@@ -1,0 +1,223 @@
+{
+  "sites": {
+    "changbaishan": {
+      "bvid": "BV1Na4y1U7C6",
+      "title": "真有「云顶天宫」！长白山到底藏着多少秘密？（星球研究所）",
+      "title_en": "Changbaishan: the ‘palace above the clouds’ (Institute for Planets)",
+      "note": "讲长白山复式火山、天池破火山口和喷发史，不是旅游航拍。建议看到天池成因与喷发段落。",
+      "note_en": "A process film on the Changbaishan stratovolcano and the Tianchi caldera — not a travel reel. Watch the eruption and caldera chapters."
+    },
+    "danxiashan": {
+      "bvid": "BV1jKK2z4E8C",
+      "title": "中国不能没有丹霞（星球研究所）",
+      "title_en": "China cannot do without Danxia (Institute for Planets)",
+      "note": "从命名地丹霞山讲红层、垂直节理和崩塌，不是景区宣传片。建议看到成因与赤壁巷谷段落。",
+      "note_en": "From the type locality at Danxiashan: red beds, vertical joints, collapse — not a park promo. Watch the origin and cliff-and-alley chapters."
+    },
+    "zhangjiajie": {
+      "bvid": "BV1pi42117Qy",
+      "title": "张家界是什么界？为何世界独有？（星球研究所）",
+      "title_en": "What kind of ‘jie’ is Zhangjiajie? (Institute for Planets)",
+      "note": "讲石英砂岩峰林怎么被节理切出来，不是云海航拍。建议看到夷平面–方山–峰林段落。",
+      "note_en": "How jointed quartz sandstone becomes pillars — not a sea-of-clouds reel. Watch the planation–mesa–peak-forest chapter."
+    },
+    "shilin": {
+      "bvid": "BV1eC4y1P7co",
+      "title": "沧海落，石林生——世界遗产：中国南方喀斯特·云南石林（《美丽云南》）",
+      "title_en": "From sea to stone forest: Shilin, South China Karst",
+      "note": "讲路南石林怎么从海相灰岩走到剑状石柱，现场就是石林，不是邻省同地貌。建议看到溶蚀成林段落。",
+      "note_en": "How marine limestone at Lunan became sword-like pinnacles. This is Shilin itself, not a look-alike park. Watch the dissolution-to-forest chapter."
+    },
+    "wudalianchi": {
+      "bvid": "BV1Dr4y1Z79X",
+      "title": "黑龙江五大连池火山群（地理纪）",
+      "title_en": "The Wudalianchi volcanic field",
+      "note": "讲五大连池火山群和堰塞湖，老黑山是三百年前的渣锥。建议看到火口与五池段落，不要当旅游片快进。",
+      "note_en": "The Wudalianchi volcanic field and its dammed lakes. Laoheishan is a 300-year-old scoria cone. Watch the crater and five-lakes chapter."
+    },
+    "meishan": {
+      "bvid": "BV1n9GSePEvx",
+      "title": "到金钉子去——长兴金钉子（小黄的地质世界）",
+      "title_en": "To the golden spike: the Meishan GSSP",
+      "note": "到长兴煤山看二叠–三叠界线金钉子现场，不是博物馆展柜。建议看到剖面廊和界线层。",
+      "note_en": "A field walk to the Permian–Triassic GSSP at Meishan, Changxing — not a museum case. Watch the section gallery and the boundary bed."
+    },
+    "huangshan": {
+      "bvid": "BV1gt421n7bp",
+      "title": "黄山为啥火？从地质地理上来讲跟它的花岗岩地貌有关（刘福江·中国地质大学）",
+      "title_en": "Why Huangshan looks like that: granite landforms (China University of Geosciences)",
+      "note": "地质大学课堂讲黄山花岗岩地貌，不是云海MV。建议看到节理、球状风化和峰林。",
+      "note_en": "A geology-class film on Huangshan granite — joints, spheroidal weathering, peaks. Not a sea-of-clouds reel."
+    },
+    "songshan": {
+      "bvid": "BV1Di4y1C7Jj",
+      "title": "嵩山地质认识实习",
+      "title_en": "A field class on Songshan stratigraphy",
+      "note": "嵩山地质认识实习，看太古宙到新生代怎么叠在一座山上。建议看到剖面，不是少林寺导游。",
+      "note_en": "A field class on how Archaean to Cenozoic rocks stack on Songshan. Watch the sections, not the Shaolin tour."
+    },
+    "shihuadong": {
+      "bvid": "BV1TV411H75g",
+      "title": "高考地理 房山石花洞形成过程",
+      "title_en": "How Shihuadong cave formed",
+      "note": "讲房山石花洞溶蚀和化学沉积，画面是这个洞的形成过程，不是钟乳石美图。建议看完成因。",
+      "note_en": "Dissolution and chemical precipitation at Fangshan Shihuadong — a process film, not a speleothem slideshow."
+    },
+    "zhijindong": {
+      "bvid": "BV1Wg411a7vW",
+      "title": "课前3分钟——织金洞【看纪录片学地理】（羊羊的地理教室）",
+      "title_en": "Zhijin Cave in three minutes (geography classroom)",
+      "note": "用纪录片讲织金洞的喀斯特沉积，不是探洞vlog。建议看到石笋和地下河。",
+      "note_en": "A classroom cut of Zhijin Cave karst deposits — not a caving vlog. Watch the stalagmites and underground river."
+    },
+    "guilin-karst": {
+      "bvid": "BV1NG4y1R7a4",
+      "title": "桂林山水——喀斯特地貌",
+      "title_en": "Guilin landscape: peak-forest karst",
+      "note": "讲桂林峰林平原怎么溶出来，不是漓江游船宣传。建议看到峰林与漓江段落。",
+      "note_en": "How Guilin’s peak-forest plain was dissolved — not a Li River cruise promo. Watch the fenglin chapter."
+    },
+    "jiuzhaigou": {
+      "bvid": "BV11X4y1a712",
+      "title": "钙华为九寨水塑形、着色（地理纪）",
+      "title_en": "Travertine shapes and colours Jiuzhaigou",
+      "note": "讲钙华怎么给九寨沟的水和堤坝上色，不是秋色航拍。建议看到钙华坝段落。",
+      "note_en": "How travertine builds the dams and colours the water at Jiuzhaigou — not an autumn aerial. Watch the travertine-dam chapter."
+    },
+    "zhangye": {
+      "bvid": "BV1vY4y1t7yB",
+      "title": "张掖七彩丹霞地貌？彩丘？丹霞？傻傻分不清！",
+      "title_en": "Zhangye: colourful hills, not Danxia Shan",
+      "note": "专门把张掖彩丘和丹霞山那种丹霞拆开，不要把彩色丘陵叫丹霞山。建议看到对比段落。",
+      "note_en": "Why Zhangye’s colourful hills are not the Danxia of Danxiashan. Watch the contrast chapter."
+    },
+    "dunhuang": {
+      "bvid": "BV1MCWezsEf8",
+      "title": "敦煌雅丹国家地质公园地质科普篇",
+      "title_en": "Dunhuang yardang: a geology short",
+      "note": "敦煌雅丹地质科普，讲风把河湖相切成垄槽。建议看到雅丹形态，不是魔鬼城夜游。",
+      "note_en": "How wind cut lacustrine beds into yardang ridges at Dunhuang. Watch the landform, not a night-tour reel."
+    },
+    "hongkong": {
+      "bvid": "BV1et411s7Rd",
+      "title": "香港破边洲：1亿年前火山爆发奇观（小纪读书旅行）",
+      "title_en": "Po Pin Chau, Hong Kong: hexagonal volcanic columns",
+      "note": "香港西贡破边洲六角柱，酸性火山岩柱状节理，不是港币图案介绍。建议看到柱体。",
+      "note_en": "Hexagonal columns of acidic volcanic rock at Po Pin Chau, Sai Kung — the landform, not a banknote feature."
+    },
+    "chengjiang": {
+      "bvid": "BV1p34y1h7FM",
+      "title": "澄江化石地科考·专家揭秘 从澄江化石地看寒武纪生命大爆发",
+      "title_en": "Chengjiang fossils and the Cambrian explosion",
+      "note": "专家在澄江化石地讲寒武纪爆发，化石只看不挖。建议看到地层和标本对照。",
+      "note_en": "A field talk at Chengjiang on the Cambrian explosion. Look, don’t dig. Watch the bed and the specimens together."
+    },
+    "changshan": {
+      "bvid": "BV1aGqDYtEud",
+      "title": "浙江常山 隐藏着中国第一枚意义非凡的「金钉子」",
+      "title_en": "Changshan: China’s first GSSP",
+      "note": "讲常山黄泥塘金钉子（达瑞威尔阶），不是常山油茶广告。建议看到剖面。",
+      "note_en": "The Darriwilian GSSP at Huangnitang, Changshan. Watch the section, not a camellia advert."
+    },
+    "jingpohu": {
+      "bvid": "BV1Zu41157YB",
+      "title": "镜泊湖火山口地下森林公园-熔岩洞-熔岩隧道",
+      "title_en": "Jingpohu: lava tubes under the crater forest",
+      "note": "镜泊湖火山口地下森林的熔岩洞和熔岩隧道，是玄武岩溢流不是湖光山色。建议看到熔岩管道。",
+      "note_en": "Lava tubes under the Jingpohu crater forest — basalt overflow, not a lake postcard. Watch the tubes."
+    },
+    "taining": {
+      "bvid": "BV15L411p7qX",
+      "title": "中国丹霞（泰宁）【瑰宝——文化自然遗产在福建】",
+      "title_en": "China Danxia at Taining (Fujian heritage film)",
+      "note": "海峡卫视讲泰宁丹霞，金湖和线谷是这个园。建议看到丹霞峡谷，不是游船广告。",
+      "note_en": "Taining Danxia — Golden Lake and slot valleys of this park. Watch the canyon chapter, not the boat advert."
+    },
+    "jixian": {
+      "bvid": "BV1dT4y1L714",
+      "title": "【大地史书】05 大陆裂谷之水，于天津蓟县常州村",
+      "title_en": "Earth’s history book: the Jixian Mesoproterozoic section",
+      "note": "在蓟县常州村讲中新元古界剖面，是地层不是盘山风景。建议看到叠层石和地层。",
+      "note_en": "The Mesoproterozoic section at Changzhou village, Jixian — stromatolites and strata, not Mount Pan scenery."
+    },
+    "taishan": {
+      "bvid": "BV1nm4y1m7vb",
+      "title": "新构造运动与泰山的形成",
+      "title_en": "Neotectonics and the making of Taishan",
+      "note": "讲泰山怎么被断块掀斜抬起来，不是登顶攻略。建议看到泰前断裂和三级台阶。",
+      "note_en": "How block faulting tilted Taishan up — not a summit vlog. Watch the Taishanqian fault and the three steps."
+    },
+    "wulong": {
+      "bvid": "BV1tsV5zzEJS",
+      "title": "武隆天坑形成探秘",
+      "title_en": "How Wulong’s tiankengs collapsed",
+      "note": "讲武隆天坑怎么从暗河溶洞塌成坑，不是天生三桥玻璃眺望台。建议看到溶洞顶板塌陷。",
+      "note_en": "How Wulong’s tiankengs collapsed from caves — not a glass-platform clip. Watch the roof-collapse chapter."
+    },
+    "sanqingshan": {
+      "bvid": "BV1Fi4y1A7tQ",
+      "title": "江西三清山，峰峦、峰墙、峰丛、峰柱，最美花岗岩！三维地图动画！",
+      "title_en": "Sanqingshan granite: peaks, walls, clusters, pillars",
+      "note": "三维动画讲三清山花岗岩峰林怎么分出峰峦、峰墙、峰丛、峰柱，不是云海MV。建议看完全片认微地貌。",
+      "note_en": "A 3D map of Sanqingshan granite micro-landforms — peaks, walls, clusters, pillars. Not a sea-of-clouds reel."
+    },
+    "zigong": {
+      "bvid": "BV1yGYd67Ezo",
+      "title": "建在遗址上的博物馆-自贡恐龙馆探秘——自贡游记（下）",
+      "title_en": "Zigong: a museum built on the dinosaur quarry",
+      "note": "到大山铺遗址厅看中侏罗世化石怎么埋在砂岩里，不是仿真恐龙乐园。建议看到埋藏现场。",
+      "note_en": "The Dashanpu quarry hall — Mid-Jurassic bones in sandstone, not a dinosaur theme park. Watch the burial site."
+    }
+  },
+  "routes": {
+    "karst": {
+      "bvid": "BV1Kx421m7SY",
+      "title": "前往深渊：贵州地下山河（星球研究所）",
+      "title_en": "Into the abyss: Guizhou’s underground rivers (Institute for Planets)",
+      "note": "讲南方喀斯特如何从溶洞走到天坑和地下河。用来对照石林（地表）和织金、乐业（地下）。建议看到洞穴—天坑段落。",
+      "note_en": "How southern karst goes from caves to tiankengs and underground rivers. Contrast Shilin (surface) with Zhijin and Leye (underground)."
+    },
+    "granite": {
+      "bvid": "BV1UE41197t3",
+      "title": "拿花岗岩开刀（岩石与矿物科普）",
+      "title_en": "Start with granite — how to recognise it",
+      "note": "讲花岗岩的矿物和结构，不是黄山景区片。到黄山、三清山之前先看：粗粒石英+长石，不是火山颈。建议看完全片认斑晶。",
+      "note_en": "Mineral and texture ID for granite, not a Huangshan travel film. Watch before the granite-peak stops: coarse quartz + feldspar, not a volcanic neck."
+    },
+    "danxia": {
+      "bvid": "BV1jKK2z4E8C",
+      "title": "中国不能没有丹霞（星球研究所）",
+      "title_en": "China cannot do without Danxia (Institute for Planets)",
+      "note": "讲丹霞这一条过程：红层、节理、崩塌。用来对照整条丹霞线，不要拿它当每个停靠点的宣传片。建议看到命名地成因段落。",
+      "note_en": "One process film for the whole Danxia trail: red beds, joints, collapse. Not a clip to copy onto every stop. Watch the type-locality chapter."
+    },
+    "volcano": {
+      "bvid": "BV11bNLzjEh6",
+      "title": "镜泊湖、五大连池由来【看纪录片学地理】",
+      "title_en": "How Jingpohu and Wudalianchi were dammed by lava",
+      "note": "讲熔岩堰塞怎么做出镜泊湖和五大连池，用来对照整条火山线，不要拿长白山片复用到每一站。",
+      "note_en": "Lava-dammed lakes at Jingpohu and Wudalianchi — one process film for the volcano trail. Do not paste the Changbaishan clip onto every stop."
+    },
+    "gssp": {
+      "bvid": "BV1994MzaEXs",
+      "title": "南大院士科普｜中国11枚「金钉子」，钉住地球46亿年记忆",
+      "title_en": "Eleven Chinese GSSPs: nails in Earth’s timeline",
+      "note": "南京大学院士讲中国金钉子怎么选、钉在哪。用来对照整条金钉子线，不是某一条剖面的旅游片。",
+      "note_en": "How China picked its GSSPs. One briefing for the whole golden-spike trail, not a tourist clip of one section."
+    },
+    "sandstone-peak": {
+      "bvid": "BV1tM4m1y7hZ",
+      "title": "央视纪录：石英砂岩峰林地貌的形成过程",
+      "title_en": "CCTV: how quartz-sandstone peak forest forms",
+      "note": "央视纪录讲石英砂岩峰林怎么被节理切开。张家界页已有星球研究所片，这条给整条砂岩峰林线。建议看到夷平面到峰林。",
+      "note_en": "CCTV on jointed quartz sandstone. Zhangjiajie’s page already has the Institute for Planets film; this one is for the sandstone-peak trail."
+    },
+    "wind": {
+      "bvid": "BV1MCWezsEf8",
+      "title": "敦煌雅丹国家地质公园地质科普篇",
+      "title_en": "Dunhuang yardang: a geology short",
+      "note": "用敦煌雅丹讲风把河湖相切成垄槽。对照整条风沙线：雅丹不是丹霞，也不是石林。",
+      "note_en": "Yardangs at Dunhuang as the process film for the wind-and-sand trail. Yardang is not Danxia and not stone forest."
+    }
+  }
+}

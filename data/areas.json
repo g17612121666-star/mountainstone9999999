@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fangshan-shihuadong",
+    "site_id": "fangshan",
+    "name": "石花洞园区",
+    "coordinates": [
+      115.93,
+      39.8
+    ],
+    "summary": "北方喀斯特洞穴。雾迷山组白云岩里的石旗、石幔和石花。"
+  },
+  {
+    "id": "fangshan-zhoukoudian",
+    "site_id": "fangshan",
+    "name": "周口店园区",
+    "coordinates": [
+      115.92,
+      39.69
+    ],
+    "summary": "北京人遗址。看的是洞穴堆积与人类演化，不是挖化石。"
+  },
+  {
+    "id": "fangshan-shidu",
+    "site_id": "fangshan",
+    "name": "十渡园区",
+    "coordinates": [
+      115.6,
+      39.64
+    ],
+    "summary": "拒马河切开的碳酸盐岩峡谷，北方喀斯特的河谷面。"
+  },
+  {
+    "id": "fangshan-baishishan",
+    "site_id": "fangshan",
+    "name": "白石山园区",
+    "coordinates": [
+      114.68,
+      39.25
+    ],
+    "summary": "河北涞源。大理岩峰林，房山世界地质公园的跨省园区。"
+  },
+  {
+    "id": "hk-saikung",
+    "site_id": "hongkong",
+    "name": "西贡火山岩园区",
+    "coordinates": [
+      114.36,
+      22.38
+    ],
+    "summary": "早白垩世酸性火成岩柱状节理，IUGS 遗产点所在。"
+  },
+  {
+    "id": "hk-ne",
+    "site_id": "hongkong",
+    "name": "新界东北沉积岩园区",
+    "coordinates": [
+      114.29,
+      22.54
+    ],
+    "summary": "沉积岩海岸、断层与差异侵蚀。"
+  }
+]

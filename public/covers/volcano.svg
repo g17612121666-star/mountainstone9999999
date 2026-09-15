@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" role="img" aria-label="火山示意，非实地照片">
+  <title>火山示意，非实地照片</title>
+  <rect width="400" height="180" fill="#4a4540"/>
+  <rect x="0" y="118" width="400" height="22" fill="#6b5344" opacity="0.85"/>
+  <rect x="0" y="140" width="400" height="18" fill="#7a3b32" opacity="0.9"/>
+  <rect x="0" y="158" width="400" height="22" fill="#2c261c" opacity="0.55"/>
+  
+  <polygon points="70,118 140,38 210,118" fill="#7a3b32"/>
+  <polygon points="180,118 250,52 320,118" fill="#6b5344"/>
+  <ellipse cx="250" cy="52" rx="18" ry="7" fill="#2c261c" opacity="0.45"/>
+
+  <text x="16" y="24" fill="#2c261c" font-size="11" font-family="serif" opacity="0.7">火山示意，非实地照片</text>
+</svg>

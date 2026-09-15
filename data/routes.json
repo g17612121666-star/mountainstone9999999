@@ -1,0 +1,4966 @@
+[
+  {
+    "id": "fangshan-r1",
+    "site_id": "fangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fangshan-g1",
+      "fangshan-g2",
+      "fangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shihuadong-r1",
+    "site_id": "shihuadong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shihuadong-g1",
+      "shihuadong-g2",
+      "shihuadong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shidu-r1",
+    "site_id": "shidu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shidu-g1",
+      "shidu-g2",
+      "shidu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yanqing-r1",
+    "site_id": "yanqing",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yanqing-g1",
+      "yanqing-g2",
+      "yanqing-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huangsongyu-r1",
+    "site_id": "huangsongyu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huangsongyu-g1",
+      "huangsongyu-g2",
+      "huangsongyu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yunmengshan-r1",
+    "site_id": "yunmengshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yunmengshan-g1",
+      "yunmengshan-g2",
+      "yunmengshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhoukoudian-r1",
+    "site_id": "zhoukoudian",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhoukoudian-g1",
+      "zhoukoudian-g2",
+      "zhoukoudian-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jixian-r1",
+    "site_id": "jixian",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jixian-g1",
+      "jixian-g2",
+      "jixian-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baishishan-r1",
+    "site_id": "baishishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baishishan-g1",
+      "baishishan-g2",
+      "baishishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tianshengqiao-r1",
+    "site_id": "tianshengqiao",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tianshengqiao-g1",
+      "tianshengqiao-g2",
+      "tianshengqiao-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "liujiang-r1",
+    "site_id": "liujiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "liujiang-g1",
+      "liujiang-g2",
+      "liujiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhangshiyan-r1",
+    "site_id": "zhangshiyan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhangshiyan-g1",
+      "zhangshiyan-g2",
+      "zhangshiyan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yesanpo-r1",
+    "site_id": "yesanpo",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yesanpo-g1",
+      "yesanpo-g2",
+      "yesanpo-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "lincheng-r1",
+    "site_id": "lincheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "lincheng-g1",
+      "lincheng-g2",
+      "lincheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wuan-r1",
+    "site_id": "wuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wuan-g1",
+      "wuan-g2",
+      "wuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xinglong-r1",
+    "site_id": "xinglong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xinglong-g1",
+      "xinglong-g2",
+      "xinglong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qianan-r1",
+    "site_id": "qianan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qianan-g1",
+      "qianan-g2",
+      "qianan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chengde-danxia-r1",
+    "site_id": "chengde-danxia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chengde-danxia-g1",
+      "chengde-danxia-g2",
+      "chengde-danxia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xingtai-canyon-r1",
+    "site_id": "xingtai-canyon",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xingtai-canyon-g1",
+      "xingtai-canyon-g2",
+      "xingtai-canyon-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hukou-r1",
+    "site_id": "hukou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hukou-g1",
+      "hukou-g2",
+      "hukou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wutaishan-r1",
+    "site_id": "wutaishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wutaishan-g1",
+      "wutaishan-g2",
+      "wutaishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huguan-r1",
+    "site_id": "huguan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huguan-g1",
+      "huguan-g2",
+      "huguan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ningwu-r1",
+    "site_id": "ningwu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ningwu-g1",
+      "ningwu-g2",
+      "ningwu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wangmangling-r1",
+    "site_id": "wangmangling",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wangmangling-g1",
+      "wangmangling-g2",
+      "wangmangling-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "datong-volcano-r1",
+    "site_id": "datong-volcano",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "datong-volcano-g1",
+      "datong-volcano-g2",
+      "datong-volcano-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yonghe-r1",
+    "site_id": "yonghe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yonghe-g1",
+      "yonghe-g2",
+      "yonghe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "pingshun-r1",
+    "site_id": "pingshun",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "pingshun-g1",
+      "pingshun-g2",
+      "pingshun-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yushe-r1",
+    "site_id": "yushe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yushe-g1",
+      "yushe-g2",
+      "yushe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "youyu-r1",
+    "site_id": "youyu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "youyu-g1",
+      "youyu-g2",
+      "youyu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xixian-loess-r1",
+    "site_id": "xixian-loess",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xixian-loess-g1",
+      "xixian-loess-g2",
+      "xixian-loess-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hexigten-r1",
+    "site_id": "hexigten",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hexigten-g1",
+      "hexigten-g2",
+      "hexigten-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "arxan-r1",
+    "site_id": "arxan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "arxan-g1",
+      "arxan-g2",
+      "arxan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "alxa-r1",
+    "site_id": "alxa",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "alxa-g1",
+      "alxa-g2",
+      "alxa-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "erenhot-r1",
+    "site_id": "erenhot",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "erenhot-g1",
+      "erenhot-g2",
+      "erenhot-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ningcheng-r1",
+    "site_id": "ningcheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ningcheng-g1",
+      "ningcheng-g2",
+      "ningcheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "bayannur-r1",
+    "site_id": "bayannur",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "bayannur-g1",
+      "bayannur-g2",
+      "bayannur-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ordos-r1",
+    "site_id": "ordos",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ordos-g1",
+      "ordos-g2",
+      "ordos-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "laoniuwan-r1",
+    "site_id": "laoniuwan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "laoniuwan-g1",
+      "laoniuwan-g2",
+      "laoniuwan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "siziwang-r1",
+    "site_id": "siziwang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "siziwang-g1",
+      "siziwang-g2",
+      "siziwang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "oroqen-r1",
+    "site_id": "oroqen",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "oroqen-g1",
+      "oroqen-g2",
+      "oroqen-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xilinhot-r1",
+    "site_id": "xilinhot",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xilinhot-g1",
+      "xilinhot-g2",
+      "xilinhot-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qiguoshan-r1",
+    "site_id": "qiguoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qiguoshan-g1",
+      "qiguoshan-g2",
+      "qiguoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ulanqab-r1",
+    "site_id": "ulanqab",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ulanqab-g1",
+      "ulanqab-g2",
+      "ulanqab-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wuda-r1",
+    "site_id": "wuda",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wuda-g1",
+      "wuda-g2",
+      "wuda-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "badain-jaran-r1",
+    "site_id": "badain-jaran",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "badain-jaran-g1",
+      "badain-jaran-g2",
+      "badain-jaran-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chaoyang-r1",
+    "site_id": "chaoyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chaoyang-g1",
+      "chaoyang-g2",
+      "chaoyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "benxi-r1",
+    "site_id": "benxi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "benxi-g1",
+      "benxi-g2",
+      "benxi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dalian-coast-r1",
+    "site_id": "dalian-coast",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dalian-coast-g1",
+      "dalian-coast-g2",
+      "dalian-coast-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "bingyugou-r1",
+    "site_id": "bingyugou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "bingyugou-g1",
+      "bingyugou-g2",
+      "bingyugou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jinzhou-r1",
+    "site_id": "jinzhou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jinzhou-g1",
+      "jinzhou-g2",
+      "jinzhou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huludao-r1",
+    "site_id": "huludao",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huludao-g1",
+      "huludao-g2",
+      "huludao-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "changbaishan-r1",
+    "site_id": "changbaishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "changbaishan-g1",
+      "changbaishan-g2",
+      "changbaishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jingyu-r1",
+    "site_id": "jingyu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jingyu-g1",
+      "jingyu-g2",
+      "jingyu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qianan-mud-r1",
+    "site_id": "qianan-mud",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qianan-mud-g1",
+      "qianan-mud-g2",
+      "qianan-mud-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fusong-r1",
+    "site_id": "fusong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fusong-g1",
+      "fusong-g2",
+      "fusong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "siping-r1",
+    "site_id": "siping",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "siping-g1",
+      "siping-g2",
+      "siping-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "longwan-r1",
+    "site_id": "longwan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "longwan-g1",
+      "longwan-g2",
+      "longwan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wudalianchi-r1",
+    "site_id": "wudalianchi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wudalianchi-g1",
+      "wudalianchi-g2",
+      "wudalianchi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiayin-r1",
+    "site_id": "jiayin",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiayin-g1",
+      "jiayin-g2",
+      "jiayin-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yichun-forest-r1",
+    "site_id": "yichun-forest",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yichun-forest-g1",
+      "yichun-forest-g2",
+      "yichun-forest-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jingpohu-r1",
+    "site_id": "jingpohu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jingpohu-g1",
+      "jingpohu-g2",
+      "jingpohu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xingkaihu-r1",
+    "site_id": "xingkaihu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xingkaihu-g1",
+      "xingkaihu-g2",
+      "xingkaihu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiaoxinggan-r1",
+    "site_id": "xiaoxinggan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiaoxinggan-g1",
+      "xiaoxinggan-g2",
+      "xiaoxinggan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fenghuangshan-hlj-r1",
+    "site_id": "fenghuangshan-hlj",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fenghuangshan-hlj-g1",
+      "fenghuangshan-hlj-g2",
+      "fenghuangshan-hlj-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shankou-r1",
+    "site_id": "shankou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shankou-g1",
+      "shankou-g2",
+      "shankou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "mohe-r1",
+    "site_id": "mohe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "mohe-g1",
+      "mohe-g2",
+      "mohe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qinggang-r1",
+    "site_id": "qinggang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qinggang-g1",
+      "qinggang-g2",
+      "qinggang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiguanshan-r1",
+    "site_id": "jiguanshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiguanshan-g1",
+      "jiguanshan-g2",
+      "jiguanshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chongming-r1",
+    "site_id": "chongming",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chongming-g1",
+      "chongming-g2",
+      "chongming-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sheshan-r1",
+    "site_id": "sheshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sheshan-g1",
+      "sheshan-g2",
+      "sheshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "taihu-xishan-r1",
+    "site_id": "taihu-xishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "taihu-xishan-g1",
+      "taihu-xishan-g2",
+      "taihu-xishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "luhe-r1",
+    "site_id": "luhe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "luhe-g1",
+      "luhe-g2",
+      "luhe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tangshan-fangshan-r1",
+    "site_id": "tangshan-fangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tangshan-fangshan-g1",
+      "tangshan-fangshan-g2",
+      "tangshan-fangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huaguoshan-r1",
+    "site_id": "huaguoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huaguoshan-g1",
+      "huaguoshan-g2",
+      "huaguoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "changshan-r1",
+    "site_id": "changshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "changshan-g1",
+      "changshan-g2",
+      "changshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "linhai-r1",
+    "site_id": "linhai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "linhai-g1",
+      "linhai-g2",
+      "linhai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yandangshan-r1",
+    "site_id": "yandangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yandangshan-g1",
+      "yandangshan-g2",
+      "yandangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xinchang-r1",
+    "site_id": "xinchang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xinchang-g1",
+      "xinchang-g2",
+      "xinchang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shenxianju-r1",
+    "site_id": "shenxianju",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shenxianju-g1",
+      "shenxianju-g2",
+      "shenxianju-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiandu-r1",
+    "site_id": "xiandu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiandu-g1",
+      "xiandu-g2",
+      "xiandu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "cangnan-fanshan-r1",
+    "site_id": "cangnan-fanshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "cangnan-fanshan-g1",
+      "cangnan-fanshan-g2",
+      "cangnan-fanshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "meishan-r1",
+    "site_id": "meishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "meishan-g1",
+      "meishan-g2",
+      "meishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-huangnitang-r1",
+    "site_id": "gssp-huangnitang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-huangnitang-g1",
+      "gssp-huangnitang-g2",
+      "gssp-huangnitang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-jiangshan-r1",
+    "site_id": "gssp-jiangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-jiangshan-g1",
+      "gssp-jiangshan-g2",
+      "gssp-jiangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huangshan-r1",
+    "site_id": "huangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huangshan-g1",
+      "huangshan-g2",
+      "huangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qiyunshan-r1",
+    "site_id": "qiyunshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qiyunshan-g1",
+      "qiyunshan-g2",
+      "qiyunshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fushan-r1",
+    "site_id": "fushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fushan-g1",
+      "fushan-g2",
+      "fushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "bagongshan-r1",
+    "site_id": "bagongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "bagongshan-g1",
+      "bagongshan-g2",
+      "bagongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guniujiang-r1",
+    "site_id": "guniujiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guniujiang-g1",
+      "guniujiang-g2",
+      "guniujiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tianzhushan-r1",
+    "site_id": "tianzhushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tianzhushan-g1",
+      "tianzhushan-g2",
+      "tianzhushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dabieshan-luan-r1",
+    "site_id": "dabieshan-luan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dabieshan-luan-g1",
+      "dabieshan-luan-g2",
+      "dabieshan-luan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiuhuashan-r1",
+    "site_id": "jiuhuashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiuhuashan-g1",
+      "jiuhuashan-g2",
+      "jiuhuashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fengyangshan-r1",
+    "site_id": "fengyangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fengyangshan-g1",
+      "fengyangshan-g2",
+      "fengyangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "taijidong-r1",
+    "site_id": "taijidong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "taijidong-g1",
+      "taijidong-g2",
+      "taijidong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yashan-r1",
+    "site_id": "yashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yashan-g1",
+      "yashan-g2",
+      "yashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qingyunshan-r1",
+    "site_id": "qingyunshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qingyunshan-g1",
+      "qingyunshan-g2",
+      "qingyunshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "marenshan-r1",
+    "site_id": "marenshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "marenshan-g1",
+      "marenshan-g2",
+      "marenshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shitai-r1",
+    "site_id": "shitai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shitai-g1",
+      "shitai-g2",
+      "shitai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhangzhou-volcano-r1",
+    "site_id": "zhangzhou-volcano",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhangzhou-volcano-g1",
+      "zhangzhou-volcano-g2",
+      "zhangzhou-volcano-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "taining-r1",
+    "site_id": "taining",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "taining-g1",
+      "taining-g2",
+      "taining-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shenhuwan-r1",
+    "site_id": "shenhuwan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shenhuwan-g1",
+      "shenhuwan-g2",
+      "shenhuwan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "taimushan-r1",
+    "site_id": "taimushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "taimushan-g1",
+      "taimushan-g2",
+      "taimushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tianedong-r1",
+    "site_id": "tianedong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tianedong-g1",
+      "tianedong-g2",
+      "tianedong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shiniushan-r1",
+    "site_id": "shiniushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shiniushan-g1",
+      "shiniushan-g2",
+      "shiniushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baishuiyang-r1",
+    "site_id": "baishuiyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baishuiyang-g1",
+      "baishuiyang-g2",
+      "baishuiyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yongan-r1",
+    "site_id": "yongan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yongan-g1",
+      "yongan-g2",
+      "yongan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guanzhishan-r1",
+    "site_id": "guanzhishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guanzhishan-g1",
+      "guanzhishan-g2",
+      "guanzhishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baiyunshan-fj-r1",
+    "site_id": "baiyunshan-fj",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baiyunshan-fj-g1",
+      "baiyunshan-fj-g2",
+      "baiyunshan-fj-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ningde-r1",
+    "site_id": "ningde",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ningde-g1",
+      "ningde-g2",
+      "ningde-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "longyan-r1",
+    "site_id": "longyan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "longyan-g1",
+      "longyan-g2",
+      "longyan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "lingtongshan-r1",
+    "site_id": "lingtongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "lingtongshan-g1",
+      "lingtongshan-g2",
+      "lingtongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fozishan-r1",
+    "site_id": "fozishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fozishan-g1",
+      "fozishan-g2",
+      "fozishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qingliu-r1",
+    "site_id": "qingliu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qingliu-g1",
+      "qingliu-g2",
+      "qingliu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sanming-jiaoye-r1",
+    "site_id": "sanming-jiaoye",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sanming-jiaoye-g1",
+      "sanming-jiaoye-g2",
+      "sanming-jiaoye-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "pingtan-r1",
+    "site_id": "pingtan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "pingtan-g1",
+      "pingtan-g2",
+      "pingtan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sanduao-r1",
+    "site_id": "sanduao",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sanduao-g1",
+      "sanduao-g2",
+      "sanduao-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guantaishan-r1",
+    "site_id": "guantaishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guantaishan-g1",
+      "guantaishan-g2",
+      "guantaishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "lushan-r1",
+    "site_id": "lushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "lushan-g1",
+      "lushan-g2",
+      "lushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "longhushan-r1",
+    "site_id": "longhushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "longhushan-g1",
+      "longhushan-g2",
+      "longhushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sanqingshan-r1",
+    "site_id": "sanqingshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sanqingshan-g1",
+      "sanqingshan-g2",
+      "sanqingshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wugongshan-r1",
+    "site_id": "wugongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wugongshan-g1",
+      "wugongshan-g2",
+      "wugongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shicheng-r1",
+    "site_id": "shicheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shicheng-g1",
+      "shicheng-g2",
+      "shicheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shanwang-r1",
+    "site_id": "shanwang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shanwang-g1",
+      "shanwang-g2",
+      "shanwang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiongershan-r1",
+    "site_id": "xiongershan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiongershan-g1",
+      "xiongershan-g2",
+      "xiongershan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huanghe-delta-r1",
+    "site_id": "huanghe-delta",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huanghe-delta-g1",
+      "huanghe-delta-g2",
+      "huanghe-delta-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "taishan-r1",
+    "site_id": "taishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "taishan-g1",
+      "taishan-g2",
+      "taishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yimengshan-r1",
+    "site_id": "yimengshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yimengshan-g1",
+      "yimengshan-g2",
+      "yimengshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "changshan-islands-r1",
+    "site_id": "changshan-islands",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "changshan-islands-g1",
+      "changshan-islands-g2",
+      "changshan-islands-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhucheng-r1",
+    "site_id": "zhucheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhucheng-g1",
+      "zhucheng-g2",
+      "zhucheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qingzhou-r1",
+    "site_id": "qingzhou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qingzhou-g1",
+      "qingzhou-g2",
+      "qingzhou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "laiyang-r1",
+    "site_id": "laiyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "laiyang-g1",
+      "laiyang-g2",
+      "laiyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yiyuan-r1",
+    "site_id": "yiyuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yiyuan-g1",
+      "yiyuan-g2",
+      "yiyuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "changle-volcano-r1",
+    "site_id": "changle-volcano",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "changle-volcano-g1",
+      "changle-volcano-g2",
+      "changle-volcano-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wulianshan-r1",
+    "site_id": "wulianshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wulianshan-g1",
+      "wulianshan-g2",
+      "wulianshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yishan-r1",
+    "site_id": "yishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yishan-g1",
+      "yishan-g2",
+      "yishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "songshan-r1",
+    "site_id": "songshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "songshan-g1",
+      "songshan-g2",
+      "songshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yuntaishan-r1",
+    "site_id": "yuntaishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yuntaishan-g1",
+      "yuntaishan-g2",
+      "yuntaishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baotianman-r1",
+    "site_id": "baotianman",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baotianman-g1",
+      "baotianman-g2",
+      "baotianman-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wangwushan-r1",
+    "site_id": "wangwushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wangwushan-g1",
+      "wangwushan-g2",
+      "wangwushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "funiushan-r1",
+    "site_id": "funiushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "funiushan-g1",
+      "funiushan-g2",
+      "funiushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chayashan-r1",
+    "site_id": "chayashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chayashan-g1",
+      "chayashan-g2",
+      "chayashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhengzhou-huanghe-r1",
+    "site_id": "zhengzhou-huanghe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhengzhou-huanghe-g1",
+      "zhengzhou-huanghe-g2",
+      "zhengzhou-huanghe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guanshan-r1",
+    "site_id": "guanshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guanshan-g1",
+      "guanshan-g2",
+      "guanshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shenlingzhai-r1",
+    "site_id": "shenlingzhai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shenlingzhai-g1",
+      "shenlingzhai-g2",
+      "shenlingzhai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "daimeishan-r1",
+    "site_id": "daimeishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "daimeishan-g1",
+      "daimeishan-g2",
+      "daimeishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jingangtai-r1",
+    "site_id": "jingangtai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jingangtai-g1",
+      "jingangtai-g2",
+      "jingangtai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiaoqinling-r1",
+    "site_id": "xiaoqinling",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiaoqinling-g1",
+      "xiaoqinling-g2",
+      "xiaoqinling-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "linlushan-r1",
+    "site_id": "linlushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "linlushan-g1",
+      "linlushan-g2",
+      "linlushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ruyang-r1",
+    "site_id": "ruyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ruyang-g1",
+      "ruyang-g2",
+      "ruyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yaoshan-r1",
+    "site_id": "yaoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yaoshan-g1",
+      "yaoshan-g2",
+      "yaoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sanxia-r1",
+    "site_id": "sanxia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sanxia-g1",
+      "sanxia-g2",
+      "sanxia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shennongjia-r1",
+    "site_id": "shennongjia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shennongjia-g1",
+      "shennongjia-g2",
+      "shennongjia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "mulanshan-r1",
+    "site_id": "mulanshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "mulanshan-g1",
+      "mulanshan-g2",
+      "mulanshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yunxian-r1",
+    "site_id": "yunxian",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yunxian-g1",
+      "yunxian-g2",
+      "yunxian-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wudangshan-r1",
+    "site_id": "wudangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wudangshan-g1",
+      "wudangshan-g2",
+      "wudangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dabieshan-hg-r1",
+    "site_id": "dabieshan-hg",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dabieshan-hg-g1",
+      "dabieshan-hg-g2",
+      "dabieshan-hg-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wufeng-r1",
+    "site_id": "wufeng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wufeng-g1",
+      "wufeng-g2",
+      "wufeng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiugongshan-r1",
+    "site_id": "jiugongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiugongshan-g1",
+      "jiugongshan-g2",
+      "jiugongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "enshi-r1",
+    "site_id": "enshi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "enshi-g1",
+      "enshi-g2",
+      "enshi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "changyang-r1",
+    "site_id": "changyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "changyang-g1",
+      "changyang-g2",
+      "changyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yuanan-r1",
+    "site_id": "yuanan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yuanan-g1",
+      "yuanan-g2",
+      "yuanan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-huanghuachang-r1",
+    "site_id": "gssp-huanghuachang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-huanghuachang-g1",
+      "gssp-huanghuachang-g2",
+      "gssp-huanghuachang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-wangjiawan-r1",
+    "site_id": "gssp-wangjiawan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-wangjiawan-g1",
+      "gssp-wangjiawan-g2",
+      "gssp-wangjiawan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhangjiajie-r1",
+    "site_id": "zhangjiajie",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhangjiajie-g1",
+      "zhangjiajie-g2",
+      "zhangjiajie-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "feitianshan-r1",
+    "site_id": "feitianshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "feitianshan-g1",
+      "feitianshan-g2",
+      "feitianshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "langshan-r1",
+    "site_id": "langshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "langshan-g1",
+      "langshan-g2",
+      "langshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fenghuang-r1",
+    "site_id": "fenghuang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fenghuang-g1",
+      "fenghuang-g2",
+      "fenghuang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hongshilin-r1",
+    "site_id": "hongshilin",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hongshilin-g1",
+      "hongshilin-g2",
+      "hongshilin-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiubujiang-r1",
+    "site_id": "jiubujiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiubujiang-g1",
+      "jiubujiang-g2",
+      "jiubujiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wulongshan-r1",
+    "site_id": "wulongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wulongshan-g1",
+      "wulongshan-g2",
+      "wulongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "meijiang-r1",
+    "site_id": "meijiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "meijiang-g1",
+      "meijiang-g2",
+      "meijiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shiniuzhai-r1",
+    "site_id": "shiniuzhai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shiniuzhai-g1",
+      "shiniuzhai-g2",
+      "shiniuzhai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "daweishan-r1",
+    "site_id": "daweishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "daweishan-g1",
+      "daweishan-g2",
+      "daweishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wanfoshan-r1",
+    "site_id": "wanfoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wanfoshan-g1",
+      "wanfoshan-g2",
+      "wanfoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xuefenghu-r1",
+    "site_id": "xuefenghu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xuefenghu-g1",
+      "xuefenghu-g2",
+      "xuefenghu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "mangshan-r1",
+    "site_id": "mangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "mangshan-g1",
+      "mangshan-g2",
+      "mangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baishuidong-r1",
+    "site_id": "baishuidong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baishuidong-g1",
+      "baishuidong-g2",
+      "baishuidong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiangxi-r1",
+    "site_id": "xiangxi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiangxi-g1",
+      "xiangxi-g2",
+      "xiangxi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-paibi-r1",
+    "site_id": "gssp-paibi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-paibi-g1",
+      "gssp-paibi-g2",
+      "gssp-paibi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-guzhang-r1",
+    "site_id": "gssp-guzhang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-guzhang-g1",
+      "gssp-guzhang-g2",
+      "gssp-guzhang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "danxiashan-r1",
+    "site_id": "danxiashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "danxiashan-g1",
+      "danxiashan-g2",
+      "danxiashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huguangyan-r1",
+    "site_id": "huguangyan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huguangyan-g1",
+      "huguangyan-g2",
+      "huguangyan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiqiaoshan-r1",
+    "site_id": "xiqiaoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiqiaoshan-g1",
+      "xiqiaoshan-g2",
+      "xiqiaoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "lingxiaoyan-r1",
+    "site_id": "lingxiaoyan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "lingxiaoyan-g1",
+      "lingxiaoyan-g2",
+      "lingxiaoyan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dapeng-r1",
+    "site_id": "dapeng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dapeng-g1",
+      "dapeng-g2",
+      "dapeng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fengkai-r1",
+    "site_id": "fengkai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fengkai-g1",
+      "fengkai-g2",
+      "fengkai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "enping-r1",
+    "site_id": "enping",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "enping-g1",
+      "enping-g2",
+      "enping-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yangshan-r1",
+    "site_id": "yangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yangshan-g1",
+      "yangshan-g2",
+      "yangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qinglan-r1",
+    "site_id": "qinglan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qinglan-g1",
+      "qinglan-g2",
+      "qinglan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "leiqiong-r1",
+    "site_id": "leiqiong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "leiqiong-g1",
+      "leiqiong-g2",
+      "leiqiong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "ziyuan-r1",
+    "site_id": "ziyuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "ziyuan-g1",
+      "ziyuan-g2",
+      "ziyuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "leye-fengshan-r1",
+    "site_id": "leye-fengshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "leye-fengshan-g1",
+      "leye-fengshan-g2",
+      "leye-fengshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "weizhoudao-r1",
+    "site_id": "weizhoudao",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "weizhoudao-g1",
+      "weizhoudao-g2",
+      "weizhoudao-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "fengshan-r1",
+    "site_id": "fengshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "fengshan-g1",
+      "fengshan-g2",
+      "fengshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiangqiao-r1",
+    "site_id": "xiangqiao",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiangqiao-g1",
+      "xiangqiao-g2",
+      "xiangqiao-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qibailong-r1",
+    "site_id": "qibailong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qibailong-g1",
+      "qibailong-g2",
+      "qibailong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guiping-r1",
+    "site_id": "guiping",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guiping-g1",
+      "guiping-g2",
+      "guiping-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yizhou-shilin-r1",
+    "site_id": "yizhou-shilin",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yizhou-shilin-g1",
+      "yizhou-shilin-g2",
+      "yizhou-shilin-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wuhuangshan-r1",
+    "site_id": "wuhuangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wuhuangshan-g1",
+      "wuhuangshan-g2",
+      "wuhuangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "duan-r1",
+    "site_id": "duan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "duan-g1",
+      "duan-g2",
+      "duan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "luocheng-r1",
+    "site_id": "luocheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "luocheng-g1",
+      "luocheng-g2",
+      "luocheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "donglan-r1",
+    "site_id": "donglan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "donglan-g1",
+      "donglan-g2",
+      "donglan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guilin-karst-r1",
+    "site_id": "guilin-karst",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guilin-karst-g1",
+      "guilin-karst-g2",
+      "guilin-karst-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-penglaitan-r1",
+    "site_id": "gssp-penglaitan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-penglaitan-g1",
+      "gssp-penglaitan-g2",
+      "gssp-penglaitan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-pengchong-r1",
+    "site_id": "gssp-pengchong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-pengchong-g1",
+      "gssp-pengchong-g2",
+      "gssp-pengchong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "haikou-volcano-r1",
+    "site_id": "haikou-volcano",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "haikou-volcano-g1",
+      "haikou-volcano-g2",
+      "haikou-volcano-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "baisha-crater-r1",
+    "site_id": "baisha-crater",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "baisha-crater-g1",
+      "baisha-crater-g2",
+      "baisha-crater-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wulong-r1",
+    "site_id": "wulong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wulong-g1",
+      "wulong-g2",
+      "wulong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xiaonanhai-r1",
+    "site_id": "xiaonanhai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xiaonanhai-g1",
+      "xiaonanhai-g2",
+      "xiaonanhai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yunyang-r1",
+    "site_id": "yunyang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yunyang-g1",
+      "yunyang-g2",
+      "yunyang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wansheng-r1",
+    "site_id": "wansheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wansheng-g1",
+      "wansheng-g2",
+      "wansheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qijiang-r1",
+    "site_id": "qijiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qijiang-g1",
+      "qijiang-g2",
+      "qijiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qiyaoshan-r1",
+    "site_id": "qiyaoshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qiyaoshan-g1",
+      "qiyaoshan-g2",
+      "qiyaoshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zigong-r1",
+    "site_id": "zigong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zigong-g1",
+      "zigong-g2",
+      "zigong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "longmenshan-r1",
+    "site_id": "longmenshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "longmenshan-g1",
+      "longmenshan-g2",
+      "longmenshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hailuogou-r1",
+    "site_id": "hailuogou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hailuogou-g1",
+      "hailuogou-g2",
+      "hailuogou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "daduhe-r1",
+    "site_id": "daduhe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "daduhe-g1",
+      "daduhe-g2",
+      "daduhe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "anxiang-r1",
+    "site_id": "anxiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "anxiang-g1",
+      "anxiang-g2",
+      "anxiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiuzhaigou-r1",
+    "site_id": "jiuzhaigou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiuzhaigou-g1",
+      "jiuzhaigou-g2",
+      "jiuzhaigou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huanglong-r1",
+    "site_id": "huanglong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huanglong-g1",
+      "huanglong-g2",
+      "huanglong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xingwen-r1",
+    "site_id": "xingwen",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xingwen-g1",
+      "xingwen-g2",
+      "xingwen-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shehong-r1",
+    "site_id": "shehong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shehong-g1",
+      "shehong-g2",
+      "shehong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "siguniang-r1",
+    "site_id": "siguniang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "siguniang-g1",
+      "siguniang-g2",
+      "siguniang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huayingshan-r1",
+    "site_id": "huayingshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huayingshan-g1",
+      "huayingshan-g2",
+      "huayingshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiangyou-r1",
+    "site_id": "jiangyou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiangyou-g1",
+      "jiangyou-g2",
+      "jiangyou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dabashan-r1",
+    "site_id": "dabashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dabashan-g1",
+      "dabashan-g2",
+      "dabashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guangwushan-r1",
+    "site_id": "guangwushan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guangwushan-g1",
+      "guangwushan-g2",
+      "guangwushan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qingchuan-r1",
+    "site_id": "qingchuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qingchuan-g1",
+      "qingchuan-g2",
+      "qingchuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "mianzhu-r1",
+    "site_id": "mianzhu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "mianzhu-g1",
+      "mianzhu-g2",
+      "mianzhu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gesala-r1",
+    "site_id": "gesala",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gesala-g1",
+      "gesala-g2",
+      "gesala-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "daguglacier-r1",
+    "site_id": "daguglacier",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "daguglacier-g1",
+      "daguglacier-g2",
+      "daguglacier-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guanling-r1",
+    "site_id": "guanling",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guanling-g1",
+      "guanling-g2",
+      "guanling-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "xingyi-r1",
+    "site_id": "xingyi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "xingyi-g1",
+      "xingyi-g2",
+      "xingyi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhijindong-r1",
+    "site_id": "zhijindong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhijindong-g1",
+      "zhijindong-g2",
+      "zhijindong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shuanghedong-r1",
+    "site_id": "shuanghedong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shuanghedong-g1",
+      "shuanghedong-g2",
+      "shuanghedong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "wumengshan-r1",
+    "site_id": "wumengshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "wumengshan-g1",
+      "wumengshan-g2",
+      "wumengshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "pingtang-r1",
+    "site_id": "pingtang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "pingtang-g1",
+      "pingtang-g2",
+      "pingtang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "sinan-r1",
+    "site_id": "sinan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "sinan-g1",
+      "sinan-g2",
+      "sinan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "miaoling-r1",
+    "site_id": "miaoling",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "miaoling-g1",
+      "miaoling-g2",
+      "miaoling-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chishui-r1",
+    "site_id": "chishui",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chishui-g1",
+      "chishui-g2",
+      "chishui-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "getuhe-r1",
+    "site_id": "getuhe",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "getuhe-g1",
+      "getuhe-g2",
+      "getuhe-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "gssp-wuliu-r1",
+    "site_id": "gssp-wuliu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "gssp-wuliu-g1",
+      "gssp-wuliu-g2",
+      "gssp-wuliu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "shilin-r1",
+    "site_id": "shilin",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "shilin-g1",
+      "shilin-g2",
+      "shilin-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "chengjiang-r1",
+    "site_id": "chengjiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "chengjiang-g1",
+      "chengjiang-g2",
+      "chengjiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tengchong-r1",
+    "site_id": "tengchong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tengchong-g1",
+      "tengchong-g2",
+      "tengchong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "lufeng-r1",
+    "site_id": "lufeng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "lufeng-g1",
+      "lufeng-g2",
+      "lufeng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "laojunshan-r1",
+    "site_id": "laojunshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "laojunshan-g1",
+      "laojunshan-g2",
+      "laojunshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "cangshan-r1",
+    "site_id": "cangshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "cangshan-g1",
+      "cangshan-g2",
+      "cangshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yulongxueshan-r1",
+    "site_id": "yulongxueshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yulongxueshan-g1",
+      "yulongxueshan-g2",
+      "yulongxueshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jiuxiang-r1",
+    "site_id": "jiuxiang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jiuxiang-g1",
+      "jiuxiang-g2",
+      "jiuxiang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "luoping-r1",
+    "site_id": "luoping",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "luoping-g1",
+      "luoping-g2",
+      "luoping-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "alu-r1",
+    "site_id": "alu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "alu-g1",
+      "alu-g2",
+      "alu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dongchuan-r1",
+    "site_id": "dongchuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dongchuan-g1",
+      "dongchuan-g2",
+      "dongchuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "weishan-r1",
+    "site_id": "weishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "weishan-g1",
+      "weishan-g2",
+      "weishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yigong-r1",
+    "site_id": "yigong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yigong-g1",
+      "yigong-g2",
+      "yigong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhada-r1",
+    "site_id": "zhada",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhada-g1",
+      "zhada-g2",
+      "zhada-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "everest-ordovician-r1",
+    "site_id": "everest-ordovician",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "everest-ordovician-g1",
+      "everest-ordovician-g2",
+      "everest-ordovician-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "rongbuk-r1",
+    "site_id": "rongbuk",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "rongbuk-g1",
+      "rongbuk-g2",
+      "rongbuk-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "cuihuashan-r1",
+    "site_id": "cuihuashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "cuihuashan-g1",
+      "cuihuashan-g2",
+      "cuihuashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "luochuan-r1",
+    "site_id": "luochuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "luochuan-g1",
+      "luochuan-g2",
+      "luochuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yanchuan-r1",
+    "site_id": "yanchuan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yanchuan-g1",
+      "yanchuan-g2",
+      "yanchuan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jinsixia-r1",
+    "site_id": "jinsixia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jinsixia-g1",
+      "jinsixia-g2",
+      "jinsixia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "nangongshan-r1",
+    "site_id": "nangongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "nangongshan-g1",
+      "nangongshan-g2",
+      "nangongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huashan-r1",
+    "site_id": "huashan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huashan-g1",
+      "huashan-g2",
+      "huashan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "liping-r1",
+    "site_id": "liping",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "liping-g1",
+      "liping-g2",
+      "liping-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "dunhuang-r1",
+    "site_id": "dunhuang",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "dunhuang-g1",
+      "dunhuang-g2",
+      "dunhuang-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "liujiaxia-r1",
+    "site_id": "liujiaxia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "liujiaxia-g1",
+      "liujiaxia-g2",
+      "liujiaxia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "kongtongshan-r1",
+    "site_id": "kongtongshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "kongtongshan-g1",
+      "kongtongshan-g2",
+      "kongtongshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huanghe-shilin-r1",
+    "site_id": "huanghe-shilin",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huanghe-shilin-g1",
+      "huanghe-shilin-g2",
+      "huanghe-shilin-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "linxia-r1",
+    "site_id": "linxia",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "linxia-g1",
+      "linxia-g2",
+      "linxia-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "maijishan-r1",
+    "site_id": "maijishan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "maijishan-g1",
+      "maijishan-g2",
+      "maijishan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhangye-r1",
+    "site_id": "zhangye",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhangye-g1",
+      "zhangye-g2",
+      "zhangye-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "bingling-r1",
+    "site_id": "bingling",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "bingling-g1",
+      "bingling-g2",
+      "bingling-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guangeogou-r1",
+    "site_id": "guangeogou",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guangeogou-g1",
+      "guangeogou-g2",
+      "guangeogou-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "yeliguan-r1",
+    "site_id": "yeliguan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "yeliguan-g1",
+      "yeliguan-g2",
+      "yeliguan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "pingshanhu-r1",
+    "site_id": "pingshanhu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "pingshanhu-g1",
+      "pingshanhu-g2",
+      "pingshanhu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "zhagana-r1",
+    "site_id": "zhagana",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "zhagana-g1",
+      "zhagana-g2",
+      "zhagana-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hezheng-r1",
+    "site_id": "hezheng",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hezheng-g1",
+      "hezheng-g2",
+      "hezheng-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "kanbula-r1",
+    "site_id": "kanbula",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "kanbula-g1",
+      "kanbula-g2",
+      "kanbula-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "kunlunshan-r1",
+    "site_id": "kunlunshan",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "kunlunshan-g1",
+      "kunlunshan-g2",
+      "kunlunshan-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huzhu-r1",
+    "site_id": "huzhu",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huzhu-g1",
+      "huzhu-g2",
+      "huzhu-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "nianbaoyuze-r1",
+    "site_id": "nianbaoyuze",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "nianbaoyuze-g1",
+      "nianbaoyuze-g2",
+      "nianbaoyuze-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "guide-r1",
+    "site_id": "guide",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "guide-g1",
+      "guide-g2",
+      "guide-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "animaging-r1",
+    "site_id": "animaging",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "animaging-g1",
+      "animaging-g2",
+      "animaging-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "huoshizhai-r1",
+    "site_id": "huoshizhai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "huoshizhai-g1",
+      "huoshizhai-g2",
+      "huoshizhai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "kanas-r1",
+    "site_id": "kanas",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "kanas-g1",
+      "kanas-g2",
+      "kanas-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "qitai-r1",
+    "site_id": "qitai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "qitai-g1",
+      "qitai-g2",
+      "qitai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "keketuohai-r1",
+    "site_id": "keketuohai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "keketuohai-g1",
+      "keketuohai-g2",
+      "keketuohai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "tianshan-tianchi-r1",
+    "site_id": "tianshan-tianchi",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "tianshan-tianchi-g1",
+      "tianshan-tianchi-g2",
+      "tianshan-tianchi-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "kuqa-r1",
+    "site_id": "kuqa",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "kuqa-g1",
+      "kuqa-g2",
+      "kuqa-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "jimunai-r1",
+    "site_id": "jimunai",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "jimunai-g1",
+      "jimunai-g2",
+      "jimunai-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  },
+  {
+    "id": "hongkong-r1",
+    "site_id": "hongkong",
+    "name": "半日地质步道",
+    "duration": "3–5 小时",
+    "difficulty": "中等，以园区步道为准",
+    "distance_km": null,
+    "elevation_m": null,
+    "accessible": "主要观景台多有步道；核心剖面可能需走石阶。",
+    "stop_geosite_ids": [
+      "hongkong-g1",
+      "hongkong-g2",
+      "hongkong-g3"
+    ],
+    "how_to_go": "先到游客中心取官方导览图，按打卡点顺序走，不要抄未开放捷径。",
+    "notes": "这是读岩石的路线，不是赶景点清单。每个点停够五分钟看层理和节理。"
+  }
+]

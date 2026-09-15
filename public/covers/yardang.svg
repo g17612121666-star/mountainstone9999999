@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" role="img" aria-label="雅丹示意，非实地照片">
+  <title>雅丹示意，非实地照片</title>
+  <rect width="400" height="180" fill="#d8c49a"/>
+  <rect x="0" y="118" width="400" height="22" fill="#b08958" opacity="0.85"/>
+  <rect x="0" y="140" width="400" height="18" fill="#8a6a40" opacity="0.9"/>
+  <rect x="0" y="158" width="400" height="22" fill="#2c261c" opacity="0.55"/>
+  
+  <rect x="50" y="70" width="22" height="60" fill="#8a6a40"/>
+  <rect x="90" y="50" width="18" height="80" fill="#b08958"/>
+  <rect x="130" y="62" width="28" height="68" fill="#8a6a40"/>
+  <rect x="180" y="44" width="16" height="86" fill="#b08958"/>
+  <rect x="220" y="58" width="24" height="72" fill="#8a6a40"/>
+  <rect x="270" y="48" width="20" height="82" fill="#b08958"/>
+  <rect x="320" y="66" width="30" height="64" fill="#8a6a40"/>
+
+  <text x="16" y="24" fill="#2c261c" font-size="11" font-family="serif" opacity="0.7">雅丹示意，非实地照片</text>
+</svg>

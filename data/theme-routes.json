@@ -1,0 +1,638 @@
+[
+  {
+    "id": "danxia",
+    "name": "丹霞走廊",
+    "thesis": "红层 + 垂直节理 + 崩塌。先到丹霞山看定义地，再沿线看同一套过程如何切出不同的崖、巷谷和方山。",
+    "site_ids": [
+      "danxiashan",
+      "longhushan",
+      "taining",
+      "qiyunshan",
+      "kanbula",
+      "chishui",
+      "langshan"
+    ],
+    "site_roles": [
+      "定义地：丹霞地貌的模式产地，把红层、节理、崩塌一次讲清。",
+      "丹霞与道教崖墓叠在一起，看垂直节理如何切出孤立残丘。",
+      "青年期丹霞：深切巷谷、水上丹霞，过程还没切到老年期残丘。",
+      "皖南红层，和黄山花岗岩对照——邻山完全不是一种岩石。",
+      "高原边缘的丹霞，海拔把同一过程抬到了黄河边上。",
+      "中国丹霞世界遗产的组成部分，湿润区赤壁。",
+      "崀山把丹霞的一线天和天生桥做得更完整。"
+    ],
+    "name_en": "Danxia corridor",
+    "thesis_en": "Red beds + vertical joints + collapse. Start at Danxiashan, the type locality, then watch the same process cut cliffs, alleyways and mesas.",
+    "task": "在丹霞山任选一面赤壁：指出硬层出檐、软层凹进、垂直节理把墙切成块。再到张掖页对照——那里没有这套巷谷。",
+    "task_en": "On any red cliff at Danxiashan, point to a hard ledge, a recessed soft bed, and a vertical joint. Then open Zhangye: that hill has colour, not this collapse sequence.",
+    "site_roles_en": [
+      "Type locality: red beds, joints and collapse in one lesson.",
+      "Danxia meeting Daoist cliff tombs — isolated residuals along joints.",
+      "Youthful Danxia: deep alleyways, process not yet at residual hills.",
+      "Southern Anhui red beds; contrast the granite of Huangshan next door.",
+      "Plateau-edge Danxia lifted to the Yellow River margin.",
+      "A wet-climate red cliff in the China Danxia World Heritage serial site.",
+      "Langshan completes slot canyons and natural bridges."
+    ]
+  },
+  {
+    "id": "karst",
+    "name": "喀斯特王国",
+    "thesis": "碳酸盐岩被水慢慢拆掉。石林是地表石芽，织金是地下宫殿，乐业是天坑，桂林是峰林，房山石花洞是北方对照。",
+    "site_ids": [
+      "shilin",
+      "xingwen",
+      "zhijindong",
+      "leye-fengshan",
+      "guilin-karst",
+      "shihuadong",
+      "wulong"
+    ],
+    "site_roles": [
+      "剑状石林：二叠纪灰岩被垂直裂隙和雨水切成的地表喀斯特。",
+      "石海与天坑，看塌陷如何把地下空间翻到地面。",
+      "洞穴化学沉积的教科书，看的是水里的钙如何再长成石头。",
+      "天坑群：地下河顶板大规模塌陷的终极形态。",
+      "峰林平原，湿润热带喀斯特的经典剖面。IUGS 地质遗产地。",
+      "北方对照：雾迷山组白云岩里的石花洞，喀斯特不只在广西。",
+      "武隆天坑地缝，世界自然遗产南中国喀斯特的一部分。"
+    ],
+    "name_en": "Karst kingdom",
+    "thesis_en": "Carbonate rock taken apart by water. Shilin is surface pinnacles, Zhijin is an underground palace, Leye is tiankengs, Guilin is a fenglin plain. Fangshan’s Stone Flower Cave is the northern check.",
+    "task": "滴稀盐酸：起泡才是碳酸盐岩。石林看垂直裂隙网格，织金看化学沉积，乐业看顶板塌陷。不要把张家界石英砂岩柱叫喀斯特。",
+    "task_en": "A drop of dilute HCl: fizz means carbonate. Shilin is a joint grid; Zhijin is chemical sediment; Leye is roof collapse. Zhangjiajie’s quartz-sandstone pillars are not karst.",
+    "site_roles_en": [
+      "Sword-like stone forest: Permian limestone cut by vertical fissures and rain.",
+      "Stone sea and tiankeng — collapse turning underground space inside-out.",
+      "Textbook cave chemistry: calcium coming back out of water as stone.",
+      "Tiankeng cluster: the end-member of underground-river roof collapse.",
+      "Fenglin plain, the classic wet-tropical karst. IUGS geoheritage.",
+      "Northern check: Wumishan dolostone, Stone Flower Cave. Karst is not only Guangxi.",
+      "Wulong tiankengs and gorges, part of South China Karst World Heritage."
+    ]
+  },
+  {
+    "id": "sandstone-peak",
+    "name": "砂岩峰林与方山",
+    "thesis": "张家界不是喀斯特。石英砂岩先被抬成夷平面，再沿垂直节理崩成方山、石墙、峰丛、峰林。嶂石岩是同一序列里更靠前的阶段。",
+    "site_ids": [
+      "zhangjiajie",
+      "zhangshiyan",
+      "xingtai-canyon"
+    ],
+    "site_roles": [
+      "石英砂岩峰林的模式地。夷平面→方山→石墙→峰丛→峰林。",
+      "嶂石岩地貌代表点：大型阶梯状悬崖，峰林还没切碎。",
+      "石英砂岩峡谷群，看的是下切而不是溶蚀。"
+    ],
+    "name_en": "Quartz-sandstone peaks and mesas",
+    "thesis_en": "Zhangjiajie is not karst. Quartz sandstone was lifted to a planation surface, then jointed into mesas, walls, clusters and pillars. Zhangshiyan is an earlier stage of the same sequence.",
+    "task": "在张家界看柱截面是不是近方形、滴酸起不起泡。到嶂石岩看还停在方山和长墙、峰林还没切碎。",
+    "task_en": "At Zhangjiajie check square cross-sections and no acid fizz. At Zhangshiyan the sequence still sits at mesa and wall — the forest of pillars is not finished.",
+    "site_roles_en": [
+      "Type locality of quartz-sandstone peak forest. Planation → mesa → wall → cluster → pillar.",
+      "Zhangshiyan landform: giant stepped cliffs; pillars not yet isolated.",
+      "Quartz-sandstone canyon country — incision, not dissolution."
+    ]
+  },
+  {
+    "id": "granite",
+    "name": "花岗岩名山",
+    "thesis": "酸性岩浆在地下冷凝，抬升后被球状风化和节理拆成石林、石蛋和陡峰。黄山、三清山、天柱山走的是同一套岩石，构造部位不同。",
+    "site_ids": [
+      "huangshan",
+      "sanqingshan",
+      "tianzhushan",
+      "huashan",
+      "yimengshan"
+    ],
+    "site_roles": [
+      "花岗岩峰林与石蛋的样板，垂直节理+球状风化。",
+      "柱状花岗岩峰林更瘦、更密，和黄山对照看节理密度。",
+      "超高压变质岩被花岗岩刺穿，山里同时有两种深部故事。",
+      "断块抬升的花岗岩，险在构造而不只在风化。",
+      "鲁中南花岗岩与变质基底的对照。"
+    ],
+    "name_en": "Granite mountains",
+    "thesis_en": "Acid magma froze underground, then spheroidal weathering and joints took the pluton apart. Huangshan, Sanqingshan and Tianzhushan share the rock; the structure differs.",
+    "task": "摸粗粒石英和钾长石。石蛋是球状风化，不是火山弹。垂直节理密的地方柱更瘦。",
+    "task_en": "Feel coarse quartz and K-feldspar. Tors are spheroidal weathering, not volcanic bombs. Denser vertical joints make thinner pillars.",
+    "site_roles_en": [
+      "Type granite peaks and tors: vertical joints + spheroidal weathering.",
+      "Thinner, denser granite pillars — joint spacing versus Huangshan.",
+      "A granite pluton punching through ultrahigh-pressure metamorphic rock.",
+      "A fault-block granite mountain: steepness is structure, not only weather.",
+      "Granite versus metamorphic basement in south-central Shandong."
+    ]
+  },
+  {
+    "id": "volcano",
+    "name": "中国火山",
+    "thesis": "从五大连池的新期玄武岩，到镜泊湖的堰塞、长白山的层状火山、漳州和涠洲的滨海玄武岩、雁荡山的白垩纪流纹质破火山，最后用佘山做城市对照：上海平原上突然冒出来的白垩纪火山锥。",
+    "site_ids": [
+      "wudalianchi",
+      "jingpohu",
+      "changbaishan",
+      "zhangzhou-volcano",
+      "weizhoudao",
+      "yandangshan",
+      "sheshan",
+      "tengchong",
+      "haikou-volcano"
+    ],
+    "site_roles": [
+      "中国最新期火山群之一，熔岩、锥体、堰塞湖还在同一张图上。",
+      "火山熔岩堰塞牡丹江，形成镜泊湖与地下森林。",
+      "巨型复式火山，天池是塌陷的岩浆房顶盖。",
+      "滨海玄武岩柱状节理，海浪把冷却裂隙洗出来。",
+      "火山岛，看的是海底到海面的喷发序列。",
+      "白垩纪流纹质破火山，和五大连池的玄武岩不是一种岩浆。",
+      "城市对照：佘山是火山岩，不是花岗岩名山，也不是国家地质公园。",
+      "腾冲火山地热，中国西南活跃的火山–地热系统。",
+      "雷琼火山的海南一侧，玛珥湖与玄武岩台地。"
+    ],
+    "name_en": "Volcanoes of China",
+    "thesis_en": "From Wudalianchi’s historic basalt, through Jingpohu’s lava dam and Changbaishan’s stratovolcano, to coastal basalt and Yandangshan’s Cretaceous rhyolite caldera. Sheshan is the urban check: a Cretaceous volcanic hill on the Shanghai plain — not a national geopark.",
+    "task": "先认岩浆系列：五大连池钾玄岩渣锥，长白山粗面岩–碱流岩破火山口，雁荡山流纹质，佘山碱性凝灰。不要一律叫活火山。",
+    "task_en": "Name the magma series: Wudalianchi potassic basalt cones, Changbaishan trachyte–pantellerite caldera, Yandangshan rhyolite, Sheshan alkaline tuff. Do not call every cone ‘active’.",
+    "site_roles_en": [
+      "One of China’s youngest volcanic fields: cones, lava and a dammed lake on one map.",
+      "Basalt dammed the Mudanjiang: Jingpohu and the underground forest.",
+      "A giant compound volcano; Tianchi is a collapsed magma-chamber roof.",
+      "Coastal basalt columnar joints washed out by waves.",
+      "A volcanic island: eruption from seafloor to sea surface.",
+      "A Cretaceous rhyolite caldera — not the same magma as Wudalianchi.",
+      "Urban check: Sheshan is volcanic rock, not granite, and not a national geopark.",
+      "Tengchong volcano-geothermal system on the collision belt.",
+      "Hainan side of Leiqiong: maars and basalt plateaus."
+    ]
+  },
+  {
+    "id": "fossil",
+    "name": "化石产地（只看不挖）",
+    "thesis": "化石是国家所有的地球档案。这条线只讲‘看到什么、如何认出、为什么不能挖’。澄江把寒武纪生命爆发摊在纸页状页岩上，自贡把侏罗纪恐龙埋在砂岩里。",
+    "site_ids": [
+      "chengjiang",
+      "zigong",
+      "shanwang",
+      "jiayin",
+      "chaoyang",
+      "zhucheng",
+      "linxia",
+      "yunyang"
+    ],
+    "site_roles": [
+      "寒武纪早期特异埋藏，软躯体也留下来了。世界遗产 / IUGS。",
+      "中侏罗世恐龙化石群，大山铺是看展品的地方，不是挖的地方。",
+      "中新世硅藻土里的完整哺乳类、昆虫与植物。",
+      "黑龙江嘉荫，晚白垩世恐龙。",
+      "热河生物群，带羽毛恐龙与早期鸟类的地层。",
+      "诸城恐龙，以数量和埋藏密集著称。",
+      "临夏新生代哺乳动物群，和政羊、铲齿象写在红层里。",
+      "云阳侏罗纪恐龙与三峡岩溶叠在同一座世界地质公园。"
+    ],
+    "name_en": "Fossil localities (look, don’t take)",
+    "thesis_en": "Fossils are a state archive. This trail is about what you see, how you recognise it, and why you must not dig. Chengjiang prints Cambrian soft bodies on shale; Zigong buries Jurassic dinosaurs in sandstone.",
+    "task": "全程只看展陈和保护廊。认出‘这是一层’而不是‘这是可以拿回家的标本’。发现重要化石向管理部门报告。",
+    "task_en": "Stay with displays and protected galleries. Recognise a bed, not a souvenir. Report important finds.",
+    "site_roles_en": [
+      "Early Cambrian exceptional preservation, including soft parts. World Heritage / IUGS.",
+      "Middle Jurassic dinosaurs. Dashanpu is for exhibits, not excavation.",
+      "Complete mammals, insects and plants in Miocene diatomite.",
+      "Late Cretaceous dinosaurs on the Heilongjiang at Jiayin.",
+      "Jehol Biota: feathered dinosaurs and early birds.",
+      "Zhucheng: density of dinosaur burial.",
+      "Linxia Cenozoic mammals in red beds. Look, don’t collect.",
+      "Yunyang: Jurassic dinosaurs stacked with Three Gorges karst in one UNESCO park."
+    ]
+  },
+  {
+    "id": "gssp",
+    "name": "金钉子与标准剖面",
+    "thesis": "金钉子是全球年代地层的尺子。常山钉下中国第一颗，煤山钉下灭绝与复苏的界线，蓟县把中元古界的时间展开，嵩山把太古宙到新生代叠成‘五代同堂’。",
+    "site_ids": [
+      "changshan",
+      "gssp-huangnitang",
+      "meishan",
+      "jixian",
+      "songshan",
+      "gssp-jiangshan"
+    ],
+    "site_roles": [
+      "世界地质公园，园子为金钉子和奥陶系剖面而建。",
+      "中国第一颗金钉子：奥陶系达瑞威尔阶。",
+      "一剖两钉：长兴阶与二叠–三叠系界线。IUGS 遗产地。",
+      "蓟县中上元古界标准剖面，华北的深时间尺子。",
+      "前寒武‘五代同堂’，三个前寒武纪角度不整合。",
+      "寒武系江山阶金钉子。"
+    ],
+    "name_en": "GSSPs and stratotypes",
+    "thesis_en": "A GSSP is a golden spike in the global time-scale. Changshan hosts China’s first; Meishan nails extinction and recovery; Jixian unrolls Mesoproterozoic time; Songshan stacks Archaean to Cenozoic.",
+    "task": "在每颗钉子前画出‘这一层之上/之下是哪个阶’。煤山两颗钉子不在同一厘米。禁止取样。",
+    "task_en": "At each spike, sketch what stage sits above and below. Meishan’s two spikes are not on the same centimetre. No sampling.",
+    "site_roles_en": [
+      "UNESCO Global Geopark built around GSSPs and Ordovician sections.",
+      "China’s first GSSP: base of the Darriwilian (Ordovician).",
+      "Two spikes on one section: Changhsingian and Permian–Triassic. IUGS geoheritage.",
+      "Jixian Mesoproterozoic–Neoproterozoic stratotype, North China’s deep-time ruler.",
+      "Three Precambrian angular unconformities — five generations on one mountain.",
+      "Jiangshanian GSSP (Cambrian)."
+    ]
+  },
+  {
+    "id": "wind",
+    "name": "风与沙",
+    "thesis": "干旱区把岩石交给风。敦煌是雅丹，阿拉善是沙漠地质公园，克什克腾有花岗岩与风蚀的混合，张掖彩色丘陵常被误叫丹霞——它不是丹霞山那种丹霞。",
+    "site_ids": [
+      "dunhuang",
+      "alxa",
+      "hexigten",
+      "zhangye",
+      "badain-jaran",
+      "qitai"
+    ],
+    "site_roles": [
+      "雅丹：定向风把河湖相砂泥岩削成垄槽。",
+      "阿拉善沙漠世界地质公园，风成沙与基岩残丘。",
+      "花岗岩石林遇上坝上风，岩石和风两套过程叠在一起。",
+      "白垩纪彩色丘陵。不是丹霞山那种丹霞，颜色来自沉积时的氧化还原。",
+      "IUGS：必鲁特沙山与湖泊，世界最高沙丘之一。",
+      "硅化木被风从侏罗纪河湖相里剥出来，看，不要捡。"
+    ],
+    "name_en": "Wind and sand",
+    "thesis_en": "Arid country hands the rock to the wind. Dunhuang is yardang, Alxa is a desert geopark, Hexigten mixes granite with wind. Zhangye’s colourful hills are often mis-sold as Danxia — they are not Danxiashan.",
+    "task": "看垄槽是不是平行盛行风、岩性是不是软硬互层。打开丹霞山页对照：那里靠垂直节理崩塌，这里靠风。",
+    "task_en": "Are the ridges parallel to the prevailing wind? Is the rock a hard–soft couplet? Open Danxiashan: that landscape collapses on joints; this one is wind.",
+    "site_roles_en": [
+      "Yardang: directional wind carving lacustrine sandstone and mudstone.",
+      "Alxa Desert UNESCO Global Geopark: dunes and inselbergs.",
+      "Granite forest meeting Bashang wind — two processes on one rock.",
+      "Cretaceous colourful hills. Not Danxia. Colour is redox at deposition.",
+      "IUGS: Bilutu dunes and lakes, among the world’s highest dunes.",
+      "Silicified wood stripped by wind from Jurassic beds. Look, don’t pocket it."
+    ]
+  },
+  {
+    "id": "ice",
+    "name": "冰与极高山",
+    "thesis": "冰川是移动的砂纸。四姑娘山、海螺沟、昆仑山把冰蚀、冰碛和极高山构造放在同一条线上。",
+    "site_ids": [
+      "siguniang",
+      "hailuogou",
+      "kunlunshan",
+      "yulongxueshan",
+      "nianbaoyuze",
+      "animaging"
+    ],
+    "site_roles": [
+      "极高山与现代冰川，横断山的花岗闪长岩被冰切开。",
+      "低海拔现代冰川，可走到冰舌看冰碛与消融中的冰面。",
+      "昆仑造山带上的世界地质公园，冰与构造同时在场。",
+      "玉龙雪山，中国最南端的现代海洋性冰川之一。",
+      "年宝玉则，花岗岩石林遇上高原冰川。",
+      "阿尼玛卿，东昆仑上的极高山冰帽。"
+    ],
+    "name_en": "Ice and extreme mountains",
+    "thesis_en": "A glacier is moving sandpaper. Siguniang, Hailuogou and Kunlun put ice erosion, moraine and high-mountain structure on one trail.",
+    "task": "认 U 谷、冰碛垄和擦痕。禁止走上未开放冰舌。把流水 V 谷从名单里划掉。",
+    "task_en": "Name a U-shaped valley, a moraine ridge, striae. Stay off closed ice tongues. Cross V-shaped river valleys off the list.",
+    "site_roles_en": [
+      "Extreme mountains and modern ice; granodiorite of the Hengduan cut by glaciers.",
+      "A low-elevation modern glacier: walk to the tongue, see moraine and melt.",
+      "UNESCO Global Geopark on the Kunlun orogen — ice and structure together.",
+      "Yulong Snow Mountain, among China’s southernmost temperate glaciers.",
+      "Nyenbo Yurtse: granite forest meeting plateau ice.",
+      "Anyemaqen ice cap on the eastern Kunlun."
+    ]
+  },
+  {
+    "id": "coast",
+    "name": "海岸与海岛",
+    "thesis": "海浪是另一套节理显示剂。香港把早白垩世酸性火成岩的柱状节理洗到潮间带，长山列岛、深沪湾、崇明岛分别是基岩岛、古森林潮滩和河口沙岛。",
+    "site_ids": [
+      "hongkong",
+      "changshan-islands",
+      "shenhuwan",
+      "chongming",
+      "dalian-coast",
+      "pingtan"
+    ],
+    "site_roles": [
+      "世界地质公园。六角柱状节理是冷却收缩，不是玄武岩才有。",
+      "渤海海峡基岩列岛，变质岩海岸。",
+      "深沪湾潮间带古森林与海岸风沙。",
+      "上海的国家地质公园是崇明岛，不是佘山。河口沙岛还在长。",
+      "大连滨海，老变质岩被海浪切出的海岸。",
+      "平潭岛花岗岩石蛋与海蚀。"
+    ],
+    "name_en": "Coasts and islands",
+    "thesis_en": "Waves are another joint developer. Hong Kong washes Early Cretaceous acid-rock columns into the intertidal; Changshan Islands, Shenhu Bay and Chongming are a bedrock archipelago, a drowned forest tidal flat, and an estuary sand island.",
+    "task": "先看潮汐表。香港柱状节理是酸性岩也能长。崇明是沙不是岩石，佘山才是基岩丘，而且佘山不是国家地质公园。",
+    "task_en": "Read the tide table first. Hong Kong’s columns grew in acid rock. Chongming is sand, not bedrock; Sheshan is the rock hill — and not a national geopark.",
+    "site_roles_en": [
+      "UNESCO Global Geopark. Hexagonal columns are cooling joints, not a basalt franchise.",
+      "Bedrock islands in the Bohai Strait, metamorphic coasts.",
+      "Shenhu Bay: intertidal ancient forest and coastal dunes.",
+      "Shanghai’s national geopark is Chongming, not Sheshan. The sand island is still growing.",
+      "Dalian coast: old metamorphic rock cut by waves.",
+      "Pingtan Island: granite tors and marine erosion."
+    ]
+  },
+  {
+    "id": "loess-yellow-river",
+    "name": "黄土与黄河",
+    "name_en": "Loess and the Yellow River",
+    "thesis": "风成黄土是黄河的沉积档案。隰县看黄土怎么堆，壶口看河怎么切自己的岩槛，永和与老牛湾看深切曲流，郑州与东营看泥沙被送到哪里。",
+    "thesis_en": "Aeolian loess is the Yellow River’s sedimentary archive. Xixian shows how the dust piled up; Hukou how the river cuts its own sill; Yonghe and Laoniuwan how a meander incises in place; Zhengzhou and Dongying where the silt is delivered.",
+    "site_ids": [
+      "xixian-loess",
+      "hukou",
+      "yonghe",
+      "laoniuwan",
+      "zhengzhou-huanghe",
+      "huanghe-delta"
+    ],
+    "site_roles": [
+      "黄土怎么落下来：风积、垂直节理、塬梁峁。不是红层丹霞。",
+      "壶口：三叠系砂泥岩互层被切出的岩槛瀑布。十里龙槽是瀑布后退，不是溶洞。",
+      "永和蛇曲：河先弯、地后抬，深切曲流把古河道几何保存下来。",
+      "老牛湾：晋陕峡谷另一段深切，对照永和。",
+      "郑州黄河：出山口后的宽谷与地上河，泥沙开始摊开。",
+      "东营三角洲：黄土和上游侵蚀的终点，潮滩还在长。"
+    ],
+    "site_roles_en": [
+      "How loess landed: aeolian silt, vertical joints, yuan–liang–mao. Not red-bed Danxia.",
+      "Hukou: a knickpoint waterfall in Triassic sandstone–mudstone. The ten-li trough is retreat, not a cave.",
+      "Yonghe: the bend came first, uplift later — an incised meander keeping its plan.",
+      "Laoniuwan: another incised reach of the Jin–Shaan gorge, a check on Yonghe.",
+      "Zhengzhou: the river leaves the mountains, the silt begins to spread, a perched channel.",
+      "Dongying delta: the end of loess and upstream erosion. The tidal flat is still growing."
+    ],
+    "task": "在壶口指出硬层岩槛和软层凹槽；在永和从高处数河弯。把‘黄河是从溶洞里喷出来的’划掉。",
+    "task_en": "At Hukou point to the hard sill and the recessed soft bed. At Yonghe count the bends from above. Cross off ‘the Yellow River bursts from a cave’."
+  },
+  {
+    "id": "taihang",
+    "name": "太行切开华北",
+    "name_en": "Taihang cuts North China",
+    "thesis": "太行山前把华北地台切成峡谷，不是普通山水景区。云台山近水平的寒武–奥陶灰岩和石英砂岩被切开；林虑山、壶关、邢台把同一套下切写到不同河段；野三坡和十渡是山前河谷喀斯特，不是桂林峰林。",
+    "thesis_en": "The Taihang front carves the North China Platform into gorges — not generic scenery. Yuntaishan’s near-horizontal Cambrian–Ordovician carbonates and quartz sandstone are cut open; Linlü, Huguan and Xingtai write the same incision on different reaches; Yesanpo and Shidu are foothill valley karst, not Guilin fenglin.",
+    "site_ids": [
+      "yuntaishan",
+      "linlushan",
+      "huguan",
+      "xingtai-canyon",
+      "yesanpo",
+      "shidu"
+    ],
+    "site_roles": [
+      "云台山：近水平层被切开的红崖与天瀑。不是丹霞，不是张家界。",
+      "红旗渠–林虑山：人工渠贴在太行断崖上，先认岩石再认工程。",
+      "壶关峡谷：太行南段石英砂岩/碳酸盐岩被切出的障谷。",
+      "邢台峡谷群：石英砂岩下切，滴酸不起泡。",
+      "野三坡：山前河谷，喀斯特与碎屑岩并置。",
+      "十渡：拒马河把雾迷山组切成弯。北方河谷喀斯特，不是桂林。"
+    ],
+    "site_roles_en": [
+      "Yuntaishan: near-horizontal beds cut into red cliffs and a hanging waterfall. Not Danxia, not Zhangjiajie.",
+      "Red Flag Canal–Linlü: a canal plastered on a Taihang scarp. Read the rock before the engineering.",
+      "Huguan: barrier gorges in the southern Taihang.",
+      "Xingtai canyon cluster: quartz-sandstone incision, no acid fizz.",
+      "Yesanpo: a foothill valley where karst and clastics sit together.",
+      "Shidu: the Juma River bending through Wumishan carbonates. Northern valley karst, not Guilin."
+    ],
+    "task": "在云台山分清石英砂岩（滴酸不起泡）和灰岩（起泡）。到十渡再核对北方河谷喀斯特的层理近水平。",
+    "task_en": "At Yuntaishan separate quartz sandstone (no fizz) from limestone (fizz). At Shidu check that northern valley karst still has near-horizontal bedding."
+  },
+  {
+    "id": "ncc-archive",
+    "name": "华北地台史书",
+    "name_en": "North China Craton archive",
+    "thesis": "华北克拉通的时间被几条剖面摊开：蓟县是中–新元古界的海，嵩山把太古宙到寒武系叠成不整合，泰山是新太古代基底被寒武纪海不整合盖住，五台是夷平面残片，房山把雾迷山组白云岩送到北京西山。",
+    "thesis_en": "Time on the North China Craton is unrolled by a few sections: Jixian the Meso–Neoproterozoic sea, Songshan Archaean-to-Cambrian unconformities, Taishan an unconformity of Cambrian sea on Neoarchaean basement, Wutai a planation remnant, Fangshan Wumishan dolostone in the Western Hills of Beijing.",
+    "site_ids": [
+      "jixian",
+      "songshan",
+      "taishan",
+      "wutaishan",
+      "fangshan"
+    ],
+    "site_roles": [
+      "蓟县：燕辽沉降带的海相尺子。叠层石在雾迷山组。",
+      "嵩山：三道前寒武角度不整合。峻极峰是石英岩，不是花岗岩。",
+      "泰山：登的是太古宙 TTG，寒武系只在山麓。",
+      "五台山：台顶是夷平面残片，不是推平的神迹。",
+      "房山：北方河谷喀斯特钉在雾迷山组上，不是桂林峰林平原。"
+    ],
+    "site_roles_en": [
+      "Jixian: a marine ruler of the Yanliao aulacogen. Stromatolites in the Wumishan.",
+      "Songshan: three Precambrian angular unconformities. The high peak is quartzite, not granite.",
+      "Taishan: you climb Neoarchaean TTG; Cambrian limestone is only in the foothills.",
+      "Wutai: the flat tops are planation remnants, not a miracle.",
+      "Fangshan: northern valley karst on Wumishan dolostone, not a Guilin fenglin plain."
+    ],
+    "task": "在嵩山指出一道角度不整合：上下岩层产状不同。到泰山山麓找寒武系，主峰找片麻岩。",
+    "task_en": "At Songshan point to an angular unconformity: beds above and below do not share a dip. In the Taishan foothills find Cambrian; on the summit find gneiss."
+  },
+  {
+    "id": "jehol-dinosaur",
+    "name": "热河生物群与恐龙",
+    "name_en": "Jehol Biota and dinosaurs",
+    "thesis": "中生代陆地与湖泊档案的时空分布。旧线「化石产地」讲怎么看、为什么不能挖；本线讲热河生物群如何连到山东、河南、黑龙江和湖北的恐龙与恐龙蛋。全程只看不挖。",
+    "thesis_en": "A time-space map of Mesozoic lakes and land. The older fossil trail is about how to look and why not to dig; this trail is how the Jehol Biota connects to dinosaurs and eggs in Shandong, Henan, Heilongjiang and Hubei. Look, don’t take.",
+    "site_ids": [
+      "chaoyang",
+      "shanwang",
+      "zhucheng",
+      "laiyang",
+      "ruyang",
+      "jiayin",
+      "yunxian"
+    ],
+    "site_roles": [
+      "朝阳：热河生物群。带羽毛恐龙与早期鸟类写在湖相页岩里。",
+      "山旺：中新世硅藻土，对照热河——时代更年轻的湖。",
+      "诸城：恐龙骨骼密集埋藏，看的是层位和展陈。",
+      "莱阳：白垩纪陆相地层，山东恐龙故事的另一页。",
+      "汝阳：河南恐龙，黄河南岸的中生代陆地。",
+      "嘉荫：黑龙江晚白垩世恐龙，中国最北的一页。",
+      "郧县：恐龙蛋层。蛋是层，不是可以挖的纪念品。"
+    ],
+    "site_roles_en": [
+      "Chaoyang: Jehol Biota. Feathered dinosaurs and early birds in lacustrine shale.",
+      "Shanwang: Miocene diatomite — a younger lake, a check on Jehol.",
+      "Zhucheng: dense dinosaur bone beds. Read the horizon and the exhibits.",
+      "Laiyang: Cretaceous continental beds, another page of Shandong dinosaurs.",
+      "Ruyang: dinosaurs south of the Yellow River, Mesozoic land in Henan.",
+      "Jiayin: Late Cretaceous dinosaurs on the Heilongjiang, the northern page.",
+      "Yunxian: dinosaur-egg beds. An egg is a horizon, not a souvenir."
+    ],
+    "task": "每到一站先问：这是湖还是河？热河是湖相页岩，诸城是陆地埋藏。全程不敲、不挖。",
+    "task_en": "At each stop ask: lake or river? Jehol is lacustrine shale; Zhucheng is a land burial. No hammer, no digging."
+  },
+  {
+    "id": "yangtze",
+    "name": "长江切开扬子",
+    "name_en": "The Yangtze cuts the Yangtze Platform",
+    "thesis": "扬子地台被河流与岩溶共同拆开。三峡是江切出来的剖面，恩施是峡谷与腾龙洞，神农架是抬升的基底与喀斯特，长阳清江把岩溶河谷再写一遍。不是三峡游轮介绍。",
+    "thesis_en": "The Yangtze Platform taken apart by a river and by karst. The Three Gorges are a section the river cut; Enshi is a canyon plus Tenglong Cave; Shennongjia is an uplifted basement with karst; the Qingjiang at Changyang writes a karst valley again. Not a cruise brochure.",
+    "site_ids": [
+      "sanxia",
+      "enshi",
+      "shennongjia",
+      "changyang"
+    ],
+    "site_roles": [
+      "三峡：江把扬子碳酸盐岩和碎屑岩切开。看的是剖面，不是游轮窗景。",
+      "恩施大峡谷–腾龙洞：地表峡谷与地下河大厅是同一套溶蚀的两面。",
+      "神农架：抬升的基底遇上喀斯特，海拔把溶蚀和剥蚀叠在一起。",
+      "长阳清江：清江岩溶河谷，三峡过程在支流上的对照。"
+    ],
+    "site_roles_en": [
+      "Three Gorges: the river cutting Yangtze carbonates and clastics. A section, not a cabin window.",
+      "Enshi canyon–Tenglong Cave: the surface canyon and the underground hall are two faces of one dissolution.",
+      "Shennongjia: uplifted basement meeting karst; altitude stacks dissolution on denudation.",
+      "Changyang Qingjiang: a karst valley on a tributary, a check on the Three Gorges process."
+    ],
+    "task": "在三峡或恩施指出：哪一面是层理，哪一面是溶沟。江切和溶蚀不要用同一个词。",
+    "task_en": "At the Gorges or Enshi: which face is bedding, which is dissolution grooves? Do not use one word for river-cut and karst."
+  },
+  {
+    "id": "urban-stone",
+    "name": "城市里的石头",
+    "name_en": "Stone in the city",
+    "thesis": "城市和近郊也能读地质。佘山是白垩纪碱性火山锥，城市地质点，不是国家地质公园；崇明岛才是上海的国家地质公园，而且还是沙。六合玄武岩盖在雨花石砾石层上，汤山方山一园两套，木兰山把变质岩送到武汉北郊。",
+    "thesis_en": "Cities have geology. Sheshan is a Cretaceous alkaline volcanic hill — an urban geosite, not a national geopark. Chongming Island is Shanghai’s national geopark, and it is still sand. Luhe basalt caps rainstone gravels; Tangshan–Fangshan is two stories in one park; Mulan Mountain brings metamorphic rock to northern Wuhan.",
+    "site_ids": [
+      "sheshan",
+      "chongming",
+      "luhe",
+      "tangshan-fangshan",
+      "mulanshan"
+    ],
+    "site_roles": [
+      "佘山：上海平原上的白垩纪火山残丘。不是花岗岩，不是国家地质公园。",
+      "崇明岛：全新世沙岛。上海的国家地质公园在这里。没有溶洞。",
+      "六合：新生代玄武岩方山，山下雨花石砾石层只看不捡保护区的。",
+      "江宁汤山方山：汤山是古生界灰岩溶洞，方山是新生代火山。不要用一套故事解释两座山。",
+      "木兰山：武汉北郊的变质岩中山，城市对照的深部岩石。"
+    ],
+    "site_roles_en": [
+      "Sheshan: a Cretaceous volcanic remnant on the Shanghai plain. Not granite. Not a national geopark.",
+      "Chongming: a Holocene sand island. This is Shanghai’s national geopark. No caves.",
+      "Luhe: a Neogene basalt mesa; rainstone gravels at the foot — look, don’t pocket protected pebbles.",
+      "Tangshan–Fangshan, Jiangning: Tangshan is Palaeozoic limestone caves; Fangshan is a Cenozoic volcano. Two hills, two stories.",
+      "Mulan Mountain: metamorphic mid-hills north of Wuhan, deep crust in the suburbs."
+    ],
+    "task": "先问脚下是沙、火山岩还是灰岩。佘山滴酸不起泡；崇明没有石头可滴；汤山溶洞起泡，方山顶气孔熔岩不起泡。",
+    "task_en": "Ask what is underfoot: sand, volcanic rock, or limestone. Sheshan does not fizz; Chongming has no rock to test; Tangshan caves fizz, Fangshan’s vesicular lava does not."
+  },
+  {
+    "id": "quartzite-planation",
+    "name": "石英岩与夷平面",
+    "name_en": "Quartzite and planation",
+    "thesis": "硬石英岩被抬成夷平面后再切开。泰山主峰是太古宙基底，山麓和邻区石英岩记录更老的海；嵩山三皇寨的石英岩就是主峰；嶂石岩把中元古界石英砂岩停在方山–长墙阶段。严禁写成张家界那条砂岩峰林线的重复版。",
+    "thesis_en": "Hard quartzite lifted to a planation surface, then cut. Taishan’s summit is Archaean basement; quartzite nearby records an older sea. Songshan’s Sanhuangzhai quartzite is the peak itself. Zhangshiyan parks Mesoproterozoic quartz sandstone at the mesa–wall stage. This is not a rerun of the Zhangjiajie pillar trail.",
+    "site_ids": [
+      "taishan",
+      "songshan",
+      "zhangshiyan"
+    ],
+    "site_roles": [
+      "泰山：先认主峰片麻岩，再在山麓找石英岩/寒武系。夷平面的故事在抬升，不在峰林。",
+      "嵩山三皇寨：石英岩抗风化构成峻极峰。三道不整合是尺子。",
+      "嶂石岩：同一类硬砂岩地貌的更老阶段，方山和长墙，峰林未完成。"
+    ],
+    "site_roles_en": [
+      "Taishan: name the summit gneiss first, then quartzite/Cambrian in the foothills. Planation is about uplift, not pillars.",
+      "Songshan Sanhuangzhai: weathering-resistant quartzite makes the high peak. Three unconformities are the ruler.",
+      "Zhangshiyan: an older stage of the same hard-sandstone family — mesa and wall, pillars not finished."
+    ],
+    "task": "把张家界的峰林照片收起来。本线只认：石英岩/石英砂岩是不是构成平顶？节理有没有把平顶切碎？",
+    "task_en": "Put the Zhangjiajie pillar photos away. This trail only asks: does quartzite/quartz sandstone make a flat top? Have joints broken that top into pillars yet?"
+  },
+  {
+    "id": "estuary",
+    "name": "河口、潮滩与沙岛",
+    "name_en": "Estuaries, tidal flats and sand islands",
+    "thesis": "泥沙、潮坪、古森林与湖沼。和旧线「海岸与海岛」（基岩岛、柱状节理、海蚀）不是同一件事。崇明是还在长的沙，东营是黄河的终点，兴凯湖是构造湖与湿地，深沪湾潮间带把古森林露出来。",
+    "thesis_en": "Mud, tidal flats, drowned forests and wetlands. Not the old coast trail (bedrock islands, columns, marine erosion). Chongming is still-growing sand; Dongying is the Yellow River’s end; Xingkai is a tectonic lake and marsh; Shenhu Bay bares a drowned forest on the tide.",
+    "site_ids": [
+      "chongming",
+      "huanghe-delta",
+      "xingkaihu",
+      "shenhuwan"
+    ],
+    "site_roles": [
+      "崇明：潮沟、潮滩、沙岛迁移。先看潮汐再上滩。",
+      "东营三角洲：河口泥沙与潮坪，黄土的终点。",
+      "兴凯湖：构造湖盆与湿地，不是海蚀崖。",
+      "深沪湾：潮间带古森林，海面变化写在树桩上。"
+    ],
+    "site_roles_en": [
+      "Chongming: tidal creeks, flats, a migrating sand island. Read the tide before you step on.",
+      "Dongying delta: estuary silt and tidal flats, the end of loess.",
+      "Xingkai Lake: a tectonic basin and wetland, not a sea cliff.",
+      "Shenhu Bay: an intertidal ancient forest. Sea-level change written on stumps."
+    ],
+    "task": "这四个点都不要去找柱状节理。问的是泥沙和水面：潮沟怎么摆、三角洲怎么向前、古树桩现在为什么被潮水淹。",
+    "task_en": "Do not hunt columnar joints here. Ask about sediment and water: how the creek swings, how the delta steps forward, why the stumps are under the tide now."
+  },
+  {
+    "id": "dabie-sulu",
+    "name": "大别–苏鲁造山带",
+    "name_en": "Dabie–Sulu orogen",
+    "thesis": "碰撞造山与高压–超高压变质，不是又一条花岗岩名山。安徽大别山看造山带核部，天柱山的花岗岩是刺穿超高压岩的那一针，金刚台在北缘，五莲山把苏鲁带送到鲁东南。天柱山在旧花岗岩线上只写节理峰林；本线只写它在造山带里的角色。",
+    "thesis_en": "Collision and high- to ultrahigh-pressure metamorphism — not another granite-peak tour. Dabie (Lu’an) is the orogen core; Tianzhushan’s granite is the needle through UHP rock; Jingangtai sits on the northern margin; Wulianshan brings the Sulu belt to southeast Shandong. On the granite trail Tianzhushan was about joints; here it is about the orogen.",
+    "site_ids": [
+      "dabieshan-luan",
+      "tianzhushan",
+      "jingangtai",
+      "wulianshan"
+    ],
+    "site_roles": [
+      "安徽大别山（六安）：造山带核部变质岩，碰撞的深部。",
+      "天柱山：花岗岩刺穿超高压变质岩。本线看围岩和接触，不看迎客松式的石蛋。",
+      "信阳金刚台：大别北缘火山–侵入杂岩。",
+      "五莲山–九仙山：苏鲁超高压带东缘的山。"
+    ],
+    "site_roles_en": [
+      "Dabie (Lu’an): metamorphic core of the orogen, the deep part of the collision.",
+      "Tianzhushan: granite punching UHP rock. Here you read the country rock and the contact, not the tors.",
+      "Jingangtai, Xinyang: volcanic–intrusive complex on the northern Dabie margin.",
+      "Wulian–Jiuxian: mountains on the eastern Sulu UHP belt."
+    ],
+    "task": "在天柱山先找不是花岗岩的那套深色变质岩。能指出来，这条线才算走懂。",
+    "task_en": "At Tianzhushan find the dark metamorphic rock that is not granite. If you can point to it, the trail has done its job."
+  },
+  {
+    "id": "north-karst",
+    "name": "北方喀斯特",
+    "name_en": "Northern karst",
+    "thesis": "北方峡谷型、洞穴型喀斯特。旧线「喀斯特王国」以南方峰林、天坑、地下河为主；本线走房山石花洞与十渡、野三坡、本溪、宁武冰洞、临城。不要重复石林、织金、乐业、桂林、武隆的叙事。",
+    "thesis_en": "Northern valley and cave karst. The old Karst kingdom trail is southern fenglin, tiankengs and underground rivers. This one walks Fangshan (Stone Flower Cave / Shidu), Yesanpo, Benxi, the Ningwu ice cave and Lincheng. Do not rerun Shilin, Zhijin, Leye, Guilin or Wulong.",
+    "site_ids": [
+      "fangshan",
+      "yesanpo",
+      "benxi",
+      "ningwu",
+      "lincheng"
+    ],
+    "site_roles": [
+      "房山：雾迷山组白云岩。石花洞溶得慢、花更密；十渡是拒马河谷。不是桂林峰林平原。",
+      "野三坡：山前河谷喀斯特，和十渡同一条太行山前故事。",
+      "本溪：辽东洞穴与水洞，北方地下喀斯特。",
+      "宁武冰洞：灰岩洞里的季节性冰。冰是气候，洞是喀斯特，不是冰川挖的。",
+      "临城：冀南洞穴喀斯特，对照房山。"
+    ],
+    "site_roles_en": [
+      "Fangshan: Wumishan dolostone. Stone Flower Cave dissolves slowly, so the flowers are denser; Shidu is the Juma valley. Not a Guilin fenglin plain.",
+      "Yesanpo: foothill valley karst, the same Taihang-front story as Shidu.",
+      "Benxi: Liaodong caves and a water cave — northern underground karst.",
+      "Ningwu ice cave: seasonal ice in a limestone cave. Ice is climate; the cave is karst, not glacial excavation.",
+      "Lincheng: cave karst in southern Hebei, a check on Fangshan."
+    ],
+    "task": "滴酸：白云岩反应弱于灰岩。北方洞小、石花多、峰林少。把桂林的峰林照片从本线拿开。",
+    "task_en": "Acid: dolostone fizzes less than limestone. Northern caves are smaller, flowers denser, fenglin scarce. Take the Guilin peak photos off this trail."
+  }
+]

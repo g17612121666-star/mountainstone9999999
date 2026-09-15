@@ -1,0 +1,62 @@
+import { Link, useRouterState } from "@tanstack/react-router";
+import { Map, Compass, BookOpen, Info } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useT } from "@/lib/i18n";
+import { LangSwitch } from "./LangSwitch";
+
+export function AppHeader({ dense = false }: { dense?: boolean }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const t = useT();
+  const links = [
+    { to: "/", label: t("navMap"), icon: Map },
+    { to: "/catalog", label: t("navCatalog"), icon: BookOpen },
+    { to: "/routes", label: t("navRoutes"), icon: Compass },
+    { to: "/about", label: t("navAbout"), icon: Info },
+  ] as const;
+  return (
+    <header
+      className={cn(
+        "z-30 flex items-center gap-3 border-b border-border bg-bg/92 px-3 backdrop-blur-sm",
+        dense ? "h-12" : "h-14",
+      )}
+    >
+      <Link to="/" className="flex shrink-0 items-center gap-2">
+        <span className="flex h-8 w-6 flex-col overflow-hidden rounded-sm border border-border">
+          <span className="h-1.5 bg-moss" />
+          <span className="h-1.5 bg-sand" />
+          <span className="h-1.5 bg-hematite" />
+          <span className="flex-1 bg-ink" />
+        </span>
+        <span>
+          <span className="font-display block text-base leading-tight font-semibold tracking-tight">
+            {t("appName")}
+          </span>
+          {!dense ? (
+            <span className="block text-[11px] text-muted">{t("tagline")}</span>
+          ) : null}
+        </span>
+      </Link>
+      <nav className="ml-auto flex items-center gap-0.5" aria-label={t("mainNav")}>
+        {links.map((l) => {
+          const active = l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
+          const Icon = l.icon;
+          return (
+            <Link
+              key={l.to}
+              to={l.to}
+              aria-label={l.label}
+              className={cn(
+                "flex h-11 items-center gap-1.5 rounded-md px-2.5 text-sm transition-colors duration-150",
+                active ? "bg-surface-2 text-ink" : "text-muted hover:bg-surface-2 hover:text-ink",
+              )}
+            >
+              <Icon className="size-4" strokeWidth={1.75} />
+              <span className="hidden sm:inline">{l.label}</span>
+            </Link>
+          );
+        })}
+        <LangSwitch />
+      </nav>
+    </header>
+  );
+}

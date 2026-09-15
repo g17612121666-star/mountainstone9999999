@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei",
+    system-ui, sans-serif;
+  --font-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "Noto Serif CJK SC",
+    serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --color-bg: #f3eee4;
+  --color-bg-warm: #ebe3d4;
+  --color-surface: #f7f3eb;
+  --color-surface-2: #e7dfd0;
+  --color-ink: #2c261c;
+  --color-fg: #2c261c;
+  --color-muted: #6e6456;
+  --color-subtle: #8a7f70;
+  --color-sand: #6b5344;
+  --color-primary: #6b5344;
+  --color-primary-fg: #f7f3eb;
+  --color-moss: #3d5c52;
+  --color-accent: #3d5c52;
+  --color-accent-fg: #f4efe6;
+  --color-hematite: #7a3b32;
+  --color-slate: #4a5c6a;
+  --color-border: #d4cbb8;
+  --color-border-strong: #b9ad96;
+  --color-ring: #3d5c52;
+  --color-card: #f7f3eb;
+  --color-background: #f3eee4;
+  --color-foreground: #2c261c;
+  --color-muted-foreground: #6e6456;
+  --color-destructive: #7a3b32;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border: 0 0 0 1px rgb(44 38 28 / 0.08), 0 1px 2px -1px rgb(44 38 28 / 0.06),
+    0 2px 6px 0 rgb(44 38 28 / 0.04);
+  --shadow-border-hover: 0 0 0 1px rgb(44 38 28 / 0.12), 0 4px 14px -2px rgb(44 38 28 / 0.1);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.35rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-moss);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-moss) 28%, white);
+  }
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #1c241c;
+  z-index: 0;
+}
+
+.tile-rich {
+  filter: saturate(1.2) contrast(1.1) brightness(0.94);
+}
+
+.leaflet-control-layers {
+  background: var(--color-surface) !important;
+  color: var(--color-ink) !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-border) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.leaflet-control-layers-toggle {
+  background-color: var(--color-surface) !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.leaflet-control-attribution {
+  background: color-mix(in oklab, var(--color-bg) 86%, transparent) !important;
+  color: var(--color-muted) !important;
+  font-size: 10px !important;
+  max-width: min(70vw, 22rem);
+}
+
+.leaflet-control-zoom a {
+  background: var(--color-surface) !important;
+  color: var(--color-ink) !important;
+  border: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+}
+
+.marker-dot {
+  border-radius: 999px;
+  border: 2px solid #f7f3eb;
+  box-shadow: 0 1px 4px rgb(44 38 28 / 0.35);
+}
+
+.cluster-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #6b5344;
+  color: #f7f3eb;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #f7f3eb;
+  box-shadow: 0 1px 4px rgb(44 38 28 / 0.35);
+}
+
+.cluster-dot span {
+  line-height: 1;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  header,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  body,
+  html {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .field-card {
+    max-width: none;
+    padding: 0;
+  }
+
+  .field-card h1,
+  .field-card h2 {
+    color: #111 !important;
+    break-after: avoid;
+  }
+
+  .field-card img {
+    max-height: 42mm;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.15);
+  }
+}
+
+.marker-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #2c261c;
+  background: rgb(247 243 235 / 0.92);
+  padding: 1px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgb(44 38 28 / 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
