@@ -3,13 +3,16 @@ import { LandformCover } from "@/components/cover/LandformCover";
 import { LinkedText } from "@/components/geo/LinkedText";
 import { OfficialBox } from "@/components/geo/OfficialBox";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
-import { BiliEmbed, EmptyVideoSlot } from "@/components/media/BiliEmbed";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { SiteBadges } from "@/components/site/SiteBadges";
+import { SiteLinkCard } from "@/components/site/SiteLinkCard";
 import { SiteMiniMap } from "@/components/site/SiteMiniMap";
 import { VisitCard } from "@/components/site/VisitCard";
 import { Button } from "@/components/ui/button";
+import { ageLabel } from "@/lib/geo/age";
 import {
   getAreas,
+  getGeosite,
   getGeosites,
   getRoutes,
   getSite,
@@ -17,15 +20,16 @@ import {
   getVisit,
   relatedSites,
   STOP_PHOTOS,
-  VIDEO_SLOT_SITES,
 } from "@/lib/geo/catalog";
+import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
-import { GENERIC_DO_NOT, isOwnCover, isRealPhoto } from "@/lib/geo/safety";
+import { GENERIC_DO_NOT, isRealPhoto } from "@/lib/geo/safety";
 import type { Geosite, Site } from "@/lib/geo/types";
 import {
   displayName,
-  fossilLaw,
+  fossilLawFor,
+  hasQualifiedEn,
   landformLabel,
   localizeArea,
   localizeGeosite,
@@ -45,6 +49,7 @@ export function SiteDetail({ site }: { site: Site }) {
   const locale = useLocale((s) => s.locale);
   const t = useT();
   const s = localizeSite(site, locale);
+  const standard = site.content_status === "standard";
   const geosites = getGeosites(site.id)
     .filter((g) => !isFakeGeosite(g) && !isGenericGeositeName(g.name))
     .map((g) => localizeGeosite(g, locale));
@@ -70,6 +75,15 @@ export function SiteDetail({ site }: { site: Site }) {
       s.legal_notes.includes("化石") ||
       s.legal_notes.includes("Fossil") ||
       site.theme_route_ids.includes("fossil"));
+  const areaOnlyOnce = geosites.some((g) => g.public_precision === "area_only");
+  const formation = visibleCopy(s.formation_short);
+  const today = visibleCopy(s.what_you_see_today);
+  const tips = (s.observation_tips || []).map(visibleCopy).filter(Boolean);
+  const rocks = (s.visible_rocks_minerals_fossils || []).filter((v) => !isPlaceholderCopy(v.name));
+  const safety = (s.safety_notes || []).map(visibleCopy).filter(Boolean);
+  const legal = visibleCopy(s.legal_notes);
+  const showEnPending = locale === "en" && !hasQualifiedEn(site.id);
+  const age = ageLabel(s.geologic_age_text || site.geologic_age_text, locale);
 
   return (
     <article className="pb-16">
@@ -89,6 +103,9 @@ export function SiteDetail({ site }: { site: Site }) {
             {placeLine(site, locale)}
             {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
           </p>
+          {showEnPending ? (
+            <p className="rounded-md bg-surface-2 px-3 py-2 text-sm text-muted">{t("enBodyPending")}</p>
+          ) : null}
           <p className="text-lg leading-relaxed">{s.hook}</p>
           <div className="flex flex-wrap gap-2">
             <Button variant="ghost" size="sm" asChild>
@@ -102,21 +119,6 @@ export function SiteDetail({ site }: { site: Site }) {
               </Link>
             </Button>
           </div>
-          <OfflinePackButton
-            pack={{
-              kind: "site",
-              id: site.id,
-              title: site.name,
-              title_en: site.name_en || site.name,
-              cover: photo,
-              body_zh: [site.hook, site.formation_short, site.what_you_see_today, site.legal_notes]
-                .filter(Boolean)
-                .join("\n\n"),
-              body_en: [s.hook, s.formation_short, s.what_you_see_today, s.legal_notes]
-                .filter(Boolean)
-                .join("\n\n"),
-            }}
-          />
         </header>
 
         {s.corrections?.length ? (
@@ -132,26 +134,49 @@ export function SiteDetail({ site }: { site: Site }) {
 
         {s.gssp ? <GsspBlock site={s} original={site} /> : null}
 
-        {s.park_structure ? (
+        {s.park_structure && !standard ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("parkStructure")}</h2>
             <p className="mt-2 text-sm leading-relaxed">{s.park_structure}</p>
           </section>
         ) : null}
 
-        <section>
-          <h2 className="font-display text-xl font-semibold">{t("formation")}</h2>
-          <p className="mt-2 text-sm leading-relaxed">
-            <LinkedText text={s.formation_short} />
+        {formation ? (
+          <section>
+            <h2 className="font-display text-xl font-semibold">{t("formation")}</h2>
+            <p className="mt-2 text-sm leading-relaxed">
+              <LinkedText text={formation} />
+            </p>
+            <p className="mt-2 text-xs text-subtle">
+              {t("landformColon")}
+              {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
+              <span className="mx-1">·</span>
+              {t("age")} {age}
+            </p>
+          </section>
+        ) : (
+          <p className="text-xs text-subtle">
+            {t("age")} {age}
           </p>
-          <p className="mt-2 text-xs text-subtle">
-            {t("landformColon")}
-            {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
-            {s.geologic_age_text ? ` · ${t("age")} ${s.geologic_age_text}` : ""}
-          </p>
-        </section>
+        )}
 
-        {s.formation_timeline.length > 0 ? (
+        <OfflinePackButton
+          pack={{
+            kind: "site",
+            id: site.id,
+            title: site.name,
+            title_en: site.name_en || site.name,
+            cover: photo,
+            body_zh: [site.hook, site.formation_short, site.what_you_see_today, site.legal_notes]
+              .filter(Boolean)
+              .join("\n\n"),
+            body_en: [s.hook, s.formation_short, s.what_you_see_today, s.legal_notes]
+              .filter(Boolean)
+              .join("\n\n"),
+          }}
+        />
+
+        {!standard && s.formation_timeline.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("timeline")}</h2>
             <ol className="mt-3 space-y-3">
@@ -163,7 +188,7 @@ export function SiteDetail({ site }: { site: Site }) {
                   <div>
                     <p className="font-medium">
                       {st.name.replace(/^\d+[\.\s、．]+/, "")}
-                      <span className="ml-2 text-xs font-normal text-muted">{st.age}</span>
+                      {st.age ? <span className="ml-2 text-xs font-normal text-muted">{st.age}</span> : null}
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-muted">{st.what}</p>
                   </div>
@@ -173,7 +198,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {s.evolution_sequence ? (
+        {!standard && s.evolution_sequence ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("sequence")}</h2>
             <p className="mt-2 font-display text-base leading-relaxed">
@@ -182,11 +207,11 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {s.what_you_see_today ? (
+        {today ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("today")}</h2>
             <p className="mt-2 text-sm leading-relaxed">
-              <LinkedText text={s.what_you_see_today} />
+              <LinkedText text={today} />
             </p>
             {todayPhoto ? (
               <figure className="mt-3 overflow-hidden rounded-lg bg-surface shadow-[var(--shadow-border)]">
@@ -206,7 +231,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {extraPhotos.length > 0 ? (
+        {!standard && extraPhotos.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("photos")}</h2>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -225,18 +250,16 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {site.video ? (
+        {site.video?.bvid ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("video")}</h2>
             <div className="mt-3">
               <BiliEmbed video={site.video} />
             </div>
           </section>
-        ) : VIDEO_SLOT_SITES.has(site.id) ? (
-          <EmptyVideoSlot />
         ) : null}
 
-        {areas.length > 0 ? (
+        {!standard && areas.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("areas")}</h2>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -253,7 +276,7 @@ export function SiteDetail({ site }: { site: Site }) {
         {geosites.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("stopMap")}</h2>
-            <p className="mt-1 text-xs text-subtle">{t("stopMapNote")}</p>
+            {areaOnlyOnce ? <p className="mt-1 text-xs text-subtle">{t("stopMapNote")}</p> : null}
             <div className="mt-3 overflow-hidden rounded-xl shadow-[var(--shadow-border)]">
               <SiteMiniMap site={site} geosites={geosites} />
             </div>
@@ -268,6 +291,7 @@ export function SiteDetail({ site }: { site: Site }) {
               {t("fieldStops")}
               <span className="ml-2 text-sm font-normal text-muted">{geosites.length}</span>
             </h2>
+            {areaOnlyOnce ? <p className="mt-1 text-xs text-subtle">{t("areaOnly")}</p> : null}
             <ul className="mt-3 space-y-3">
               {geosites.map((g) => (
                 <GeositeItem key={g.id} geosite={g} parkCover={site.cover_image} />
@@ -276,50 +300,58 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {routes.length > 0 ? (
+        {!standard && routes.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("walking")}</h2>
             <ul className="mt-3 space-y-4">
-              {routes.map((r) => (
-                <li key={r.id} className="rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">
-                  <p className="font-display text-lg font-semibold">{r.name}</p>
-                  <p className="mt-1 text-xs text-muted">
-                    {r.duration} · {r.difficulty}
-                    {r.distance_km != null ? ` · ${r.distance_km} ${t("km")}` : ""}
-                    {r.elevation_m != null ? ` · ${t("relief")} ${r.elevation_m} m` : ""}
-                  </p>
-                  <p className="mt-2 text-sm">{r.how_to_go}</p>
-                  <p className="mt-1 text-sm text-muted">{r.notes}</p>
-                  {r.stop_geosite_ids.length > 0 ? (
-                    <p className="mt-2 text-xs text-subtle">
-                      {t("via")}
-                      {r.stop_geosite_ids
-                        .map((id) => geosites.find((g) => g.id === id)?.name ?? id)
-                        .join(" → ")}
+              {routes.map((r) => {
+                const via = r.stop_geosite_ids
+                  .map((id) => {
+                    const fromPage = geosites.find((g) => g.id === id);
+                    if (fromPage) return fromPage.name;
+                    const raw = getGeosite(id);
+                    return raw && !isGenericGeositeName(raw.name) ? raw.name : "";
+                  })
+                  .filter(Boolean);
+                return (
+                  <li key={r.id} className="rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">
+                    <p className="font-display text-lg font-semibold">{r.name}</p>
+                    <p className="mt-1 text-xs text-muted">
+                      {r.duration} · {r.difficulty}
+                      {r.distance_km != null ? ` · ${r.distance_km} ${t("km")}` : ""}
+                      {r.elevation_m != null ? ` · ${t("relief")} ${r.elevation_m} m` : ""}
                     </p>
-                  ) : null}
-                </li>
-              ))}
+                    {visibleCopy(r.how_to_go) ? <p className="mt-2 text-sm">{r.how_to_go}</p> : null}
+                    {visibleCopy(r.notes) ? <p className="mt-1 text-sm text-muted">{r.notes}</p> : null}
+                    {via.length > 0 ? (
+                      <p className="mt-2 text-xs text-subtle">
+                        {t("via")}
+                        {via.join(" → ")}
+                      </p>
+                    ) : null}
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ) : null}
 
-        {s.observation_tips.length > 0 ? (
+        {tips.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("handbook")}</h2>
             <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed">
-              {s.observation_tips.map((tip) => (
+              {(standard ? tips.slice(0, 1) : tips).map((tip) => (
                 <li key={tip}>{tip}</li>
               ))}
             </ul>
           </section>
         ) : null}
 
-        {s.visible_rocks_minerals_fossils.length > 0 ? (
+        {rocks.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("treasures")}</h2>
             <ul className="mt-3 space-y-2">
-              {s.visible_rocks_minerals_fossils.map((v, i) => (
+              {rocks.map((v, i) => (
                 <li key={`${v.name}-${i}`} className="rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)]">
                   <p className="font-medium">{v.name}</p>
                   <p className="mt-1 text-sm text-muted">{v.how_to_recognize}</p>
@@ -333,11 +365,11 @@ export function SiteDetail({ site }: { site: Site }) {
 
         <OfficialBox site={site} visit={visit} />
 
-        {s.safety_notes.length > 0 ? (
+        {safety.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("safety")}</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
-              {s.safety_notes.map((n) => (
+              {(standard ? safety.slice(0, 1) : safety).map((n) => (
                 <li key={n}>{n}</li>
               ))}
             </ul>
@@ -346,10 +378,10 @@ export function SiteDetail({ site }: { site: Site }) {
 
         <section>
           <h2 className="font-display text-xl font-semibold">{t("law")}</h2>
-          <p className="mt-2 text-sm leading-relaxed">{s.legal_notes}</p>
-          {fossilRelated ? (
+          {legal ? <p className="mt-2 text-sm leading-relaxed">{legal}</p> : null}
+          {fossilRelated || site.province === "香港" ? (
             <p className="mt-3 rounded-lg border border-hematite/30 bg-hematite/8 p-3 text-sm leading-relaxed">
-              {fossilLaw(locale)}
+              {fossilLawFor(site.province, locale)}
             </p>
           ) : null}
         </section>
@@ -358,29 +390,11 @@ export function SiteDetail({ site }: { site: Site }) {
           <section>
             <h2 className="font-display text-xl font-semibold">{t("related")}</h2>
             <ul className="mt-3 space-y-2">
-              {related.map((r) => {
-                const lr = localizeSite(r, locale);
-                return (
-                  <li key={r.id}>
-                    <Link
-                      {...siteTo(r)}
-                      className="flex items-center gap-3 rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]"
-                    >
-                      {isOwnCover(r) ? (
-                        <img
-                          src={r.cover_image}
-                          alt={displayName(r, locale)}
-                          className="h-14 w-20 shrink-0 rounded-md object-cover"
-                        />
-                      ) : null}
-                      <span className="min-w-0">
-                        <p className="font-medium">{displayName(r, locale)}</p>
-                        <p className="mt-1 text-sm text-muted">{lr.hook}</p>
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
+              {related.map((r) => (
+                <li key={r.id}>
+                  <SiteLinkCard site={r} note={localizeSite(r, locale).hook} />
+                </li>
+              ))}
             </ul>
           </section>
         ) : null}
@@ -393,15 +407,13 @@ export function SiteDetail({ site }: { site: Site }) {
                 const tr = getTheme(id);
                 if (!tr) return null;
                 return (
-                  <li key={id}>
-                    <Link
-                      to="/routes/$id"
-                      params={{ id }}
-                      className="block rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)]"
-                    >
-                      <p className="font-medium">{themeName(tr, locale)}</p>
-                      <p className="mt-1 text-sm text-muted">{themeThesis(tr, locale)}</p>
-                    </Link>
+                  <li key={id} className="rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)]">
+                    <p className="font-medium">
+                      <Link to="/routes/$id" params={{ id }} className="hover:underline">
+                        {themeName(tr, locale)}
+                      </Link>
+                    </p>
+                    <p className="mt-1 text-sm text-muted">{themeThesis(tr, locale)}</p>
                   </li>
                 );
               })}
@@ -409,7 +421,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {s.sources.length > 0 ? (
+        {s.sources.length > 0 && !standard ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("sources")}</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-subtle">
@@ -417,18 +429,6 @@ export function SiteDetail({ site }: { site: Site }) {
                 <li key={src}>{src}</li>
               ))}
             </ul>
-            {site.official_website ? (
-              <p className="mt-2 text-sm">
-                <a
-                  className="text-moss underline"
-                  href={site.official_website}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t("officialSite")}
-                </a>
-              </p>
-            ) : null}
           </section>
         ) : null}
 
@@ -511,9 +511,6 @@ function GeositeItem({ geosite, parkCover }: { geosite: Geosite; parkCover?: str
           <span className="font-medium">{t("lookHere")}</span>
           {geosite.look_here}
         </p>
-        {geosite.public_precision === "area_only" ? (
-          <p className="mt-1 text-xs text-subtle">{t("areaOnly")}</p>
-        ) : null}
         {extra.length > 0 ? (
           <p className="mt-2 text-xs text-hematite">{extra.join(" · ")}</p>
         ) : null}

@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as BrowseRouteImport } from './routes/browse'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as CompareRouteImport } from './routes/compare'
+import { Route as EnRouteImport } from './routes/en'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as NearbyRouteImport } from './routes/nearby'
 import { Route as OfflineRouteImport } from './routes/offline'
@@ -48,6 +49,11 @@ const CatalogRoute = CatalogRouteImport.update({
 const CompareRoute = CompareRouteImport.update({
   id: '/compare',
   path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnRoute = EnRouteImport.update({
+  id: '/en',
+  path: '/en',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlossaryRoute = GlossaryRouteImport.update({
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
+  '/en': typeof EnRoute
   '/glossary': typeof GlossaryRoute
   '/nearby': typeof NearbyRoute
   '/offline': typeof OfflineRoute
@@ -124,6 +131,7 @@ export interface FileRoutesByTo {
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
+  '/en': typeof EnRoute
   '/glossary': typeof GlossaryRoute
   '/nearby': typeof NearbyRoute
   '/offline': typeof OfflineRoute
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
+  '/en': typeof EnRoute
   '/glossary': typeof GlossaryRoute
   '/nearby': typeof NearbyRoute
   '/offline': typeof OfflineRoute
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/browse'
     | '/catalog'
     | '/compare'
+    | '/en'
     | '/glossary'
     | '/nearby'
     | '/offline'
@@ -178,6 +188,7 @@ export interface FileRouteTypes {
     | '/browse'
     | '/catalog'
     | '/compare'
+    | '/en'
     | '/glossary'
     | '/nearby'
     | '/offline'
@@ -195,6 +206,7 @@ export interface FileRouteTypes {
     | '/browse'
     | '/catalog'
     | '/compare'
+    | '/en'
     | '/glossary'
     | '/nearby'
     | '/offline'
@@ -213,6 +225,7 @@ export interface RootRouteChildren {
   BrowseRoute: typeof BrowseRoute
   CatalogRoute: typeof CatalogRoute
   CompareRoute: typeof CompareRoute
+  EnRoute: typeof EnRoute
   GlossaryRoute: typeof GlossaryRoute
   NearbyRoute: typeof NearbyRoute
   OfflineRoute: typeof OfflineRoute
@@ -260,6 +273,13 @@ declare module '@tanstack/react-router' {
       path: '/compare'
       fullPath: '/compare'
       preLoaderRoute: typeof CompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en': {
+      id: '/en'
+      path: '/en'
+      fullPath: '/en'
+      preLoaderRoute: typeof EnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glossary': {
@@ -341,6 +361,7 @@ const rootRouteChildren: RootRouteChildren = {
   BrowseRoute: BrowseRoute,
   CatalogRoute: CatalogRoute,
   CompareRoute: CompareRoute,
+  EnRoute: EnRoute,
   GlossaryRoute: GlossaryRoute,
   NearbyRoute: NearbyRoute,
   OfflineRoute: OfflineRoute,

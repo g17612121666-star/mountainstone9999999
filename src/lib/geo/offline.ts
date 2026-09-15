@@ -1,4 +1,4 @@
-export const PACK_CACHE = "shanshizhi-field-v1";
+export const PACK_CACHE = "shanshizhi-field-v2";
 export const PACK_PREFIX = "/__pack/";
 
 export interface OfflinePackMeta {
@@ -12,6 +12,11 @@ export interface OfflinePackMeta {
   body_en: string;
   page_path?: string;
   sw_ok?: boolean;
+  locale: "zh" | "en";
+}
+
+function packKey(kind: string, id: string, locale: string): string {
+  return PACK_PREFIX + kind + "-" + id + "-" + locale;
 }
 
 export async function listPacks(): Promise<OfflinePackMeta[]> {
@@ -24,7 +29,9 @@ export async function listPacks(): Promise<OfflinePackMeta[]> {
     const res = await cache.match(req);
     if (!res) continue;
     try {
-      packs.push((await res.json()) as OfflinePackMeta);
+      const meta = (await res.json()) as OfflinePackMeta;
+      if (!meta.locale) meta.locale = "zh";
+      packs.push(meta);
     } catch {
       /* skip */
     }
@@ -39,7 +46,7 @@ export async function savePack(meta: OfflinePackMeta): Promise<void> {
     (typeof window !== "undefined" ? window.location.pathname : undefined);
   const stored: OfflinePackMeta = { ...meta, page_path: pagePath };
   await cache.put(
-    PACK_PREFIX + meta.kind + "-" + meta.id,
+    packKey(meta.kind, meta.id, meta.locale),
     new Response(JSON.stringify(stored), { headers: { "Content-Type": "application/json" } }),
   );
   if (pagePath && typeof window !== "undefined") {
@@ -66,16 +73,24 @@ export async function savePack(meta: OfflinePackMeta): Promise<void> {
   }
 }
 
-export async function hasPack(kind: "site" | "trail", id: string): Promise<boolean> {
+export async function hasPack(
+  kind: "site" | "trail",
+  id: string,
+  locale: "zh" | "en",
+): Promise<boolean> {
   if (typeof caches === "undefined") return false;
   const cache = await caches.open(PACK_CACHE);
-  return Boolean(await cache.match(PACK_PREFIX + kind + "-" + id));
+  return Boolean(await cache.match(packKey(kind, id, locale)));
 }
 
-export async function deletePack(kind: "site" | "trail", id: string): Promise<void> {
+export async function deletePack(
+  kind: "site" | "trail",
+  id: string,
+  locale: "zh" | "en",
+): Promise<void> {
   if (typeof caches === "undefined") return;
   const cache = await caches.open(PACK_CACHE);
-  const key = PACK_PREFIX + kind + "-" + id;
+  const key = packKey(kind, id, locale);
   const hit = await cache.match(key);
   if (hit) {
     try {

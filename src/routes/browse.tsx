@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { SiteRowLink } from "@/components/site/SiteLinkCard";
+import { seoHead } from "@/lib/geo/canonical";
 import { sites } from "@/lib/geo/catalog";
-import { siteTo } from "@/lib/geo/href";
-import { isOwnCover } from "@/lib/geo/safety";
 import type { LandformType, Site } from "@/lib/geo/types";
-import { displayName, landformLabel, useLocale, useT } from "@/lib/i18n";
+import { landformLabel, useLocale, useT } from "@/lib/i18n";
 
 type Bucket = {
   id: string;
@@ -34,13 +35,12 @@ const BUCKETS: Bucket[] = [
 
 export const Route = createFileRoute("/browse")({
   component: BrowsePage,
-  head: () => ({
-    meta: [
-      { title: "按过程逛 · 山石志" },
-      { name: "description", content: "按喀斯特、丹霞、石英砂岩峰林、花岗岩、火山、金钉子、化石产地浏览名录。" },
-    ],
-    links: [{ rel: "canonical", href: "/browse" }],
-  }),
+  head: () =>
+    seoHead({
+      title: "按过程逛",
+      description: "按喀斯特、丹霞、石英砂岩峰林、花岗岩、火山、金钉子、化石产地浏览名录。",
+      path: "/browse",
+    }),
 });
 
 function BrowsePage() {
@@ -57,32 +57,25 @@ function BrowsePage() {
           {BUCKETS.map((b) => {
             const list = sites.filter(b.match);
             if (!list.length) return null;
+            const title = en ? b.en : b.zh;
             return (
               <section key={b.id} id={b.id}>
-                <h2 className="font-display text-xl font-semibold">
-                  {en ? b.en : b.zh}
-                  <span className="ml-2 text-sm font-normal text-muted">{list.length}</span>
+                <h2 className="font-display flex flex-wrap items-baseline gap-2 text-xl font-semibold">
+                  <span>{title}</span>
+                  <span className="rounded-full bg-surface-2 px-2 py-0.5 text-sm font-normal text-muted">
+                    {list.length}
+                  </span>
                 </h2>
-                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                <ul className="mt-3 divide-y divide-border overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)] sm:grid sm:grid-cols-2 sm:divide-y-0 sm:gap-px sm:bg-transparent sm:shadow-none">
                   {list.map((s) => (
-                    <li key={s.id}>
-                      <Link
-                        {...siteTo(s)}
-                        className="flex items-center gap-3 rounded-lg bg-surface px-3 py-2 shadow-[var(--shadow-border)]"
-                      >
-                        {isOwnCover(s) ? (
-                          <img src={s.cover_image} alt="" className="h-12 w-16 shrink-0 rounded object-cover" />
-                        ) : null}
-                        <span className="min-w-0">
-                          <span className="block truncate font-medium">{displayName(s, locale)}</span>
-                          <span className="block text-xs text-muted">
-                            {s.landform_types
-                              .slice(0, 2)
-                              .map((lf) => landformLabel(lf as LandformType, locale))
-                              .join(" · ")}
-                          </span>
-                        </span>
-                      </Link>
+                    <li key={s.id} className="sm:overflow-hidden sm:rounded-lg sm:bg-surface sm:shadow-[var(--shadow-border)]">
+                      <SiteRowLink
+                        site={s}
+                        sub={s.landform_types
+                          .slice(0, 2)
+                          .map((lf) => landformLabel(lf as LandformType, locale))
+                          .join(" · ")}
+                      />
                     </li>
                   ))}
                 </ul>
@@ -91,6 +84,7 @@ function BrowsePage() {
           })}
         </div>
       </main>
+      <AppFooter />
     </div>
   );
 }

@@ -1,17 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { NearbyPanel } from "@/components/geo/NearbyPanel";
 import { RecentlyWritten } from "@/components/geo/RecentlyWritten";
 import { TimescaleBar } from "@/components/geo/TimescaleBar";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
-import { LandformCover } from "@/components/cover/LandformCover";
 import { SiteBadges } from "@/components/site/SiteBadges";
+import { SiteRowLink } from "@/components/site/SiteLinkCard";
 import { Input } from "@/components/ui/input";
+import { ageLabel } from "@/lib/geo/age";
+import { seoHead } from "@/lib/geo/canonical";
 import { getVisit, nationalGeoparks, sites, stats } from "@/lib/geo/catalog";
-import { siteTo } from "@/lib/geo/href";
 import { haystack } from "@/lib/geo/search";
 import { useMapStore } from "@/lib/geo/store";
-import { isOwnCover } from "@/lib/geo/safety";
 import {
   LANDFORM_LABEL,
   PROVINCES,
@@ -20,10 +20,8 @@ import {
   type SiteType,
 } from "@/lib/geo/types";
 import {
-  displayName,
   landformLabel,
   localizeSite,
-  photoCredit,
   provinceLabel,
   typeLabel,
   useLocale,
@@ -32,16 +30,12 @@ import {
 
 export const Route = createFileRoute("/catalog")({
   component: CatalogPage,
-  head: () => ({
-    meta: [
-      { title: "目录 · 山石志" },
-      {
-        name: "description",
-        content: "中国世界地质公园、国家地质公园、金钉子与城市地质点名录。",
-      },
-    ],
-    links: [{ rel: "canonical", href: "/catalog" }],
-  }),
+  head: () =>
+    seoHead({
+      title: "目录",
+      description: "中国世界地质公园、国家地质公园、金钉子与城市地质点名录。",
+      path: "/catalog",
+    }),
 });
 
 function groupByProvince(list: Site[]) {
@@ -113,6 +107,14 @@ function CatalogPage() {
             {t("gsspIndex")}
           </Link>
         </p>
+        <p className="mt-1 text-xs text-subtle">{t("gsspNote")}</p>
+        <Input
+          className="mt-5 max-w-md"
+          placeholder={t("catalogSearchPh")}
+          aria-label={t("searchAria")}
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
         <div className="mt-5 flex flex-wrap gap-2">
           {(
             [
@@ -247,15 +249,7 @@ function CatalogPage() {
             }}
           />
           <RecentlyWritten />
-          <NearbyPanel />
         </div>
-        <Input
-          className="mt-6 max-w-md"
-          placeholder={t("catalogSearchPh")}
-          aria-label={t("searchAria")}
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
         <div className="mt-8 space-y-10">
           {grouped.length === 0 ? (
             <p className="rounded-xl bg-surface p-6 text-sm text-muted shadow-[var(--shadow-border)]">
@@ -264,50 +258,34 @@ function CatalogPage() {
           ) : null}
           {grouped.map(([provinceName, items]) => (
             <section key={provinceName}>
-              <h2 className="font-display text-xl font-semibold">
-                {provinceLabel(provinceName, locale)}
-                <span className="ml-2 text-sm font-normal text-muted">{items.length}</span>
+              <h2 className="font-display flex flex-wrap items-baseline gap-2 text-xl font-semibold">
+                <span>{provinceLabel(provinceName, locale)}</span>
+                <span className="rounded-full bg-surface-2 px-2 py-0.5 text-sm font-normal text-muted">
+                  {items.length}
+                </span>
               </h2>
               <ul className="mt-3 divide-y divide-border overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
                 {items.map((s) => {
-                  const own = isOwnCover(s);
                   const loc = localizeSite(s, locale);
-                  const sketch =
-                    !own &&
-                    (s.types.includes("world_geopark") ||
-                      s.types.includes("gssp") ||
-                      s.types.includes("iugs_geoheritage") ||
-                      s.content_status === "complete");
                   return (
                     <li key={s.id}>
-                      <Link
-                        {...siteTo(s)}
-                        className="flex items-center gap-3 px-3 py-3 hover:bg-surface-2 sm:px-4"
-                      >
-                        {own ? (
-                          <img
-                            src={s.cover_image}
-                            alt={photoCredit(s.cover_credit || "", locale)}
-                            className="h-16 w-20 shrink-0 rounded-md object-cover"
-                          />
-                        ) : sketch ? (
-                          <span className="h-16 w-20 shrink-0 overflow-hidden rounded-md">
-                            <LandformCover
-                              type={s.landform_types[0] ?? "other"}
-                              label={displayName(s, locale)}
-                            />
+                      <SiteRowLink
+                        site={s}
+                        sub={
+                          <>
+                            {loc.city || provinceLabel(s.province, locale)} · {typeLabel(s.types[0], locale)} ·{" "}
+                            {ageLabel(loc.geologic_age_text, locale)}
+                          </>
+                        }
+                        end={
+                          <span className="flex shrink-0 flex-col items-end gap-1">
+                            <SiteBadges site={s} compact />
+                            <span className="rounded-full bg-surface-2 px-2 py-0.5 text-[11px] text-muted">
+                              {s.content_status === "complete" ? t("deepPage") : t("standardCard")}
+                            </span>
                           </span>
-                        ) : (
-                          <span className="hidden h-16 w-0 sm:block" />
-                        )}
-                        <div className="min-w-0 flex-1">
-                          <p className="font-medium">{displayName(s, locale)}</p>
-                          <p className="text-xs text-muted">
-                            {loc.city || provinceLabel(s.province, locale)} · {typeLabel(s.types[0], locale)} · {loc.geologic_age_text}
-                          </p>
-                        </div>
-                        <SiteBadges site={s} compact />
-                      </Link>
+                        }
+                      />
                     </li>
                   );
                 })}
@@ -316,6 +294,7 @@ function CatalogPage() {
           ))}
         </div>
       </main>
+      <AppFooter />
     </div>
   );
 }

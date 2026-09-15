@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MARKER_COLOR } from "@/lib/geo/constants";
 import { useT, type UiKey } from "@/lib/i18n";
 
@@ -11,9 +11,22 @@ const ITEMS: { c: string; key: UiKey }[] = [
   { c: MARKER_COLOR.geosite, key: "legendGeosite" },
 ];
 
+const HINT_KEY = "shanshizhi-geosite-hint";
+
 export function MapLegend() {
   const [open, setOpen] = useState(false);
+  const [hint, setHint] = useState(false);
   const t = useT();
+  useEffect(() => {
+    try {
+      if (!localStorage.getItem(HINT_KEY)) {
+        setHint(true);
+        localStorage.setItem(HINT_KEY, "1");
+      }
+    } catch {
+      setHint(true);
+    }
+  }, []);
   return (
     <div className="pointer-events-none absolute bottom-8 left-3 z-30">
       <button
@@ -41,6 +54,7 @@ export function MapLegend() {
             </li>
           ))}
         </ul>
+        {hint ? <p className="mt-2 max-w-40 text-[10px] leading-snug text-muted">{t("geositeHint")}</p> : null}
       </div>
     </div>
   );

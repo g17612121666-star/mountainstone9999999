@@ -257,6 +257,69 @@ export const UI = {
   distanceKm: { zh: "直线", en: "straight-line" },
   whyWorth: { zh: "为什么值得对照", en: "Why it is worth checking" },
   tools: { zh: "手册工具", en: "Field tools" },
+  gsspNote: {
+    zh: "独立点 10；煤山一剖两钉，计为一处。",
+    en: "10 independent sites; Meishan holds two spikes on one section.",
+  },
+  geositeHint: {
+    zh: "打卡点要放大地图才出现，坐标只到园区或观景台。",
+    en: "Field stops appear after you zoom in. Pins are park- or viewpoint-precision only.",
+  },
+  startTrail: { zh: "从一条线路开始", en: "Start with a trail" },
+  sketchLandform: { zh: "示意地貌，非本园踏勘照片", en: "Schematic landform, not a field photo of this park" },
+  noPhoto: { zh: "暂无现场照片", en: "No field photo yet" },
+  enBodyPending: {
+    zh: "English body not yet copy-edited. Chinese text is shown for this section.",
+    en: "English body not yet copy-edited. Chinese text is shown for this section.",
+  },
+  inclusionH: { zh: "收录边界", en: "What this edition includes" },
+  inclusionBody: {
+    zh: "收入已命名国家地质公园、资格园、世界地质公园、金钉子独立点，以及佘山这一处城市地质。不含省级地质公园——那是下一层名录，本期不混进国家名录。香港世界地质公园按单独法域收入。台湾、澳门本版不收。海南世界级点挂在雷琼（海口石山、湖光岩），白沙陨石坑等按国家名录收录。",
+    en: "This edition lists named national geoparks, qualifying parks, UNESCO Global Geoparks, independent GSSPs, and Sheshan as an urban geosite. Provincial geoparks are out — they are a different list and are not mixed into the national catalogue here. Hong Kong’s UNESCO Global Geopark is included under its own jurisdiction. Taiwan and Macao are not in this edition. Hainan’s UNESCO sites sit under Leiqiong (Haikou Shishan, Huguangyan); others such as Baisha crater follow the national list.",
+  },
+  provincialCallout: {
+    zh: "省级地质公园未收入本期。资格园与已命名国家地质公园一并收录，但资格不是已命名。",
+    en: "Provincial geoparks are not in this edition. Qualifying parks sit with named national parks — qualifying is not named.",
+  },
+  govPortal: { zh: "地方政府站点，不是园区官网", en: "Local government site — not the park’s own page" },
+  parkOfficial: { zh: "园区 / 博物馆 / 预约页", en: "Park, museum or booking page" },
+  viaStops: { zh: "途经", en: "Via" },
+  packLangZh: { zh: "缓存语言：中文", en: "Cached language: Chinese" },
+  packLangEn: { zh: "缓存语言：English", en: "Cached language: English" },
+  packLangMismatch: {
+    zh: "当前界面是英文，这条缓存是中文正文。",
+    en: "The UI is in English; this pack was cached in Chinese.",
+  },
+  offlineEmpty: {
+    zh: "还没有缓存。打开一条线路或一个点，再点「缓存这一页」。",
+    en: "Nothing cached yet. Open a trail or a site, then tap Cache this page.",
+  },
+  swDisabled: {
+    zh: "当前环境无法注册 Service Worker，不能当作已可离线。",
+    en: "This host cannot register a service worker. Do not treat this as offline-ready.",
+  },
+  notFoundSite: {
+    zh: "名录里没有这个点。可能是写错了地址，或它还没被收入。",
+    en: "No site in the catalogue matches this address. The slug may be wrong, or it is not in this edition.",
+  },
+  notFoundFeature: {
+    zh: "这个功能页还没有出露。",
+    en: "This tool page has not cropped out.",
+  },
+  notFoundSlug: {
+    zh: "这个短地址不对。下面是可能的去处。",
+    en: "This short address is not a live slug. Try one of these.",
+  },
+  nearbyCity: { zh: "按城市找", en: "Pick a city" },
+  nearbyPlace: { zh: "输入地名", en: "Type a place name" },
+  nearbyPlacePh: { zh: "临城、十渡、佘山…", en: "Lincheng, Shidu, Sheshan…" },
+  ageUnknown: { zh: "年代待考", en: "Age not yet established" },
+  footerNav: { zh: "手册", en: "Handbook" },
+  moreTools: { zh: "手册", en: "Tools" },
+  cachedHint: {
+    zh: "已写入本机缓存。这不是实时票价。",
+    en: "Saved on this device. This is not a live ticket price.",
+  },
 } as const satisfies Record<string, Pair>;
 
 export type UiKey = keyof typeof UI;
@@ -309,3 +372,7 @@ export const MOTTO_EN =
 
 export const FOSSIL_LAW_EN =
   "Under China’s fossil-protection regulations, fossils are in principle state property. Look, photograph, note. Report important finds. Do not hammer, dig, or take anything home.";
+
+export const FOSSIL_LAW_HK_EN =
+  "Hong Kong is a separate jurisdiction. Mainland China’s Fossil Protection Regulations do not apply as such. Do not hammer, dig, or take specimens. Follow the Country Parks Ordinance and on-site notices.";
+

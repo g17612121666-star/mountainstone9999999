@@ -1,11 +1,13 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
 import { ThemeMap } from "@/components/map/ThemeMap";
-import { BiliEmbed, EmptyVideoSlot } from "@/components/media/BiliEmbed";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
-import { getSite, getTheme, VIDEO_SLOT_ROUTES } from "@/lib/geo/catalog";
+import { seoHead } from "@/lib/geo/canonical";
+import { getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isOwnCover } from "@/lib/geo/safety";
 import type { Site } from "@/lib/geo/types";
@@ -33,16 +35,12 @@ export const Route = createFileRoute("/routes/$id")({
     return { theme, points };
   },
   component: ThemePage,
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData?.theme.name ?? "线路"} · 山石志` },
-      {
-        name: "description",
-        content: loaderData?.theme.thesis ?? "地质主题线路",
-      },
-    ],
-    links: [{ rel: "canonical", href: `/routes/${loaderData?.theme.id ?? ""}` }],
-  }),
+  head: ({ loaderData }) =>
+    seoHead({
+      title: loaderData?.theme.name ?? "线路",
+      description: loaderData?.theme.thesis ?? "地质主题线路",
+      path: `/routes/${loaderData?.theme.id ?? ""}`,
+    }),
 });
 
 function ThemePage() {
@@ -58,6 +56,10 @@ function ThemePage() {
       <main className="mx-auto max-w-3xl px-4 py-10">
         <p className="text-xs tracking-wide text-muted uppercase">{t("themeTrails")}</p>
         <h1 className="font-display mt-1 text-3xl font-semibold">{themeName(theme, locale)}</h1>
+        <section className="mt-6">
+          <h2 className="font-display text-lg font-semibold">{t("trailWhy")}</h2>
+          <p className="mt-2 text-base leading-relaxed">{themeThesis(theme, locale)}</p>
+        </section>
         <div className="mt-4 flex flex-wrap items-start gap-3">
           <Button variant="outline" size="sm" asChild>
             <Link to="/card/$id" params={{ id: theme.id }}>
@@ -78,10 +80,6 @@ function ThemePage() {
             }}
           />
         </div>
-        <section className="mt-6">
-          <h2 className="font-display text-lg font-semibold">{t("trailWhy")}</h2>
-          <p className="mt-2 text-base leading-relaxed">{themeThesis(theme, locale)}</p>
-        </section>
         {task ? (
           <aside className="mt-6 rounded-lg border border-moss/25 bg-moss/8 p-4 text-sm leading-relaxed">
             <p className="font-medium">{t("trailTask")}</p>
@@ -93,13 +91,9 @@ function ThemePage() {
             {fossilLaw(locale)}
           </aside>
         ) : null}
-        {theme.video ? (
+        {theme.video?.bvid ? (
           <div className="mt-6">
             <BiliEmbed video={theme.video} />
-          </div>
-        ) : VIDEO_SLOT_ROUTES.has(theme.id) ? (
-          <div className="mt-6">
-            <EmptyVideoSlot />
           </div>
         ) : null}
         {theme.article ? (
@@ -127,9 +121,11 @@ function ThemePage() {
                     {t("trailStop")} {i + 1}
                     {locale === "zh" ? t("trailStopOf") : ""}
                   </p>
-                  <Link {...siteTo(site)} className="font-display mt-1 block text-xl font-semibold">
-                    {displayName(site, locale)}
-                  </Link>
+                  <p className="font-display mt-1 text-xl font-semibold">
+                    <Link {...siteTo(site)} className="hover:underline">
+                      {displayName(site, locale)}
+                    </Link>
+                  </p>
                   <div className="mt-2">
                     <SiteBadges site={site} compact />
                   </div>
@@ -158,6 +154,7 @@ function ThemePage() {
           )}
         </ol>
       </main>
+      <AppFooter />
     </div>
   );
 }

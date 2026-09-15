@@ -23,6 +23,9 @@ export function OfficialBox({ site, visit }: { site: Site; visit?: VisitInfo }) 
               {locale === "en" ? l.en : l.zh}
               <ExternalLink className="size-3.5" />
             </a>
+            {l.kind === "gov" ? (
+              <span className="mt-0.5 block text-[11px] text-subtle">{t("govPortal")}</span>
+            ) : null}
           </li>
         ))}
       </ul>

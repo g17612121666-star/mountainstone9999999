@@ -1,4 +1,4 @@
-import type { Geosite, Site } from "./types";
+import type { Geosite, Route, Site } from "./types";
 
 /** 金钉子所属园。null = 独立剖面。禁止用 related 第一项冒充。 */
 export const HOST_PARK: Record<string, string | null> = {
@@ -26,6 +26,14 @@ export const SITE_PUBLIC_ID: Record<string, string> = {
 
 export const SITE_ALIASES: Record<string, string> = {
   anyemaqen: "animaging",
+  weizhou: "weizhoudao",
+  haikou: "haikou-volcano",
+};
+
+/** Short public URLs that 301 to the live slug. Do not include public-id aliases. */
+export const SITE_REDIRECTS: Record<string, string> = {
+  weizhou: "weizhoudao",
+  haikou: "haikou-volcano",
 };
 
 const rock = (name: string, how: string) =>
@@ -51,6 +59,33 @@ function geo(
     photo: "",
     do_not: [],
     public_precision: "area_only",
+  };
+}
+
+function walk(
+  id: string,
+  site_id: string,
+  name: string,
+  duration: string,
+  difficulty: string,
+  stops: string[],
+  how: string,
+  notes: string,
+  distance_km: number | null = null,
+  elevation_m: number | null = null,
+): Route {
+  return {
+    id,
+    site_id,
+    name,
+    duration,
+    difficulty,
+    distance_km,
+    elevation_m,
+    accessible: "以园区步道为准。",
+    stop_geosite_ids: stops,
+    how_to_go: how,
+    notes,
   };
 }
 
@@ -181,7 +216,42 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     cover_image: "",
     cover_credit: "",
     gallery: [],
+    geologic_age_text: "晚白垩世",
+    content_status: "complete",
+    content_tier: "deep",
+    hook: "佘山是晚白垩世碱性火山岩残丘，安山质–粗面质到流纹质。城市地质点，不是上海的国家地质公园——那一座是崇明岛。",
+    formation_short:
+      "佘山是岩石山，不是填出来的土堆。出露的是晚白垩世碱性火山岩：安山质–粗面质到流纹质凝灰岩、熔岩和火山碎屑，浅灰到紫灰，或见斑晶、凝灰碎屑和流纹构造。它属于浙闽沿海火山岩带在长江口留下的孤立丘，不是花岗岩，也不是五大连池那种玄武岩渣锥，更不是人工堆土。西佘山海拔约 100 米，是上海陆上最高点；东佘山、天马山等松郡九峰是同一套火山丘。禁止凿石。佘山是城市地质点，不是国家地质公园。上海的国家地质公园是崇明岛。",
+    what_you_see_today:
+      "东佘山、西佘山等松郡九峰。西佘山附近是上海陆上最高点。沿开放步道认浅色块状火山岩：斑晶、凝灰碎屑或流纹构造。不要把教堂或天文台当岩石封面。对比的是崇明沙岛：那边是还没固结完的全新世沙，这里是七千万年前量级的碱性火山岩。",
+    observation_tips: [
+      "先摸浅色块状火山岩和凝灰碎屑。浅灰到紫灰，不是暗色细粒熔岩台。",
+      "教堂和天文台是地面建筑，不是这套岩石的识别标志。",
+      "上海的国家地质公园在崇明，不在佘山。",
+    ],
+    visible_rocks_minerals_fossils: [
+      {
+        name: "安山质–粗面质到流纹质凝灰岩 / 熔岩",
+        how_to_recognize: "浅灰到紫灰。或见斑晶、凝灰碎屑、流纹构造。摸上去是块状基岩。",
+        collect_allowed: false,
+      },
+    ],
+    corrections: [
+      "佘山不是五大连池那种玄武岩渣锥。识别靠浅色、斑晶、凝灰碎屑和流纹构造，不要套用暗色熔岩的野外标志。",
+      "不要把佘山写成上海的国家地质公园。那一座是崇明岛。",
+    ],
   },
+  lincheng: { geologic_age_text: "寒武–奥陶纪" },
+  wuan: {
+    geologic_age_text: "寒武–奥陶纪",
+    cover_credit: "H2v5o68z, CC0, Wikimedia Commons · 河北武安古武当山天柱峰，非湖北武当山",
+  },
+  "xingtai-canyon": {
+    geologic_age_text: "中元古代",
+    landform_types: ["zhangjiajie_sandstone"],
+    hook: "太行山石英砂岩被切成峡谷群。先认层理和垂直节理。滴酸不起泡：不是喀斯特，也不是丹霞红层。",
+  },
+  huoshizhai: { geologic_age_text: "白垩纪" },
   danxiashan: {
     cover_image: "/covers/danxiashan.jpg",
     cover_credit: "Mx. Granger, CC0, Wikimedia Commons",
@@ -370,5 +440,43 @@ export const geositePatches: Record<string, Geosite[]> = {
     geo("zd-tulin", "zhada", "札达土林", 79.8, 31.48, "pillar", "河湖相被切开的柱。先认层理方向。"),
     geo("zd-bedding", "zhada", "古湖相层理", 79.82, 31.5, "bedding", "水平层是湖，柱是后来的风和洪水。"),
     geo("zd-basin", "zhada", "札达盆地远观", 79.78, 31.47, "other", "盆地尺度。土林只是被切开的一角。"),
+  ],
+  sheshan: [
+    geo(
+      "ss-west",
+      "sheshan",
+      "西佘山开放步道",
+      121.187,
+      31.093,
+      "other",
+      "在开放步道上看浅色火山岩。认斑晶、凝灰碎屑或流纹构造。教堂和天文台是地面建筑，不是岩石识别标志。",
+    ),
+    geo(
+      "ss-hills",
+      "sheshan",
+      "松郡九峰远观",
+      121.21,
+      31.09,
+      "other",
+      "从远处数丘。它们是同一套晚白垩世碱性火山丘，不是花岗岩，也不是崇明那种沙岛。上海的国家地质公园在崇明。",
+    ),
+  ],
+};
+
+/** Last-write walking routes. Keys are site_id. */
+export const routePatches: Record<string, Route[]> = {
+  sheshan: [
+    walk(
+      "ss-loop",
+      "sheshan",
+      "东西佘山：平原上的火山锥",
+      "半日",
+      "低",
+      ["ss-west", "ss-hills"],
+      "地铁或公交到佘山。沿开放步道走。",
+      "把浅色基岩拍下来。对照：流纹岩/凝灰岩，不是花岗岩。上海的国家地质公园在崇明。",
+      6,
+      100,
+    ),
   ],
 };

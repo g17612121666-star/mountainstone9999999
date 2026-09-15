@@ -1,20 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { CONTACT_EMAIL, seoHead } from "@/lib/geo/canonical";
 import { bundleMeta, stats } from "@/lib/geo/catalog";
-import { fossilLaw, motto, useLocale, useT } from "@/lib/i18n";
+import { fossilLaw, fossilLawFor, motto, useLocale, useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
-  head: () => ({
-    meta: [
-      { title: "关于 · 山石志" },
-      {
-        name: "description",
-        content: "山石志是随身地质向导。名录来源、化石法律、票价免责与勘误入口。",
-      },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
+  head: () =>
+    seoHead({
+      title: "关于",
+      description: "山石志是随身地质向导。名录来源、化石法律、票价免责与勘误入口。",
+      path: "/about",
+    }),
 });
 
 function AboutPage() {
@@ -70,14 +68,18 @@ function AboutPage() {
             {stats.placeholder ? (en ? ` · ${stats.placeholder} unwritten` : ` · 未写 ${stats.placeholder}`) : ""}
           </li>
         </ul>
-        <p className="mt-3 text-sm text-muted">
-          {en
-            ? "Provincial geoparks are not in this edition. Qualifying parks sit with named parks. Do not label Sheshan a national geopark — Shanghai’s national geopark is Chongming Island."
-            : "省级地质公园未收入本期。资格园与已命名园一并收录。禁止把佘山标成国家地质公园——上海的国家地质公园是崇明岛。"}
-        </p>
+
+        <h2 className="font-display mt-10 text-xl font-semibold">{t("inclusionH")}</h2>
+        <p className="mt-2 text-sm leading-relaxed">{t("inclusionBody")}</p>
+        <aside className="mt-4 rounded-lg border border-sand/40 bg-sand/10 px-4 py-3 text-sm leading-relaxed">
+          {t("provincialCallout")}
+        </aside>
 
         <h2 className="font-display mt-10 text-xl font-semibold">{t("fossilLawH")}</h2>
         <p className="mt-2 text-sm leading-relaxed">{fossilLaw(locale)}</p>
+        <p className="mt-3 rounded-lg bg-surface px-4 py-3 text-sm leading-relaxed shadow-[var(--shadow-border)]">
+          {fossilLawFor("香港", locale)}
+        </p>
 
         <h2 className="font-display mt-10 text-xl font-semibold">{t("ticketH")}</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -90,15 +92,18 @@ function AboutPage() {
         <figure className="mt-4 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
           <img
             src="/producer.jpg"
-            alt="Li Zeyu / 李泽宇 in the field, geological hammer in hand"
+            alt={en ? "Li Zeyu in the field, geological hammer in hand" : "李泽宇在野外，手里拿着地质锤"}
             className="aspect-[4/5] w-full object-cover object-[50%_18%] sm:aspect-[5/4]"
           />
           <figcaption className="space-y-2 px-4 py-4 text-sm leading-relaxed">
-            <p>网站制作：李泽宇。地质爱好者。上海平和学校地质社社长。</p>
-            <p>
-              Website Producer: Li Zeyu. A Geoscience Lover. The President of Geoscience Club of
-              Shanghai Pinghe School.
-            </p>
+            {en ? (
+              <p>
+                Website Producer: Li Zeyu. A geoscience lover. President of the Geoscience Club of
+                Shanghai Pinghe School.
+              </p>
+            ) : (
+              <p>网站制作：李泽宇。地质爱好者。上海平和学校地质社社长。</p>
+            )}
             <p className="text-muted">
               {en
                 ? "A field notebook for walking China’s geoparks, GSSPs and urban rock — written so a stop can be checked on the ground, not sold as scenery."
@@ -112,22 +117,23 @@ function AboutPage() {
           {en ? (
             <>
               For questions, corrections, or additions, contact the webmaster at{" "}
-              <a className="text-moss underline" href="mailto:g17612121666@gmail.com">
-                g17612121666@gmail.com
+              <a className="text-moss underline" href={`mailto:${CONTACT_EMAIL}`}>
+                {CONTACT_EMAIL}
               </a>
               .
             </>
           ) : (
             <>
               如有问题、纠错或补充，请联系站长邮箱{" "}
-              <a className="text-moss underline" href="mailto:g17612121666@gmail.com">
-                g17612121666@gmail.com
+              <a className="text-moss underline" href={`mailto:${CONTACT_EMAIL}`}>
+                {CONTACT_EMAIL}
               </a>
               。
             </>
           )}
         </p>
       </main>
+      <AppFooter />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Area, Geosite, GsspExtra, Route, Site, ThemeRoute, VisitInfo } fro
 import { LOOK_EN } from "@/lib/geo/look";
 import enBundle from "../../../data/en.json";
 import type { Locale } from "./locale";
+import { repairEnSpacing } from "./space";
 
 const CJK = /[\u4e00-\u9fff]/;
 
@@ -48,7 +49,8 @@ function hasCjk(v: unknown): boolean {
 function cleanStr(s: string, fallback: string): string {
   const t = (s || "").trim();
   if (!t) return fallback;
-  return hasCjk(t) ? fallback : t;
+  if (hasCjk(t)) return fallback;
+  return repairEnSpacing(t);
 }
 
 function cleanGssp(g: GsspExtra, overlay?: Partial<GsspExtra>): GsspExtra {
@@ -232,18 +234,32 @@ export function localizeArea(area: Area, locale: Locale): Area {
 }
 
 export function themeName(tr: ThemeRoute, locale: Locale): string {
-  return locale === "en" ? tr.name_en || tr.name : tr.name;
+  const n = locale === "en" ? tr.name_en || tr.name : tr.name;
+  return locale === "en" ? repairEnSpacing(n) : n;
 }
 
 export function themeThesis(tr: ThemeRoute, locale: Locale): string {
-  return locale === "en" ? tr.thesis_en || tr.thesis : tr.thesis;
+  const n = locale === "en" ? tr.thesis_en || tr.thesis : tr.thesis;
+  return locale === "en" ? repairEnSpacing(n) : n;
 }
 
 export function themeRole(tr: ThemeRoute, i: number, locale: Locale): string {
-  if (locale === "en" && tr.site_roles_en?.[i]) return tr.site_roles_en[i];
-  return tr.site_roles[i] ?? "";
+  const n = locale === "en" && tr.site_roles_en?.[i] ? tr.site_roles_en[i] : tr.site_roles[i] ?? "";
+  return locale === "en" ? repairEnSpacing(n) : n;
 }
 
 export function themeTask(tr: ThemeRoute, locale: Locale): string {
-  return locale === "en" ? tr.task_en || tr.task || "" : tr.task || "";
+  return locale === "en" ? repairEnSpacing(tr.task_en || tr.task || "") : tr.task || "";
 }
+
+/** True when the English overlay has a real hook + formation, not a fallback. */
+export function hasQualifiedEn(id: string): boolean {
+  const o = en.sites?.[id];
+  if (!o) return false;
+  const hook = o.hook || "";
+  const form = o.formation_short || "";
+  if (!hook || hasCjk(hook) || hook.length < 48) return false;
+  if (!form || hasCjk(form) || form.length < 48) return false;
+  return true;
+}
+

@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { seoHead } from "@/lib/geo/canonical";
 import { getSite } from "@/lib/geo/catalog";
 import { COMPARE } from "@/lib/geo/compare";
 import { siteTo } from "@/lib/geo/href";
@@ -8,13 +10,12 @@ import { displayName, useLocale, useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/compare")({
   component: ComparePage,
-  head: () => ({
-    meta: [
-      { title: "容易认错的地貌 · 山石志" },
-      { name: "description", content: "丹霞、彩丘、砂岩峰林、南北喀斯特、破火山口与堰塞湖——现场用一条就能分开。" },
-    ],
-    links: [{ rel: "canonical", href: "/compare" }],
-  }),
+  head: () =>
+    seoHead({
+      title: "容易认错的地貌",
+      description: "丹霞、彩丘、砂岩峰林、南北喀斯特、天坑与玛珥、雅丹与丹霞、酸性柱状节理与玄武——现场用一条就能分开。",
+      path: "/compare",
+    }),
 });
 
 function ComparePage() {
@@ -74,6 +75,7 @@ function ComparePage() {
           ))}
         </ol>
       </main>
+      <AppFooter />
     </div>
   );
 }

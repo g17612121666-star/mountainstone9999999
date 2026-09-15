@@ -27,10 +27,13 @@ import {
   UNESCO_PARENT,
   fieldPatches,
   geositePatches,
+  routePatches,
 } from "./patches";
 import { isGenericSafety, isOwnCover, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
 import type { VideoClip } from "./types";
+import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
+import { isPlaceholderCopy, visibleCopy } from "./copy";
 
 /** Extra outcrop/landscape photos that are not the cover, never reused as a field-stop photo. */
 const EXTRA_GALLERY: Record<string, PhotoAsset[]> = {
@@ -367,18 +370,37 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
   if (d) merged = { ...merged, ...d, id: s.id };
   const rw = rwSites[s.id];
   if (rw) {
-    const { cover_image: _ci, cover_credit: _cc, gallery: _g, ...rest } = rw as Partial<Site> & {
+    const {
+      cover_image: _ci,
+      cover_credit: _cc,
+      gallery: _g,
+      content_status: _cs,
+      content_tier: _ct,
+      ...rest
+    } = rw as Partial<Site> & {
       cover_image?: string;
       cover_credit?: string;
       gallery?: PhotoAsset[];
+      content_status?: Site["content_status"];
+      content_tier?: Site["content_tier"];
     };
     void _ci;
     void _cc;
     void _g;
+    void _cs;
+    void _ct;
     merged = { ...merged, ...rest, id: s.id };
   }
   if (c) merged = { ...merged, ...c, id: s.id };
   fillCoverFromCredits(merged);
+  merged.geologic_age_text = sanitizeGeologicAge(merged.geologic_age_text);
+  merged.hook = rewriteAgeClause(merged.hook, merged.geologic_age_text);
+  merged.formation_short = rewriteAgeClause(merged.formation_short, merged.geologic_age_text);
+  merged.what_you_see_today = rewriteAgeClause(merged.what_you_see_today, merged.geologic_age_text);
+  if (isPlaceholderCopy(merged.hook)) merged.hook = visibleCopy(merged.hook);
+  merged.formation_short = visibleCopy(merged.formation_short);
+  merged.what_you_see_today = visibleCopy(merged.what_you_see_today);
+  merged.observation_tips = (merged.observation_tips || []).map(visibleCopy).filter(Boolean);
   if (s.id in HOST_PARK) merged.host_park_id = HOST_PARK[s.id];
   if (UNESCO_PARENT[s.id]) merged.unesco_parent_id = UNESCO_PARENT[s.id];
   if (s.id === "chongming" ||
@@ -456,18 +478,22 @@ const overlayRouteSiteIds = new Set([
   ...Object.keys(upRoutes),
 ]);
 
-export const routes: Route[] = [
-  ...(rawRoutes as unknown as Route[]).filter(
-    (r) => !overlayRouteSiteIds.has(r.site_id) && r.name !== "半日地质步道",
-  ),
-  ...Object.entries(stdRoutes)
-    .filter(([id]) => !deepRoutes[id] && !upRoutes[id])
-    .flatMap(([, list]) => list),
-  ...Object.entries(deepRoutes)
-    .filter(([id]) => !upRoutes[id])
-    .flatMap(([, list]) => list),
-  ...Object.values(upRoutes).flat(),
-];
+export const routes: Route[] = (() => {
+  const merged: Route[] = [
+    ...(rawRoutes as unknown as Route[]).filter(
+      (r) => !overlayRouteSiteIds.has(r.site_id) && r.name !== "半日地质步道",
+    ),
+    ...Object.entries(stdRoutes)
+      .filter(([id]) => !deepRoutes[id] && !upRoutes[id])
+      .flatMap(([, list]) => list),
+    ...Object.entries(deepRoutes)
+      .filter(([id]) => !upRoutes[id])
+      .flatMap(([, list]) => list),
+    ...Object.values(upRoutes).flat(),
+  ];
+  const replaced = new Set(Object.keys(routePatches));
+  return [...merged.filter((r) => !replaced.has(r.site_id)), ...Object.values(routePatches).flat()];
+})();
 
 export const areas: Area[] = rawAreas as unknown as Area[];
 export const themeRoutes: ThemeRoute[] = (rawThemeRoutes as unknown as ThemeRoute[]).map((tr) => {
@@ -491,10 +517,12 @@ for (const tr of themeRoutes) {
   }
 }
 const geositesBySite = new Map<string, Geosite[]>();
+const geositeById = new Map<string, Geosite>();
 for (const g of geosites) {
   const list = geositesBySite.get(g.site_id) ?? [];
   list.push(g);
   geositesBySite.set(g.site_id, list);
+  geositeById.set(g.id, g);
 }
 for (const s of sites) {
   const used = new Set<string>();
@@ -559,6 +587,10 @@ export function getGeosites(siteId: string): Geosite[] {
   return geositesBySite.get(siteId) ?? [];
 }
 
+export function getGeosite(id: string): Geosite | undefined {
+  return geositeById.get(id);
+}
+
 export function getRoutes(siteId: string): Route[] {
   return routesBySite.get(siteId) ?? [];
 }
@@ -600,7 +632,7 @@ export const stats = {
       s.types.includes("national_geopark_candidate") &&
       !s.types.includes("national_geopark"),
   ).length,
-  world: sites.filter((s) => s.types.includes("world_geopark")).length,
+  world: sites.filter((s) => s.types.includes("world_geopark") && !s.unesco_parent_id).length,
   gssp: sites.filter((s) => s.types.includes("gssp")).length,
   iugs: sites.filter((s) => s.types.includes("iugs_geoheritage")).length,
   urban: sites.filter((s) => s.types.includes("urban_geosite")).length,

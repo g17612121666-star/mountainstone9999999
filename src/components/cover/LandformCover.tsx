@@ -24,38 +24,55 @@ export function LandformCover({
   label,
   photo,
   credit,
+  decorative = false,
 }: {
   type: LandformType;
   className?: string;
   label?: string;
   photo?: string;
   credit?: string;
+  decorative?: boolean;
 }) {
   const locale = useLocale((s) => s.locale);
   const t = useT();
   const creditLine = photoCredit(credit || "", locale);
-  const altSketch = label ? `${label} · ${t("sketch")}` : t("sketch");
+  const sketchKey =
+    type === "stratigraphy" || type === "fossil" ? "sketch" : "sketchLandform";
+  const caption = decorative ? "" : label ? `${label} · ${t(sketchKey)}` : t(sketchKey);
   if (photo) {
     return (
       <div className={cn("relative h-full w-full overflow-hidden", className)}>
-        <img src={photo} alt={creditLine} className="h-full w-full object-cover" />
+        <img src={photo} alt={decorative ? "" : creditLine} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/45 to-transparent" />
-        <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-primary-fg/90">
-          {creditLine}
-        </p>
+        {decorative ? null : (
+          <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-primary-fg/90">
+            {creditLine}
+          </p>
+        )}
       </div>
     );
   }
   const [a, b, c] = palette[type] ?? palette.other;
   return (
-    <div className={cn("relative h-full w-full overflow-hidden", className)}>
-      <svg viewBox="0 0 400 180" className="h-full w-full" role="img" aria-label={altSketch}>
-        <title>{altSketch}</title>
+    <div className={cn("relative h-full w-full overflow-hidden bg-surface-2", className)}>
+      <svg viewBox="0 0 400 180" className="h-full w-full" aria-hidden="true" focusable="false">
         <rect width="400" height="180" fill={a} />
-        <rect x="0" y="118" width="400" height="22" fill={b} opacity="0.85" />
-        <rect x="0" y="140" width="400" height="18" fill={c} opacity="0.9" />
-        <rect x="0" y="158" width="400" height="22" fill="#2c261c" opacity="0.55" />
-        {type === "zhangjiajie_sandstone" || type === "granite_peak" || type === "danxia" ? (
+        {type === "volcano" ? (
+          <>
+            <polygon points="70,118 140,38 210,118" fill={c} />
+            <polygon points="180,118 250,52 320,118" fill={b} />
+            <ellipse cx="250" cy="52" rx="18" ry="7" fill="#2c261c" opacity="0.45" />
+            <rect x="0" y="118" width="400" height="62" fill={a} />
+          </>
+        ) : type === "karst" ? (
+          <>
+            <ellipse cx="90" cy="118" rx="40" ry="70" fill={c} />
+            <ellipse cx="170" cy="118" rx="28" ry="86" fill={b} />
+            <ellipse cx="240" cy="118" rx="36" ry="64" fill={c} />
+            <ellipse cx="310" cy="118" rx="30" ry="78" fill={b} />
+            <rect x="0" y="118" width="400" height="62" fill={a} />
+          </>
+        ) : type === "zhangjiajie_sandstone" || type === "granite_peak" || type === "danxia" ? (
           <>
             <rect x="48" y="36" width="28" height="82" fill={c} />
             <rect x="92" y="24" width="22" height="94" fill={b} />
@@ -64,19 +81,13 @@ export function LandformCover({
             <rect x="210" y="40" width="40" height="78" fill={c} />
             <rect x="268" y="28" width="24" height="90" fill={b} />
             <rect x="310" y="52" width="36" height="66" fill={c} />
+            <rect x="0" y="118" width="400" height="62" fill={b} opacity="0.85" />
           </>
-        ) : type === "volcano" ? (
+        ) : type === "stratigraphy" || type === "fossil" ? (
           <>
-            <polygon points="70,118 140,38 210,118" fill={c} />
-            <polygon points="180,118 250,52 320,118" fill={b} />
-            <ellipse cx="250" cy="52" rx="18" ry="7" fill="#2c261c" opacity="0.45" />
-          </>
-        ) : type === "karst" ? (
-          <>
-            <ellipse cx="90" cy="118" rx="40" ry="70" fill={c} />
-            <ellipse cx="170" cy="118" rx="28" ry="86" fill={b} />
-            <ellipse cx="240" cy="118" rx="36" ry="64" fill={c} />
-            <ellipse cx="310" cy="118" rx="30" ry="78" fill={b} />
+            <rect x="0" y="118" width="400" height="22" fill={b} opacity="0.85" />
+            <rect x="0" y="140" width="400" height="18" fill={c} opacity="0.9" />
+            <rect x="0" y="158" width="400" height="22" fill="#2c261c" opacity="0.55" />
           </>
         ) : (
           <polyline
@@ -87,9 +98,9 @@ export function LandformCover({
           />
         )}
       </svg>
-      <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-ink/80">
-        {altSketch}
-      </p>
+      {decorative ? null : (
+        <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-ink/80">{caption}</p>
+      )}
     </div>
   );
 }

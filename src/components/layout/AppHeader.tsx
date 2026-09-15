@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Map, Compass, BookOpen, Info } from "lucide-react";
+import { BookOpen, Compass, Info, Map } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
@@ -12,6 +12,14 @@ export function AppHeader({ dense = false }: { dense?: boolean }) {
     { to: "/catalog", label: t("navCatalog"), icon: BookOpen },
     { to: "/routes", label: t("navRoutes"), icon: Compass },
     { to: "/about", label: t("navAbout"), icon: Info },
+  ] as const;
+  const tools = [
+    { to: "/nearby", label: t("nearby") },
+    { to: "/compare", label: t("compare") },
+    { to: "/glossary", label: t("glossary") },
+    { to: "/browse", label: t("browse") },
+    { to: "/offline", label: t("offline") },
+    { to: "/gssp", label: t("gssp") },
   ] as const;
   return (
     <header
@@ -31,9 +39,7 @@ export function AppHeader({ dense = false }: { dense?: boolean }) {
           <span className="font-display block text-base leading-tight font-semibold tracking-tight">
             {t("appName")}
           </span>
-          {!dense ? (
-            <span className="block text-[11px] text-muted">{t("tagline")}</span>
-          ) : null}
+          {!dense ? <span className="block text-[11px] text-muted">{t("tagline")}</span> : null}
         </span>
       </Link>
       <nav className="ml-auto flex items-center gap-0.5" aria-label={t("mainNav")}>
@@ -55,6 +61,27 @@ export function AppHeader({ dense = false }: { dense?: boolean }) {
             </Link>
           );
         })}
+        <details className="relative">
+          <summary
+            className={cn(
+              "flex h-11 cursor-pointer list-none items-center rounded-md px-2.5 text-sm text-muted hover:bg-surface-2 hover:text-ink",
+              tools.some((x) => pathname.startsWith(x.to)) && "bg-surface-2 text-ink",
+            )}
+          >
+            {t("moreTools")}
+          </summary>
+          <div className="absolute right-0 z-40 mt-1 min-w-40 rounded-lg bg-surface p-1 shadow-[var(--shadow-border)]">
+            {tools.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="block rounded-md px-3 py-2 text-sm hover:bg-surface-2"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </details>
         <LangSwitch />
       </nav>
     </header>

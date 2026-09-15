@@ -65,6 +65,7 @@ export function isGenericGeositeName(name: string): boolean {
   if (GENERIC_GEOSITES.has(name)) return true;
   if (name.includes("待补") || name === "半日地质步道") return true;
   if (name.includes("核心观景台") || name.includes("剖面步道") || name.includes("对照点")) return true;
+  if (name.includes("火山口或堰塞湖岸") || name === "火山口或堰塞湖岸") return true;
   return false;
 }
 
@@ -80,3 +81,7 @@ export const MOTTO = "石头上写着地球的字。我们负责读出来，不�
 
 export const FOSSIL_LAW =
   "根据《古生物化石保护条例》与《地质遗迹保护管理规定》，古生物化石原则上属于国家所有。禁止私自发掘、买卖来路不明的化石。正确做法：看、拍、记；发现重要化石向管理部门报告。不要敲、不要挖、不要带走。";
+
+export const FOSSIL_LAW_HK =
+  "香港是单独法域。内地《古生物化石保护条例》不在此直接适用。不要敲、挖、带走标本。遵守《郊野公园条例》与现场告示。";
+

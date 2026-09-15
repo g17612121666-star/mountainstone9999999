@@ -160,4 +160,85 @@ export const COMPARE: CompareCard[] = [
       },
     ],
   },
+  {
+    id: "tiankeng-maar",
+    title_zh: "乐业–凤山天坑 ≠ 湖光岩玛珥湖",
+    title_en: "Leye–Fengshan tiankeng ≠ Huguangyan maar",
+    alike_zh: "都是圆坑、都有水，照片里都像「塌出来的湖」。",
+    alike_en: "Both are round pits with water. Photographs get captioned as a collapsed lake.",
+    split_zh:
+      "天坑：地下河顶板在碳酸盐岩里大规模塌出来，围岩会滴酸起泡。玛珥：地下水遇上岩浆爆炸留下的圆坑，岸是火山碎屑，滴酸不起泡。一个是溶了再塌，一个是炸。",
+    split_en:
+      "A tiankeng is the roof of an underground river collapsing in carbonate — acid fizzes. A maar is a round crater from groundwater meeting magma; the rim is volcanic debris and does not fizz. One dissolved, then fell; one exploded.",
+    sides: [
+      {
+        site_id: "leye-fengshan",
+        title_zh: "乐业–凤山天坑",
+        title_en: "Leye–Fengshan tiankeng",
+        formed_zh: "灰岩被地下河掏空，顶板一次性塌出大坑。围岩是碳酸盐岩。",
+        formed_en: "Limestone hollowed by an underground river; the roof collapsed in one go. The wall rock is carbonate.",
+      },
+      {
+        site_id: "huguangyan",
+        title_zh: "湖光岩玛珥",
+        title_en: "Huguangyan maar",
+        formed_zh: "雷琼裂谷里，地下水与岩浆相遇爆炸。圆湖，岸是碎屑，不是灰岩。",
+        formed_en: "In the Leiqiong rift, groundwater met magma and exploded. A round lake whose rim is debris, not limestone.",
+      },
+    ],
+  },
+  {
+    id: "yardang-danxia",
+    title_zh: "敦煌雅丹 ≠ 丹霞山赤壁",
+    title_en: "Dunhuang yardang ≠ Danxiashan cliffs",
+    alike_zh: "都是被切开的陡壁和土柱，颜色都可以发红，远看都像「风切出来的城」。",
+    alike_en: "Both are steep walls and pillars, often reddish. From far away both look like a city cut by wind.",
+    split_zh:
+      "雅丹：干旱区河湖相砂泥岩，主导外力是定向风蚀，脊线顺风向。丹霞：红层 + 垂直节理 + 崩塌，硬层出檐、软层凹进，有巷谷和方山。敦煌没有丹霞那套节理崩塌。",
+    split_en:
+      "Yardang: arid lacustrine sand–mudstone, carved by directional wind, ridges aligned with the wind. Danxia: red beds + vertical joints + collapse; hard ledges, soft recesses, alleyways and mesas. Dunhuang does not have that joint-collapse sequence.",
+    sides: [
+      {
+        site_id: "dunhuang",
+        title_zh: "敦煌雅丹",
+        title_en: "Dunhuang yardang",
+        formed_zh: "古湖相被定向风削成垄槽。先认风向，再认层理。",
+        formed_en: "Old lake beds planed into ridges and troughs by directional wind. Read the wind first, then the bedding.",
+      },
+      {
+        site_id: "danxiashan",
+        title_zh: "丹霞山",
+        title_en: "Danxiashan",
+        formed_zh: "红层被垂直节理切开再崩塌。这是定义地，不是风城。",
+        formed_en: "Red beds jointed and collapsed. This is the type locality, not a wind city.",
+      },
+    ],
+  },
+  {
+    id: "acid-basalt-columns",
+    title_zh: "香港酸性岩柱状节理 ≠ 五大连池玄武岩柱状节理",
+    title_en: "Hong Kong acid-rock columns ≠ Wudalianchi basalt columns",
+    alike_zh: "都是多边形石柱，照片里都写成「玄武岩柱状节理」。",
+    alike_en: "Both are polygonal stone columns. Photographs get captioned “basalt columnar jointing” for both.",
+    split_zh:
+      "柱状节理是冷却收缩切出来的，酸性熔结凝灰岩和流纹岩也能长。香港西贡等地是酸性岩柱，浅色、斑晶可见。五大连池是玄武岩，暗色、气孔。颜色和斑晶先分开，再谈柱。",
+    split_en:
+      "Columnar joints are cooling-contraction cracks. Acid welded tuff and rhyolite can grow them too. Sai Kung in Hong Kong is acid rock — pale, with phenocrysts. Wudalianchi is basalt — dark, vesicular. Name colour and crystals before you name the columns.",
+    sides: [
+      {
+        site_id: "hongkong",
+        title_zh: "香港酸性岩柱",
+        title_en: "Hong Kong acid columns",
+        formed_zh: "白垩纪酸性火山岩冷却收缩。浅色柱，不是玄武岩专属。",
+        formed_en: "Cretaceous acid volcanic rock cooling and contracting. Pale columns — not a basalt franchise.",
+      },
+      {
+        site_id: "wudalianchi",
+        title_zh: "五大连池玄武岩",
+        title_en: "Wudalianchi basalt",
+        formed_zh: "第四纪玄武岩流。暗色、气孔、渣锥。柱状节理只是冷却的一种。",
+        formed_en: "Quaternary basalt flows. Dark, vesicular, scoria cones. Columns are just one way it cooled.",
+      },
+    ],
+  },
 ];

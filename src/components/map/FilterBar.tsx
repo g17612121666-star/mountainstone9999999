@@ -10,7 +10,7 @@ import { useMapStore } from "@/lib/geo/store";
 import { sites, stats } from "@/lib/geo/catalog";
 import { filterSites, suggestSites } from "@/lib/geo/search";
 import { cn } from "@/lib/utils";
-import { displayName, landformLabel, localizeSite, placeLine, provinceLabel, useLocale, useT, type UiKey } from "@/lib/i18n";
+import { displayName, landformLabel, placeLine, provinceLabel, useLocale, useT, type UiKey } from "@/lib/i18n";
 
 const LEVELS: { id: SiteType; key: UiKey }[] = [
   { id: "world_geopark", key: "world" },
@@ -111,7 +111,6 @@ export function FilterBar() {
               ) : (
                 <ul>
                   {suggestions.map((s, i) => {
-                    const loc = localizeSite(s, locale);
                     return (
                       <li key={s.id}>
                         <button
@@ -124,9 +123,7 @@ export function FilterBar() {
                           onClick={() => pick(s.id)}
                         >
                           <span className="font-medium">{displayName(s, locale)}</span>
-                          <span className="text-xs text-muted">
-                            {placeLine(s, locale)} · {loc.hook.slice(0, 48)}
-                          </span>
+                          <span className="text-xs text-muted">{placeLine(s, locale)}</span>
                         </button>
                       </li>
                     );
@@ -152,11 +149,23 @@ export function FilterBar() {
           <Link to="/compare">{t("compare")}</Link>
         </Button>
       </div>
-      <div className="pointer-events-none text-[11px] text-muted">
+      <div className="pointer-events-none flex flex-wrap items-center gap-1.5 text-[11px] text-muted">
         <span className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1">
           {t("onMap")} {matched.length} · {t("world")} {stats.world} · {t("national")} {stats.national} ·{" "}
-          {t("candidate")} {stats.candidate} · {t("gssp")} {stats.gssp}
+          {t("candidate")} {stats.candidate}
         </span>
+        <span className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1">
+          {t("gssp")} {stats.gssp}
+        </span>
+        <span className="pointer-events-auto max-w-full rounded-full bg-bg/80 px-2 py-1">
+          {t("gsspNote")}
+        </span>
+        <Link
+          to="/routes"
+          className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1 text-moss underline"
+        >
+          {t("startTrail")}
+        </Link>
       </div>
       {matched.length === 0 ? (
         <div className="pointer-events-auto rounded-xl bg-surface/95 p-4 text-sm shadow-[var(--shadow-border)]">

@@ -16,7 +16,7 @@ const PH: Record<PhenomenonType, string> = {
   unconformity: "看懂的标志：上下两套岩层产状不同，中间是剥蚀面，不是一条普通层理。",
   peak: "看懂的标志：能说出柱/峰的边界是节理、溶沟还是崩塌面，而不是只拍一张轮廓。",
   cave_speleothem: "看懂的标志：认出石钟乳是水里的钙再长出来的。手不碰。溶洞听现场指挥。",
-  lava: "看懂的标志：气孔、绳状或渣状构造还在，能和沉积层理分开。",
+  lava: "看懂的标志：能把火山岩和沉积层理分开。玄武质熔岩才常见气孔、绳状或渣状；酸性凝灰岩、流纹岩要认浅色、斑晶或流纹。",
   fossil_layer: "看懂的标志：化石是一层，不是纪念品。只看展陈和保护廊。",
   collapse: "看懂的标志：能指出滑面或崩积块石的棱角，而不是把乱石堆当成熔岩。",
   pillar: "看懂的标志：柱的截面形状、软硬互层出檐，能和邻区另一种柱分开。",
@@ -36,7 +36,7 @@ export const LOOK_EN: Record<PhenomenonType, string> = {
   peak: "From an open viewpoint, name the pillar or peak boundary: joint, dissolution groove, or collapse face — not just a silhouette. Located to the park or viewpoint.",
   cave_speleothem:
     "In the cave, recognise a stalactite as calcium grown back out of water. Do not touch. Follow the on-site brief. No sampling.",
-  lava: "On the open path, find vesicles, ropey or scoriaceous texture, and separate them from sedimentary bedding. Located to the park or viewpoint.",
+  lava: "On the open path, separate volcanic rock from sedimentary bedding. Vesicles, ropey or scoriaceous textures belong to basaltic lava; pale colour, phenocrysts or flow banding mark acidic tuff and rhyolite. Located to the park or viewpoint.",
   fossil_layer:
     "At the gallery or protected walkway: a fossil is a bed, not a souvenir. Look, photograph, note. Do not hammer or collect.",
   collapse: "Point to a slide surface or angular talus. A rubble pile is not lava. Stay on the open path.",
@@ -58,6 +58,10 @@ export function expandLookHere(g: Geosite): string {
     .replace(/定位只到园区或观景台，不提供可取样坐标。?/g, "")
     .replace(/票价以官方当日为准，本站不售票。?/g, "")
     .trim();
+  if (g.site_id === "sheshan") return cleaned || extra;
+  if (/浅色|流纹|凝灰|碱性|斑晶/.test(cleaned) && g.phenomenon_type === "lava") {
+    return cleaned;
+  }
   if (cleaned.length >= 80) return cleaned;
   if (cleaned.length >= 40) {
     return cleaned.endsWith("。") ? `${cleaned}${extra}` : `${cleaned}。${extra}`;

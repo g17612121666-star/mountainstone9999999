@@ -1,8 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { seoHead } from "@/lib/geo/canonical";
 import { getGeosites, getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
-import { isGenericGeositeName } from "@/lib/geo/labels";
+import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { isOwnCover } from "@/lib/geo/safety";
 import {
   localizeGeosite,
@@ -26,13 +28,15 @@ export const Route = createFileRoute("/card/$id")({
     throw notFound();
   },
   component: CardPage,
-  head: ({ loaderData }) => ({
-    meta: [
-      {
-        title: `${loaderData?.site?.name ?? loaderData?.theme?.name ?? "观察卡"} · 山石志`,
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const name = loaderData?.site?.name ?? loaderData?.theme?.name ?? "观察卡";
+    const path = `/card/${loaderData?.site?.id ?? loaderData?.theme?.id ?? ""}`;
+    return seoHead({
+      title: `${name}`,
+      description: "一页能装进口袋的观察卡。只看不挖。",
+      path,
+    });
+  },
 });
 
 function cardLook(name: string, look: string): string {
@@ -67,6 +71,7 @@ function CardPage() {
         </div>
         <p className="mt-6 text-center font-display text-sm text-muted">{motto(locale)}</p>
       </main>
+      <AppFooter />
     </div>
   );
 }
@@ -77,12 +82,10 @@ function SiteCardBody() {
   const locale = useLocale((s) => s.locale);
   if (!site) return null;
   const s = localizeSite(site, locale);
-  const allStops = getGeosites(site.id).filter((g) => !isGenericGeositeName(g.name));
-  const stops = allStops.slice(0, 3).map((g) => localizeGeosite(g, locale));
+  const allStops = getGeosites(site.id).filter((g) => !isFakeGeosite(g) && !isGenericGeositeName(g.name));
+  const stops = allStops.map((g) => localizeGeosite(g, locale));
   const own = isOwnCover(site);
-  const stopThumbs = allStops
-    .filter((g) => g.photo && g.photo !== site.cover_image)
-    .slice(0, 3);
+  const stopThumbs = allStops.filter((g) => g.photo && g.photo !== site.cover_image).slice(0, 4);
   return (
     <>
       <h1 className="font-display mt-1 text-3xl font-semibold">
@@ -113,7 +116,10 @@ function SiteCardBody() {
       <p className="mt-4 text-base leading-relaxed">{s.hook}</p>
       {stops.length ? (
         <section className="mt-5">
-          <h2 className="font-display text-lg font-semibold">{t("fieldStops")}</h2>
+          <h2 className="font-display text-lg font-semibold">
+            {t("fieldStops")}
+            <span className="ml-2 text-sm font-normal text-muted">{stops.length}</span>
+          </h2>
           <ol className="mt-2 list-decimal space-y-2 pl-5 text-sm leading-relaxed">
             {stops.map((g) => (
               <li key={g.id}>
@@ -158,8 +164,8 @@ function TrailCardBody() {
           <p className="mt-1">{task}</p>
         </aside>
       ) : null}
-      <ol className="mt-5 space-y-2">
-        {theme.site_ids.slice(0, 3).map((id, i) => {
+      <ol className="mt-5 space-y-3">
+        {theme.site_ids.map((id, i) => {
           const site = getSite(id);
           if (!site) return null;
           const own = isOwnCover(site);
@@ -173,11 +179,11 @@ function TrailCardBody() {
                 />
               ) : null}
               <span>
-                <span className="font-medium">
+                <span className="block text-xs text-muted">
                   {t("trailStop")} {i + 1}
-                  {locale === "zh" ? t("trailStopOf") : ""} ·{" "}
-                  {locale === "en" ? site.name_en || site.id : site.name}
+                  {locale === "zh" ? t("trailStopOf") : ""}
                 </span>
+                <span className="font-medium">{locale === "en" ? site.name_en || site.id : site.name}</span>
                 <span className="mt-0.5 block text-muted">{themeRole(theme, i, locale)}</span>
               </span>
             </li>

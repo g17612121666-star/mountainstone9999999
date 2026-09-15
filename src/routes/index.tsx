@@ -5,6 +5,7 @@ import { ChinaMap } from "@/components/map/ChinaMap";
 import { FilterBar } from "@/components/map/FilterBar";
 import { MapLegend } from "@/components/map/Legend";
 import { SiteCard } from "@/components/site/SiteCard";
+import { seoHead } from "@/lib/geo/canonical";
 import { getSite } from "@/lib/geo/catalog";
 import { useMapStore } from "@/lib/geo/store";
 import { useT } from "@/lib/i18n";
@@ -16,16 +17,12 @@ export const Route = createFileRoute("/")({
     focus: typeof raw.focus === "string" ? raw.focus : undefined,
   }),
   component: Home,
-  head: () => ({
-    meta: [
-      { title: "山石志 · 随身地质向导" },
-      {
-        name: "description",
-        content: "一张可缩放的中国地质点地图：成因、打卡点、怎么走、看什么、不挖什么、要不要买票。",
-      },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  head: () =>
+    seoHead({
+      title: "随身地质向导",
+      description: "一张可缩放的中国地质点地图：成因、打卡点、怎么走、看什么、不挖什么、要不要买票。",
+      path: "/",
+    }),
 });
 
 function Home() {

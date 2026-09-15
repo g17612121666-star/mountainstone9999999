@@ -643,7 +643,7 @@ export const deepRoutes: Record<string, Route[]> = {
     route("cs-park-walk", "changshan", "常山园：从入口走到金钉子栈道", "半日", "低至中", ["cs-park", "cs-section-view", "cs-gssp-link"], "衢州常山县城至黄泥塘。", "园是保护罩。金钉子是独立的点，从栈道连过去。"),
   ],
   sheshan: [
-    route("ss-loop", "sheshan", "东西佘山：平原上的火山锥", "半日", "低", ["ss-west", "ss-observatory", "ss-east"], "地铁或公交到佘山，先西后东。", "把每一处浅色基岩拍下来。对照：流纹岩/凝灰岩，不是花岗岩。", 6, 100),
+    route("ss-loop", "sheshan", "东西佘山：平原上的火山锥", "半日", "低", ["ss-west", "ss-hills"], "地铁或公交到佘山。沿开放步道走。", "把浅色基岩拍下来。对照：流纹岩/凝灰岩，不是花岗岩。", 6, 100),
   ],
   meishan: [
     route("ms-gssp", "meishan", "煤山：一剖两钉", "3 小时", "低", ["ms-museum", "ms-section", "ms-pt"], "长兴县城出发。先馆后廊。", "把长兴阶底和 PT 界线的上下关系画在笔记本上。"),

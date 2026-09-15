@@ -1,8 +1,8 @@
 import type { LandformType, PhenomenonType, Site, SiteType } from "@/lib/geo/types";
 import { LANDFORM_LABEL, PHENOMENON_LABEL, SITE_TYPE_LABEL } from "@/lib/geo/types";
-import { FOSSIL_LAW, MOTTO, shortName, typeBadge as typeBadgeZh } from "@/lib/geo/labels";
+import { FOSSIL_LAW, FOSSIL_LAW_HK, MOTTO, shortName, typeBadge as typeBadgeZh } from "@/lib/geo/labels";
 import { currentLocale, useLocale, type Locale } from "./locale";
-import { FOSSIL_LAW_EN, LANDFORM_EN, MOTTO_EN, PHENOMENON_EN, TYPE_EN, UI, type UiKey } from "./ui";
+import { FOSSIL_LAW_EN, FOSSIL_LAW_HK_EN, LANDFORM_EN, MOTTO_EN, PHENOMENON_EN, TYPE_EN, UI, type UiKey } from "./ui";
 import { localizeSite } from "./localize";
 import { provinceLabel } from "./provinces";
 
@@ -20,6 +20,7 @@ export {
   themeThesis,
   themeRole,
   themeTask,
+  hasQualifiedEn,
 } from "./localize";
 export { provinceLabel } from "./provinces";
 
@@ -40,6 +41,12 @@ export function motto(locale?: Locale): string {
 
 export function fossilLaw(locale?: Locale): string {
   return (locale ?? currentLocale()) === "en" ? FOSSIL_LAW_EN : FOSSIL_LAW;
+}
+
+export function fossilLawFor(province: string, locale?: Locale): string {
+  const loc = locale ?? currentLocale();
+  if (province === "香港") return loc === "en" ? FOSSIL_LAW_HK_EN : FOSSIL_LAW_HK;
+  return fossilLaw(loc);
 }
 
 export function landformLabel(type: LandformType, locale?: Locale): string {
