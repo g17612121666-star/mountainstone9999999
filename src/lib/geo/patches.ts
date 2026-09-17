@@ -214,8 +214,8 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     ],
   },
   sheshan: {
-    cover_image: "",
-    cover_credit: "",
+    cover_image: "/covers/sheshan.jpg",
+    cover_credit: "上海道台, CC BY-SA 4.0, Wikimedia Commons · File:上海_松江_佘山_西佘山_远眺.jpg · 西佘山山体远眺 · 资料照片",
     gallery: [],
     geologic_age_text: "晚白垩世",
     content_status: "complete",
@@ -287,24 +287,23 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   jixian: {
     cover_image: "/covers/jixian.jpg",
     cover_credit:
-      "HaziiDozen, CC BY-SA 4.0, Wikimedia Commons · museum specimen, not a field outcrop · 馆藏标本，非野外露头",
+      "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
     gallery: [
       {
         src: "/covers/jixian.jpg",
-        credit:
-          "HaziiDozen, CC BY-SA 4.0, Wikimedia Commons · museum specimen, not a field outcrop · 馆藏标本，非野外露头",
-        caption: "蓟县雾迷山组叠层石，馆藏标本，非野外露头",
+        credit: "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
+        caption: "蓟县雾迷山组叠层石野外露头。资料照片，非本站踏勘",
       },
     ],
   },
   zhucheng: {
     cover_image: "/covers/zhucheng.jpg",
-    cover_credit: "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 馆藏标本，非野外露头",
+    cover_credit: "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 诸城恐龙化石隧道原位骨层 · 资料照片",
     gallery: [
       {
         src: "/covers/zhucheng.jpg",
-        credit: "Glennsmart, CC BY-SA 3.0, Wikimedia Commons",
-        caption: "资料照片，非本站踏勘",
+        credit: "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 诸城恐龙化石隧道原位骨层",
+        caption: "诸城恐龙化石带原位骨层。资料照片，非本站踏勘",
       },
     ],
   },
@@ -379,8 +378,8 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     ],
   },
   "xixian-loess": {
-    cover_image: "",
-    cover_credit: "",
+    cover_image: "/covers/xixian-loess.jpg",
+    cover_credit: "Esri World Imagery · 隰县黄土公园坐标卫星资料照片，非本站踏勘",
     gallery: [],
     hook: "黄土塬被切成梁和峁。风积粉砂，垂直节理，不是红层丹霞。",
     formation_short:
@@ -388,8 +387,8 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     what_you_see_today: "先认粉砂和垂直节理。站在塬边看梁峁，不要靠近黄土陡坎根部。",
   },
   "zhengzhou-huanghe": {
-    cover_image: "",
-    cover_credit: "",
+    cover_image: "/covers/zhengzhou-huanghe.jpg",
+    cover_credit: "vtpoly, by-nc-nd, Openverse · 郑州黄河地上河资料照片",
     gallery: [],
     hook: "黄河出山口后摊开。地上河，看的是泥沙怎么被送走。",
     formation_short:
@@ -397,8 +396,8 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     what_you_see_today: "先认宽谷和堤。泥是黄土和上游侵蚀送来的，不是本地基岩被切开。",
   },
   "huanghe-delta": {
-    cover_image: "",
-    cover_credit: "",
+    cover_image: "/covers/huanghe-delta.jpg",
+    cover_credit: "资料照片 · 新华社记者 徐速绘 · 人民网图片频道转载 · 东营黄河三角洲湿地航拍",
     gallery: [],
     hook: "黄土和上游侵蚀的终点。东营潮滩还在往海里长。",
     formation_short:
@@ -419,7 +418,7 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   },
   jiayin: {
     cover_image: "/covers/jiayin.jpg",
-    cover_credit: "Huanokinhejo, CC BY-SA 4.0, Wikimedia Commons · 馆藏标本，非野外露头",
+    cover_credit: "Huanokinhejo, CC BY-SA 4.0, Wikimedia Commons · 嘉荫恐龙化石产地资料照片",
   },
   baishishan: {
     cover_image: "/covers/baishishan.jpg",
@@ -431,7 +430,7 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   },
   chaoyang: {
     cover_image: "/covers/chaoyang.jpg",
-    cover_credit: "James St. John, CC BY 2.0, Wikimedia Commons · 馆藏标本，非野外露头",
+    cover_credit: "资料照片 · 朝阳鸟化石产地地貌远景",
   },
 };
 

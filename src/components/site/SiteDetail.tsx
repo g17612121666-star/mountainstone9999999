@@ -150,6 +150,14 @@ export function SiteDetail({ site }: { site: Site }) {
         {formation ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("formation")}</h2>
+            {photo ? (
+              <figure className="mt-3 overflow-hidden rounded-lg bg-surface shadow-[var(--shadow-border)]">
+                <img src={photo} alt={site.cover_credit || displayName(s, locale)} className="h-48 w-full object-cover" />
+                <figcaption className="px-3 py-2 text-[11px] leading-snug text-muted">
+                  {photoCredit(site.cover_credit || "", locale)}
+                </figcaption>
+              </figure>
+            ) : null}
             <p className="mt-2 text-sm leading-relaxed">
               <LinkedText text={formation} />
             </p>

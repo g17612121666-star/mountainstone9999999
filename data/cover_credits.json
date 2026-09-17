@@ -623,8 +623,8 @@
     "gallery": []
   },
   "shanwang": {
-    "credit": "Wikimedia Commons · 馆藏标本，非野外露头",
-    "caption": "山旺化石，馆藏标本，非野外露头",
+    "credit": "Esri World Imagery · 临朐山旺国家地质公园坐标卫星资料照片，非本站踏勘",
+    "caption": "山旺玛珥湖盆地地貌远景。资料照片，非本站踏勘",
     "src": "/covers/shanwang.jpg",
     "gallery": []
   },
@@ -737,8 +737,8 @@
     "gallery": []
   },
   "zhucheng": {
-    "credit": "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 馆藏标本，非野外露头",
-    "caption": "诸城恐龙骨骼，馆藏标本，非野外露头",
+    "credit": "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 诸城恐龙化石隧道原位骨层 · 资料照片",
+    "caption": "诸城恐龙化石带原位骨层（公园保护廊），不是展柜标本。资料照片，非本站踏勘",
     "src": "/covers/zhucheng.jpg",
     "gallery": []
   },
@@ -888,8 +888,8 @@
     "gallery": []
   },
   "lufeng": {
-    "credit": "瑞丽江的河水, CC BY-SA 4.0, Wikimedia Commons · 馆藏标本，非野外露头",
-    "caption": "禄丰古猿下颌，馆藏标本，非野外露头",
+    "credit": "zhanyoun, CC BY-SA 3.0, Wikimedia Commons · File:恐龙谷 - panoramio.jpg · 禄丰恐龙谷山体 · 资料照片",
+    "caption": "禄丰恐龙谷山体远景。资料照片，非本站踏勘",
     "src": "/covers/lufeng.jpg",
     "commons": "File:云南省博物馆-新近纪-云南省禄丰县-禄丰禄丰古猿-下颌骨（化65）.jpg",
     "gallery": []
@@ -1471,8 +1471,8 @@
     ]
   },
   "sheshan": {
-    "credit": "上海道台, CC BY-SA 4.0, Wikimedia Commons · 西佘山山体远眺 · 资料照片",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "上海道台, CC BY-SA 4.0, Wikimedia Commons · File:上海 松江 佘山 西佘山 远眺.jpg · 西佘山山体远眺 · 资料照片",
+    "caption": "西佘山山体远眺。资料照片，非本站踏勘",
     "src": "/covers/sheshan.jpg",
     "gallery": []
   },
@@ -1591,16 +1591,22 @@
     "gallery": []
   },
   "cangnan-fanshan": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "金同学, CC BY 3.0, Wikimedia Commons · File:单车游苍南—矾山 - panoramio.jpg · 苍南矾山山地 · 资料照片",
+    "caption": "苍南矾山镇山地远景。资料照片，非本站踏勘",
     "src": "/covers/cangnan-fanshan.jpg",
     "gallery": []
   },
   "gssp-jiangshan": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "Peng et al., 2012, Episodes 35(4) Fig.5B · ICS 江山阶金钉子 · 江山碓边 B 剖面野外露头 · 资料照片",
+    "caption": "江山碓边 B 剖面，华严寺组灰岩。资料照片，非本站踏勘",
     "src": "/covers/gssp-jiangshan.jpg",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/covers/gssp-jiangshan-2.jpg",
+        "credit": "Peng et al., 2012, Episodes 35(4) Fig.5C · ICS · 碓边灰岩层理 · 资料照片",
+        "caption": "华严寺组薄层灰岩。资料照片，非本站踏勘"
+      }
+    ]
   },
   "fengyangshan": {
     "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
@@ -1687,8 +1693,8 @@
     "gallery": []
   },
   "changle-volcano": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "Geoli, CC BY-SA 4.0, Wikimedia Commons · File:昌乐北岩火山口.JPG · 资料照片",
+    "caption": "昌乐北岩火山口与柱状节理。资料照片，非本站踏勘",
     "src": "/covers/changle-volcano.jpg",
     "gallery": []
   },
@@ -1867,14 +1873,14 @@
     "gallery": []
   },
   "gssp-penglaitan": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "Jin et al. / ICS Wuchiapingian GSSP · 来宾蓬莱滩剖面露头 · 资料照片",
+    "caption": "红水河蓬莱滩吴家坪阶金钉子剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-penglaitan.jpg",
     "gallery": []
   },
   "gssp-pengchong": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "Devuyst et al., 2003, Episodes 26(2) · ICS 维宪阶金钉子 · 柳州碰冲剖面露头 · 资料照片",
+    "caption": "碰冲组灰岩剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-pengchong.jpg",
     "gallery": []
   },
@@ -1969,8 +1975,8 @@
     "gallery": []
   },
   "luochuan": {
-    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "中国地震学会 2024 黄土沉积地层与黄土区工程建设交流材料 图4 · 黄土–古土壤互层野外露头 · 资料照片",
+    "caption": "黄土与红棕色古土壤互层，垂直节理。资料照片，非本站踏勘",
     "src": "/covers/luochuan.jpg",
     "gallery": []
   },
