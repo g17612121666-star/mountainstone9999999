@@ -531,7 +531,7 @@
     },
     "lincheng": {
       "city": "Lin Cheng County",
-      "geologic_age_text": "Palaeozoic carbonate, later uplifted",
+      "geologic_age_text": "Cambrian–Ordovician",
       "hook": "Lincheng: CO2-bearing water dissolving carbonate along joints. First find grikes, solution notches or speleothems. Not Danxia, not Zhangjiajie quartz-sandstone pillars. A drop of dilute HCl should fizz.",
       "formation_short": "Lincheng. Rock: Carbonate (limestone or dolostone). Process: CO2-bearing water dissolving carbonate along joints. Not Danxia, not Zhangjiajie quartz-sandstone pillars. A drop of dilute HCl should fizz. Look, do not take.",
       "evolution_sequence": "Carbonate platform → uplift and joints → grikes / gorge / cave",
@@ -544,7 +544,7 @@
       "formation_timeline": [
         {
           "name": "Carbonate deposited",
-          "age": "marine or tidal flat",
+          "age": "Cambrian–Ordovician",
           "what": "Limestone or dolostone in beds."
         },
         {
@@ -554,7 +554,7 @@
         },
         {
           "name": "Dissolution",
-          "age": "to the present",
+          "age": "Cenozoic to the present",
           "what": "Grikes, gorges or caves still grow."
         }
       ],
@@ -573,7 +573,7 @@
     },
     "wuan": {
       "city": "Wu An",
-      "geologic_age_text": "Palaeozoic carbonate, later uplifted",
+      "geologic_age_text": "Cambrian–Ordovician",
       "hook": "Wuan: CO2-bearing water dissolving carbonate along joints. First find grikes, solution notches or speleothems. Not Danxia, not Zhangjiajie quartz-sandstone pillars. A drop of dilute HCl should fizz.",
       "formation_short": "Wuan. Rock: Carbonate (limestone or dolostone). Process: CO2-bearing water dissolving carbonate along joints. Not Danxia, not Zhangjiajie quartz-sandstone pillars. A drop of dilute HCl should fizz. Look, do not take.",
       "evolution_sequence": "Carbonate platform → uplift and joints → grikes / gorge / cave",
@@ -586,7 +586,7 @@
       "formation_timeline": [
         {
           "name": "Carbonate deposited",
-          "age": "marine or tidal flat",
+          "age": "Cambrian–Ordovician",
           "what": "Limestone or dolostone in beds."
         },
         {
@@ -596,7 +596,7 @@
         },
         {
           "name": "Dissolution",
-          "age": "to the present",
+          "age": "Cenozoic to the present",
           "what": "Grikes, gorges or caves still grow."
         }
       ],
@@ -11416,7 +11416,7 @@
     },
     "hongkong": {
       "city": "Sai Kung District",
-      "geologic_age_text": "Age as listed on the Chinese park page.",
+      "geologic_age_text": "Early Cretaceous",
       "hook": "When the tide goes out, a hexagonal cooling-joint net appears. Acid rock grows columns too.",
       "formation_short": "Hong Kong UNESCO Global Geopark has two limbs: Sai Kung volcanic rock and northeast New Territories sedimentary rock, on the Early Cretaceous volcanic–sedimentary belt of the South China margin. The columns are rhyolitic lava and ignimbrite, not basalt: pale to dark, quartz and feldspar phenocrysts. Joints grew perpendicular to the cooling surface. Coordinates stay in WGS84 on the map — Hong Kong is not offset to GCJ-02. Read the tide.",
       "evolution_sequence": "Early Cretaceous acid volcanics → cooling joints → marine erosion of the columns",
@@ -11429,11 +11429,11 @@
       "formation_timeline": [],
       "visible_rocks_minerals_fossils": [],
       "safety_notes": [
-        "Crater walls and scoria slopes are loose — stay on the path.",
-        "Watch for burns at hot springs.",
-        "Do not climb crater fences."
+        "Read the tide table before going down to the columns. The intertidal can cut you off.",
+        "Wave-cut platforms are slick — do not climb the columns or drop off the cliff.",
+        "Stay on marked country-park paths. Do not hammer or take rock."
       ],
-      "legal_notes": "Protected geoheritage. Look, photograph, note. Do not hammer, dig, or take rock, mineral or fossil. Prices and hours follow the official listing on the day. This guide does not sell tickets.",
+      "legal_notes": "Hong Kong is a separate jurisdiction. Mainland China’s Fossil Protection Regulations do not apply as such. Do not hammer, dig, or take specimens. Follow the Country Parks Ordinance and on-site notices.",
       "corrections": [
         "Columnar jointing is not a basalt franchise. Acid rock can do this."
       ]

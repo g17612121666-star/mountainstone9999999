@@ -27,48 +27,57 @@ const PH: Record<PhenomenonType, string> = {
 
 export const LOOK_EN: Record<PhenomenonType, string> = {
   bedding:
-    "Stand on the open path. Point to the top and base of one bed. You have read it when you can say whether the beds above and below belong to the same package. Located to the park or viewpoint — no sampling coordinates.",
+    "Stand on the open path. Point to the top and base of one bed. You have read it when you can say whether the beds above and below belong to the same package.",
   joint:
-    "Stand on the open path. Use both hands to show two joint sets and how they cut the rock into blocks. Located to the park or viewpoint — no sampling coordinates.",
-  fold: "Stand on the open path. Point to the hinge where beds bend — a curved ridge is not automatically a fold. Located to the park or viewpoint — no sampling coordinates.",
+    "Stand on the open path. Use both hands to show two joint sets and how they cut the rock into blocks.",
+  fold: "Stand on the open path. Point to the hinge where beds bend — a curved ridge is not automatically a fold.",
   unconformity:
     "Stand at the marked section. Beds above and below do not share a dip; the surface between them is erosion, not an ordinary bedding plane. No sampling.",
-  peak: "From an open viewpoint, name the pillar or peak boundary: joint, dissolution groove, or collapse face — not just a silhouette. Located to the park or viewpoint.",
+  peak: "From an open viewpoint, name the pillar or peak boundary: joint, dissolution groove, or collapse face — not just a silhouette.",
   cave_speleothem:
     "In the cave, recognise a stalactite as calcium grown back out of water. Do not touch. Follow the on-site brief. No sampling.",
-  lava: "On the open path, separate volcanic rock from sedimentary bedding. Vesicles, ropey or scoriaceous textures belong to basaltic lava; pale colour, phenocrysts or flow banding mark acidic tuff and rhyolite. Located to the park or viewpoint.",
+  lava: "On the open path, separate volcanic rock from sedimentary bedding. Vesicles, ropey or scoriaceous textures belong to basaltic lava; pale colour, phenocrysts or flow banding mark acidic tuff and rhyolite.",
   fossil_layer:
     "At the gallery or protected walkway: a fossil is a bed, not a souvenir. Look, photograph, note. Do not hammer or collect.",
   collapse: "Point to a slide surface or angular talus. A rubble pile is not lava. Stay on the open path.",
   pillar:
-    "Read the pillar’s cross-section and any hard–soft ledges, and separate it from a neighbouring pillar of a different rock. Located to the park or viewpoint.",
-  dike: "The sheet cuts the country rock; walls are roughly parallel; grain size differs. Located to the park or viewpoint — no sampling coordinates.",
+    "Read the pillar’s cross-section and any hard–soft ledges, and separate it from a neighbouring pillar of a different rock.",
+  dike: "The sheet cuts the country rock; walls are roughly parallel; grain size differs.",
   stromatolite:
-    "Laminae convex-up mark the top. Stromatolites are microbial mats, not ornamental stone. Do not chisel. Located to the park or viewpoint.",
+    "Laminae convex-up mark the top. Stromatolites are microbial mats, not ornamental stone. Do not chisel.",
   other:
-    "First name the rock, then the one process this stop is here to prove. Located to the park or viewpoint — no sampling coordinates.",
+    "First name the rock, then the one process this stop is here to prove.",
 };
+
+/** Strip template locate/ticket sentences so the page can print that note once. */
+export function stripLocatePhrase(text: string): string {
+  return (text || "")
+    .replace(/站在开放步道或观景台看「[^」]+」。?/g, "")
+    .replace(/定位只到园区或观景台，不提供可取样坐标。?/g, "")
+    .replace(/定位到园区\s*\/\s*观景台，不提供可取样坐标。?/g, "")
+    .replace(/Located to the park or viewpoint — no sampling coordinates\.?/gi, "")
+    .replace(/Located to the park or viewpoint\.?/gi, "")
+    .replace(/票价以官方当日为准，本站不售票。?/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
 
 export function expandLookHere(g: Geosite): string {
   if (HAND[g.id]) return HAND[g.id];
-  const text = (g.look_here || "").trim();
+  const text = stripLocatePhrase(g.look_here || "");
   const extra = PH[g.phenomenon_type] ?? PH.other;
-  const cleaned = text
-    .replace(/站在开放步道或观景台看「[^」]+」。?/g, "")
-    .replace(/定位只到园区或观景台，不提供可取样坐标。?/g, "")
-    .replace(/票价以官方当日为准，本站不售票。?/g, "")
-    .trim();
-  if (g.site_id === "sheshan") return cleaned || extra;
-  if (/浅色|流纹|凝灰|碱性|斑晶/.test(cleaned) && g.phenomenon_type === "lava") {
-    return cleaned;
+  if (g.site_id === "sheshan") return text || extra;
+  if (/浅色|流纹|凝灰|碱性|斑晶/.test(text) && g.phenomenon_type === "lava") {
+    return text;
   }
-  if (cleaned.length >= 80) return cleaned;
-  if (cleaned.length >= 40) {
-    return cleaned.endsWith("。") ? `${cleaned}${extra}` : `${cleaned}。${extra}`;
+  if (text.length >= 80) return text;
+  if (text.length >= 40) {
+    return text.endsWith("。") ? `${text}${extra}` : `${text}。${extra}`;
   }
-  if (cleaned) {
-    const lead = cleaned.endsWith("。") ? cleaned : `${cleaned}。`;
+  if (text) {
+    const lead = text.endsWith("。") ? text : `${text}。`;
     return `${lead}${extra}`;
   }
   return extra;
 }
+

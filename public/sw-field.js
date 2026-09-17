@@ -1,13 +1,21 @@
 /* Field-pack service worker. Caches only explicit packs, their pages, and covers.
-   Basemap tiles are not promised offline. */
-const CACHE = "shanshizhi-field-v1";
+   Basemap tiles are not promised offline. Cache name must match src/lib/geo/offline.ts. */
+const CACHE = "shanshizhi-field-v2";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys
+          .filter((k) => k.startsWith("shanshizhi-field-") && k !== CACHE)
+          .map((k) => caches.delete(k)),
+      ),
+    ).then(() => self.clients.claim()),
+  );
 });
 
 self.addEventListener("fetch", (event) => {

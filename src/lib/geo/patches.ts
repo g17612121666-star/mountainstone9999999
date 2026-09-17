@@ -1,4 +1,5 @@
 import type { Geosite, Route, Site } from "./types";
+import { FOSSIL_LAW_HK } from "./labels";
 
 /** 金钉子所属园。null = 独立剖面。禁止用 related 第一项冒充。 */
 export const HOST_PARK: Record<string, string | null> = {
@@ -252,6 +253,15 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     hook: "太行山石英砂岩被切成峡谷群。先认层理和垂直节理。滴酸不起泡：不是喀斯特，也不是丹霞红层。",
   },
   huoshizhai: { geologic_age_text: "白垩纪" },
+  hongkong: {
+    geologic_age_text: "早白垩世",
+    legal_notes: FOSSIL_LAW_HK,
+    safety_notes: [
+      "先看潮汐表再下岸。柱状节理多在潮间带，涨潮会断退路。",
+      "浪切台湿滑，不要攀柱、不要下崖。",
+      "只走郊野公园开放步道。不要敲挖带走标本。",
+    ],
+  },
   danxiashan: {
     cover_image: "/covers/danxiashan.jpg",
     cover_credit: "Mx. Granger, CC0, Wikimedia Commons",

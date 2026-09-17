@@ -45,8 +45,15 @@ const URBAN = [
   "林间土阶雨后滑。",
 ];
 
+const COUNTRY_PARK_COAST = [
+  "先看潮汐表再下岸。柱状节理多在潮间带，涨潮会断退路。",
+  "浪切台湿滑，不要攀柱、不要下崖。",
+  "只走郊野公园开放步道。不要敲挖带走标本。",
+];
+
 export function safetyFor(site: Site): string[] {
   if (site.id === "chongming") return SAND_ISLAND;
+  if (site.id === "hongkong") return COUNTRY_PARK_COAST;
   if (site.types.includes("urban_geosite")) return URBAN;
   if (site.types.includes("gssp")) return BY_LANDFORM.stratigraphy;
   const primary = site.landform_types[0] ?? "other";
@@ -68,6 +75,11 @@ const MISLEADING = [
   "同县山地对照",
   "额尔齐斯河上游河谷",
   "终南山山林",
+  "馆藏标本",
+  "标本，非野外",
+  "非野外露头",
+  "Mount Pan",
+  "盘山标本",
 ];
 
 export function isOwnCover(site: {

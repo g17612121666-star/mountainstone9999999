@@ -5,6 +5,7 @@ import { seoHead } from "@/lib/geo/canonical";
 import { getGeosites, getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
+import { stripLocatePhrase } from "@/lib/geo/look";
 import { isOwnCover } from "@/lib/geo/safety";
 import {
   localizeGeosite,
@@ -40,10 +41,8 @@ export const Route = createFileRoute("/card/$id")({
 });
 
 function cardLook(name: string, look: string): string {
-  return look
+  return stripLocatePhrase(look)
     .replace(new RegExp(`站在开放步道或观景台看「${name}」。?`), "")
-    .replace(/定位只到园区或观景台，不提供可取样坐标。?/g, "")
-    .replace(/Located to the park or viewpoint — no sampling coordinates\.?/gi, "")
     .trim();
 }
 

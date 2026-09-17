@@ -5,7 +5,7 @@ import { SiteBadges } from "@/components/site/SiteBadges";
 import { siteTo } from "@/lib/geo/href";
 import { isOwnCover } from "@/lib/geo/safety";
 import type { Site } from "@/lib/geo/types";
-import { displayName, useLocale, useT } from "@/lib/i18n";
+import { displayName, useLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 /** Name is the only link text. Badges, place and notes sit outside the <a>. */
@@ -57,7 +57,6 @@ export function SiteRowLink({
   end?: ReactNode;
 }) {
   const locale = useLocale((s) => s.locale);
-  const t = useT();
   const own = isOwnCover(site);
   return (
     <div className="flex items-center gap-3 px-3 py-3 sm:px-4">
@@ -77,9 +76,7 @@ export function SiteRowLink({
         {sub ? <div className="mt-0.5 text-xs text-muted">{sub}</div> : null}
       </div>
       {end ?? (
-        <span className="shrink-0 rounded-full bg-surface-2 px-2 py-0.5 text-[11px] text-muted">
-          {site.content_status === "complete" ? t("deepPage") : t("standardCard")}
-        </span>
+        <SiteBadges site={site} compact />
       )}
     </div>
   );

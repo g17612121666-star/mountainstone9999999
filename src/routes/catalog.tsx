@@ -11,7 +11,6 @@ import { ageLabel } from "@/lib/geo/age";
 import { seoHead } from "@/lib/geo/canonical";
 import { getVisit, nationalGeoparks, sites, stats } from "@/lib/geo/catalog";
 import { haystack } from "@/lib/geo/search";
-import { useMapStore } from "@/lib/geo/store";
 import {
   LANDFORM_LABEL,
   PROVINCES,
@@ -61,9 +60,9 @@ function CatalogPage() {
   const [status, setStatus] = useState<"all" | "deep" | "standard">("all");
   const [ticket, setTicket] = useState<"all" | "yes" | "no">("all");
   const [level, setLevel] = useState<SiteType | "">("");
-  const ageOn = useMapStore((s) => s.filters.ageOn);
-  const ageStart = useMapStore((s) => s.filters.ageStart);
-  const ageEnd = useMapStore((s) => s.filters.ageEnd);
+  const [ageOn, setAgeOn] = useState(false);
+  const [ageStart, setAgeStart] = useState(0);
+  const [ageEnd, setAgeEnd] = useState(0);
 
   const list = useMemo(() => {
     const base = tab === "national" ? nationalGeoparks() : sites;
@@ -242,10 +241,15 @@ function CatalogPage() {
         </p>
         <div className="mt-5 space-y-6">
           <TimescaleBar
-            onPick={(start, end) => {
-              setStatus("all");
-              void start;
-              void end;
+            ageOn={ageOn}
+            ageStart={ageStart}
+            ageEnd={ageEnd}
+            onAgeChange={(on, start, end) => {
+              setAgeOn(on);
+              if (on && start != null && end != null) {
+                setAgeStart(start);
+                setAgeEnd(end);
+              }
             }}
           />
           <RecentlyWritten />
@@ -280,9 +284,6 @@ function CatalogPage() {
                         end={
                           <span className="flex shrink-0 flex-col items-end gap-1">
                             <SiteBadges site={s} compact />
-                            <span className="rounded-full bg-surface-2 px-2 py-0.5 text-[11px] text-muted">
-                              {s.content_status === "complete" ? t("deepPage") : t("standardCard")}
-                            </span>
                           </span>
                         }
                       />

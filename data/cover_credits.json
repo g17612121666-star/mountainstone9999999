@@ -2,981 +2,2030 @@
   "fangshan": {
     "credit": "a href=\"//commons.wikimedia.org/wiki/User:David290\" class=\"mw-redirect\" title=\"U, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/fangshan.jpg"
+    "src": "/covers/fangshan.jpg",
+    "gallery": []
   },
   "yanqing": {
     "credit": "Kinianox, CC BY-SA",
     "caption": "延庆世界地质公园。",
-    "src": "/covers/yanqing.jpg"
+    "src": "/covers/yanqing.jpg",
+    "gallery": []
   },
   "hexigten": {
     "credit": "a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/2016102, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/hexigten.jpg"
+    "src": "/covers/hexigten.jpg",
+    "gallery": []
   },
   "arxan": {
     "credit": "Wikimedia Commons",
     "caption": "阿尔山火山与天池。",
-    "src": "/covers/arxan.jpg"
+    "src": "/covers/arxan.jpg",
+    "gallery": []
   },
   "alxa": {
     "credit": "NASA Earth Observatory image by Jesse Allen, using Landsat data from the U.S. Ge, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/alxa.jpg"
+    "src": "/covers/alxa.jpg",
+    "gallery": []
   },
   "changbaishan": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/changbaishan.jpg"
+    "src": "/covers/changbaishan.jpg",
+    "gallery": []
   },
   "wudalianchi": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/wudalianchi.jpg"
+    "src": "/covers/wudalianchi.jpg",
+    "gallery": []
   },
   "changshan": {
-    "credit": "a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/2016102, Wikimedia Commons",
-    "caption": "",
-    "src": "/covers/changshan.jpg"
+    "credit": "维基百科「Changshan」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/changshan.jpg",
+    "gallery": []
   },
   "yandangshan": {
     "credit": "a href=\"//commons.wikimedia.org/w/index.php?title=User:Glasreifen&amp;action=edi, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/yandangshan.jpg"
+    "src": "/covers/yandangshan.jpg",
+    "gallery": []
   },
   "huangshan": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/huangshan.jpg"
+    "src": "/covers/huangshan.jpg",
+    "gallery": []
   },
   "tianzhushan": {
     "credit": "a href=\"//commons.wikimedia.org/wiki/User:N509FZ\" title=\"User:N509FZ\" N509FZ /a, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/tianzhushan.jpg"
+    "src": "/covers/tianzhushan.jpg",
+    "gallery": []
   },
   "jiuhuashan": {
     "credit": "Felix Filnkoessl, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/jiuhuashan.jpg"
+    "src": "/covers/jiuhuashan.jpg",
+    "gallery": []
   },
   "ningde": {
     "credit": "维基百科「太姥山」条目配图",
     "caption": "",
-    "src": "/covers/ningde.jpg"
+    "src": "/covers/ningde.jpg",
+    "gallery": []
   },
   "longyan": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/longyan.jpg"
+    "src": "/covers/longyan.jpg",
+    "gallery": []
   },
   "lushan": {
     "credit": "Wikimedia Commons",
     "caption": "庐山。",
-    "src": "/covers/lushan.jpg"
+    "src": "/covers/lushan.jpg",
+    "gallery": []
   },
   "longhushan": {
     "credit": "a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/81459, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/longhushan.jpg"
+    "src": "/covers/longhushan.jpg",
+    "gallery": []
   },
   "sanqingshan": {
     "credit": "a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/71380, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/sanqingshan.jpg"
+    "src": "/covers/sanqingshan.jpg",
+    "gallery": []
   },
   "wugongshan": {
     "credit": "Wikimedia Commons",
     "caption": "武功山。",
-    "src": "/covers/wugongshan.jpg"
+    "src": "/covers/wugongshan.jpg",
+    "gallery": []
   },
   "taishan": {
     "credit": "Jiang, Public Domain",
     "caption": "太古宙岩基掀斜成东岳。不是年轻火山。",
-    "src": "/covers/taishan.jpg"
+    "src": "/covers/taishan.jpg",
+    "gallery": []
   },
   "songshan": {
     "credit": "Gary Todd, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/songshan.jpg"
+    "src": "/covers/songshan.jpg",
+    "gallery": []
   },
   "yuntaishan": {
     "credit": "Gary Todd, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/yuntaishan.jpg"
+    "src": "/covers/yuntaishan.jpg",
+    "gallery": []
   },
   "shennongjia": {
     "credit": "a href=\"//commons.wikimedia.org/wiki/User:Vmenkov\" title=\"User:Vmenkov\" User:Vme, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/shennongjia.jpg"
+    "src": "/covers/shennongjia.jpg",
+    "gallery": []
   },
   "enshi": {
     "credit": "Wikimedia Commons",
     "caption": "腾龙洞。",
-    "src": "/covers/enshi.jpg"
+    "src": "/covers/enshi.jpg",
+    "gallery": []
   },
   "zhangjiajie": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/zhangjiajie.jpg"
+    "src": "/covers/zhangjiajie.jpg",
+    "gallery": []
   },
   "danxiashan": {
     "credit": "Yumeto, 2025, CC BY-SA",
     "caption": "丹霞地貌定义地：红层、垂直节理、崩塌。",
-    "src": "/covers/danxiashan.jpg"
+    "src": "/covers/danxiashan.jpg",
+    "gallery": []
   },
   "leiqiong": {
     "credit": "a href=\"//commons.wikimedia.org/wiki/User:ViaHarry\" title=\"User:ViaHarry\" ViaHar, Wikimedia Commons",
     "caption": "",
-    "src": "/covers/leiqiong.jpg"
+    "src": "/covers/leiqiong.jpg",
+    "gallery": []
   },
   "yunyang": {
     "credit": "English Wikipedia \"Yunyang County\"",
     "caption": "",
-    "src": "/covers/yunyang.jpg"
+    "src": "/covers/yunyang.jpg",
+    "gallery": []
   },
   "siguniang": {
     "credit": "Wikimedia Commons",
     "caption": "四姑娘山。松潘–甘孜造山带极高山。",
-    "src": "/covers/siguniang.jpg"
+    "src": "/covers/siguniang.jpg",
+    "gallery": []
   },
   "shilin": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/shilin.jpg"
+    "src": "/covers/shilin.jpg",
+    "gallery": []
   },
   "dunhuang": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/dunhuang.jpg"
+    "src": "/covers/dunhuang.jpg",
+    "gallery": []
   },
   "zhangye": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/zhangye.jpg"
+    "src": "/covers/zhangye.jpg",
+    "gallery": []
   },
   "hongkong": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/hongkong.jpg"
+    "src": "/covers/hongkong.jpg",
+    "gallery": []
   },
   "chishui": {
     "credit": "Wikimedia Commons / 公开资料照片",
     "caption": "",
-    "src": "/covers/chishui.jpg"
+    "src": "/covers/chishui.jpg",
+    "gallery": []
   },
   "taining": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/taining.jpg"
+    "src": "/covers/taining.jpg",
+    "gallery": []
   },
   "yimengshan": {
     "credit": "维基百科「沂蒙山」条目配图",
     "caption": "",
-    "src": "/covers/yimengshan.jpg"
+    "src": "/covers/yimengshan.jpg",
+    "gallery": []
   },
   "wangwushan": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/wangwushan.jpg"
+    "src": "/covers/wangwushan.jpg",
+    "gallery": []
   },
   "funiushan": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/funiushan.jpg"
+    "src": "/covers/funiushan.jpg",
+    "gallery": []
   },
   "dabieshan-hg": {
     "credit": "维基百科「大别山」条目配图",
     "caption": "",
-    "src": "/covers/dabieshan-hg.jpg"
+    "src": "/covers/dabieshan-hg.jpg",
+    "gallery": []
   },
   "huguangyan": {
     "credit": "维基百科「湖光岩」条目配图",
     "caption": "",
-    "src": "/covers/huguangyan.jpg"
+    "src": "/covers/huguangyan.jpg",
+    "gallery": []
   },
   "haikou-volcano": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/haikou-volcano.jpg"
+    "src": "/covers/haikou-volcano.jpg",
+    "gallery": []
   },
   "langshan": {
     "credit": "维基百科「崀山」条目配图",
     "caption": "",
-    "src": "/covers/langshan.jpg"
+    "src": "/covers/langshan.jpg",
+    "gallery": []
   },
   "tengchong": {
     "credit": "Wikimedia Commons 缩略图",
     "caption": "",
-    "src": "/covers/tengchong.jpg"
+    "src": "/covers/tengchong.jpg",
+    "gallery": []
   },
   "huashan": {
     "credit": "维基百科「华山」条目配图",
     "caption": "",
-    "src": "/covers/huashan.jpg"
+    "src": "/covers/huashan.jpg",
+    "gallery": []
   },
   "jiuzhaigou": {
     "credit": "维基百科「九寨沟」条目配图",
     "caption": "",
-    "src": "/covers/jiuzhaigou.jpg"
+    "src": "/covers/jiuzhaigou.jpg",
+    "gallery": []
   },
   "wulong": {
     "credit": "维基百科「武隆喀斯特」条目配图",
     "caption": "",
-    "src": "/covers/wulong.jpg"
+    "src": "/covers/wulong.jpg",
+    "gallery": []
   },
   "hailuogou": {
     "credit": "维基百科「海螺沟」条目配图",
     "caption": "",
-    "src": "/covers/hailuogou.jpg"
+    "src": "/covers/hailuogou.jpg",
+    "gallery": []
   },
   "guilin-karst": {
     "credit": "维基百科「桂林山水」条目配图",
     "caption": "",
-    "src": "/covers/guilin-karst.jpg"
+    "src": "/covers/guilin-karst.jpg",
+    "gallery": []
   },
   "yulongxueshan": {
     "credit": "维基百科「玉龙雪山」条目配图",
     "caption": "",
-    "src": "/covers/yulongxueshan.jpg"
+    "src": "/covers/yulongxueshan.jpg",
+    "gallery": []
   },
   "zigong": {
     "credit": "English Wikipedia \"Zigong Dinosaur Museum\"",
     "caption": "",
-    "src": "/covers/zigong.jpg"
+    "src": "/covers/zigong.jpg",
+    "gallery": []
   },
   "zhijindong": {
     "credit": "English Wikipedia \"Zhijin Cave\"",
     "caption": "",
-    "src": "/covers/zhijindong.jpg"
+    "src": "/covers/zhijindong.jpg",
+    "gallery": []
   },
   "xingyi": {
     "credit": "维基百科「马岭河峡谷」条目配图",
     "caption": "",
-    "src": "/covers/xingyi.jpg"
+    "src": "/covers/xingyi.jpg",
+    "gallery": []
   },
   "cangshan": {
     "credit": "维基百科「点苍山」条目配图",
     "caption": "",
-    "src": "/covers/cangshan.jpg"
+    "src": "/covers/cangshan.jpg",
+    "gallery": []
   },
   "cuihuashan": {
     "credit": "维基百科「Zhongnan Mountains」条目配图",
     "caption": "",
-    "src": "/covers/cuihuashan.jpg"
+    "src": "/covers/cuihuashan.jpg",
+    "gallery": []
   },
   "keketuohai": {
     "credit": "维基百科「额尔齐斯河」条目配图",
     "caption": "",
-    "src": "/covers/keketuohai.jpg"
+    "src": "/covers/keketuohai.jpg",
+    "gallery": []
   },
   "hukou": {
     "credit": "Wikimedia Commons · Hukou_Waterfalls,_Shaanxi_28.jpg",
     "caption": "",
-    "src": "/covers/hukou.jpg"
+    "src": "/covers/hukou.jpg",
+    "gallery": []
   },
   "zhoukoudian": {
     "credit": "维基百科「周口店北京人遗址」条目配图",
     "caption": "",
-    "src": "/covers/zhoukoudian.jpg"
+    "src": "/covers/zhoukoudian.jpg",
+    "gallery": []
   },
   "jixian": {
-    "credit": "维基百科「Mount Pan」条目配图",
-    "caption": "",
-    "src": "/covers/jixian.jpg"
+    "credit": "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jixian.jpg",
+    "gallery": [
+      {
+        "src": "/covers/jixian-2.jpg",
+        "credit": "吴军江 / 中国国家地理 · 蓟县叠层石纵切面 · 资料照片",
+        "caption": "资料照片，非本站踏勘"
+      },
+      {
+        "src": "/covers/jixian-3.jpg",
+        "credit": "岩石学报 2014 图2 · 蓟县雾迷山组/铁岭组野外露头 · 资料照片",
+        "caption": "资料照片，非本站踏勘"
+      }
+    ]
   },
   "chengjiang": {
     "credit": "维基百科「澄江化石地」条目配图",
     "caption": "",
-    "src": "/covers/chengjiang.jpg"
+    "src": "/covers/chengjiang.jpg",
+    "gallery": []
   },
   "xingwen": {
     "credit": "liuzusai, CC BY 3.0",
     "caption": "",
-    "src": "/covers/xingwen.jpg"
+    "src": "/covers/xingwen.jpg",
+    "gallery": []
   },
   "kanbula": {
     "credit": "Tiger@西北, CC BY-SA 3.0",
     "caption": "",
-    "src": "/covers/kanbula.jpg"
+    "src": "/covers/kanbula.jpg",
+    "gallery": []
   },
   "guangwushan": {
     "credit": "无相, CC BY 3.0",
     "caption": "",
-    "src": "/covers/guangwushan.jpg"
+    "src": "/covers/guangwushan.jpg",
+    "gallery": []
   },
   "kunlunshan": {
     "credit": "Zhangmoon618, CC BY-SA",
     "caption": "",
-    "src": "/covers/kunlunshan.jpg"
+    "src": "/covers/kunlunshan.jpg",
+    "gallery": []
   },
   "linxia": {
     "credit": "维基百科「和政县」条目配图",
     "caption": "",
-    "src": "/covers/linxia.jpg"
+    "src": "/covers/linxia.jpg",
+    "gallery": []
   },
   "leye-fengshan": {
     "credit": "Wikimedia Commons · Peak cluster depression（凤山峰丛洼地）",
     "caption": "桂西峰丛洼地，乐业–凤山园区地貌类型",
-    "src": "/covers/leye-fengshan.jpg"
+    "src": "/covers/leye-fengshan.jpg",
+    "gallery": []
   },
   "alu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/alu.jpg"
+    "src": "/covers/alu.jpg",
+    "gallery": []
   },
   "badain-jaran": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/badain-jaran.jpg"
+    "src": "/covers/badain-jaran.jpg",
+    "gallery": []
   },
   "baishishan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/baishishan.jpg"
+    "src": "/covers/baishishan.jpg",
+    "gallery": []
   },
   "bayannur": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/bayannur.jpg"
+    "src": "/covers/bayannur.jpg",
+    "gallery": []
   },
   "benxi": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/benxi.jpg"
+    "src": "/covers/benxi.jpg",
+    "gallery": []
   },
   "changshan-islands": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/changshan-islands.jpg"
+    "src": "/covers/changshan-islands.jpg",
+    "gallery": []
   },
   "changyang": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/changyang.jpg"
+    "src": "/covers/changyang.jpg",
+    "gallery": []
   },
   "chaoyang": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/chaoyang.jpg"
+    "src": "/covers/chaoyang.jpg",
+    "gallery": []
   },
   "chengde-danxia": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/chengde-danxia.jpg"
+    "src": "/covers/chengde-danxia.jpg",
+    "gallery": []
   },
   "chongming": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/chongming.jpg"
+    "src": "/covers/chongming.jpg",
+    "gallery": []
   },
   "daduhe": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/daduhe.jpg"
+    "src": "/covers/daduhe.jpg",
+    "gallery": []
   },
   "dalian-coast": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/dalian-coast.jpg"
+    "src": "/covers/dalian-coast.jpg",
+    "gallery": []
   },
   "duan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/duan.jpg"
+    "src": "/covers/duan.jpg",
+    "gallery": []
   },
   "erenhot": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/erenhot.jpg"
+    "src": "/covers/erenhot.jpg",
+    "gallery": []
   },
   "guanzhishan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/guanzhishan.jpg"
+    "src": "/covers/guanzhishan.jpg",
+    "gallery": []
   },
   "huaguoshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/huaguoshan.jpg"
+    "src": "/covers/huaguoshan.jpg",
+    "gallery": []
   },
   "huanghe-shilin": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/huanghe-shilin.jpg"
+    "src": "/covers/huanghe-shilin.jpg",
+    "gallery": []
   },
   "huguan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/huguan.jpg"
+    "src": "/covers/huguan.jpg",
+    "gallery": []
   },
   "huzhu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/huzhu.jpg"
+    "src": "/covers/huzhu.jpg",
+    "gallery": []
   },
   "jiayin": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/jiayin.jpg"
+    "src": "/covers/jiayin.jpg",
+    "gallery": []
   },
   "jingpohu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/jingpohu.jpg"
+    "src": "/covers/jingpohu.jpg",
+    "gallery": []
   },
   "jiugongshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/jiugongshan.jpg"
+    "src": "/covers/jiugongshan.jpg",
+    "gallery": []
   },
   "kanas": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/kanas.jpg"
+    "src": "/covers/kanas.jpg",
+    "gallery": []
   },
   "kuqa": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/kuqa.jpg"
+    "src": "/covers/kuqa.jpg",
+    "gallery": []
   },
   "laoniuwan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/laoniuwan.jpg"
+    "src": "/covers/laoniuwan.jpg",
+    "gallery": []
   },
   "linhai": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/linhai.jpg"
+    "src": "/covers/linhai.jpg",
+    "gallery": []
   },
   "mangshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/mangshan.jpg"
+    "src": "/covers/mangshan.jpg",
+    "gallery": []
   },
   "mohe": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/mohe.jpg"
+    "src": "/covers/mohe.jpg",
+    "gallery": []
   },
   "nianbaoyuze": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/nianbaoyuze.jpg"
+    "src": "/covers/nianbaoyuze.jpg",
+    "gallery": []
   },
   "ningwu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/ningwu.jpg"
+    "src": "/covers/ningwu.jpg",
+    "gallery": []
   },
   "ordos": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/ordos.jpg"
+    "src": "/covers/ordos.jpg",
+    "gallery": []
   },
   "oroqen": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/oroqen.jpg"
+    "src": "/covers/oroqen.jpg",
+    "gallery": []
   },
   "pingshun": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/pingshun.jpg"
+    "src": "/covers/pingshun.jpg",
+    "gallery": []
   },
   "pingtan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/pingtan.jpg"
+    "src": "/covers/pingtan.jpg",
+    "gallery": []
   },
   "qianan-mud": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/qianan-mud.jpg"
+    "src": "/covers/qianan-mud.jpg",
+    "gallery": []
   },
   "qingyunshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/qingyunshan.jpg"
+    "src": "/covers/qingyunshan.jpg",
+    "gallery": []
   },
   "qingzhou": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/qingzhou.jpg"
+    "src": "/covers/qingzhou.jpg",
+    "gallery": []
   },
   "sanxia": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/sanxia.jpg"
+    "src": "/covers/sanxia.jpg",
+    "gallery": []
   },
   "shanwang": {
     "credit": "Wikimedia Commons · 馆藏标本，非野外露头",
     "caption": "山旺化石，馆藏标本，非野外露头",
-    "src": "/covers/shanwang.jpg"
+    "src": "/covers/shanwang.jpg",
+    "gallery": []
   },
   "shidu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/shidu.jpg"
+    "src": "/covers/shidu.jpg",
+    "gallery": []
   },
   "shihuadong": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/shihuadong.jpg"
+    "src": "/covers/shihuadong.jpg",
+    "gallery": []
   },
   "siziwang": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/siziwang.jpg"
+    "src": "/covers/siziwang.jpg",
+    "gallery": []
   },
   "taihu-xishan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/taihu-xishan.jpg"
+    "src": "/covers/taihu-xishan.jpg",
+    "gallery": []
   },
   "taimushan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/taimushan.jpg"
+    "src": "/covers/taimushan.jpg",
+    "gallery": []
   },
   "tianshan-tianchi": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/tianshan-tianchi.jpg"
+    "src": "/covers/tianshan-tianchi.jpg",
+    "gallery": []
   },
   "ulanqab": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/ulanqab.jpg"
+    "src": "/covers/ulanqab.jpg",
+    "gallery": []
   },
   "weizhoudao": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/weizhoudao.jpg"
+    "src": "/covers/weizhoudao.jpg",
+    "gallery": []
   },
   "wutaishan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/wutaishan.jpg"
+    "src": "/covers/wutaishan.jpg",
+    "gallery": []
   },
   "xiaoxinggan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/xiaoxinggan.jpg"
+    "src": "/covers/xiaoxinggan.jpg",
+    "gallery": []
   },
   "xingkaihu": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/xingkaihu.jpg"
+    "src": "/covers/xingkaihu.jpg",
+    "gallery": []
   },
   "xiqiaoshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/xiqiaoshan.jpg"
+    "src": "/covers/xiqiaoshan.jpg",
+    "gallery": []
   },
   "yaoshan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/yaoshan.jpg"
+    "src": "/covers/yaoshan.jpg",
+    "gallery": []
   },
   "yashan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/yashan.jpg"
+    "src": "/covers/yashan.jpg",
+    "gallery": []
   },
   "yesanpo": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/yesanpo.jpg"
+    "src": "/covers/yesanpo.jpg",
+    "gallery": []
   },
   "yongan": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/yongan.jpg"
+    "src": "/covers/yongan.jpg",
+    "gallery": []
   },
   "yonghe": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/yonghe.jpg"
+    "src": "/covers/yonghe.jpg",
+    "gallery": []
   },
   "zhagana": {
     "credit": "Wikimedia Commons",
     "caption": "资料照片，非本站踏勘",
-    "src": "/covers/zhagana.jpg"
+    "src": "/covers/zhagana.jpg",
+    "gallery": []
   },
   "zhucheng": {
     "credit": "Glennsmart, CC BY-SA 3.0, Wikimedia Commons · 馆藏标本，非野外露头",
     "caption": "诸城恐龙骨骼，馆藏标本，非野外露头",
-    "src": "/covers/zhucheng.jpg"
+    "src": "/covers/zhucheng.jpg",
+    "gallery": []
   },
   "bingyugou": {
     "credit": "Wikimedia Commons · Bingyu Valley rock formation",
     "caption": "冰峪沟变质岩峡谷",
-    "src": "/covers/bingyugou.jpg"
+    "src": "/covers/bingyugou.jpg",
+    "gallery": []
   },
   "tangshan-fangshan": {
     "credit": "panoramio, CC BY 3.0, Wikimedia Commons · 南京方山火山石柱",
     "caption": "方山柱状节理",
-    "src": "/covers/tangshan-fangshan.jpg"
+    "src": "/covers/tangshan-fangshan.jpg",
+    "gallery": []
   },
   "shenxianju": {
     "credit": "Wikimedia Commons · 台州神仙居",
     "caption": "神仙居火山岩峰",
-    "src": "/covers/shenxianju.jpg"
+    "src": "/covers/shenxianju.jpg",
+    "gallery": []
   },
   "xiandu": {
     "credit": "Wikimedia Commons · 缙云仙都鼎湖峰",
     "caption": "仙都鼎湖峰",
-    "src": "/covers/xiandu.jpg"
+    "src": "/covers/xiandu.jpg",
+    "gallery": []
   },
   "dabieshan-luan": {
     "credit": "Wikimedia Commons · 天堂寨",
     "caption": "大别山天堂寨",
-    "src": "/covers/dabieshan-luan.jpg"
+    "src": "/covers/dabieshan-luan.jpg",
+    "gallery": []
   },
   "guniujiang": {
     "credit": "panoramio, Wikimedia Commons · 牯牛降",
     "caption": "牯牛降花岗岩溪谷",
-    "src": "/covers/guniujiang.jpg"
+    "src": "/covers/guniujiang.jpg",
+    "gallery": []
   },
   "wangmangling": {
     "credit": "Wikimedia Commons · 王莽岭",
     "caption": "王莽岭碳酸盐岩崖壁",
-    "src": "/covers/wangmangling.jpg"
+    "src": "/covers/wangmangling.jpg",
+    "gallery": []
   },
   "yushe": {
-    "credit": "Wikimedia Commons · 馆藏标本，非野外露头",
-    "caption": "榆社三趾马化石，馆藏标本，非野外露头",
-    "src": "/covers/yushe.jpg"
+    "credit": "维基百科「榆社县」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yushe.jpg",
+    "gallery": [
+      {
+        "src": "/covers/yushe-2.jpg",
+        "credit": "Bernor R.L, Wang S., Liu Y., Chen Y. &amp; Sun B. (2018), CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Proboscidipparion pater.jpg"
+      },
+      {
+        "src": "/covers/yushe-3.jpg",
+        "credit": "陈向阳, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "笔架山和文峰塔之间的田野 - panoramio.jpg"
+      }
+    ]
   },
   "huanglong": {
     "credit": "chensiyuan, CC BY-SA 4.0, Wikimedia Commons",
     "caption": "黄龙钙华池",
     "src": "/covers/huanglong.jpg",
-    "commons": "File:1 huanglong pools aerial 2011.jpg"
+    "commons": "File:1 huanglong pools aerial 2011.jpg",
+    "gallery": []
   },
   "yanchuan": {
     "credit": "H2v5o68z, CC0, Wikimedia Commons",
     "caption": "延川乾坤湾深切曲流",
     "src": "/covers/yanchuan.jpg",
-    "commons": "File:黄河乾坤湾 1.jpg"
+    "commons": "File:黄河乾坤湾 1.jpg",
+    "gallery": []
   },
   "yunmengshan": {
     "credit": "Tiger@西北, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "密云云蒙山花岗岩",
     "src": "/covers/yunmengshan.jpg",
-    "commons": "File:云蒙山 - panoramio.jpg"
+    "commons": "File:云蒙山 - panoramio.jpg",
+    "gallery": []
   },
   "baishuiyang": {
     "credit": "rheins, CC BY 3.0, Wikimedia Commons",
     "caption": "屏南白水洋基岩浅滩",
     "src": "/covers/baishuiyang.jpg",
-    "commons": "File:俯视白水洋 - Overlook of Baishuiyang - 2014.07 - panoramio.jpg"
+    "commons": "File:俯视白水洋 - Overlook of Baishuiyang - 2014.07 - panoramio.jpg",
+    "gallery": []
   },
   "jiuxiang": {
     "credit": "mayanming, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "宜良九乡溶洞化学沉积",
     "src": "/covers/jiuxiang.jpg",
-    "commons": "File:中国云南省 九乡 溶洞的钟乳石 - panoramio.jpg"
+    "commons": "File:中国云南省 九乡 溶洞的钟乳石 - panoramio.jpg",
+    "gallery": []
   },
   "daguglacier": {
     "credit": "aisccd, CC BY 3.0, Wikimedia Commons",
     "caption": "达古冰川",
     "src": "/covers/daguglacier.jpg",
-    "commons": "File:Dagu Glacier panoramio61669499.jpg"
+    "commons": "File:Dagu Glacier panoramio61669499.jpg",
+    "gallery": []
   },
   "animaging": {
     "credit": "FrozenNeptune, CC BY-SA 4.0, Wikimedia Commons",
     "caption": "阿尼玛卿雪山",
     "src": "/covers/animaging.jpg",
-    "commons": "File:阿尼玛卿雪山.jpg"
+    "commons": "File:阿尼玛卿雪山.jpg",
+    "gallery": []
   },
   "everest-ordovician": {
     "credit": "User:Ggia, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "珠峰北坡",
     "src": "/covers/everest-ordovician.jpg",
-    "commons": "File:20110810 North Face of Everest Tibet China Panoramic.jpg"
+    "commons": "File:20110810 North Face of Everest Tibet China Panoramic.jpg",
+    "gallery": []
   },
   "rongbuk": {
     "credit": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons",
     "caption": "绒布冰川",
     "src": "/covers/rongbuk.jpg",
-    "commons": "File:ISS066-E-86253 - View of China - Rongbuk Valley - zha ga qu (river) - Rongbuk Co (lake) - West Rongbuk Glacier - Pumori - Khangri Shar - Chumbu - West Lingtren - Tongqiang Ri - Hongxing Ri (cropped).jpg"
+    "commons": "File:ISS066-E-86253 - View of China - Rongbuk Valley - zha ga qu (river) - Rongbuk Co (lake) - West Rongbuk Glacier - Pumori - Khangri Shar - Chumbu - West Lingtren - Tongqiang Ri - Hongxing Ri (cropped).jpg",
+    "gallery": []
   },
   "maijishan": {
     "credit": "dayu490301, CC BY 3.0, Wikimedia Commons",
     "caption": "麦积山砾岩崖",
     "src": "/covers/maijishan.jpg",
-    "commons": "File:仰望麦积山 - panoramio.jpg"
+    "commons": "File:仰望麦积山 - panoramio.jpg",
+    "gallery": []
   },
   "bagongshan": {
     "credit": "李泉, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "淮南八公山喀斯特谷",
     "src": "/covers/bagongshan.jpg",
-    "commons": "File:八公山忘情谷 - panoramio.jpg"
+    "commons": "File:八公山忘情谷 - panoramio.jpg",
+    "gallery": []
   },
   "zhangzhou-volcano": {
     "credit": "弧微分, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "南碇岛火山岩柱状节理",
     "src": "/covers/zhangzhou-volcano.jpg",
-    "commons": "File:南碇岛全景.jpg"
+    "commons": "File:南碇岛全景.jpg",
+    "gallery": []
   },
   "lufeng": {
     "credit": "瑞丽江的河水, CC BY-SA 4.0, Wikimedia Commons · 馆藏标本，非野外露头",
     "caption": "禄丰古猿下颌，馆藏标本，非野外露头",
     "src": "/covers/lufeng.jpg",
-    "commons": "File:云南省博物馆-新近纪-云南省禄丰县-禄丰禄丰古猿-下颌骨（化65）.jpg"
+    "commons": "File:云南省博物馆-新近纪-云南省禄丰县-禄丰禄丰古猿-下颌骨（化65）.jpg",
+    "gallery": []
   },
   "longmenshan": {
     "credit": "zhiyin586@163.com, CC BY 3.0, Wikimedia Commons",
     "caption": "龙门山",
     "src": "/covers/longmenshan.jpg",
-    "commons": "File:登龙门山 - panoramio.jpg"
+    "commons": "File:登龙门山 - panoramio.jpg",
+    "gallery": []
   },
   "weishan": {
     "credit": "Kcx36, CC BY-SA 4.0, Wikimedia Commons",
     "caption": "巍山群山",
     "src": "/covers/weishan.jpg",
-    "commons": "File:巍山县群山，在巍宝山上拍摄 02.jpg"
+    "commons": "File:巍山县群山，在巍宝山上拍摄 02.jpg",
+    "gallery": []
   },
   "xiangqiao": {
     "credit": "涔水影人, CC BY 3.0, Wikimedia Commons",
     "caption": "鹿寨香桥峰林",
     "src": "/covers/xiangqiao.jpg",
-    "commons": "File:中渡香桥风光 - panoramio.jpg"
+    "commons": "File:中渡香桥风光 - panoramio.jpg",
+    "gallery": []
   },
   "linlushan": {
     "credit": "caoyadong, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "林虑山 / 红旗渠所在太行东麓",
     "src": "/covers/linlushan.jpg",
-    "commons": "File:从红旗渠看山下 - panoramio.jpg"
+    "commons": "File:从红旗渠看山下 - panoramio.jpg",
+    "gallery": []
   },
   "guide": {
     "credit": "neverdance, CC BY-SA 3.0, Wikimedia Commons",
     "caption": "贵德黄河谷",
     "src": "/covers/guide.jpg",
-    "commons": "File:西宁-贵德途中 - panoramio.jpg"
+    "commons": "File:西宁-贵德途中 - panoramio.jpg",
+    "gallery": []
   },
   "xiangxi": {
     "credit": "Wikimedia Commons · File:Hongshilin.tianchi2.jpg",
     "caption": "湘西世界地质公园红石林园区喀斯特峰林",
-    "src": "/covers/xiangxi.jpg"
+    "src": "/covers/xiangxi.jpg",
+    "gallery": []
   },
   "luhe": {
     "credit": "六合区文化旅游局，南京市六合区人民政府官网 · 桂子山石柱林",
     "caption": "六合桂子山玄武岩柱状节理。资料照片，政府/园区官方图，已署名并链回。非本站踏勘",
     "src": "/covers/luhe.jpg",
     "source_url": "http://www.njlh.gov.cn/lhgln/lhly/jqjd/202107/t20210705_3026551.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "zhangshiyan": {
     "credit": "新华网河北频道 / 赞皇县委宣传部供图",
     "caption": "嶂石岩地貌：赤壁长崖。资料照片 · 新华社通稿 · 非本站踏勘",
     "src": "/covers/zhangshiyan.jpg",
     "source_url": "http://he.xinhuanet.com/20240913/f0a4891bde754eaabea8d45a5dfe9672/c.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "qiyunshan": {
     "credit": "Julienfuchs, CC BY-SA 3.0, Wikimedia Commons · File:Qiyun Shan panorama.JPG",
     "caption": "齐云山丹霞赤壁。资料照片，非本站踏勘",
     "src": "/covers/qiyunshan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Qiyun_Shan_panorama.JPG",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "kongtongshan": {
     "credit": "DarthVachel, CC BY-SA 4.0, Wikimedia Commons · File:崆峒山.jpg",
     "caption": "平凉崆峒山。资料照片，非本站踏勘",
     "src": "/covers/kongtongshan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:%E5%B4%86%E5%B3%92%E5%B1%B1.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "xiongershan": {
     "credit": "Zhongxxin, CC BY-SA 4.0, Wikimedia Commons · File:Shandong Baodugu National Forest Park.jpg",
     "caption": "枣庄抱犊崮：夷平面残留的桌状山。资料照片，非本站踏勘",
     "src": "/covers/xiongershan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Shandong_Baodugu_National_Forest_Park.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "ziyuan": {
     "credit": "三猎, CC BY-SA 4.0, Wikimedia Commons · File:资江灯谷.jpg",
     "caption": "资源资江丹霞峰林（八角寨一带）。资料照片，非本站踏勘",
     "src": "/covers/ziyuan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:%E8%B5%84%E6%B1%9F%E7%81%AF%E8%B0%B7.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "dapeng": {
     "credit": "Wishds, CC BY-SA 3.0, Wikimedia Commons · File:Qiniangshan, Shenzhen.jpg",
     "caption": "大鹏半岛七娘山：海岸火山岩山体。资料照片，非本站踏勘",
     "src": "/covers/dapeng.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Qiniangshan,_Shenzhen.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "bingling": {
     "credit": "Jonashtand, CC BY-SA 4.0, Wikimedia Commons · File:202609 Bingling Temple 01.jpg",
     "caption": "永靖炳灵：红层砂砾岩崖壁（丹霞）。资料照片，非本站踏勘",
     "src": "/covers/bingling.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:202609_Bingling_Temple_01.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "zhada": {
     "credit": "yuen yan, CC BY-SA 2.0, Wikimedia Commons · File:Ngari Tsaparang 01.jpg",
     "caption": "札达土林：河湖相被切成的土柱与古格遗址。资料照片，非本站踏勘",
     "src": "/covers/zhada.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ngari_Tsaparang_01.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "fushan": {
     "credit": "luchangjiang~鲁昌江, CC BY-SA 3.0, Wikimedia Commons · File:枞阳县浮山风景区 - panoramio.jpg",
     "caption": "安徽枞阳浮山火山口湖。资料照片，非本站踏勘",
     "src": "/covers/fushan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:%E6%9E%9E%E9%98%B3%E5%8E%BF%E6%B5%AE%E5%B1%B1%E9%A3%8E%E6%99%AF%E5%8C%BA_-_panoramio.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "longwan": {
     "credit": "Rolfmueller, CC BY-SA 3.0, Wikimedia Commons · File:Longwanqun national forest park sanjiaolong crater lake 2011 07 25.jpg",
     "caption": "辉南三角龙湾：火山口湖。资料照片，非本站踏勘",
     "src": "/covers/longwan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Longwanqun_national_forest_park_sanjiaolong_crater_lake_2011_07_25.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "chayashan": {
     "credit": "Gary Todd, CC0, Wikimedia Commons · File:Chaya Shan 01.jpg",
     "caption": "遂平嵖岈山花岗岩峰林。资料照片，非本站踏勘",
     "src": "/covers/chayashan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Chaya_Shan_01.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "jinzhou": {
     "credit": "Wen2li3, CC BY-SA 4.0, Wikimedia Commons · File:Bi jia shan at high tide.JPG",
     "caption": "锦州笔架山：潮汐淹没沙堤后的花岗岩岛。资料照片，非本站踏勘",
     "src": "/covers/jinzhou.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bi_jia_shan_at_high_tide.JPG",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "huayingshan": {
-    "credit": "chaselei雷厚取, CC BY-SA 3.0, Wikimedia Commons · File:华蓥山 天池石林 - panoramio.jpg",
-    "caption": "华蓥山天池石林。资料照片，非本站踏勘",
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
     "src": "/covers/huayingshan.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:%E5%8D%8E%E8%93%A5%E5%B1%B1_%E5%A4%A9%E6%B1%A0%E7%9F%B3%E6%9E%97_-_panoramio.jpg",
-    "level": 1
+    "gallery": []
   },
   "datong-volcano": {
     "credit": "资料照片 · 大同市委宣传部供图 / 中国国际广播电台 · 政府/园区官方图，已署名并链回",
     "caption": "大同金山火山锥，黄土高原上的第四纪火山。资料照片，非本站踏勘",
     "src": "/covers/datong-volcano.jpg",
     "source_url": "https://news.cri.cn/20220121/aab9945c-5a80-245b-42d9-f9f46e6cb716.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "pingshanhu": {
     "credit": "资料照片 · 张掖市人民政府官网 · 政府/园区官方图，已署名并链回",
     "caption": "张掖平山湖大峡谷：红层砂砾岩被切出的峡谷。资料照片，非本站踏勘",
     "src": "/covers/pingshanhu.jpg",
     "source_url": "https://www.zhangye.gov.cn/dzdt/tszy/202505/t20250520_1403468_ghb.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "wansheng": {
     "credit": "资料照片 · 尹南源 / 华龙网（重庆市委市政府官方新闻门户）· 政府/园区官方图，已署名并链回",
     "caption": "万盛石林：奥陶纪喀斯特石林。资料照片，非本站踏勘",
     "src": "/covers/wansheng.jpg",
     "source_url": "https://cq.cqnews.net/cqqx/html/web/content_1507082492948443136.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "xingtai-canyon": {
     "credit": "资料照片 · 人民网记者 席彪 · 人民网河北频道 · 政府/园区官方图，已署名并链回",
     "caption": "邢台太行石英砂岩峡谷（邢台峡谷群国家地质公园所在山体）。资料照片，非本站踏勘",
     "src": "/covers/xingtai-canyon.jpg",
     "source_url": "http://he.people.com.cn/n2/2025/0917/c192235-41354532.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "wudangshan": {
     "credit": "xiquinhosilva, CC BY 2.0, Wikimedia Commons · File:Wudang Mountain (54131425234).jpg",
     "caption": "湖北武当山峰林。资料照片，非本站踏勘",
     "src": "/covers/wudangshan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Wudang_Mountain_(54131425234).jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "wuan": {
     "credit": "H2v5o68z, CC0, Wikimedia Commons · File:Tianzhu Peak, Gu Wudang Mountain.jpg",
     "caption": "武安古武当山天柱峰。资料照片，非本站踏勘",
     "src": "/covers/wuan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Tianzhu_Peak,_Gu_Wudang_Mountain.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "gssp-paibi": {
     "credit": "Woudloper, CC BY-SA 4.0, Wikimedia Commons · File:Paibian GSSP, Huaqiao Formation, Hunan, China 2.jpg",
     "caption": "花垣排碧金钉子：寒武系芙蓉统排碧阶剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-paibi.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Paibian_GSSP,_Huaqiao_Formation,_Hunan,_China_2.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "gssp-guzhang": {
     "credit": "Woudloper, CC BY-SA 4.0, Wikimedia Commons · File:Guzhangian GSSP 2.jpg",
     "caption": "古丈罗依溪金钉子：寒武系古丈阶剖面，沿酉水。资料照片，非本站踏勘",
     "src": "/covers/gssp-guzhang.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Guzhangian_GSSP_2.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "gssp-wuliu": {
     "credit": "Woudloper, CC BY-SA 4.0, Wikimedia Commons · File:Wuliuan GSSP 1.jpg",
     "caption": "剑河乌溜金钉子：寒武系乌溜阶凯里组剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-wuliu.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Wuliuan_GSSP_1.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "gssp-huanghuachang": {
     "credit": "Woudloper, CC BY-SA 4.0, Wikimedia Commons · File:Dapingian GSSP 1.jpg",
     "caption": "宜昌黄花场金钉子：奥陶系大坪阶大湾组剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-huanghuachang.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dapingian_GSSP_1.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "gssp-wangjiawan": {
     "credit": "Woudloper, CC BY-SA 4.0, Wikimedia Commons · File:Hirnantian GSSP 1.jpg",
     "caption": "宜昌王家湾金钉子：奥陶系赫南特阶五峰组剖面。资料照片，非本站踏勘",
     "src": "/covers/gssp-wangjiawan.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hirnantian_GSSP_1.jpg",
-    "level": 1
+    "level": 1,
+    "gallery": []
   },
   "huanghe-delta": {
     "credit": "资料照片 · 新华社记者 徐速绘 · 人民网图片频道转载 · 政府/园区官方图，已署名并链回",
     "caption": "东营黄河三角洲湿地航拍。资料照片，非本站踏勘",
     "src": "/covers/huanghe-delta.jpg",
     "source_url": "http://pic.people.com.cn/n1/2023/1028/c1016-40105404-7.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "laojunshan": {
     "credit": "资料照片 · 人民网云南频道 · 黎明景区供图 · 政府/园区官方图，已署名并链回",
     "caption": "玉龙黎明丹霞：高海拔红层峰丛。资料照片，非本站踏勘",
     "src": "/covers/laojunshan.jpg",
     "source_url": "http://yn.people.com.cn/n2/2020/0411/c372453-33942118.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "huoshizhai": {
     "credit": "资料照片 · 宁夏回族自治区人民政府网 · 政府/园区官方图，已署名并链回",
     "caption": "西吉火石寨：北方高海拔丹霞（大石城一带红层）。资料照片，非本站踏勘",
     "src": "/covers/huoshizhai.jpg",
     "source_url": "https://www.nx.gov.cn/ssjn/esyj/202303/t20230330_4015332.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "yichun-forest": {
     "credit": "资料照片 · 人民网记者 苏靖刚 · 人民网黑龙江频道 · 政府/园区官方图，已署名并链回",
     "caption": "伊春汤旺河花岗岩石林（林海奇石）。资料照片，非本站踏勘",
     "src": "/covers/yichun-forest.jpg",
     "source_url": "http://hlj.people.com.cn/n2/2025/0816/c220024-41324343.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "getuhe": {
     "credit": "资料照片 · 李婷、杨滢 / 人民网贵州频道 · 政府/园区官方图，已署名并链回",
     "caption": "紫云格凸河喀斯特河谷。资料照片，非本站踏勘",
     "src": "/covers/getuhe.jpg",
     "source_url": "http://gz.people.com.cn/n2/2026/0324/c389359-41532658.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
   },
   "xiaonanhai": {
     "credit": "资料照片 · 新华社记者 唐奕 · 新华网图片 · 政府/园区官方图，已署名并链回",
     "caption": "黔江小南海：1856年地震堰塞湖秋景航拍。资料照片，非本站踏勘",
     "src": "/covers/xiaonanhai.jpg",
     "source_url": "http://www.xinhuanet.com/photo/20250909/72bc396989ef4f5ea28543200f7e7735/c.html",
-    "level": 4
+    "level": 4,
+    "gallery": []
+  },
+  "huangsongyu": {
+    "credit": "维基百科「黄松峪乡」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/huangsongyu.jpg",
+    "gallery": [
+      {
+        "src": "/covers/huangsongyu-2.jpg",
+        "credit": "Muzzleflash, CC0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Glass bridge at Tianyun Mountain.jpg"
+      },
+      {
+        "src": "/covers/huangsongyu-3.jpg",
+        "credit": "BV3CM, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "長城 - panoramio.jpg"
+      }
+    ]
+  },
+  "tianshengqiao": {
+    "credit": "携程攻略 / 景区公开资料照片 · 阜平天生桥",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/tianshengqiao.jpg",
+    "gallery": []
+  },
+  "liujiang": {
+    "credit": "维基百科「抚宁区」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/liujiang.jpg",
+    "gallery": [
+      {
+        "src": "/covers/liujiang-2.jpg",
+        "credit": "维基百科「Liujiang District」条目配图 · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Liujiang District"
+      },
+      {
+        "src": "/covers/liujiang-3.jpg",
+        "credit": "Windmemories, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "20240728 Liujiang Yellow River Bridge.jpg"
+      }
+    ]
+  },
+  "lincheng": {
+    "credit": "Fanghong, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/lincheng.jpg",
+    "gallery": [
+      {
+        "src": "/covers/lincheng-2.jpg",
+        "credit": "Fanghong, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Qishan Lake2.JPG"
+      },
+      {
+        "src": "/covers/lincheng-3.jpg",
+        "credit": "そらみみ, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "View near Dongzhen, Lincheng, Xingtai.jpg"
+      }
+    ]
+  },
+  "xinglong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xinglong.jpg",
+    "gallery": []
+  },
+  "qianan": {
+    "credit": "钉钉, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qianan.jpg",
+    "gallery": [
+      {
+        "src": "/covers/qianan-2.jpg",
+        "credit": "Sonjournermonde, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Jinxiu Center.JPG"
+      },
+      {
+        "src": "/covers/qianan-3.jpg",
+        "credit": "N509FZ, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Shaheyizhen Railway Station (20240403131503).jpg"
+      }
+    ]
+  },
+  "youyu": {
+    "credit": "维基百科「右玉县」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/youyu.jpg",
+    "gallery": [
+      {
+        "src": "/covers/youyu-2.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS020-E-49684 - View of Earth.jpg"
+      },
+      {
+        "src": "/covers/youyu-3.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS067-E-250408 - View of Earth.jpg"
+      }
+    ]
+  },
+  "xixian-loess": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xixian-loess.jpg",
+    "gallery": []
+  },
+  "ningcheng": {
+    "credit": "维基百科「Ningcheng County」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/ningcheng.jpg",
+    "gallery": []
+  },
+  "xilinhot": {
+    "credit": "维基百科「锡林浩特市」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xilinhot.jpg",
+    "gallery": [
+      {
+        "src": "/covers/xilinhot-2.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS054-E-39086 - View of Earth.jpg"
+      },
+      {
+        "src": "/covers/xilinhot-3.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS054-E-39087 - View of Earth.jpg"
+      }
+    ]
+  },
+  "qiguoshan": {
+    "credit": "BabelStone, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qiguoshan.jpg",
+    "gallery": [
+      {
+        "src": "/covers/qiguoshan-2.jpg",
+        "credit": "BabelStone, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Liao Shangjing Museum.jpg"
+      },
+      {
+        "src": "/covers/qiguoshan-3.jpg",
+        "credit": "BabelStone, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Liao Shangjing Museum reassembled dharani pillar face 5.jpg"
+      }
+    ]
+  },
+  "wuda": {
+    "credit": "fish4fish, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wuda.jpg",
+    "gallery": [
+      {
+        "src": "/covers/wuda-2.jpg",
+        "credit": "fish4fish, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "20130805乌达至海勃湾G110道边曾经村镇已成戈壁全景2 - panoramio.jpg"
+      },
+      {
+        "src": "/covers/wuda-3.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS048-E-42457 - View of China.jpg"
+      }
+    ]
+  },
+  "huludao": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/huludao.jpg",
+    "gallery": []
+  },
+  "jingyu": {
+    "credit": "Bridget Coila from Beijing, China, CC BY-SA 2.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jingyu.jpg",
+    "gallery": [
+      {
+        "src": "/covers/jingyu-2.jpg",
+        "credit": "Bridget Coila from Beijing, China, CC BY-SA 2.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "2008 Summer Olympics Taekwondo - Mildred Alango v. Wu Jingyu 3 (cropped).jpg"
+      },
+      {
+        "src": "/covers/jingyu-3.jpg",
+        "credit": "Unknown authorUnknown author, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Wu Jingyu 2008 Somalia stamp.jpg"
+      }
+    ]
+  },
+  "fusong": {
+    "credit": "wanghongliu, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fusong.jpg",
+    "gallery": [
+      {
+        "src": "/covers/fusong-2.jpg",
+        "credit": "玉米, CC BY 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Changchun Rail Transit 350 and 351 at Fusong Road (Apr 2026).jpg"
+      },
+      {
+        "src": "/covers/fusong-3.jpg",
+        "credit": "Chen Zhi, CC BY 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Fusong, Baishan, Jilin, China - panoramio.jpg"
+      }
+    ]
+  },
+  "siping": {
+    "credit": "Siyuwj, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/siping.jpg",
+    "gallery": [
+      {
+        "src": "/covers/siping-2.jpg",
+        "credit": "Siyuwj, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Fenghua Museum, 2020-10-03 05.jpg"
+      },
+      {
+        "src": "/covers/siping-3.jpg",
+        "credit": "钉钉, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Fenghua River, Ningbo.jpg"
+      }
+    ]
+  },
+  "fenghuangshan-hlj": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fenghuangshan-hlj.jpg",
+    "gallery": []
+  },
+  "shankou": {
+    "credit": "Charlie fong, CC BY 4.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shankou.jpg",
+    "gallery": [
+      {
+        "src": "/covers/shankou-2.jpg",
+        "credit": "Hiroki Ogawa, CC BY 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "3,648m Dangjin Shankou Aksai Jiuquan Gansu China 当金山垭口 - panoramio (2).jpg"
+      },
+      {
+        "src": "/covers/shankou-3.png",
+        "credit": "Ngguls, CC0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "Shankou Town in Taian.png"
+      }
+    ]
+  },
+  "qinggang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qinggang.jpg",
+    "gallery": []
+  },
+  "jiguanshan": {
+    "credit": "N509FZ, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jiguanshan.jpg",
+    "gallery": [
+      {
+        "src": "/covers/jiguanshan-2.jpg",
+        "credit": "TowerCard, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "东海站 - panoramio.jpg"
+      },
+      {
+        "src": "/covers/jiguanshan-3.jpg",
+        "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+        "caption": "资料照片，非本站踏勘",
+        "title": "ISS067-E-44589 - View of Earth.jpg"
+      }
+    ]
+  },
+  "sheshan": {
+    "credit": "上海道台, CC BY-SA 4.0, Wikimedia Commons · 西佘山山体远眺 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/sheshan.jpg",
+    "gallery": []
+  },
+  "meishan": {
+    "credit": "中国科学院地质与地球物理研究所 · Geology 2021 图1B 煤山剖面露头 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/meishan.jpg",
+    "gallery": []
+  },
+  "gssp-huangnitang": {
+    "credit": "《中国科学报》/ 中国科学院 · 达瑞威尔阶黄泥塘金钉子剖面 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/gssp-huangnitang.jpg",
+    "gallery": [
+      {
+        "src": "/covers/gssp-huangnitang-2.jpg",
+        "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子剖面全景 · 资料照片",
+        "caption": "资料照片，非本站踏勘"
+      }
+    ]
+  },
+  "baiyunshan-fj": {
+    "credit": "咋了, cc0, Openverse · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/baiyunshan-fj.jpg",
+    "gallery": []
+  },
+  "shicheng": {
+    "credit": "patrick20042018, by-sa, Openverse · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shicheng.jpg",
+    "gallery": []
+  },
+  "zhengzhou-huanghe": {
+    "credit": "vtpoly, by-nc-nd, Openverse · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/zhengzhou-huanghe.jpg",
+    "gallery": []
+  },
+  "wufeng": {
+    "credit": "world01231987, by-nc-sa, Openverse · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wufeng.jpg",
+    "gallery": []
+  },
+  "fenghuang": {
+    "credit": "维基百科「Fenghuang」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fenghuang.jpg",
+    "gallery": []
+  },
+  "meijiang": {
+    "credit": "World Economic Forum, by-nc-sa, Openverse · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/meijiang.jpg",
+    "gallery": []
+  },
+  "guiping": {
+    "credit": "维基百科「Guiping」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/guiping.jpg",
+    "gallery": []
+  },
+  "donglan": {
+    "credit": "维基百科「Donglan County」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/donglan.jpg",
+    "gallery": []
+  },
+  "qijiang": {
+    "credit": "维基百科「Qijiang, Chongqing」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qijiang.jpg",
+    "gallery": []
+  },
+  "jiangyou": {
+    "credit": "维基百科「Jiangyou」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jiangyou.jpg",
+    "gallery": []
+  },
+  "dabashan": {
+    "credit": "维基百科「Daba Mountains」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/dabashan.jpg",
+    "gallery": []
+  },
+  "pingtang": {
+    "credit": "维基百科「Pingtang County」条目配图 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/pingtang.jpg",
+    "gallery": []
+  },
+  "taijidong": {
+    "credit": "景区公开资料照片 · 广德太极洞 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/taijidong.jpg",
+    "gallery": []
+  },
+  "baotianman": {
+    "credit": "Wikidata / Wikimedia Commons · 宝天曼龙属 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/baotianman.jpg",
+    "gallery": []
+  },
+  "guanshan": {
+    "credit": "Wikidata / Wikimedia Commons · 關山鎮 · 资料照片",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/guanshan.jpg",
+    "gallery": []
+  },
+  "xinchang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xinchang.jpg",
+    "gallery": []
+  },
+  "cangnan-fanshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/cangnan-fanshan.jpg",
+    "gallery": []
+  },
+  "gssp-jiangshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/gssp-jiangshan.jpg",
+    "gallery": []
+  },
+  "fengyangshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fengyangshan.jpg",
+    "gallery": []
+  },
+  "marenshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/marenshan.jpg",
+    "gallery": []
+  },
+  "shitai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shitai.jpg",
+    "gallery": []
+  },
+  "shenhuwan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shenhuwan.jpg",
+    "gallery": []
+  },
+  "tianedong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/tianedong.jpg",
+    "gallery": []
+  },
+  "shiniushan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shiniushan.jpg",
+    "gallery": []
+  },
+  "lingtongshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/lingtongshan.jpg",
+    "gallery": []
+  },
+  "fozishan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fozishan.jpg",
+    "gallery": []
+  },
+  "qingliu": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qingliu.jpg",
+    "gallery": []
+  },
+  "sanming-jiaoye": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/sanming-jiaoye.jpg",
+    "gallery": []
+  },
+  "sanduao": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/sanduao.jpg",
+    "gallery": []
+  },
+  "guantaishan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/guantaishan.jpg",
+    "gallery": []
+  },
+  "laiyang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/laiyang.jpg",
+    "gallery": []
+  },
+  "yiyuan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yiyuan.jpg",
+    "gallery": []
+  },
+  "changle-volcano": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/changle-volcano.jpg",
+    "gallery": []
+  },
+  "wulianshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wulianshan.jpg",
+    "gallery": []
+  },
+  "yishan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yishan.jpg",
+    "gallery": []
+  },
+  "shenlingzhai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shenlingzhai.jpg",
+    "gallery": []
+  },
+  "daimeishan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/daimeishan.jpg",
+    "gallery": []
+  },
+  "jingangtai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jingangtai.jpg",
+    "gallery": []
+  },
+  "xiaoqinling": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xiaoqinling.jpg",
+    "gallery": []
+  },
+  "ruyang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/ruyang.jpg",
+    "gallery": []
+  },
+  "mulanshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/mulanshan.jpg",
+    "gallery": []
+  },
+  "yunxian": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yunxian.jpg",
+    "gallery": []
+  },
+  "yuanan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yuanan.jpg",
+    "gallery": []
+  },
+  "feitianshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/feitianshan.jpg",
+    "gallery": []
+  },
+  "hongshilin": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/hongshilin.jpg",
+    "gallery": []
+  },
+  "jiubujiang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jiubujiang.jpg",
+    "gallery": []
+  },
+  "wulongshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wulongshan.jpg",
+    "gallery": []
+  },
+  "shiniuzhai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shiniuzhai.jpg",
+    "gallery": []
+  },
+  "daweishan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/daweishan.jpg",
+    "gallery": []
+  },
+  "wanfoshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wanfoshan.jpg",
+    "gallery": []
+  },
+  "xuefenghu": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/xuefenghu.jpg",
+    "gallery": []
+  },
+  "baishuidong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/baishuidong.jpg",
+    "gallery": []
+  },
+  "lingxiaoyan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/lingxiaoyan.jpg",
+    "gallery": []
+  },
+  "fengkai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fengkai.jpg",
+    "gallery": []
+  },
+  "enping": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/enping.jpg",
+    "gallery": []
+  },
+  "yangshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yangshan.jpg",
+    "gallery": []
+  },
+  "qinglan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qinglan.jpg",
+    "gallery": []
+  },
+  "fengshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/fengshan.jpg",
+    "gallery": []
+  },
+  "qibailong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qibailong.jpg",
+    "gallery": []
+  },
+  "yizhou-shilin": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yizhou-shilin.jpg",
+    "gallery": []
+  },
+  "wuhuangshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wuhuangshan.jpg",
+    "gallery": []
+  },
+  "luocheng": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/luocheng.jpg",
+    "gallery": []
+  },
+  "gssp-penglaitan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/gssp-penglaitan.jpg",
+    "gallery": []
+  },
+  "gssp-pengchong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/gssp-pengchong.jpg",
+    "gallery": []
+  },
+  "baisha-crater": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/baisha-crater.jpg",
+    "gallery": []
+  },
+  "qiyaoshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qiyaoshan.jpg",
+    "gallery": []
+  },
+  "anxiang": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/anxiang.jpg",
+    "gallery": []
+  },
+  "shehong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shehong.jpg",
+    "gallery": []
+  },
+  "qingchuan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qingchuan.jpg",
+    "gallery": []
+  },
+  "mianzhu": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/mianzhu.jpg",
+    "gallery": []
+  },
+  "gesala": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/gesala.jpg",
+    "gallery": []
+  },
+  "guanling": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/guanling.jpg",
+    "gallery": []
+  },
+  "shuanghedong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/shuanghedong.jpg",
+    "gallery": []
+  },
+  "wumengshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/wumengshan.jpg",
+    "gallery": []
+  },
+  "sinan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/sinan.jpg",
+    "gallery": []
+  },
+  "miaoling": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/miaoling.jpg",
+    "gallery": []
+  },
+  "luoping": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/luoping.jpg",
+    "gallery": []
+  },
+  "dongchuan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/dongchuan.jpg",
+    "gallery": []
+  },
+  "yigong": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yigong.jpg",
+    "gallery": []
+  },
+  "luochuan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/luochuan.jpg",
+    "gallery": []
+  },
+  "jinsixia": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jinsixia.jpg",
+    "gallery": []
+  },
+  "nangongshan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/nangongshan.jpg",
+    "gallery": []
+  },
+  "liping": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/liping.jpg",
+    "gallery": []
+  },
+  "liujiaxia": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/liujiaxia.jpg",
+    "gallery": []
+  },
+  "guangeogou": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/guangeogou.jpg",
+    "gallery": []
+  },
+  "yeliguan": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/yeliguan.jpg",
+    "gallery": []
+  },
+  "hezheng": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/hezheng.jpg",
+    "gallery": []
+  },
+  "qitai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/qitai.jpg",
+    "gallery": []
+  },
+  "jimunai": {
+    "credit": "Esri World Imagery · 该点坐标卫星资料照片，非本站踏勘",
+    "caption": "资料照片，非本站踏勘",
+    "src": "/covers/jimunai.jpg",
+    "gallery": []
   }
 }

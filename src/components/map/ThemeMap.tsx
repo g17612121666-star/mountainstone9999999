@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gcjPair } from "@/lib/geo/coords";
+import { mapPair } from "@/lib/geo/coords";
 import { MARKER_COLOR } from "@/lib/geo/constants";
 import { primaryType } from "@/lib/geo/labels";
 import { addBaseTiles } from "@/lib/geo/tiles";
@@ -25,10 +25,10 @@ export function ThemeMap({ sites }: { sites: Site[] }) {
         maxZoom: 18,
         worldCopyJump: false,
       });
-      addBaseTiles(L, map, { attribution: false });
+      addBaseTiles(L, map, { attribution: false, locale });
       const latlngs: [number, number][] = [];
       for (const site of sites) {
-        const [lng, lat] = gcjPair(site.coordinates, site.province);
+        const [lng, lat] = mapPair(site.coordinates, site.province, locale);
         latlngs.push([lat, lng]);
         L.circleMarker([lat, lng], {
           radius: 7,

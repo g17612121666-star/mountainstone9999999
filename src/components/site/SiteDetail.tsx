@@ -25,11 +25,13 @@ import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { GENERIC_DO_NOT, isRealPhoto } from "@/lib/geo/safety";
+import { stripLocatePhrase } from "@/lib/geo/look";
 import type { Geosite, Site } from "@/lib/geo/types";
 import {
   displayName,
   fossilLawFor,
   hasQualifiedEn,
+  joinNameAge,
   landformLabel,
   localizeArea,
   localizeGeosite,
@@ -84,6 +86,9 @@ export function SiteDetail({ site }: { site: Site }) {
   const legal = visibleCopy(s.legal_notes);
   const showEnPending = locale === "en" && !hasQualifiedEn(site.id);
   const age = ageLabel(s.geologic_age_text || site.geologic_age_text, locale);
+  const enSite = localizeSite(site, "en");
+  const locateNoteOnce =
+    areaOnlyOnce || site.types.includes("gssp") || site.landform_types.includes("fossil");
 
   return (
     <article className="pb-16">
@@ -103,6 +108,7 @@ export function SiteDetail({ site }: { site: Site }) {
             {placeLine(site, locale)}
             {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
           </p>
+          {site.province === "香港" ? <p className="text-xs text-subtle">{t("hkWgs")}</p> : null}
           {showEnPending ? (
             <p className="rounded-md bg-surface-2 px-3 py-2 text-sm text-muted">{t("enBodyPending")}</p>
           ) : null}
@@ -134,7 +140,7 @@ export function SiteDetail({ site }: { site: Site }) {
 
         {s.gssp ? <GsspBlock site={s} original={site} /> : null}
 
-        {s.park_structure && !standard ? (
+        {s.park_structure ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("parkStructure")}</h2>
             <p className="mt-2 text-sm leading-relaxed">{s.park_structure}</p>
@@ -160,23 +166,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </p>
         )}
 
-        <OfflinePackButton
-          pack={{
-            kind: "site",
-            id: site.id,
-            title: site.name,
-            title_en: site.name_en || site.name,
-            cover: photo,
-            body_zh: [site.hook, site.formation_short, site.what_you_see_today, site.legal_notes]
-              .filter(Boolean)
-              .join("\n\n"),
-            body_en: [s.hook, s.formation_short, s.what_you_see_today, s.legal_notes]
-              .filter(Boolean)
-              .join("\n\n"),
-          }}
-        />
-
-        {!standard && s.formation_timeline.length > 0 ? (
+        {s.formation_timeline.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("timeline")}</h2>
             <ol className="mt-3 space-y-3">
@@ -186,10 +176,7 @@ export function SiteDetail({ site }: { site: Site }) {
                     {i + 1}
                   </span>
                   <div>
-                    <p className="font-medium">
-                      {st.name.replace(/^\d+[\.\s、．]+/, "")}
-                      {st.age ? <span className="ml-2 text-xs font-normal text-muted">{st.age}</span> : null}
-                    </p>
+                    <p className="font-medium">{joinNameAge(st.name, st.age, locale)}</p>
                     <p className="mt-1 text-sm leading-relaxed text-muted">{st.what}</p>
                   </div>
                 </li>
@@ -198,7 +185,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {!standard && s.evolution_sequence ? (
+        {s.evolution_sequence ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("sequence")}</h2>
             <p className="mt-2 font-display text-base leading-relaxed">
@@ -231,7 +218,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {!standard && extraPhotos.length > 0 ? (
+        {extraPhotos.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("photos")}</h2>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -259,7 +246,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {!standard && areas.length > 0 ? (
+        {areas.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("areas")}</h2>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -276,7 +263,6 @@ export function SiteDetail({ site }: { site: Site }) {
         {geosites.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("stopMap")}</h2>
-            {areaOnlyOnce ? <p className="mt-1 text-xs text-subtle">{t("stopMapNote")}</p> : null}
             <div className="mt-3 overflow-hidden rounded-xl shadow-[var(--shadow-border)]">
               <SiteMiniMap site={site} geosites={geosites} />
             </div>
@@ -291,7 +277,7 @@ export function SiteDetail({ site }: { site: Site }) {
               {t("fieldStops")}
               <span className="ml-2 text-sm font-normal text-muted">{geosites.length}</span>
             </h2>
-            {areaOnlyOnce ? <p className="mt-1 text-xs text-subtle">{t("areaOnly")}</p> : null}
+            {locateNoteOnce ? <p className="mt-1 text-xs text-subtle">{t("areaOnly")}</p> : null}
             <ul className="mt-3 space-y-3">
               {geosites.map((g) => (
                 <GeositeItem key={g.id} geosite={g} parkCover={site.cover_image} />
@@ -300,7 +286,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {!standard && routes.length > 0 ? (
+        {routes.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("walking")}</h2>
             <ul className="mt-3 space-y-4">
@@ -340,7 +326,7 @@ export function SiteDetail({ site }: { site: Site }) {
           <section>
             <h2 className="font-display text-xl font-semibold">{t("handbook")}</h2>
             <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed">
-              {(standard ? tips.slice(0, 1) : tips).map((tip) => (
+              {tips.map((tip) => (
                 <li key={tip}>{tip}</li>
               ))}
             </ul>
@@ -369,7 +355,7 @@ export function SiteDetail({ site }: { site: Site }) {
           <section>
             <h2 className="font-display text-xl font-semibold">{t("safety")}</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
-              {(standard ? safety.slice(0, 1) : safety).map((n) => (
+              {safety.map((n) => (
                 <li key={n}>{n}</li>
               ))}
             </ul>
@@ -379,12 +365,28 @@ export function SiteDetail({ site }: { site: Site }) {
         <section>
           <h2 className="font-display text-xl font-semibold">{t("law")}</h2>
           {legal ? <p className="mt-2 text-sm leading-relaxed">{legal}</p> : null}
-          {fossilRelated || site.province === "香港" ? (
+          {fossilRelated ? (
             <p className="mt-3 rounded-lg border border-hematite/30 bg-hematite/8 p-3 text-sm leading-relaxed">
               {fossilLawFor(site.province, locale)}
             </p>
           ) : null}
         </section>
+
+        <OfflinePackButton
+          pack={{
+            kind: "site",
+            id: site.id,
+            title: site.name,
+            title_en: site.name_en || site.name,
+            cover: photo,
+            body_zh: [site.hook, site.formation_short, site.what_you_see_today, site.legal_notes]
+              .filter(Boolean)
+              .join("\n\n"),
+            body_en: [enSite.hook, enSite.formation_short, enSite.what_you_see_today, enSite.legal_notes]
+              .filter(Boolean)
+              .join("\n\n"),
+          }}
+        />
 
         {related.length > 0 ? (
           <section>
@@ -421,7 +423,7 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {s.sources.length > 0 && !standard ? (
+        {s.sources.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("sources")}</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-subtle">
@@ -491,25 +493,28 @@ function GeositeItem({ geosite, parkCover }: { geosite: Geosite; parkCover?: str
   const t = useT();
   const locale = useLocale((s) => s.locale);
   const extra = geosite.do_not.filter((d) => !GENERIC_DO_NOT.has(d));
-  const photo = isRealPhoto(geosite.photo) ? geosite.photo : undefined;
-  const reused = photo && parkCover && photo === parkCover;
-  const show = photo && !reused;
+  const photo = isRealPhoto(geosite.photo)
+    ? geosite.photo
+    : isRealPhoto(parkCover)
+      ? parkCover
+      : undefined;
+  const credit = STOP_PHOTOS[geosite.id]?.credit || "";
   return (
     <li id={geosite.id} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
-      {show ? (
+      {photo ? (
         <img src={photo} alt={geosite.name} className="h-40 w-full object-cover" />
       ) : null}
       <div className="p-4">
-        {show ? (
+        {photo ? (
           <p className="mb-2 text-[11px] text-muted">
-            {photoCredit(STOP_PHOTOS[geosite.id]?.credit || "", locale)}
+            {photoCredit(credit, locale) || t("photoCaption")}
           </p>
         ) : null}
         <p className="text-xs text-muted">{phenomenonLabel(geosite.phenomenon_type, locale)}</p>
         <p className="font-display mt-0.5 text-lg font-semibold">{geosite.name}</p>
         <p className="mt-2 text-sm leading-relaxed">
           <span className="font-medium">{t("lookHere")}</span>
-          {geosite.look_here}
+          {stripLocatePhrase(geosite.look_here)}
         </p>
         {extra.length > 0 ? (
           <p className="mt-2 text-xs text-hematite">{extra.join(" · ")}</p>

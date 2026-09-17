@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import type { LeafletMouseEvent, Map as LeafletMap, LayerGroup } from "leaflet";
 import { geosites, getSite, sites } from "@/lib/geo/catalog";
-import { gcjPair } from "@/lib/geo/coords";
+import { mapPair } from "@/lib/geo/coords";
 import { MARKER_COLOR } from "@/lib/geo/constants";
 import { isGenericGeositeName, primaryType } from "@/lib/geo/labels";
 import { filterSites } from "@/lib/geo/search";
 import { useMapStore } from "@/lib/geo/store";
-import { addChinaBase, ASIA_NE, ASIA_SW } from "@/lib/geo/tiles";
+import { addChinaBase, ASIA_NE, ASIA_SW, type BaseTilesHandle } from "@/lib/geo/tiles";
 import type { Site } from "@/lib/geo/types";
 import { displayName as displayNameI18n, localizeGeosite, useLocale, useT } from "@/lib/i18n";
 
@@ -35,6 +35,8 @@ export function ChinaMap() {
   const mapRef = useRef<LeafletMap | null>(null);
   const layerRef = useRef<LayerGroup | null>(null);
   const geoLayerRef = useRef<LayerGroup | null>(null);
+  const tilesRef = useRef<BaseTilesHandle | null>(null);
+  const viewRef = useRef<{ center: [number, number]; zoom: number } | null>(null);
   const [ready, setReady] = useState(false);
   const filters = useMapStore((s) => s.filters);
   const selectedId = useMapStore((s) => s.selectedId);
@@ -62,8 +64,12 @@ export function ChinaMap() {
         attributionControl: true,
         preferCanvas: true,
       });
-      map.setView([36.2, 104.0], 5);
-      addChinaBase(L, map);
+      if (viewRef.current) {
+        map.setView(viewRef.current.center, viewRef.current.zoom);
+      } else {
+        map.setView([36.2, 104.0], 5);
+      }
+      tilesRef.current = addChinaBase(L, map, { locale });
       L.control.zoom({ position: "bottomright" }).addTo(map);
       layerRef.current = L.layerGroup().addTo(map);
       geoLayerRef.current = L.layerGroup().addTo(map);
@@ -74,13 +80,18 @@ export function ChinaMap() {
 
     return () => {
       cancelled = true;
-      map?.remove();
+      if (map) {
+        const c = map.getCenter();
+        viewRef.current = { center: [c.lat, c.lng], zoom: map.getZoom() };
+        map.remove();
+      }
       mapRef.current = null;
       layerRef.current = null;
       geoLayerRef.current = null;
+      tilesRef.current = null;
       setReady(false);
     };
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     if (!ready) return;
@@ -118,10 +129,10 @@ export function ChinaMap() {
           addSiteMarker(L, group, members[0]!, zoom, false, select, locale);
         } else {
           const slng =
-            members.reduce((a, s) => a + gcjPair(s.coordinates, s.province)[0], 0) /
+            members.reduce((a, s) => a + mapPair(s.coordinates, s.province, locale)[0], 0) /
             members.length;
           const slat =
-            members.reduce((a, s) => a + gcjPair(s.coordinates, s.province)[1], 0) /
+            members.reduce((a, s) => a + mapPair(s.coordinates, s.province, locale)[1], 0) /
             members.length;
           const n = members.length;
           const icon = L.divIcon({
@@ -156,7 +167,7 @@ export function ChinaMap() {
         if (!parent) continue;
         if (parent.content_status === "placeholder") continue;
         if (isGenericGeositeName(gs.name)) continue;
-        const [lng, lat] = gcjPair(gs.coordinates, parent.province);
+        const [lng, lat] = mapPair(gs.coordinates, parent.province, locale);
         if (!bounds.contains([lat, lng])) continue;
         const m = L.circleMarker([lat, lng], {
           radius: 4,
@@ -166,7 +177,7 @@ export function ChinaMap() {
           fillOpacity: 0.9,
         });
         const locG = localizeGeosite(gs, locale);
-        m.bindTooltip(`${locG.name}：${locG.look_here}`, {
+        m.bindTooltip(`${locG.name}${locale === "en" ? " · " : "："}${locG.look_here}`, {
           direction: "top",
           offset: [0, -6],
           className: "marker-label",
@@ -195,11 +206,11 @@ export function ChinaMap() {
     if (!map || !selectedId) return;
     const site = getSite(selectedId) ?? sites.find((s) => s.id === selectedId);
     if (!site) return;
-    const [lng, lat] = gcjPair(site.coordinates, site.province);
+    const [lng, lat] = mapPair(site.coordinates, site.province, locale);
     map.invalidateSize();
     const z = Math.max(map.getZoom(), 9);
     map.flyTo([lat, lng], z, { duration: 0.7 });
-  }, [selectedId, ready]);
+  }, [selectedId, ready, locale]);
 
   return (
     <div
@@ -221,7 +232,7 @@ function addSiteMarker(
   select: (id: string) => void,
   locale: "zh" | "en",
 ) {
-  const [lng, lat] = gcjPair(site.coordinates, site.province);
+  const [lng, lat] = mapPair(site.coordinates, site.province, locale);
   const marker = L.circleMarker([lat, lng], {
     radius: radiusFor(site, zoom) + (selected ? 2 : 0),
     color: "#f7f3eb",

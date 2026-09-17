@@ -320,6 +320,16 @@ export const UI = {
     zh: "已写入本机缓存。这不是实时票价。",
     en: "Saved on this device. This is not a live ticket price.",
   },
+  hkWgs: {
+    zh: "本园坐标按 WGS84 显示，香港不偏移到 GCJ-02。",
+    en: "Coordinates stay in WGS 84. Hong Kong is not shifted to GCJ-02.",
+  },
+  layerSat: { zh: "卫星", en: "Satellite" },
+  layerStreet: { zh: "标准", en: "Streets" },
+  tileAttr: {
+    zh: "底图 © 高德地图 · 中国大陆 WGS84→GCJ-02；香港等地不偏移",
+    en: "Basemap © Amap · Mainland China WGS84→GCJ-02; Hong Kong not offset",
+  },
 } as const satisfies Record<string, Pair>;
 
 export type UiKey = keyof typeof UI;

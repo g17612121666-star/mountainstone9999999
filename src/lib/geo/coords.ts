@@ -1,4 +1,4 @@
-/** WGS84 stored. Gaode tiles are GCJ-02. Hong Kong / Macau / overseas stay WGS84. */
+/** WGS84 stored. Gaode tiles are GCJ-02. English basemap is WGS84 (Esri/Carto). Hong Kong / Macau / overseas stay WGS84. */
 
 const PI = Math.PI;
 const A = 6378245.0;
@@ -42,7 +42,7 @@ function transformLng(x: number, y: number): number {
   r +=
     ((20.0 * Math.sin(x * PI) + 40.0 * Math.sin((x / 3.0) * PI)) * 2.0) / 3.0;
   r +=
-    ((150.0 * Math.sin((x / 12.0) * PI) + 300.0 * Math.sin((x / 30.0) * PI)) *
+    ((150.0 * Math.sin((x / 12.0) * PI) + 300.0 * Math.sin((x * PI) / 30.0)) *
       2.0) /
     3.0;
   return r;
@@ -65,11 +65,21 @@ export function gcj02Eligible(province: string): boolean {
   return province !== "香港" && province !== "澳门";
 }
 
-/** Leaflet display pair: [lng, lat] already in the tile CRS. */
+/** Leaflet display pair on Gaode (GCJ-02) tiles. */
 export function gcjPair(
   coordinates: [number, number],
   province?: string,
 ): [number, number] {
   if (province && !gcj02Eligible(province)) return coordinates;
   return wgs84ToGcj02(coordinates[0], coordinates[1]);
+}
+
+/** Marker pair matching the active basemap CRS. English tiles are WGS84. */
+export function mapPair(
+  coordinates: [number, number],
+  province?: string,
+  locale: "zh" | "en" = "zh",
+): [number, number] {
+  if (locale === "en") return coordinates;
+  return gcjPair(coordinates, province);
 }

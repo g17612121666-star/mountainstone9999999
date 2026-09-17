@@ -1,8 +1,10 @@
 import type { Area, Geosite, GsspExtra, Route, Site, ThemeRoute, VisitInfo } from "@/lib/geo/types";
-import { LOOK_EN } from "@/lib/geo/look";
+import { LOOK_EN, stripLocatePhrase } from "@/lib/geo/look";
+import { sanitizeGeologicAge } from "@/lib/geo/age";
 import enBundle from "../../../data/en.json";
 import type { Locale } from "./locale";
 import { repairEnSpacing } from "./space";
+import { FOSSIL_LAW_HK_EN } from "./ui";
 
 const CJK = /[\u4e00-\u9fff]/;
 
@@ -80,7 +82,9 @@ export function localizeSite(site: Site, locale: Locale): Site {
   const o = en.sites?.[site.id];
   const merged: Site = o ? { ...site, ...o, id: site.id } : { ...site };
   merged.city = cleanStr(merged.city || "", o?.city || "");
-  merged.geologic_age_text = cleanStr(merged.geologic_age_text || "", o?.geologic_age_text || "");
+  merged.geologic_age_text = sanitizeGeologicAge(
+    cleanStr(merged.geologic_age_text || "", o?.geologic_age_text || ""),
+  );
   merged.hook = cleanStr(merged.hook, site.name_en || site.id);
   merged.formation_short = cleanStr(
     merged.formation_short,
@@ -114,10 +118,11 @@ export function localizeSite(site: Site, locale: Locale): Site {
     merged.legal_notes,
     "Protected geoheritage. Look, don’t take. This guide does not sell tickets.",
   );
+  if (site.province === "香港") merged.legal_notes = FOSSIL_LAW_HK_EN;
   merged.formation_timeline = (merged.formation_timeline || [])
     .map((st) => ({
       name: cleanStr(st.name, ""),
-      age: cleanStr(st.age, ""),
+      age: sanitizeGeologicAge(cleanStr(st.age, "")),
       what: cleanStr(st.what, ""),
     }))
     .filter((st) => st.name && st.what && !/^Stage \d+$/i.test(st.name));
@@ -125,7 +130,7 @@ export function localizeSite(site: Site, locale: Locale): Site {
     merged.formation_timeline = o.formation_timeline
       .map((st) => ({
         name: cleanStr(st.name, ""),
-        age: cleanStr(st.age, ""),
+        age: sanitizeGeologicAge(cleanStr(st.age, "")),
         what: cleanStr(st.what, ""),
       }))
       .filter((st) => st.name && st.what);
@@ -166,9 +171,10 @@ export function localizeGeosite(g: Geosite, locale: Locale): Geosite {
   if (locale !== "en") return g;
   const o = en.geosites?.[g.id];
   const name = o?.name || (hasCjk(g.name) ? "Field stop" : g.name);
-  const look =
+  const look = stripLocatePhrase(
     o?.look_here ||
-    (hasCjk(g.look_here) ? LOOK_EN[g.phenomenon_type] || LOOK_EN.other : g.look_here);
+      (hasCjk(g.look_here) ? LOOK_EN[g.phenomenon_type] || LOOK_EN.other : g.look_here),
+  );
   const do_not = (g.do_not || []).map((d) => cleanStr(d, "")).filter(Boolean);
   return { ...g, name, look_here: look, do_not };
 }

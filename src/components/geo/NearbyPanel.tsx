@@ -23,7 +23,13 @@ const CITIES: { zh: string; en: string; coords: [number, number] }[] = [
   { zh: "武汉", en: "Wuhan", coords: [114.305, 30.593] },
 ];
 
-export function NearbyPanel({ compact = false }: { compact?: boolean }) {
+export function NearbyPanel({
+  compact = false,
+  hideTitle = false,
+}: {
+  compact?: boolean;
+  hideTitle?: boolean;
+}) {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   const [radius, setRadius] = useState<(typeof RADII)[number]>(50);
@@ -54,54 +60,40 @@ export function NearbyPanel({ compact = false }: { compact?: boolean }) {
   }
 
   const placeHits = useMemo(() => suggestSites(sites, place, 5), [place]);
+  const showTitle = !compact && !hideTitle;
+
+  const radiusChips = (
+    <div className={showTitle ? "ml-auto flex gap-1" : "flex gap-1"}>
+      {RADII.map((r) => (
+        <button
+          key={r}
+          type="button"
+          onClick={() => {
+            setRadius(r);
+            setHits(null);
+            setStatus("idle");
+          }}
+          className={
+            radius === r
+              ? "h-8 rounded-full bg-sand px-2.5 text-xs text-primary-fg"
+              : "h-8 rounded-full bg-surface-2 px-2.5 text-xs text-muted"
+          }
+        >
+          {r} km
+        </button>
+      ))}
+    </div>
+  );
 
   return (
     <section className={compact ? "" : "rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]"}>
-      {!compact ? (
+      {showTitle ? (
         <div className="flex flex-wrap items-center gap-2">
           <h2 className="font-display text-lg font-semibold">{t("nearbyTitle")}</h2>
-          <div className="ml-auto flex gap-1">
-            {RADII.map((r) => (
-              <button
-                key={r}
-                type="button"
-                onClick={() => {
-                  setRadius(r);
-                  setHits(null);
-                  setStatus("idle");
-                }}
-                className={
-                  radius === r
-                    ? "h-8 rounded-full bg-sand px-2.5 text-xs text-primary-fg"
-                    : "h-8 rounded-full bg-surface-2 px-2.5 text-xs text-muted"
-                }
-              >
-                {r} km
-              </button>
-            ))}
-          </div>
+          {radiusChips}
         </div>
       ) : (
-        <div className="flex gap-1">
-          {RADII.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => {
-                setRadius(r);
-                setHits(null);
-                setStatus("idle");
-              }}
-              className={
-                radius === r
-                  ? "h-8 rounded-full bg-sand px-2.5 text-xs text-primary-fg"
-                  : "h-8 rounded-full bg-surface-2 px-2.5 text-xs text-muted"
-              }
-            >
-              {r} km
-            </button>
-          ))}
-        </div>
+        radiusChips
       )}
       <Button type="button" size="sm" className="mt-3" onClick={locate}>
         {t("locateMe")}
@@ -152,24 +144,19 @@ export function NearbyPanel({ compact = false }: { compact?: boolean }) {
       {hits && hits.length ? (
         <ul className="mt-3 space-y-2">
           {hits.map((h) => (
-            <li key={h.site.id}>
-              <Link
-                {...siteTo(h.site)}
-                className="block rounded-lg border border-border px-3 py-2 hover:bg-surface-2"
-              >
-                <span className="flex items-baseline justify-between gap-2">
-                  <span className="font-medium">{displayName(h.site, locale)}</span>
-                  <span className="shrink-0 text-xs text-muted">
-                    {h.km < 10 ? h.km.toFixed(1) : Math.round(h.km)} km
-                  </span>
+            <li key={h.site.id} className="rounded-lg border border-border px-3 py-2">
+              <p className="flex items-baseline justify-between gap-2">
+                <Link {...siteTo(h.site)} className="font-medium hover:underline">
+                  {displayName(h.site, locale)}
+                </Link>
+                <span className="shrink-0 text-xs text-muted">
+                  {h.km < 10 ? h.km.toFixed(1) : Math.round(h.km)} km
                 </span>
-                <span className="mt-0.5 block text-xs text-muted">
-                  {typeBadge(h.site, locale)} · {landformLabel(h.site.landform_types[0] ?? "other", locale)}
-                </span>
-                <span className="mt-1 block text-xs leading-relaxed text-subtle">
-                  {whyNearby(h.site, locale)}
-                </span>
-              </Link>
+              </p>
+              <p className="mt-0.5 text-xs text-muted">
+                {typeBadge(h.site, locale)} · {landformLabel(h.site.landform_types[0] ?? "other", locale)}
+              </p>
+              <p className="mt-1 text-xs leading-relaxed text-subtle">{whyNearby(h.site, locale)}</p>
             </li>
           ))}
         </ul>

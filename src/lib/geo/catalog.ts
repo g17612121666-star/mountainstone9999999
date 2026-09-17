@@ -20,7 +20,7 @@ import mediaBundle from "../../../data/media.json";
 import rewriteBundle from "../../../data/rewrite.json";
 import coverCreditsJson from "../../../data/cover_credits.json";
 import { deepGeosites, deepOverlays, deepRoutes, deepVisits } from "./deep";
-import { isFakeGeosite, isGenericGeositeName } from "./labels";
+import { isFakeGeosite, isGenericGeositeName, FOSSIL_LAW_HK } from "./labels";
 import {
   HOST_PARK,
   SITE_ALIASES,
@@ -29,7 +29,7 @@ import {
   geositePatches,
   routePatches,
 } from "./patches";
-import { isGenericSafety, isOwnCover, safetyFor } from "./safety";
+import { isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
 import type { VideoClip } from "./types";
 import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
@@ -401,9 +401,18 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
   merged.formation_short = visibleCopy(merged.formation_short);
   merged.what_you_see_today = visibleCopy(merged.what_you_see_today);
   merged.observation_tips = (merged.observation_tips || []).map(visibleCopy).filter(Boolean);
+  if (Array.isArray(merged.formation_timeline)) {
+    merged.formation_timeline = merged.formation_timeline.map((st) => ({
+      ...st,
+      age: sanitizeGeologicAge(st.age),
+    }));
+  }
+  if (merged.province === "香港") merged.legal_notes = FOSSIL_LAW_HK;
   if (s.id in HOST_PARK) merged.host_park_id = HOST_PARK[s.id];
   if (UNESCO_PARENT[s.id]) merged.unesco_parent_id = UNESCO_PARENT[s.id];
-  if (s.id === "chongming" ||
+  if (
+    s.id === "chongming" ||
+    s.id === "hongkong" ||
     merged.types.includes("urban_geosite") ||
     isGenericSafety(merged.safety_notes)
   ) {
@@ -418,7 +427,10 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
       ? [{ src: merged.cover_image, credit: merged.cover_credit || "", caption: "资料照片，非本站踏勘" }]
       : [];
   }
-  const extra = EXTRA_GALLERY[s.id];
+  const extra = [
+    ...(EXTRA_GALLERY[s.id] ?? []),
+    ...((((COVER_CREDITS[s.id] as { gallery?: PhotoAsset[] } | undefined)?.gallery) ?? []) as PhotoAsset[]),
+  ];
   if (extra && extra.length && merged.cover_image) {
     const have = new Set<string>();
     merged.gallery = [];
@@ -510,6 +522,12 @@ export const visits: VisitInfo[] = (rawVisits as unknown as VisitInfo[]).map((v)
 });
 
 const siteById = new Map(sites.map((s) => [s.id, s]));
+for (const g of geosites) {
+  if (!isRealPhoto(g.photo)) {
+    const host = siteById.get(g.site_id);
+    if (host && isOwnCover(host) && host.cover_image) g.photo = host.cover_image;
+  }
+}
 for (const tr of themeRoutes) {
   for (const id of tr.site_ids) {
     const s = siteById.get(id);

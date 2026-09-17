@@ -10,10 +10,12 @@ import { seoHead } from "@/lib/geo/canonical";
 import { getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isOwnCover } from "@/lib/geo/safety";
+import { ageLabel } from "@/lib/geo/age";
 import type { Site } from "@/lib/geo/types";
 import {
   displayName,
   fossilLaw,
+  landformLabel,
   localizeSite,
   photoCredit,
   themeName,
@@ -66,19 +68,6 @@ function ThemePage() {
               {t("fieldCard")}
             </Link>
           </Button>
-          <OfflinePackButton
-            pack={{
-              kind: "trail",
-              id: theme.id,
-              title: theme.name,
-              title_en: theme.name_en || theme.name,
-              cover: mapped.find((s) => isOwnCover(s))?.cover_image,
-              body_zh: [theme.thesis, theme.task || "", theme.site_roles.join("\n")].join("\n\n"),
-              body_en: [theme.thesis_en || theme.thesis, theme.task_en || "", (theme.site_roles_en || []).join("\n")].join(
-                "\n\n",
-              ),
-            }}
-          />
         </div>
         {task ? (
           <aside className="mt-6 rounded-lg border border-moss/25 bg-moss/8 p-4 text-sm leading-relaxed">
@@ -141,18 +130,86 @@ function ThemePage() {
                       {photoCredit(site.cover_credit || "", locale)}
                     </p>
                   </>
-                ) : null}
+                ) : (
+                  <p className="mx-4 rounded-md bg-surface-2 px-3 py-6 text-center text-xs text-muted">
+                    {t("noPhoto")}
+                  </p>
+                )}
                 <div className="p-4 pt-3">
                   <p className="text-sm leading-relaxed">
                     <span className="font-medium">{t("proveJob")} · </span>
                     {themeRole(theme, i, locale)}
                   </p>
-                  <p className="mt-2 text-sm text-muted">{localizeSite(site, locale).hook}</p>
+                  <p className="mt-2 text-sm leading-relaxed">{localizeSite(site, locale).hook}</p>
+                  <p className="mt-2 text-sm leading-relaxed">
+                    {localizeSite(site, locale).what_you_see_today || localizeSite(site, locale).formation_short}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {localizeSite(site, locale).formation_short}
+                  </p>
+                  <p className="mt-2 text-xs text-subtle">
+                    {t("landformColon")}
+                    {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
+                    <span className="mx-1">·</span>
+                    {t("age")} {ageLabel(localizeSite(site, locale).geologic_age_text || site.geologic_age_text, locale)}
+                  </p>
+                  {site.video?.bvid ? (
+                    <div className="mt-3">
+                      <BiliEmbed video={site.video} />
+                      <p className="mt-2 text-sm">
+                        <a
+                          className="text-moss underline"
+                          href={`https://www.bilibili.com/video/${site.video.bvid}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {t("videoExt")}
+                          {" · "}
+                          {locale === "en" ? site.video.title_en || site.video.title : site.video.title}
+                        </a>
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="mt-2 text-sm">
+                      <a
+                        className="text-moss underline"
+                        href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(
+                          site.name
+                            .replace(/联合国教科文组织/g, "")
+                            .replace(/世界地质公园/g, "")
+                            .replace(/国家地质公园/g, "")
+                            .replace(/地质公园/g, "")
+                            .trim() || site.name,
+                        )}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {locale === "en" ? "Open encyclopaedia / field notes" : "百科与公开资料"}
+                      </a>
+                    </p>
+                  )}
                 </div>
               </li>
             ) : null,
           )}
         </ol>
+        <div className="mt-8">
+          <OfflinePackButton
+            pack={{
+              kind: "trail",
+              id: theme.id,
+              title: theme.name,
+              title_en: theme.name_en || theme.name,
+              cover: mapped.find((s) => isOwnCover(s))?.cover_image,
+              body_zh: [theme.thesis, theme.task || "", theme.site_roles.join("\n")].join("\n\n"),
+              body_en: [
+                theme.thesis_en || theme.thesis,
+                theme.task_en || "",
+                (theme.site_roles_en || []).join("\n"),
+              ].join("\n\n"),
+            }}
+          />
+        </div>
       </main>
       <AppFooter />
     </div>

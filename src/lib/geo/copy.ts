@@ -1,28 +1,28 @@
-const PLACEHOLDER = /待补|标准卡待补|成因与打卡点待补|内容待写/;
-const GENERIC_TRANSPORT = /通常经县里转车|一般需包车或自驾到园区/;
-const LIGHT_TIP = /春秋侧光/;
-const TICKET_LINE = /本站不售票|以官方(当日)?为准/;
+const PLACEHOLDER_ONLY = /^(待补|标准卡待补|成因与打卡点待补|内容待写)[。.]?$/;
+const PLACEHOLDER_TAIL =
+  /标准卡待补[，,]?先用这个三件套读现场。?|成因与打卡点待补。?|内容待写。?|详细过程见深页时间轴。?|详细过程见深页。?/g;
 
 export function isPlaceholderCopy(s: string | null | undefined): boolean {
-  return !s ? true : PLACEHOLDER.test(s);
+  return !visibleCopy(s);
 }
 
 export function visibleCopy(s: string | null | undefined): string {
   const t = (s || "").trim();
-  if (!t || PLACEHOLDER.test(t)) return "";
-  return t;
+  if (!t) return "";
+  if (PLACEHOLDER_ONLY.test(t)) return "";
+  return t.replace(PLACEHOLDER_TAIL, "").replace(/待补/g, "").replace(/\s{2,}/g, " ").trim();
 }
 
 export function isGenericTransport(s: string): boolean {
-  return GENERIC_TRANSPORT.test(s);
+  return /通常经县里转车|一般需包车或自驾到园区/.test(s);
 }
 
 export function isSeasonLightTip(s: string): boolean {
-  return LIGHT_TIP.test(s);
+  return /春秋侧光/.test(s);
 }
 
 export function isTicketDisclaimer(s: string): boolean {
-  return TICKET_LINE.test(s);
+  return /本站不售票|以官方(当日)?为准/.test(s);
 }
 
 /** Drop leftover template sentences visitors should not see stacked. */
