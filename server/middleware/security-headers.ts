@@ -3,6 +3,7 @@
  * the live preview is an iframe on grok.com.
  *
  * Published hosts get index,follow. Do not noindex mountainstone.grok.me.
+ * Preview / localhost may stay noindex.
  */
 const CANONICAL_HOST = "mountainstone.grok.me";
 const ALIAS_HOSTS = new Set(["shanshizhi.grok.me", "www.mountainstone.grok.me"]);
@@ -29,6 +30,11 @@ function hostFrom(event: unknown): string {
   return hostnameOf(h?.get?.("x-forwarded-host") || h?.get?.("host") || e.url?.host || "");
 }
 
+function isPreviewHost(host: string): boolean {
+  if (host === CANONICAL_HOST || ALIAS_HOSTS.has(host)) return false;
+  return /localhost|127\.0\.0\.1|0\.0\.0\.0|^preview/i.test(host);
+}
+
 function apply(event: unknown) {
   const e = event as {
     node?: { res?: { setHeader?: (k: string, v: string) => void; removeHeader?: (k: string) => void } };
@@ -36,7 +42,7 @@ function apply(event: unknown) {
   };
   const host = hostFrom(event);
   const headers = { ...BASE };
-  if (host === CANONICAL_HOST || ALIAS_HOSTS.has(host)) {
+  if (!isPreviewHost(host)) {
     e.node?.res?.removeHeader?.("X-Robots-Tag");
     headers["X-Robots-Tag"] = "index, follow";
   }
@@ -58,17 +64,15 @@ export default async function securityHeaders(
   const result = await next();
   try {
     const host = hostFrom(event);
-    if (host === CANONICAL_HOST || ALIAS_HOSTS.has(host)) {
-      if (result instanceof Response) {
-        const headers = new Headers(result.headers);
-        headers.delete("x-robots-tag");
-        headers.set("X-Robots-Tag", "index, follow");
-        return new Response(result.body, {
-          status: result.status,
-          statusText: result.statusText,
-          headers,
-        });
-      }
+    if (!isPreviewHost(host) && result instanceof Response) {
+      const headers = new Headers(result.headers);
+      headers.delete("x-robots-tag");
+      headers.set("X-Robots-Tag", "index, follow");
+      return new Response(result.body, {
+        status: result.status,
+        statusText: result.statusText,
+        headers,
+      });
     }
   } catch {
     /* never block */

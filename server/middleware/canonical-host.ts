@@ -54,9 +54,11 @@ export default async function canonicalHost(
 
   const result = await next();
   const publicHost = host === CANONICAL_HOST || ALIAS_HOSTS.has(host);
+  const preview =
+    !publicHost && /localhost|127\.0\.0\.1|0\.0\.0\.0|^preview/i.test(host);
 
   try {
-    if (publicHost) {
+    if (!preview) {
       event.node?.res?.removeHeader?.("X-Robots-Tag");
       event.node?.res?.setHeader?.("X-Robots-Tag", "index, follow");
       if (result instanceof Response) {

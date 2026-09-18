@@ -29,7 +29,7 @@ import {
   geositePatches,
   routePatches,
 } from "./patches";
-import { isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
+import { isDiagramCredit, isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
 import type { VideoClip } from "./types";
 import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
@@ -437,7 +437,11 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
     for (const p of extra) {
       if (!p.src || p.src === merged.cover_image || have.has(p.src)) continue;
       have.add(p.src);
-      merged.gallery.push(p);
+      if (isDiagramCredit(p.credit || "", p.caption || "")) {
+        merged.gallery.push({ ...p, caption: p.caption || "示意图，不是现场照片" });
+      } else {
+        merged.gallery.push(p);
+      }
     }
   } else if (Array.isArray(merged.gallery)) {
     merged.gallery = merged.gallery.filter((p) => p.src && p.src !== merged.cover_image);

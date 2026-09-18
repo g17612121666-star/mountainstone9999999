@@ -88,6 +88,23 @@ const MISLEADING = [
   "柱状图",
 ];
 
+const DIAGRAM_BITS = [
+  "示意图",
+  "范围示意图",
+  "磁性地层",
+  "地层对比",
+  "地质图",
+  "柱状图",
+  "路线图",
+  "科学图表",
+  "示意地层柱",
+];
+
+export function isDiagramCredit(credit: string, caption = ""): boolean {
+  const t = `${credit} ${caption}`;
+  return DIAGRAM_BITS.some((bit) => t.includes(bit));
+}
+
 export function isOwnCover(site: {
   id: string;
   cover_image?: string;

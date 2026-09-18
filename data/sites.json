@@ -149,7 +149,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "中元古界碳酸盐岩",
+    "geologic_age_text": "中元古界",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 800,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -520,7 +520,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "元古宙大理岩",
+    "geologic_age_text": "元古宙",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 800,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -694,7 +694,7 @@
     "landform_types": [
       "zhangjiajie_sandstone"
     ],
-    "geologic_age_text": "中元古界石英砂岩",
+    "geologic_age_text": "中元古界",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 1000,
     "hook": "砂岩峰林。成因与打卡点待补。",
@@ -754,7 +754,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 400,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -811,7 +811,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "寒武–奥陶纪",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -868,7 +868,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "寒武–奥陶纪",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -925,7 +925,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -1038,7 +1038,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 130,
     "geologic_age_end_ma": 60,
     "hook": "丹霞。成因与打卡点待补。",
@@ -1094,7 +1094,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "石英砂岩",
+    "geologic_age_text": "中元古代",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 1000,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -1152,7 +1152,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "三叠系砂岩",
+    "geologic_age_text": "三叠系",
     "geologic_age_start_ma": 250,
     "geologic_age_end_ma": 200,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -1265,7 +1265,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -1321,7 +1321,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -1378,7 +1378,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -1547,7 +1547,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -2197,7 +2197,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -2253,7 +2253,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "岩浆岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -2309,7 +2309,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -2421,7 +2421,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "火成岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -2725,7 +2725,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "寒武–奥陶系灰岩",
+    "geologic_age_text": "寒武–奥陶系",
     "geologic_age_start_ma": 500,
     "geologic_age_end_ma": 450,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -2960,7 +2960,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 250,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -3018,7 +3018,7 @@
       "volcano",
       "glacier"
     ],
-    "geologic_age_text": "新生代火山",
+    "geologic_age_text": "新生代",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "火山、冰川。成因与打卡点待补。",
@@ -3486,7 +3486,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "中生代花岗岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 160,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -3543,7 +3543,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "全新世火山堰塞湖",
+    "geologic_age_text": "全新世 堰塞湖",
     "geologic_age_start_ma": 0.01,
     "geologic_age_end_ma": 0,
     "hook": "火山。成因与打卡点待补。",
@@ -3713,7 +3713,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 200,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -3769,7 +3769,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "综合",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -3943,7 +3943,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 200,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -4182,7 +4182,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "新生代玄武岩与雨花石",
+    "geologic_age_text": "新生代 与雨花石",
     "geologic_age_start_ma": 16,
     "geologic_age_end_ma": 2,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -4239,7 +4239,7 @@
       "karst",
       "volcano"
     ],
-    "geologic_age_text": "古生界灰岩与新生代火山",
+    "geologic_age_text": "古生界 与新生代",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 10,
     "hook": "喀斯特、火山。成因与打卡点待补。",
@@ -4296,7 +4296,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "前寒武变质岩",
+    "geologic_age_text": "前寒武",
     "geologic_age_start_ma": 1800,
     "geologic_age_end_ma": 800,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -4416,7 +4416,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "白垩纪火山岩",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 80,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -4473,7 +4473,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "白垩纪流纹质火山",
+    "geologic_age_text": "白垩纪流纹质",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 90,
     "hook": "火山。成因与打卡点待补。",
@@ -4594,7 +4594,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "白垩纪火山岩",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 80,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -4707,7 +4707,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "中生代火山与明矾石",
+    "geologic_age_text": "中生代 与明矾石",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 80,
     "hook": "火山。成因与打卡点待补。",
@@ -4990,7 +4990,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "中生代花岗岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 120,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -5053,7 +5053,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -5111,7 +5111,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "中生代火山",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 130,
     "geologic_age_end_ma": 90,
     "hook": "火山。成因与打卡点待补。",
@@ -5224,7 +5224,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -5281,7 +5281,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "超高压变质与花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 240,
     "geologic_age_end_ma": 120,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -5339,7 +5339,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "超高压变质带",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 240,
     "geologic_age_end_ma": 200,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -5396,7 +5396,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -5452,7 +5452,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩与碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1800,
     "geologic_age_end_ma": 400,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -5508,7 +5508,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -5565,7 +5565,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "综合",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -5621,7 +5621,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 540,
     "geologic_age_end_ma": 400,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -5677,7 +5677,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "综合",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -5733,7 +5733,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -5791,7 +5791,7 @@
       "volcano",
       "coast"
     ],
-    "geologic_age_text": "新生代玄武岩",
+    "geologic_age_text": "新生代",
     "geologic_age_start_ma": 16,
     "geologic_age_end_ma": 0.7,
     "hook": "火山、海岸。成因与打卡点待补。",
@@ -5850,7 +5850,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -5909,7 +5909,7 @@
       "coast",
       "fossil"
     ],
-    "geologic_age_text": "全新世森林遗迹与海岸",
+    "geologic_age_text": "全新世森林遗迹与",
     "geologic_age_start_ma": 0.01,
     "geologic_age_end_ma": 0,
     "hook": "海岸、化石产地。成因与打卡点待补。",
@@ -5975,7 +5975,7 @@
       "granite_peak",
       "volcano"
     ],
-    "geologic_age_text": "中生代火山–花岗岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "花岗岩地貌、火山。成因与打卡点待补。",
@@ -6031,7 +6031,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -6089,7 +6089,7 @@
       "volcano",
       "granite_peak"
     ],
-    "geologic_age_text": "中生代火山岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山、花岗岩地貌。成因与打卡点待补。",
@@ -6146,7 +6146,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "中生代火山岩浅滩",
+    "geologic_age_text": "中生代 浅滩",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -6260,7 +6260,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -6317,7 +6317,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "中生代火山岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -6376,7 +6376,7 @@
       "granite_peak",
       "coast"
     ],
-    "geologic_age_text": "中生代火山–花岗岩海岸",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "火山、花岗岩地貌、海岸。成因与打卡点待补。",
@@ -6438,7 +6438,7 @@
       "danxia",
       "karst"
     ],
-    "geologic_age_text": "丹霞与岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞、喀斯特。成因与打卡点待补。",
@@ -6494,7 +6494,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -6550,7 +6550,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "火山岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山。成因与打卡点待补。",
@@ -6606,7 +6606,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "温泉与花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -6662,7 +6662,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -6720,7 +6720,7 @@
       "coast",
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩海蚀",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "海岸、花岗岩地貌。成因与打卡点待补。",
@@ -6779,7 +6779,7 @@
     "landform_types": [
       "coast"
     ],
-    "geologic_age_text": "海岸",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "海岸。成因与打卡点待补。",
@@ -6836,7 +6836,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "火山岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山。成因与打卡点待补。",
@@ -6953,7 +6953,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -7012,7 +7012,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "中生代花岗岩",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 120,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -7072,7 +7072,7 @@
       "granite_peak",
       "other"
     ],
-    "geologic_age_text": "花岗岩与变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌、综合地貌。成因与打卡点待补。",
@@ -7128,7 +7128,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -7249,7 +7249,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "寒武系灰岩",
+    "geologic_age_text": "寒武系",
     "geologic_age_start_ma": 520,
     "geologic_age_end_ma": 490,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -7482,7 +7482,7 @@
     "landform_types": [
       "coast"
     ],
-    "geologic_age_text": "变质岩海岸",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1800,
     "geologic_age_end_ma": 0,
     "hook": "海岸。成因与打卡点待补。",
@@ -7731,7 +7731,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 520,
     "geologic_age_end_ma": 450,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -7788,7 +7788,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "新生代玄武岩",
+    "geologic_age_text": "新生代",
     "geologic_age_start_ma": 16,
     "geologic_age_end_ma": 8,
     "hook": "火山。成因与打卡点待补。",
@@ -7844,7 +7844,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -7900,7 +7900,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -8078,7 +8078,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩与花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -8194,7 +8194,7 @@
       "other",
       "fossil"
     ],
-    "geologic_age_text": "恐龙蛋与造山带",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 66,
     "hook": "综合地貌、化石产地。成因与打卡点待补。",
@@ -8256,7 +8256,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -8369,7 +8369,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 520,
     "geologic_age_end_ma": 450,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -8425,7 +8425,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -8481,7 +8481,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "沉积岩峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1400,
     "geologic_age_end_ma": 250,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -8538,7 +8538,7 @@
       "volcano",
       "granite_peak"
     ],
-    "geologic_age_text": "火山岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山、花岗岩地貌。成因与打卡点待补。",
@@ -8594,7 +8594,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1800,
     "geologic_age_end_ma": 400,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -8650,7 +8650,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 520,
     "geologic_age_end_ma": 250,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -8768,7 +8768,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -8885,7 +8885,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "碳酸盐岩与构造",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 700,
     "geologic_age_end_ma": 200,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -8942,7 +8942,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 1800,
     "geologic_age_end_ma": 400,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -9060,7 +9060,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 800,
     "geologic_age_end_ma": 400,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -9117,7 +9117,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "超高压变质带",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 240,
     "geologic_age_end_ma": 200,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -9173,7 +9173,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9230,7 +9230,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "变质岩与温泉",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -9287,7 +9287,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩峡谷与洞穴",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9344,7 +9344,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "清江岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9606,7 +9606,7 @@
     "landform_types": [
       "zhangjiajie_sandstone"
     ],
-    "geologic_age_text": "中泥盆世石英砂岩",
+    "geologic_age_text": "中泥盆世",
     "geologic_age_start_ma": 380,
     "geologic_age_end_ma": 360,
     "hook": "3.8 亿年前的海滩，被切成三千多座石柱。",
@@ -9670,7 +9670,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -9726,7 +9726,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -9784,7 +9784,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9841,7 +9841,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "红色碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9898,7 +9898,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -9955,7 +9955,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10012,7 +10012,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10069,7 +10069,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -10125,7 +10125,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -10181,7 +10181,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -10237,7 +10237,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "综合",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -10293,7 +10293,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -10349,7 +10349,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10407,7 +10407,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10607,7 +10607,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪–古近纪红层",
+    "geologic_age_text": "白垩纪–古近纪",
     "geologic_age_start_ma": 96,
     "geologic_age_end_ma": 20,
     "hook": "丹霞写在广东韶关市。",
@@ -10728,7 +10728,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "新生代粗面岩",
+    "geologic_age_text": "新生代",
     "geologic_age_start_ma": 50,
     "geologic_age_end_ma": 40,
     "hook": "火山。成因与打卡点待补。",
@@ -10784,7 +10784,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10842,7 +10842,7 @@
       "coast",
       "volcano"
     ],
-    "geologic_age_text": "中生代火山岩海岸",
+    "geologic_age_text": "中生代",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "海岸、火山。成因与打卡点待补。",
@@ -10899,7 +10899,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -10956,7 +10956,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "温泉与花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -11012,7 +11012,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11069,7 +11069,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "火山岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 90,
     "hook": "火山。成因与打卡点待补。",
@@ -11126,7 +11126,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "第四纪玄武岩",
+    "geologic_age_text": "第四纪",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "火山。成因与打卡点待补。",
@@ -11186,7 +11186,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -11243,7 +11243,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "天坑与岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11308,7 +11308,7 @@
       "volcano",
       "coast"
     ],
-    "geologic_age_text": "第四纪火山岛",
+    "geologic_age_text": "第四纪 岛",
     "geologic_age_start_ma": 1.0,
     "geologic_age_end_ma": 0,
     "hook": "火山、海岸。成因与打卡点待补。",
@@ -11366,7 +11366,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11423,7 +11423,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11480,7 +11480,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "峰丛洼地",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11537,7 +11537,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "花岗岩与沉积岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -11593,7 +11593,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11650,7 +11650,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -11706,7 +11706,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "地下河",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11763,7 +11763,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11820,7 +11820,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -11878,7 +11878,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "泥盆–石炭系灰岩",
+    "geologic_age_text": "泥盆–石炭系",
     "geologic_age_start_ma": 380,
     "geologic_age_end_ma": 300,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -12081,7 +12081,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "全新世玄武岩",
+    "geologic_age_text": "全新世",
     "geologic_age_start_ma": 0.01,
     "geologic_age_end_ma": 0,
     "hook": "火山。成因与打卡点待补。",
@@ -12139,7 +12139,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "撞击坑",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -12195,7 +12195,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "天坑地缝",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -12254,7 +12254,7 @@
     "landform_types": [
       "geo_hazard"
     ],
-    "geologic_age_text": "地震堰塞湖",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0.16,
     "geologic_age_end_ma": 0.16,
     "hook": "地质灾害遗迹。成因与打卡点待补。",
@@ -12312,7 +12312,7 @@
       "fossil",
       "karst"
     ],
-    "geologic_age_text": "侏罗纪恐龙与三峡岩溶",
+    "geologic_age_text": "侏罗纪恐龙与三峡",
     "geologic_age_start_ma": 180,
     "geologic_age_end_ma": 150,
     "hook": "化石产地、喀斯特。成因与打卡点待补。",
@@ -12380,7 +12380,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "石林与溶洞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -12500,7 +12500,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -12630,7 +12630,7 @@
       "other",
       "geo_hazard"
     ],
-    "geologic_age_text": "推覆构造",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌、地质灾害遗迹。成因与打卡点待补。",
@@ -12745,7 +12745,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -12865,7 +12865,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "钙华与构造湖",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -12980,7 +12980,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "石海与天坑",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13103,7 +13103,7 @@
       "glacier",
       "granite_peak"
     ],
-    "geologic_age_text": "极高山与冰川",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "冰川、花岗岩地貌。成因与打卡点待补。",
@@ -13162,7 +13162,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "褶皱山",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 100,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -13276,7 +13276,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "碳酸盐岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13334,7 +13334,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "岩溶与峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13391,7 +13391,7 @@
     "landform_types": [
       "geo_hazard"
     ],
-    "geologic_age_text": "2008 地震遗迹",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0,
     "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹。成因与打卡点待补。",
@@ -13447,7 +13447,7 @@
     "landform_types": [
       "geo_hazard"
     ],
-    "geologic_age_text": "地震遗迹",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0,
     "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹。成因与打卡点待补。",
@@ -13503,7 +13503,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "丹霞与峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -13680,7 +13680,7 @@
       "karst",
       "fossil"
     ],
-    "geologic_age_text": "万峰林与三叠纪化石",
+    "geologic_age_text": "万 与三叠纪",
     "geologic_age_start_ma": 247,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特、化石产地。成因与打卡点待补。",
@@ -13744,7 +13744,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "洞穴化学沉积",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13803,7 +13803,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "超长洞穴系统",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13861,7 +13861,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "高原岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -13918,7 +13918,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "天坑与大射电",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -13975,7 +13975,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "乌江岩溶",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -14090,7 +14090,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "白垩纪红层",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -14148,7 +14148,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "穿洞与天坑",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -14278,7 +14278,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "二叠纪灰岩石林",
+    "geologic_age_text": "二叠纪 石林",
     "geologic_age_start_ma": 270,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特写在云南石林县。",
@@ -14413,7 +14413,7 @@
     "landform_types": [
       "volcano"
     ],
-    "geologic_age_text": "新生代火山与地热",
+    "geologic_age_text": "新生代 与地热",
     "geologic_age_start_ma": 5,
     "geologic_age_end_ma": 0,
     "hook": "火山。成因与打卡点待补。",
@@ -14534,7 +14534,7 @@
       "danxia",
       "other"
     ],
-    "geologic_age_text": "黎明丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞、综合地貌。成因与打卡点待补。",
@@ -14592,7 +14592,7 @@
       "glacier",
       "other"
     ],
-    "geologic_age_text": "变质岩与冰川遗迹",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 0,
     "hook": "冰川、综合地貌。成因与打卡点待补。",
@@ -14708,7 +14708,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "洞穴与峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -14827,7 +14827,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "洞穴",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 0,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -14884,7 +14884,7 @@
     "landform_types": [
       "geo_hazard"
     ],
-    "geologic_age_text": "泥石流",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0,
     "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹。成因与打卡点待补。",
@@ -14940,7 +14940,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "红河源",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -14997,7 +14997,7 @@
       "geo_hazard",
       "glacier"
     ],
-    "geologic_age_text": "滑坡堰塞与冰川",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0.02,
     "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹、冰川。成因与打卡点待补。",
@@ -15054,7 +15054,7 @@
       "other",
       "yardang"
     ],
-    "geologic_age_text": "河湖相土林",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 5,
     "geologic_age_end_ma": 1,
     "hook": "综合地貌、雅丹。成因与打卡点待补。",
@@ -15111,7 +15111,7 @@
     "landform_types": [
       "stratigraphy"
     ],
-    "geologic_age_text": "奥陶纪石灰岩",
+    "geologic_age_text": "奥陶纪石",
     "geologic_age_start_ma": 480,
     "geologic_age_end_ma": 440,
     "hook": "地层剖面。成因与打卡点待补。",
@@ -15172,7 +15172,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "伸展滑脱",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 20,
     "geologic_age_end_ma": 10,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -15233,7 +15233,7 @@
       "geo_hazard",
       "granite_peak"
     ],
-    "geologic_age_text": "山崩与秦岭构造",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹、花岗岩地貌。成因与打卡点待补。",
@@ -15291,7 +15291,7 @@
       "loess",
       "stratigraphy"
     ],
-    "geologic_age_text": "第四纪黄土剖面",
+    "geologic_age_text": "第四纪 剖面",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "黄土、地层剖面。成因与打卡点待补。",
@@ -15347,7 +15347,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "黄河深切曲流",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -15403,7 +15403,7 @@
     "landform_types": [
       "karst"
     ],
-    "geologic_age_text": "峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 400,
     "geologic_age_end_ma": 250,
     "hook": "喀斯特。成因与打卡点待补。",
@@ -15461,7 +15461,7 @@
       "volcano",
       "other"
     ],
-    "geologic_age_text": "粗面岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 40,
     "geologic_age_end_ma": 20,
     "hook": "火山、综合地貌。成因与打卡点待补。",
@@ -15517,7 +15517,7 @@
     "landform_types": [
       "granite_peak"
     ],
-    "geologic_age_text": "花岗岩断块山",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 100,
     "hook": "花岗岩地貌。成因与打卡点待补。",
@@ -15576,7 +15576,7 @@
       "karst",
       "other"
     ],
-    "geologic_age_text": "喀斯特与红层",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 70,
     "hook": "喀斯特、综合地貌。成因与打卡点待补。",
@@ -15634,7 +15634,7 @@
     "landform_types": [
       "yardang"
     ],
-    "geologic_age_text": "雅丹",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "雅丹。成因与打卡点待补。",
@@ -15755,7 +15755,7 @@
       "danxia",
       "other"
     ],
-    "geologic_age_text": "丹霞与灰岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 250,
     "hook": "丹霞、综合地貌。成因与打卡点待补。",
@@ -15811,7 +15811,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "砂砾岩柱",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 4,
     "geologic_age_end_ma": 2,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -15937,7 +15937,7 @@
       "danxia",
       "other"
     ],
-    "geologic_age_text": "红层丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞、综合地貌。成因与打卡点待补。",
@@ -16060,7 +16060,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -16116,7 +16116,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -16172,7 +16172,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "综合",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -16229,7 +16229,7 @@
       "yardang",
       "other"
     ],
-    "geologic_age_text": "雅丹与峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 23,
     "geologic_age_end_ma": 0,
     "hook": "雅丹、综合地貌。成因与打卡点待补。",
@@ -16285,7 +16285,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "迭部构造与峰丛",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -16341,7 +16341,7 @@
     "landform_types": [
       "fossil"
     ],
-    "geologic_age_text": "新生代化石",
+    "geologic_age_text": "新生代",
     "geologic_age_start_ma": 23,
     "geologic_age_end_ma": 5,
     "hook": "化石产地。成因与打卡点待补。",
@@ -16404,7 +16404,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "红层丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -16464,7 +16464,7 @@
       "glacier",
       "other"
     ],
-    "geologic_age_text": "昆仑造山与冰川",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "冰川、综合地貌。成因与打卡点待补。",
@@ -16523,7 +16523,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "丹霞与构造",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -16580,7 +16580,7 @@
       "granite_peak",
       "glacier"
     ],
-    "geologic_age_text": "花岗岩与冰川",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 200,
     "geologic_age_end_ma": 0,
     "hook": "花岗岩地貌、冰川。成因与打卡点待补。",
@@ -16639,7 +16639,7 @@
       "other",
       "danxia"
     ],
-    "geologic_age_text": "黄河与丹霞",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 23,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌、丹霞。成因与打卡点待补。",
@@ -16695,7 +16695,7 @@
     "landform_types": [
       "glacier"
     ],
-    "geologic_age_text": "极高山冰川",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 0.01,
     "geologic_age_end_ma": 0,
     "hook": "冰川。成因与打卡点待补。",
@@ -16754,7 +16754,7 @@
     "landform_types": [
       "danxia"
     ],
-    "geologic_age_text": "丹霞",
+    "geologic_age_text": "白垩纪",
     "geologic_age_start_ma": 120,
     "geologic_age_end_ma": 70,
     "hook": "丹霞。成因与打卡点待补。",
@@ -16811,7 +16811,7 @@
       "glacier",
       "other"
     ],
-    "geologic_age_text": "冰川湖泊",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "冰川、综合地貌。成因与打卡点待补。",
@@ -16935,7 +16935,7 @@
       "granite_peak",
       "other"
     ],
-    "geologic_age_text": "伟晶岩与花岗岩",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 300,
     "geologic_age_end_ma": 200,
     "hook": "花岗岩地貌、综合地貌。成因与打卡点待补。",
@@ -16992,7 +16992,7 @@
       "glacier",
       "other"
     ],
-    "geologic_age_text": "冰蚀湖",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 2.6,
     "geologic_age_end_ma": 0,
     "hook": "冰川、综合地貌。成因与打卡点待补。",
@@ -17050,7 +17050,7 @@
       "other",
       "danxia"
     ],
-    "geologic_age_text": "第三系红层峡谷",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 23,
     "geologic_age_end_ma": 2,
     "hook": "综合地貌、丹霞。成因与打卡点待补。",
@@ -17106,7 +17106,7 @@
     "landform_types": [
       "other"
     ],
-    "geologic_age_text": "风蚀石城",
+    "geologic_age_text": "",
     "geologic_age_start_ma": 23,
     "geologic_age_end_ma": 0,
     "hook": "综合地貌。成因与打卡点待补。",
@@ -17165,7 +17165,7 @@
       "volcano",
       "coast"
     ],
-    "geologic_age_text": "早白垩世酸性火成岩",
+    "geologic_age_text": "早白垩世",
     "geologic_age_start_ma": 140,
     "geologic_age_end_ma": 140,
     "hook": "火山、海岸写在香港西贡区。",

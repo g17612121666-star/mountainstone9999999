@@ -24,7 +24,7 @@ import {
 import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
-import { GENERIC_DO_NOT, isRealPhoto } from "@/lib/geo/safety";
+import { GENERIC_DO_NOT, isDiagramCredit, isRealPhoto } from "@/lib/geo/safety";
 import { stripLocatePhrase } from "@/lib/geo/look";
 import type { Geosite, Site } from "@/lib/geo/types";
 import {
@@ -64,7 +64,12 @@ export function SiteDetail({ site }: { site: Site }) {
   const photo = isRealPhoto(site.cover_image) ? site.cover_image : undefined;
   const stopSrcs = new Set(geosites.map((g) => g.photo).filter(Boolean));
   const leftoverPhotos = site.gallery.filter(
-    (g) => g.src && g.src !== site.cover_image && !stopSrcs.has(g.src) && isRealPhoto(g.src),
+    (g) =>
+      g.src &&
+      g.src !== site.cover_image &&
+      !stopSrcs.has(g.src) &&
+      isRealPhoto(g.src) &&
+      !isDiagramCredit(g.credit || "", g.caption || ""),
   );
   const todayPhoto = leftoverPhotos[0];
   const extraPhotos = leftoverPhotos.slice(1);

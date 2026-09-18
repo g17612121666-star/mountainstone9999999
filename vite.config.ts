@@ -175,6 +175,12 @@ const SECURITY_HEADERS = {
   "Referrer-Policy": "strict-origin-when-cross-origin",
 };
 
+/** Production only. Preview/dev may stay noindex. */
+const PUBLISHED_HEADERS = {
+  ...SECURITY_HEADERS,
+  "X-Robots-Tag": "index, follow",
+};
+
 // `0.0.0.0:8080` is the live-preview contract — don't change host/port.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
@@ -215,7 +221,7 @@ export default defineConfig(({ command, isPreview }) => ({
             serverDir: "./server",
             routeRules: {
               "/**": {
-                headers: SECURITY_HEADERS,
+                headers: PUBLISHED_HEADERS,
               },
             },
           }),
