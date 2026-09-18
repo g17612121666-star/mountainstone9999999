@@ -2771,37 +2771,37 @@
     },
     "sheshan": {
       "city": "Songjiang District",
-      "geologic_age_text": "Neogene–Quaternary volcanic rock",
-      "hook": "Sheshan is a Cenozoic volcanic cone remnant in southwest Shanghai. Not a national geopark. The church and observatory were built later.",
-      "formation_short": "Sheshan. Rock: Basalt, andesite or volcaniclastic rock. Process: Magma reaching the surface as scoria cones, lava plates, maars or a caldera. A maar is not a karst tiankeng. A scoria cone is not granite. Look, do not take.",
-      "evolution_sequence": "Eruption → cone / lake / plate → later water, wind or waves",
-      "what_you_see_today": "Name pyroclastics and basaltic rock. Do not use the church as the cover. The contrast site is Chongming sand island.",
+      "geologic_age_text": "Late Cretaceous",
+      "hook": "Sheshan is a Late Cretaceous alkaline volcanic remnant in southwest Shanghai — andesitic–trachytic to rhyolitic. An urban geosite, not a national geopark. Shanghai's national geopark is Chongming Island. The church and observatory were built later.",
+      "formation_short": "Sheshan is a rock hill, not dumped fill. The rock is Late Cretaceous alkaline volcanic: andesitic–trachytic to rhyolitic tuff, lava and pyroclastics, pale grey to purple-grey, sometimes with phenocrysts, tuff fragments or flow banding. It belongs to the Zhejiang–Fujian coastal volcanic belt at the Yangtze mouth. Not granite, not a Wudalianchi-style basalt scoria cone, not a maar. West Sheshan is about 100 m, the highest point on Shanghai land. East Sheshan and Tianmashan are the same volcanic hills. Do not cut the rock. Sheshan is an urban geosite. Shanghai's national geopark is Chongming Island.",
+      "evolution_sequence": "Late Cretaceous eruption → isolated volcanic hill → later weathering",
+      "what_you_see_today": "East Sheshan, West Sheshan and the other Songjun nine peaks. West Sheshan is the highest point on Shanghai land. On open paths, name pale massive volcanic rock: phenocrysts, tuff fragments or flow banding. Do not use the church or observatory as the rock cover. Contrast with Chongming sand island: there the sand is still Holocene and unconsolidated; here the rock is Late Cretaceous alkaline volcanic, on the order of seventy million years.",
       "observation_tips": [
-        "Vesicles and ropey texture are not bedding.",
-        "A maar wall is debris, not limestone.",
-        "Stay on the crater path."
+        "First touch the pale massive volcanic rock and tuff fragments. Pale grey to purple-grey, not a dark fine lava plateau.",
+        "The church and observatory are later buildings, not field marks of this rock.",
+        "Shanghai's national geopark is on Chongming Island, not at Sheshan."
       ],
       "formation_timeline": [
         {
           "name": "Eruption",
-          "age": "Neogene–Quaternary (park-specific)",
-          "what": "Lava or tephra reached the surface."
+          "age": "Late Cretaceous",
+          "what": "Alkaline magma reached the surface as andesitic–trachytic to rhyolitic tuff, lava and pyroclastics."
         },
         {
           "name": "Landform locks in",
           "age": "soon after",
-          "what": "Cone, lake or plate."
+          "what": "An isolated volcanic hill of the coastal volcanic belt remains."
         },
         {
           "name": "Reworking",
           "age": "to the present",
-          "what": "Water, wind or waves cut again."
+          "what": "Weathering of the volcanic hill. Church and observatory were built later."
         }
       ],
       "visible_rocks_minerals_fossils": [
         {
-          "name": "Basalt, andesite or volcaniclastic rock",
-          "how_to_recognize": "Find vesicles, ropey lava or pyroclastics first. Look, do not collect.",
+          "name": "Andesitic–trachytic to rhyolitic tuff / lava",
+          "how_to_recognize": "Pale grey to purple-grey. Phenocrysts, tuff fragments or flow banding may be visible. Massive bedrock to the touch. Look, do not collect.",
           "collect_allowed": false
         }
       ],
@@ -2811,7 +2811,8 @@
       ],
       "legal_notes": "Protected geoheritage. Look, photograph, note. Do not hammer, dig, or take rock, mineral or fossil. Prices and hours follow the official listing on the day. This guide does not sell tickets.",
       "corrections": [
-        "Sheshan is volcanic rock, not granite, and not a national geopark. Chongming Island is Shanghai's national geopark."
+        "Sheshan is not a Wudalianchi-style basalt scoria cone. Identify by pale colour, phenocrysts, tuff fragments and flow banding. Do not apply dark-lava field marks.",
+        "Do not call Sheshan Shanghai's national geopark. That park is Chongming Island."
       ]
     },
     "taihu-xishan": {

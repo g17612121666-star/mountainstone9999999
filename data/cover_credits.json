@@ -336,19 +336,14 @@
     "gallery": []
   },
   "jixian": {
-    "credit": "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "李怀坤等, 2014, 岩石学报 30(10) 图2 · 蓟县雾迷山组野外露头 · 资料照片",
+    "caption": "蓟县中新元古界剖面雾迷山组白云岩野外露头。资料照片，非本站踏勘",
     "src": "/covers/jixian.jpg",
     "gallery": [
       {
         "src": "/covers/jixian-2.jpg",
-        "credit": "吴军江 / 中国国家地理 · 蓟县叠层石纵切面 · 资料照片",
-        "caption": "资料照片，非本站踏勘"
-      },
-      {
-        "src": "/covers/jixian-3.jpg",
-        "credit": "岩石学报 2014 图2 · 蓟县雾迷山组/铁岭组野外露头 · 资料照片",
-        "caption": "资料照片，非本站踏勘"
+        "credit": "李怀坤等, 2014, 岩石学报 图2b · 雾迷山组硅质条带白云岩 · 资料照片",
+        "caption": "蓟县雾迷山组野外露头近景。资料照片，非本站踏勘"
       }
     ]
   },
@@ -1477,20 +1472,31 @@
     "gallery": []
   },
   "meishan": {
-    "credit": "中国科学院地质与地球物理研究所 · Geology 2021 图1B 煤山剖面露头 · 资料照片",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "IUGS Geoheritage Site 018 · 煤山长兴灰岩采石剖面与金钉子保护廊 · 资料照片",
+    "caption": "长兴煤山剖面与保护廊现场。资料照片，非本站踏勘",
     "src": "/covers/meishan.jpg",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/covers/meishan-2.jpg",
+        "credit": "IUGS Geoheritage Site 018 · 煤山二叠–三叠系界线层 · 资料照片",
+        "caption": "煤山剖面上的二叠–三叠系界线。资料照片，非本站踏勘"
+      }
+    ]
   },
   "gssp-huangnitang": {
-    "credit": "《中国科学报》/ 中国科学院 · 达瑞威尔阶黄泥塘金钉子剖面 · 资料照片",
-    "caption": "资料照片，非本站踏勘",
+    "credit": "《中国科学报》/ 中国科学院 · 黄泥塘达瑞威尔阶金钉子剖面露头 · 资料照片",
+    "caption": "常山黄泥塘金钉子剖面野外露头。资料照片，非本站踏勘",
     "src": "/covers/gssp-huangnitang.jpg",
     "gallery": [
       {
         "src": "/covers/gssp-huangnitang-2.jpg",
-        "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子剖面全景 · 资料照片",
+        "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子剖面 · 资料照片",
         "caption": "资料照片，非本站踏勘"
+      },
+      {
+        "src": "/covers/gssp-huangnitang-3.jpg",
+        "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子碑 · 资料照片",
+        "caption": "金钉子碑。资料照片，非本站踏勘"
       }
     ]
   },
@@ -1597,14 +1603,14 @@
     "gallery": []
   },
   "gssp-jiangshan": {
-    "credit": "Peng et al., 2012, Episodes 35(4) Fig.5B · ICS 江山阶金钉子 · 江山碓边 B 剖面野外露头 · 资料照片",
-    "caption": "江山碓边 B 剖面，华严寺组灰岩。资料照片，非本站踏勘",
+    "credit": "Peng et al., 2012, Episodes 35(4) Fig.5C · 江山碓边 B 剖面华严寺组灰岩 · 资料照片",
+    "caption": "江山碓边 B 剖面野外露头。资料照片，非本站踏勘",
     "src": "/covers/gssp-jiangshan.jpg",
     "gallery": [
       {
         "src": "/covers/gssp-jiangshan-2.jpg",
-        "credit": "Peng et al., 2012, Episodes 35(4) Fig.5C · ICS · 碓边灰岩层理 · 资料照片",
-        "caption": "华严寺组薄层灰岩。资料照片，非本站踏勘"
+        "credit": "Peng et al., 2012, Episodes 35(4) Fig.5B · 碓边 B 剖面山坡露头 · 资料照片",
+        "caption": "江山碓边 B 剖面山坡。资料照片，非本站踏勘"
       }
     ]
   },
@@ -1873,14 +1879,25 @@
     "gallery": []
   },
   "gssp-penglaitan": {
-    "credit": "Jin et al. / ICS Wuchiapingian GSSP · 来宾蓬莱滩剖面露头 · 资料照片",
-    "caption": "红水河蓬莱滩吴家坪阶金钉子剖面。资料照片，非本站踏勘",
+    "credit": "Jin et al., 2006, Episodes 29(4) · 来宾蓬莱滩吴家坪阶金钉子层 · 资料照片",
+    "caption": "红水河蓬莱滩金钉子层野外露头。资料照片，非本站踏勘",
     "src": "/covers/gssp-penglaitan.jpg",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/covers/gssp-penglaitan-2.jpg",
+        "credit": "Jin et al., 2006, Episodes · 蓬莱滩 GSSP 点位层 · 资料照片",
+        "caption": "蓬莱滩金钉子点位。资料照片，非本站踏勘"
+      },
+      {
+        "src": "/covers/gssp-penglaitan-3.jpg",
+        "credit": "Jin et al., 2006, Episodes · 蓬莱滩来宾灰岩远景 · 资料照片",
+        "caption": "红水河蓬莱滩剖面远景。资料照片，非本站踏勘"
+      }
+    ]
   },
   "gssp-pengchong": {
-    "credit": "Devuyst et al., 2003, Episodes 26(2) · ICS 维宪阶金钉子 · 柳州碰冲剖面露头 · 资料照片",
-    "caption": "碰冲组灰岩剖面。资料照片，非本站踏勘",
+    "credit": "Esri World Imagery · 柳州碰冲金钉子坐标卫星资料照片，非本站踏勘",
+    "caption": "该点坐标卫星资料照片，非本站踏勘",
     "src": "/covers/gssp-pengchong.jpg",
     "gallery": []
   },

@@ -80,6 +80,12 @@ const MISLEADING = [
   "非野外露头",
   "Mount Pan",
   "盘山标本",
+  "示意图",
+  "范围示意图",
+  "磁性地层",
+  "地层对比",
+  "地质图",
+  "柱状图",
 ];
 
 export function isOwnCover(site: {

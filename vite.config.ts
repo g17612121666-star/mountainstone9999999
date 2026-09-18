@@ -37,6 +37,10 @@ function securityHeadersPlugin(): Plugin {
       server.middlewares.use((_req, res, next) => {
         res.setHeader("X-Content-Type-Options", "nosniff");
         res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+        const host = String(_req.headers.host || _req.headers["x-forwarded-host"] || "");
+        if (/mountainstone\.grok\.me|shanshizhi\.grok\.me/i.test(host)) {
+          res.setHeader("X-Robots-Tag", "index, follow");
+        }
         next();
       });
     },
@@ -44,6 +48,10 @@ function securityHeadersPlugin(): Plugin {
       server.middlewares.use((_req, res, next) => {
         res.setHeader("X-Content-Type-Options", "nosniff");
         res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+        const host = String(_req.headers.host || _req.headers["x-forwarded-host"] || "");
+        if (/mountainstone\.grok\.me|shanshizhi\.grok\.me/i.test(host)) {
+          res.setHeader("X-Robots-Tag", "index, follow");
+        }
         next();
       });
     },

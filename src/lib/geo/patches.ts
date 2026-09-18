@@ -287,12 +287,17 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   jixian: {
     cover_image: "/covers/jixian.jpg",
     cover_credit:
-      "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
+      "李怀坤等, 2014, 岩石学报 30(10) 图2 · 蓟县雾迷山组野外露头 · 资料照片",
     gallery: [
       {
         src: "/covers/jixian.jpg",
-        credit: "吴军江 / 中国国家地理 · 蓟县叠层石野外露头 · 资料照片",
-        caption: "蓟县雾迷山组叠层石野外露头。资料照片，非本站踏勘",
+        credit: "李怀坤等, 2014, 岩石学报 30(10) 图2 · 蓟县雾迷山组野外露头 · 资料照片",
+        caption: "蓟县中新元古界剖面雾迷山组白云岩野外露头。资料照片，非本站踏勘",
+      },
+      {
+        src: "/covers/jixian-2.jpg",
+        credit: "李怀坤等, 2014, 岩石学报 图2b · 雾迷山组硅质条带白云岩 · 资料照片",
+        caption: "蓟县雾迷山组野外露头近景。资料照片，非本站踏勘",
       },
     ],
   },
