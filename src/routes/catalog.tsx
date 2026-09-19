@@ -96,8 +96,8 @@ function CatalogPage() {
   return (
     <div className="min-h-dvh bg-bg">
       <AppHeader />
-      <main className="mx-auto max-w-5xl px-4 py-8">
-        <h1 className="font-display text-3xl font-semibold">{t("catalogTitle")}</h1>
+      <main className="mx-auto max-w-5xl px-4 py-10">
+        <h1 className="font-display text-3xl font-semibold tracking-tight">{t("catalogTitle")}</h1>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
           {locale === "en"
             ? `${stats.total} geosites: ${stats.national} named national geoparks, ${stats.candidate} qualifying, ${stats.world} UNESCO Global (incl. Hong Kong), ${stats.gssp} independent GSSPs, ${stats.urban} urban. ${stats.complete} full pages · ${stats.standard} field cards. Cutoff 2026-04.`

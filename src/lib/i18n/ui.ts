@@ -324,6 +324,15 @@ export const UI = {
     zh: "本园坐标按 WGS84 显示，香港不偏移到 GCJ-02。",
     en: "Coordinates stay in WGS 84. Hong Kong is not shifted to GCJ-02.",
   },
+  analogBadge: { zh: "类比示意 · 非本园实拍", en: "Analog, not this park" },
+  satBadge: { zh: "卫星资料照片 · 非地面实拍", en: "Satellite image, not a ground photo" },
+  genesisLook: { zh: "看这里", en: "Look for" },
+  diagramAppendix: { zh: "示意图附图（不是现场照片）", en: "Diagrams (not field photos)" },
+  creditExpand: { zh: "来源与许可", en: "Source & licence" },
+  noStopOutcrop: {
+    zh: "暂无该打卡点公开露头照片",
+    en: "No public outcrop photo for this stop yet",
+  },
   layerSat: { zh: "卫星", en: "Satellite" },
   layerStreet: { zh: "标准", en: "Streets" },
   tileAttr: {

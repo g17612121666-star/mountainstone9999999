@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /__grok/
 
 Sitemap: https://mountainstone.grok.me/sitemap.xml

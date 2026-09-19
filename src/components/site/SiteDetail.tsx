@@ -4,6 +4,7 @@ import { LinkedText } from "@/components/geo/LinkedText";
 import { OfficialBox } from "@/components/geo/OfficialBox";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
 import { BiliEmbed } from "@/components/media/BiliEmbed";
+import { FieldPhoto } from "@/components/media/FieldPhoto";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { SiteLinkCard } from "@/components/site/SiteLinkCard";
 import { SiteMiniMap } from "@/components/site/SiteMiniMap";
@@ -19,12 +20,12 @@ import {
   getTheme,
   getVisit,
   relatedSites,
-  STOP_PHOTOS,
 } from "@/lib/geo/catalog";
 import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { GENERIC_DO_NOT, isDiagramCredit, isRealPhoto } from "@/lib/geo/safety";
+import { fieldPhotoFromGeosite } from "@/lib/geo/photos";
 import { stripLocatePhrase } from "@/lib/geo/look";
 import type { Geosite, Site } from "@/lib/geo/types";
 import {
@@ -62,14 +63,17 @@ export function SiteDetail({ site }: { site: Site }) {
   const areas = getAreas(site.id).map((a) => localizeArea(a, locale));
   const related = relatedSites(site);
   const photo = isRealPhoto(site.cover_image) ? site.cover_image : undefined;
-  const stopSrcs = new Set(geosites.map((g) => g.photo).filter(Boolean));
+  const genesisSrc = site.genesis?.src;
   const leftoverPhotos = site.gallery.filter(
     (g) =>
       g.src &&
       g.src !== site.cover_image &&
-      !stopSrcs.has(g.src) &&
+      g.src !== genesisSrc &&
       isRealPhoto(g.src) &&
       !isDiagramCredit(g.credit || "", g.caption || ""),
+  );
+  const diagramPhotos = site.gallery.filter(
+    (g) => g.src && isDiagramCredit(g.credit || "", g.caption || ""),
   );
   const todayPhoto = leftoverPhotos[0];
   const extraPhotos = leftoverPhotos.slice(1);
@@ -96,28 +100,40 @@ export function SiteDetail({ site }: { site: Site }) {
     areaOnlyOnce || site.types.includes("gssp") || site.landform_types.includes("fossil");
 
   return (
-    <article className="pb-16">
-      <div className="relative h-44 overflow-hidden sm:h-56">
+    <article className="pb-20">
+      <div className="relative h-56 overflow-hidden sm:h-72 md:h-96">
         <LandformCover
           type={site.landform_types[0] ?? "other"}
           label={displayName(s, locale)}
           photo={photo}
           credit={site.cover_credit}
+          overlay
         />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 pb-5 pt-20">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="font-display text-3xl leading-tight font-semibold text-primary-fg sm:text-4xl">
+              {displayName(s, locale)}
+            </h1>
+            <p className="mt-1.5 text-sm text-primary-fg/85">
+              {placeLine(site, locale)}
+              {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
+            </p>
+            {photo ? (
+              <p className="mt-2 max-w-xl truncate text-[11px] text-primary-fg/70">
+                {photoCredit(site.cover_credit || "", locale)}
+              </p>
+            ) : null}
+          </div>
+        </div>
       </div>
-      <div className="mx-auto max-w-3xl space-y-8 px-4 py-6">
-        <header className="space-y-3">
+      <div className="mx-auto max-w-3xl space-y-10 px-4 py-8">
+        <header className="space-y-4">
           <SiteBadges site={site} />
-          <h1 className="font-display text-3xl leading-tight font-semibold">{displayName(s, locale)}</h1>
-          <p className="text-sm text-muted">
-            {placeLine(site, locale)}
-            {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
-          </p>
           {site.province === "香港" ? <p className="text-xs text-subtle">{t("hkWgs")}</p> : null}
           {showEnPending ? (
             <p className="rounded-md bg-surface-2 px-3 py-2 text-sm text-muted">{t("enBodyPending")}</p>
           ) : null}
-          <p className="text-lg leading-relaxed">{s.hook}</p>
+          <p className="text-lg leading-relaxed text-ink">{s.hook}</p>
           <div className="flex flex-wrap gap-2">
             <Button variant="ghost" size="sm" asChild>
               <Link to="/" search={{ focus: site.id }}>
@@ -133,9 +149,9 @@ export function SiteDetail({ site }: { site: Site }) {
         </header>
 
         {s.corrections?.length ? (
-          <aside className="rounded-lg border border-hematite/30 bg-hematite/8 px-4 py-3 text-sm leading-relaxed">
-            <p className="font-medium text-hematite">{t("correction")}</p>
-            <ul className="mt-1 list-disc space-y-1 pl-5">
+          <aside className="border-l-2 border-hematite bg-hematite/6 px-4 py-3 text-sm leading-relaxed">
+            <p className="font-medium tracking-wide text-hematite">{t("correction")}</p>
+            <ul className="mt-2 space-y-1.5">
               {s.corrections.map((c) => (
                 <li key={c}>{c}</li>
               ))}
@@ -152,26 +168,29 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {formation ? (
+        {formation || site.genesis ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("formation")}</h2>
-            {photo ? (
-              <figure className="mt-3 overflow-hidden rounded-lg bg-surface shadow-[var(--shadow-border)]">
-                <img src={photo} alt={site.cover_credit || displayName(s, locale)} className="h-48 w-full object-cover" />
-                <figcaption className="px-3 py-2 text-[11px] leading-snug text-muted">
-                  {photoCredit(site.cover_credit || "", locale)}
-                </figcaption>
-              </figure>
-            ) : null}
-            <p className="mt-2 text-sm leading-relaxed">
-              <LinkedText text={formation} />
-            </p>
-            <p className="mt-2 text-xs text-subtle">
-              {t("landformColon")}
-              {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
-              <span className="mx-1">·</span>
-              {t("age")} {age}
-            </p>
+            <div className="mt-4 flex flex-col gap-5 md:grid md:grid-cols-2 md:items-start">
+              {site.genesis ? (
+                <div className="order-2 md:order-1">
+                  <FieldPhoto photo={site.genesis} />
+                </div>
+              ) : null}
+              <div className="order-1 md:order-2">
+                {formation ? (
+                  <p className="text-sm leading-relaxed">
+                    <LinkedText text={formation} />
+                  </p>
+                ) : null}
+                <p className="mt-3 text-xs leading-relaxed text-subtle">
+                  {t("landformColon")}
+                  {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
+                  <span className="mx-1">·</span>
+                  {t("age")} {age}
+                </p>
+              </div>
+            </div>
           </section>
         ) : (
           <p className="text-xs text-subtle">
@@ -250,6 +269,23 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
+        {diagramPhotos.length > 0 ? (
+          <section>
+            <h2 className="font-display text-xl font-semibold">{t("diagramAppendix")}</h2>
+            <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+              {diagramPhotos.map((g) => (
+                <li key={g.src} className="overflow-hidden rounded-lg bg-surface shadow-[var(--shadow-border)]">
+                  <img src={g.src} alt={g.caption || g.credit} className="h-40 w-full object-contain bg-surface-2" />
+                  <p className="px-3 py-2 text-[11px] leading-snug text-hematite">
+                    {g.caption || t("diagramAppendix")}
+                    {g.credit ? ` · ${photoCredit(g.credit, locale)}` : ""}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
         {site.video?.bvid ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("video")}</h2>
@@ -293,7 +329,7 @@ export function SiteDetail({ site }: { site: Site }) {
             {locateNoteOnce ? <p className="mt-1 text-xs text-subtle">{t("areaOnly")}</p> : null}
             <ul className="mt-3 space-y-3">
               {geosites.map((g) => (
-                <GeositeItem key={g.id} geosite={g} parkCover={site.cover_image} />
+                <GeositeItem key={g.id} geosite={g} />
               ))}
             </ul>
           </section>
@@ -502,27 +538,17 @@ function GsspBlock({ site, original }: { site: Site; original: Site }) {
   );
 }
 
-function GeositeItem({ geosite, parkCover }: { geosite: Geosite; parkCover?: string }) {
+function GeositeItem({ geosite }: { geosite: Geosite }) {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   const extra = geosite.do_not.filter((d) => !GENERIC_DO_NOT.has(d));
-  const photo = isRealPhoto(geosite.photo)
-    ? geosite.photo
-    : isRealPhoto(parkCover)
-      ? parkCover
-      : undefined;
-  const credit = STOP_PHOTOS[geosite.id]?.credit || "";
+  const photo = fieldPhotoFromGeosite(geosite);
   return (
     <li id={geosite.id} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
-      {photo ? (
-        <img src={photo} alt={geosite.name} className="h-40 w-full object-cover" />
-      ) : null}
+      {photo ? <FieldPhoto photo={photo} alt={geosite.name} imgClass="h-40 w-full object-cover" /> : (
+        <p className="px-4 pt-4 text-xs text-muted">{t("noStopPhoto")}</p>
+      )}
       <div className="p-4">
-        {photo ? (
-          <p className="mb-2 text-[11px] text-muted">
-            {photoCredit(credit, locale) || t("photoCaption")}
-          </p>
-        ) : null}
         <p className="text-xs text-muted">{phenomenonLabel(geosite.phenomenon_type, locale)}</p>
         <p className="font-display mt-0.5 text-lg font-semibold">{geosite.name}</p>
         <p className="mt-2 text-sm leading-relaxed">

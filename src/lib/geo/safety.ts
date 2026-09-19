@@ -66,7 +66,10 @@ export function safetyFor(site: Site): string[] {
 }
 
 export function isRealPhoto(path: string | undefined): boolean {
-  return !!path && /\.(jpe?g|png|webp)$/i.test(path);
+  if (!path) return false;
+  if (/\.(jpe?g|png|webp)(\?|#|$)/i.test(path)) return true;
+  if (/World_Imagery\/MapServer\/export/i.test(path)) return true;
+  return false;
 }
 
 const MISLEADING = [

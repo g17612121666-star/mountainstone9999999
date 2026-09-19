@@ -8,10 +8,10 @@
     serif;
   --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
 
-  --color-bg: #f3eee4;
+  --color-bg: #f1ebe0;
   --color-bg-warm: #ebe3d4;
-  --color-surface: #f7f3eb;
-  --color-surface-2: #e7dfd0;
+  --color-surface: #f8f4ec;
+  --color-surface-2: #e6ddd0;
   --color-ink: #2c261c;
   --color-fg: #2c261c;
   --color-muted: #6e6456;
@@ -97,12 +97,12 @@
 
 .leaflet-container {
   font-family: var(--font-sans);
-  background: #1c241c;
+  background: #121810;
   z-index: 0;
 }
 
 .tile-rich {
-  filter: saturate(1.2) contrast(1.1) brightness(0.94);
+  filter: saturate(1.15) contrast(1.18) brightness(0.92);
 }
 
 .leaflet-control-layers {

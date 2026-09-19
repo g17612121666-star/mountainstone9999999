@@ -1,0 +1,584 @@
+{
+  "baishishan": [
+    {
+      "src": "/covers/baishishan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "changbaishan": [
+    {
+      "src": "/covers/changbaishan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "chayashan": [
+    {
+      "src": "/covers/chayashan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "danxiashan": [
+    {
+      "src": "/covers/danxiashan-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/danxiashan-4.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/danxiashan-slot.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "dapeng": [
+    {
+      "src": "/covers/dapeng-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "fangshan": [
+    {
+      "src": "/covers/fangshan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "fusong": [
+    {
+      "src": "/covers/fusong-2.jpg",
+      "credit": "玉米, CC BY 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/fusong-3.jpg",
+      "credit": "Chen Zhi, CC BY 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-guzhang": [
+    {
+      "src": "/covers/gssp-guzhang-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-huanghuachang": [
+    {
+      "src": "/covers/gssp-huanghuachang-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-huangnitang": [
+    {
+      "src": "/covers/gssp-huangnitang-2.jpg",
+      "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子剖面 · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/gssp-huangnitang-3.jpg",
+      "credit": "《中国科学报》/ 中国科学院 · 黄泥塘金钉子碑 · 资料照片",
+      "caption": "金钉子碑。资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-jiangshan": [
+    {
+      "src": "/covers/gssp-jiangshan-2.jpg",
+      "credit": "Peng et al., 2012, Episodes 35(4) Fig.5B · 碓边 B 剖面山坡露头 · 资料照片",
+      "caption": "江山碓边 B 剖面山坡。资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-paibi": [
+    {
+      "src": "/covers/gssp-paibi-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-penglaitan": [
+    {
+      "src": "/covers/gssp-penglaitan-2.jpg",
+      "credit": "Jin et al., 2006, Episodes · 蓬莱滩 GSSP 点位层 · 资料照片",
+      "caption": "蓬莱滩金钉子点位。资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/gssp-penglaitan-3.jpg",
+      "credit": "Jin et al., 2006, Episodes · 蓬莱滩来宾灰岩远景 · 资料照片",
+      "caption": "红水河蓬莱滩剖面远景。资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "gssp-wuliu": [
+    {
+      "src": "/covers/gssp-wuliu-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "huangsongyu": [
+    {
+      "src": "/covers/huangsongyu-2.jpg",
+      "credit": "Muzzleflash, CC0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/huangsongyu-3.jpg",
+      "credit": "BV3CM, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "huludao": [
+    {
+      "src": "/covers/huludao-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/huludao-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "huoshizhai": [
+    {
+      "src": "/covers/huoshizhai-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "jiguanshan": [
+    {
+      "src": "/covers/jiguanshan-2.jpg",
+      "credit": "TowerCard, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/jiguanshan-3.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "jingyu": [
+    {
+      "src": "/covers/jingyu-2.jpg",
+      "credit": "Bridget Coila from Beijing, China, CC BY-SA 2.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/jingyu-3.jpg",
+      "credit": "Unknown authorUnknown author, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "jixian": [
+    {
+      "src": "/covers/jixian-2.jpg",
+      "credit": "李怀坤等, 2014, 岩石学报 30(10) 图2 地质图/柱状图",
+      "caption": "示意图，不是现场照片",
+      "diagram": true
+    },
+    {
+      "src": "/covers/jixian-3.jpg",
+      "credit": "蓟县雾迷山组叠层石野外露头 · 资料照片，非本站踏勘",
+      "caption": "蓟县雾迷山组叠层石野外露头。资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "laojunshan": [
+    {
+      "src": "/covers/laojunshan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "lincheng": [
+    {
+      "src": "/covers/lincheng-2.jpg",
+      "credit": "Fanghong, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/lincheng-3.jpg",
+      "credit": "そらみみ, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "liujiang": [
+    {
+      "src": "/covers/liujiang-2.jpg",
+      "credit": "维基百科「Liujiang District」条目配图 · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/liujiang-3.jpg",
+      "credit": "Windmemories, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "luhe": [
+    {
+      "src": "/covers/luhe-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "luochuan": [
+    {
+      "src": "/covers/luochuan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "meishan": [
+    {
+      "src": "/covers/meishan-2.jpg",
+      "credit": "IUGS Geoheritage Site 018 磁性地层/对比图",
+      "caption": "示意图，不是现场照片",
+      "diagram": true
+    }
+  ],
+  "ningcheng": [
+    {
+      "src": "/covers/ningcheng-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/ningcheng-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "pingshanhu": [
+    {
+      "src": "/covers/pingshanhu-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "qianan": [
+    {
+      "src": "/covers/qianan-2.jpg",
+      "credit": "Sonjournermonde, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/qianan-3.jpg",
+      "credit": "N509FZ, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "qiguoshan": [
+    {
+      "src": "/covers/qiguoshan-2.jpg",
+      "credit": "BabelStone, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/qiguoshan-3.jpg",
+      "credit": "BabelStone, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "qinggang": [
+    {
+      "src": "/covers/qinggang-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "qiyunshan": [
+    {
+      "src": "/covers/qiyunshan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "shankou": [
+    {
+      "src": "/covers/shankou-2.jpg",
+      "credit": "Hiroki Ogawa, CC BY 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/shankou-3.png",
+      "credit": "Ngguls, CC0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "sheshan": [
+    {
+      "src": "/covers/sheshan-2.jpg",
+      "credit": "上海道台, CC BY-SA 4.0, Wikimedia Commons · 西佘山山体",
+      "caption": "西佘山。资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/sheshan-3.jpg",
+      "credit": "资料照片 · 西佘山远眺",
+      "caption": "西佘山远眺。资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "shilin": [
+    {
+      "src": "/covers/shilin-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/shilin-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "siping": [
+    {
+      "src": "/covers/siping-2.jpg",
+      "credit": "Siyuwj, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/siping-3.jpg",
+      "credit": "钉钉, CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "tianshengqiao": [
+    {
+      "src": "/covers/tianshengqiao-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/tianshengqiao-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "weizhoudao": [
+    {
+      "src": "/covers/weizhoudao-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "wuan": [
+    {
+      "src": "/covers/wuan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "wuda": [
+    {
+      "src": "/covers/wuda-2.jpg",
+      "credit": "fish4fish, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/wuda-3.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "wudalianchi": [
+    {
+      "src": "/covers/wudalianchi-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/wudalianchi-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/wudalianchi-4.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "wudangshan": [
+    {
+      "src": "/covers/wudangshan-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "xiaonanhai": [
+    {
+      "src": "/covers/xiaonanhai-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "xilinhot": [
+    {
+      "src": "/covers/xilinhot-2.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/xilinhot-3.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "xinglong": [
+    {
+      "src": "/covers/xinglong-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/xinglong-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "xingtai-canyon": [
+    {
+      "src": "/covers/xingtai-canyon-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "yesanpo": [
+    {
+      "src": "/covers/yesanpo-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "yichun-forest": [
+    {
+      "src": "/covers/yichun-forest-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "youyu": [
+    {
+      "src": "/covers/youyu-2.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/youyu-3.jpg",
+      "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center, Public domain, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "yushe": [
+    {
+      "src": "/covers/yushe-2.jpg",
+      "credit": "Bernor R.L, Wang S., Liu Y., Chen Y. &amp; Sun B. (2018), CC BY-SA 4.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/yushe-3.jpg",
+      "credit": "陈向阳, CC BY-SA 3.0, Wikimedia Commons · 资料照片",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ],
+  "zhangjiajie": [
+    {
+      "src": "/covers/zhangjiajie-2.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/zhangjiajie-3.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    },
+    {
+      "src": "/covers/zhangjiajie-4.jpg",
+      "credit": "资料照片，非本站踏勘",
+      "caption": "资料照片，非本站踏勘",
+      "diagram": false
+    }
+  ]
+}

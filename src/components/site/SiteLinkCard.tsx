@@ -60,7 +60,7 @@ export function SiteRowLink({
   const own = isOwnCover(site);
   return (
     <div className="flex items-center gap-3 px-3 py-3 sm:px-4">
-      <div className={cn("h-16 w-20 shrink-0 overflow-hidden rounded-md", own ? "" : "bg-surface-2")} aria-hidden>
+      <div className={cn("h-20 w-28 shrink-0 overflow-hidden rounded-md", own ? "" : "bg-surface-2")} aria-hidden>
         {own ? (
           <img src={site.cover_image} alt="" className="h-full w-full object-cover" />
         ) : (

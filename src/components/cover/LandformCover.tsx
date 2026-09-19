@@ -9,6 +9,7 @@ export function LandformCover({
   photo,
   credit,
   decorative = false,
+  overlay = false,
 }: {
   type: LandformType;
   className?: string;
@@ -16,6 +17,7 @@ export function LandformCover({
   photo?: string;
   credit?: string;
   decorative?: boolean;
+  overlay?: boolean;
 }) {
   void _type;
   void label;
@@ -26,9 +28,19 @@ export function LandformCover({
   if (photo) {
     return (
       <div className={cn("relative h-full w-full overflow-hidden", className)}>
-        <img src={photo} alt={decorative ? "" : creditLine} className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/45 to-transparent" />
-        {decorative ? null : (
+        <img
+          src={photo}
+          alt={decorative ? "" : creditLine}
+          className="h-full w-full object-cover object-center"
+        />
+        <div
+          className={
+            overlay
+              ? "absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/15 to-transparent"
+              : "absolute inset-0 bg-gradient-to-t from-ink/45 to-transparent"
+          }
+        />
+        {decorative || overlay ? null : (
           <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-primary-fg/90">
             {creditLine}
           </p>

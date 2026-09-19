@@ -45,6 +45,32 @@ export type PhenomenonType =
   | "stromatolite"
   | "other";
 
+export type PhotoKind = "own" | "analog" | "satellite";
+
+export type PhotoType =
+  | "photo_outcrop"
+  | "photo_landscape"
+  | "photo_analog"
+  | "satellite"
+  | "map_or_diagram"
+  | "specimen"
+  | "chart"
+  | "other";
+
+export type PhotoRole = "cover" | "genesis" | "stop" | "gallery" | "unused";
+
+export interface FieldPhoto {
+  src: string;
+  credit: string;
+  caption: string;
+  kind: PhotoKind;
+  analog_from_id?: string;
+  analog_from_name?: string;
+  analog_from_name_en?: string;
+  analog_note_zh?: string;
+  analog_note_en?: string;
+}
+
 export interface FormationStage {
   name: string;
   age: string;
@@ -102,6 +128,9 @@ export interface Site {
   cover_image: string;
   cover_credit?: string;
   gallery: PhotoAsset[];
+  /** 成因专图。不得与封面同一文件。 */
+  genesis?: FieldPhoto;
+  cover_kind?: PhotoType;
   official_website: string;
   sources: string[];
   content_tier: ContentTier;
@@ -134,6 +163,11 @@ export interface Geosite {
   phenomenon_type: PhenomenonType;
   look_here: string;
   photo: string;
+  photo_kind?: PhotoKind | "";
+  photo_credit?: string;
+  analog_from_id?: string;
+  analog_note_zh?: string;
+  analog_note_en?: string;
   do_not: string[];
   public_precision: PublicPrecision;
 }

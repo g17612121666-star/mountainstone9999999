@@ -29,11 +29,12 @@ import {
   geositePatches,
   routePatches,
 } from "./patches";
-import { isDiagramCredit, isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
+import { isDiagramCredit, isGenericSafety, isOwnCover, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
 import type { VideoClip } from "./types";
 import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
 import { isPlaceholderCopy, visibleCopy } from "./copy";
+import { assignPhotoSlots, mergeDiskExtras } from "./photos";
 
 /** Extra outcrop/landscape photos that are not the cover, never reused as a field-stop photo. */
 const EXTRA_GALLERY: Record<string, PhotoAsset[]> = {
@@ -448,6 +449,7 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
   }
   const clip = (mediaBundle as { sites?: Record<string, VideoClip> }).sites?.[s.id];
   if (clip) merged.video = clip;
+  mergeDiskExtras(merged);
   return merged;
 });
 
@@ -484,7 +486,11 @@ export const geosites: Geosite[] = [
   for (const g of geosites) {
     g.look_here = expandLookHere(g);
     const photo = STOP_PHOTOS[g.id];
-    if (photo) g.photo = photo.src;
+    if (photo) {
+      g.photo = photo.src;
+      g.photo_credit = photo.credit;
+      g.photo_kind = "own";
+    }
   }
 }
 
@@ -526,12 +532,7 @@ export const visits: VisitInfo[] = (rawVisits as unknown as VisitInfo[]).map((v)
 });
 
 const siteById = new Map(sites.map((s) => [s.id, s]));
-for (const g of geosites) {
-  if (!isRealPhoto(g.photo)) {
-    const host = siteById.get(g.site_id);
-    if (host && isOwnCover(host) && host.cover_image) g.photo = host.cover_image;
-  }
-}
+assignPhotoSlots(sites, geosites);
 for (const tr of themeRoutes) {
   for (const id of tr.site_ids) {
     const s = siteById.get(id);
@@ -549,6 +550,7 @@ for (const g of geosites) {
 for (const s of sites) {
   const used = new Set<string>();
   if (s.cover_image) used.add(s.cover_image);
+  if (s.genesis?.src) used.add(s.genesis.src);
   for (const g of geositesBySite.get(s.id) ?? []) {
     if (g.photo) used.add(g.photo);
   }
