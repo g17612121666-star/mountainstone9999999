@@ -375,8 +375,8 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
       cover_image: _ci,
       cover_credit: _cc,
       gallery: _g,
-      content_status: _cs,
-      content_tier: _ct,
+      content_status: rwStatus,
+      content_tier: rwTier,
       ...rest
     } = rw as Partial<Site> & {
       cover_image?: string;
@@ -388,9 +388,13 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
     void _ci;
     void _cc;
     void _g;
-    void _cs;
-    void _ct;
-    merged = { ...merged, ...rest, id: s.id };
+    if (merged.content_status !== "complete") {
+      merged = { ...merged, ...rest, id: s.id };
+      if (merged.content_status === "placeholder" && rwStatus) {
+        merged.content_status = rwStatus;
+        if (rwTier) merged.content_tier = rwTier;
+      }
+    }
   }
   if (c) merged = { ...merged, ...c, id: s.id };
   fillCoverFromCredits(merged);

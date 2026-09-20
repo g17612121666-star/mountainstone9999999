@@ -5,7 +5,7 @@ const ROCK_OR_LANDFORM_ONLY =
   /^(丹霞|碳酸盐岩|石英砂岩|花岗岩|综合|喀斯特|火山|玄武岩|流纹岩|砂岩|灰岩|页岩|地貌|红层|峰林|熔岩|凝灰岩|片麻岩|片岩|板岩|大理岩|黄土|雅丹|海岸|化石|沉积岩|岩浆岩|变质岩|火山岩|岩溶|峡谷)([、，/\s].*)?$/;
 
 const ROCK_STRIP =
-  /碳酸盐岩|石英砂岩|花岗闪长岩|超高压变质带|温泉与花岗岩|花岗岩海蚀|变质岩与碳酸盐岩|火山碎屑岩|火山岩|玄武岩|安山岩|粗面岩|流纹岩|凝灰岩|白云岩|砂岩|灰岩|页岩|片麻岩|片岩|板岩|大理岩|花岗岩|红层|峰林|熔岩|丹霞|岩溶|峡谷|喀斯特|火成岩|沉积岩|岩浆岩|变质岩|黄土|雅丹|海岸|化石点?|综合|火山|地貌|volcaniclastic rocks?|volcanic rocks?|\bvolcanic\b|carbonate rocks?|\bcarbonates?\b|limestone|dolostone|granite|quartz[- ]sandstone|sandstone|basalt|andesite|trachyte|rhyolite|tuff|red beds?|karst|danxia|marine or tidal flat/gi;
+  /碳酸盐岩|石英砂岩|花岗闪长岩|超高压变质带|温泉与花岗岩|花岗岩海蚀|变质岩与碳酸盐岩|火山碎屑岩|火山岩|玄武岩|安山岩|粗面岩|流纹岩|凝灰岩|白云岩|砂岩|灰岩|页岩|片麻岩|片岩|板岩|大理岩|花岗岩|红层|峰林|熔岩|丹霞|岩溶|峡谷|喀斯特|火成岩|沉积岩|岩浆岩|变质岩|黄土|雅丹|海岸|化石点?|综合|火山|地貌|彩色丘陵|石林(?!组)|剖面|河口沙岛|沙岛|恐龙|volcaniclastic rocks?|volcanic rocks?|\bvolcanic\b|carbonate rocks?|\bcarbonates?\b|limestone|dolostone|granite|quartz[- ]sandstone|sandstone|basalt|andesite|trachyte|rhyolite|tuff|red beds?|karst|danxia|marine or tidal flat/gi;
 
 const NOT_AGE_CLAUSE = /\blater uplifted\b/gi;
 

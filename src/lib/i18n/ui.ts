@@ -337,8 +337,10 @@ export const UI = {
   layerStreet: { zh: "标准", en: "Streets" },
   tileAttr: {
     zh: "底图 © 高德地图 · 中国大陆 WGS84→GCJ-02；香港等地不偏移",
-    en: "Basemap © Amap · Mainland China WGS84→GCJ-02; Hong Kong not offset",
+    en: "Streets © CARTO / OpenStreetMap; fallback Esri World Street Map or OSM. Satellite © Esri.",
   },
+  errorTitle: { zh: "读层读到断层了", en: "The section is faulted" },
+  errorBody: { zh: "页面出了问题。试着回到地图。", en: "Something broke. Try the map again." },
 } as const satisfies Record<string, Pair>;
 
 export type UiKey = keyof typeof UI;

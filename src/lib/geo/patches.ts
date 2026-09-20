@@ -96,7 +96,13 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     host_park_id: null,
     related_site_ids: ["changshan", "gssp-penglaitan", "jixian"],
   },
+  zigong: { geologic_age_text: "中侏罗世" },
+  huangshan: { geologic_age_text: "早白垩世" },
+  sanqingshan: { geologic_age_text: "早白垩世" },
+  changbaishan: { geologic_age_text: "新生代" },
+  taishan: { geologic_age_text: "太古宙–寒武纪" },
   chongming: {
+    geologic_age_text: "全新世",
     safety_notes: [
       "崇明是河口沙岛。看潮汐和天气，风暴潮天不要上滩。",
       "潮滩、芦苇荡和观鸟区按季节封闭，不要拦路走进湿地。",
@@ -113,8 +119,6 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     ],
   },
   "gssp-huangnitang": { host_park_id: "changshan" },
-  "gssp-paibi": { host_park_id: "xiangxi" },
-  "gssp-guzhang": { host_park_id: "xiangxi" },
   leiqiong: {
     park_structure:
       "雷琼是一座世界地质公园、两岸两片。北岸在雷州半岛：湛江湖光岩玛珥湖是定义性地貌。南岸在琼北：海口石山火山群（马鞍岭、雷虎岭等渣锥）是同一裂谷火山的海南一侧。涠洲岛是海上的对照点。不是三个无关的园，也不要说「海南没有世界地质公园」。",
@@ -324,6 +328,7 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     ],
   },
   shihuadong: {
+    geologic_age_text: "中元古界雾迷山组",
     cover_image: "/covers/shihuadong.jpg",
     cover_credit: "Yumeto, CC BY-SA 4.0, Wikimedia Commons",
     gallery: [
@@ -437,6 +442,71 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     cover_image: "/covers/chaoyang.jpg",
     cover_credit: "资料照片 · 朝阳鸟化石产地地貌远景",
   },
+  xiqiaoshan: {
+    geologic_age_text: "新近纪",
+    what_you_see_today:
+      "先认浅色粗面岩斑晶和板状节理。洞是采石留下的，壁上是凿痕，不是石钟乳，也不是绳状熔岩。西樵不是雷琼那种玄武岩渣锥，更不是活火山。",
+    observation_tips: [
+      "浅色粗面岩斑晶。洞壁是采石凿痕，不是石钟乳。",
+      "不是灰岩溶洞，不是雷琼玛珥，不是绳状熔岩原位。",
+      "沿开放步道。不敲、不挖、不带走。",
+    ],
+    corrections: [
+      "西樵山是粗面岩穹丘上的古采石洞，不是灰岩溶洞，也不是绳状熔岩原位。",
+      "不要把西樵写成夏威夷玄武岩叙事，也不要把它当成雷琼玛珥湖。",
+    ],
+    visible_rocks_minerals_fossils: [
+      rock("新近纪粗面岩", "浅色，斑晶。节理面常见。不是气孔玄武岩，也不是绳状熔岩。"),
+    ],
+  },
+  zhangye: {
+    geologic_age_text: "白垩纪",
+  },
+  shilin: {
+    geologic_age_text: "二叠纪",
+  },
+  luochuan: {
+    geologic_age_text: "第四纪",
+  },
+  "gssp-paibi": {
+    host_park_id: "xiangxi",
+    hook: "寒武系排碧阶的全球尺子。花垣排碧剖面，牙形石与三叶虫定界。层型点禁止取样。",
+    formation_short:
+      "岩石：寒武系花桥组碳酸盐岩。界线：排碧阶底，以牙形石与三叶虫化石带定义。这是层序，不是名山外形。禁止取样。",
+    geologic_age_text: "寒武纪排碧阶",
+    corrections: ["排碧是层型点，不是喀斯特景区的另一个溶洞。禁止取样。"],
+  },
+  "gssp-guzhang": {
+    host_park_id: "xiangxi",
+    hook: "寒武系古丈阶的全球尺子，钉在古丈罗依溪。层型点禁止取样。",
+    geologic_age_text: "寒武纪古丈阶",
+    corrections: ["古丈阶是年代地层单位，不是一座丹霞山。禁止取样。"],
+  },
+  "gssp-wuliu": {
+    hook: "寒武系乌溜阶（苗岭统底）的全球尺子，在剑河乌溜–曾家岩。层型点禁止取样。",
+    geologic_age_text: "寒武纪乌溜阶",
+  },
+  "gssp-penglaitan": {
+    hook: "二叠系吴家坪阶的全球尺子。来宾蓬莱滩红水河边的层型。禁止取样。",
+    geologic_age_text: "二叠纪吴家坪阶",
+  },
+  "gssp-pengchong": {
+    hook: "石炭系维宪阶的全球尺子，钉在柳州碰冲。层型点禁止取样。",
+    geologic_age_text: "石炭纪维宪阶",
+  },
+  "gssp-huanghuachang": {
+    hook: "奥陶系大坪阶的全球尺子。宜昌黄花场，中奥陶统的底。禁止取样。",
+    geologic_age_text: "奥陶纪大坪阶",
+  },
+  "gssp-wangjiawan": {
+    hook: "奥陶系赫南特阶的全球尺子：冰期、笔石和海平面写在同一层。宜昌王家湾。禁止取样。",
+    geologic_age_text: "奥陶纪赫南特阶",
+  },
+  "gssp-jiangshan": {
+    geologic_age_text: "寒武纪江山阶",
+    hook: "寒武系江山阶的全球尺子，钉在浙西碓边石灰岩里。层型点禁止取样。",
+    corrections: ["江山阶是年代地层单位，不是一座喀斯特景区。禁止取样。"],
+  },
 };
 
 export const geositePatches: Record<string, Geosite[]> = {
@@ -455,24 +525,131 @@ export const geositePatches: Record<string, Geosite[]> = {
     geo("zd-bedding", "zhada", "古湖相层理", 79.82, 31.5, "bedding", "水平层是湖，柱是后来的风和洪水。"),
     geo("zd-basin", "zhada", "札达盆地远观", 79.78, 31.47, "other", "盆地尺度。土林只是被切开的一角。"),
   ],
-  sheshan: [
+  shihuadong: [
     geo(
-      "ss-west",
-      "sheshan",
-      "西佘山开放步道",
-      121.187,
-      31.093,
-      "other",
-      "在开放步道上看浅色火山岩。认斑晶、凝灰碎屑或流纹构造。教堂和天文台是地面建筑，不是岩石识别标志。",
+      "shd-flowers",
+      "shihuadong",
+      "多层石花廊",
+      115.934,
+      39.802,
+      "cave_speleothem",
+      "雾迷山组白云岩洞壁上的石花、石旗是化学沉积。只看不摸。商业彩灯不是成因。北方溶洞慢、小，不要拿桂林峰林平原来套。",
     ),
     geo(
-      "ss-hills",
-      "sheshan",
-      "松郡九峰远观",
-      121.21,
-      31.09,
+      "shd-wall",
+      "shihuadong",
+      "雾迷山组洞壁层理",
+      115.927,
+      39.803,
+      "bedding",
+      "洞口或开放廊道认中元古界白云岩层理。叠层石纹理朝上。滴酸反应弱于纯灰岩。",
+    ),
+    geo(
+      "shd-gate",
+      "shihuadong",
+      "开放洞口层楼",
+      115.932,
+      39.796,
+      "cave_speleothem",
+      "多层厅堂沿节理发育。听现场指挥，不离队，不摸化学沉积。",
+    ),
+  ],
+  shidu: [
+    geo(
+      "sd-wall",
+      "shidu",
+      "拒马河谷壁",
+      115.604,
+      39.642,
+      "bedding",
+      "雾迷山组近水平层理。滴酸起泡才是碳酸盐岩。北方河谷喀斯特，不是桂林峰林，也不是丹霞赤壁。",
+    ),
+    geo(
+      "sd-bend",
+      "shidu",
+      "十渡峡谷湾",
+      115.597,
+      39.643,
       "other",
-      "从远处数丘。它们是同一套晚白垩世碱性火山丘，不是花岗岩，也不是崇明那种沙岛。上海的国家地质公园在崇明。",
+      "河流侧蚀成湾。名字里的「十渡」不是十个地质渡口。谷壁先认岩性再认河湾。",
+    ),
+  ],
+  xiqiaoshan: [
+    geo(
+      "xqs-quarry",
+      "xiqiaoshan",
+      "采石洞壁",
+      112.974,
+      22.932,
+      "joint",
+      "粗面岩人工采石留下的洞。壁上是凿痕，不是石钟乳，也不是绳状熔岩。不要把西樵写成溶洞或夏威夷玄武岩。",
+    ),
+    geo(
+      "xqs-dome",
+      "xiqiaoshan",
+      "粗面岩穹丘远观",
+      112.967,
+      22.933,
+      "other",
+      "低丘是新生代粗面岩穹丘，不是玄武岩渣锥，不是活火山，也不是雷琼玛珥。",
+    ),
+    geo(
+      "xqs-joint",
+      "xiqiaoshan",
+      "板状节理步道",
+      112.972,
+      22.926,
+      "joint",
+      "板状–柱状节理。浅色斑晶。先认岩石，再看采石如何把节理面打开。",
+    ),
+  ],
+  luochuan: [
+    geo(
+      "lc-section",
+      "luochuan",
+      "黑木沟黄土–古土壤剖面",
+      109.434,
+      35.762,
+      "bedding",
+      "风积黄土夹古土壤条带。垂直节理、钙质结核。不是红层丹霞。雨后陡坎会塌，不要靠近壁根。",
+    ),
+    geo(
+      "lc-yuan",
+      "luochuan",
+      "黄土塬面远观",
+      109.427,
+      35.763,
+      "other",
+      "塬、梁、峁是流水切开风积黄土的结果。先认粉砂，再认切割。",
+    ),
+    geo(
+      "lc-gully",
+      "luochuan",
+      "冲沟陡坎",
+      109.432,
+      35.756,
+      "collapse",
+      "冲沟壁垂直节理控制。雨后泥泞失足。只看剖面，不挖黄土标本。",
+    ),
+  ],
+  "xixian-loess": [
+    geo(
+      "xx-section",
+      "xixian-loess",
+      "隰县黄土剖面",
+      110.934,
+      36.702,
+      "bedding",
+      "第四纪风积黄土。垂直节理、钙质结核。不是红层丹霞。不要靠近陡坎壁根。",
+    ),
+    geo(
+      "xx-yuan",
+      "xixian-loess",
+      "塬梁峁远观",
+      110.927,
+      36.703,
+      "other",
+      "风把粉砂堆成黄土，流水再切成塬、梁、峁。先认粉砂，再认切割。",
     ),
   ],
 };

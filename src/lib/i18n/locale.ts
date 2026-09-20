@@ -1,7 +1,8 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
 
 export type Locale = "zh" | "en";
+
+const STORAGE_KEY = "shanshizhi-locale";
 
 interface LocaleState {
   locale: Locale;
@@ -15,29 +16,49 @@ function applyLocale(locale: Locale) {
   document.documentElement.dataset.locale = locale;
 }
 
-export const useLocale = create<LocaleState>()(
-  persist(
-    (set, get) => ({
-      locale: "zh",
-      setLocale: (locale) => {
-        applyLocale(locale);
-        set({ locale });
-      },
-      toggle: () => {
-        const locale = get().locale === "zh" ? "en" : "zh";
-        applyLocale(locale);
-        set({ locale });
-      },
-    }),
-    {
-      name: "shanshizhi-locale",
-      partialize: (s) => ({ locale: s.locale }),
-      onRehydrateStorage: () => (state) => {
-        if (state?.locale) applyLocale(state.locale);
-      },
-    },
-  ),
-);
+export function readStored(): Locale {
+  if (typeof window === "undefined") return "zh";
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return "zh";
+    const parsed = JSON.parse(raw) as { state?: { locale?: string }; locale?: string };
+    const loc = parsed?.state?.locale || parsed?.locale;
+    return loc === "en" ? "en" : "zh";
+  } catch {
+    return "zh";
+  }
+}
+
+function writeStored(locale: Locale) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ state: { locale }, version: 0 }));
+  } catch {
+    /* private mode */
+  }
+  applyLocale(locale);
+}
+
+export const useLocale = create<LocaleState>((set, get) => ({
+  locale: "zh",
+  setLocale: (locale) => {
+    writeStored(locale);
+    set({ locale });
+  },
+  toggle: () => {
+    const locale = get().locale === "zh" ? "en" : "zh";
+    writeStored(locale);
+    set({ locale });
+  },
+}));
+
+if (typeof window !== "undefined") {
+  const stored = readStored();
+  if (stored === "en") {
+    useLocale.setState({ locale: "en" });
+    applyLocale("en");
+  }
+}
 
 export function currentLocale(): Locale {
   return useLocale.getState().locale;

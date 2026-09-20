@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocale } from "@/lib/i18n";
+import { readStored, useLocale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 export function LangSwitch() {
@@ -7,8 +7,10 @@ export function LangSwitch() {
   const setLocale = useLocale((s) => s.setLocale);
 
   useEffect(() => {
-    document.documentElement.lang = locale === "en" ? "en" : "zh-CN";
-  }, [locale]);
+    const stored = readStored();
+    if (stored !== useLocale.getState().locale) setLocale(stored);
+    document.documentElement.lang = useLocale.getState().locale === "en" ? "en" : "zh-CN";
+  }, [setLocale]);
 
   return (
     <div className="relative z-40 flex h-9 shrink-0 overflow-hidden rounded-md border border-border bg-surface">

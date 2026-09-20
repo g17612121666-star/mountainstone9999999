@@ -8,5 +8,25 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "shanshizhi.grok.me" }],
+      "destination": "https://mountainstone.grok.me/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "shanshizhi.grok.me" }],
+      "destination": "https://mountainstone.grok.me/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.mountainstone.grok.me" }],
+      "destination": "https://mountainstone.grok.me/:path",
+      "statusCode": 301
+    }
   ]
 }

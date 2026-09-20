@@ -8,6 +8,7 @@ import { provinceLabel } from "./provinces";
 
 export { useLocale } from "./locale";
 export type { Locale } from "./locale";
+export { readStored } from "./locale";
 export { UI } from "./ui";
 export type { UiKey } from "./ui";
 export {

@@ -1,5 +1,6 @@
 import { createRouter } from "@tanstack/react-router";
 import { AppErrorComponent } from "@/lib/error-component";
+import { t } from "@/lib/i18n";
 import { routeTree } from "./routeTree.gen";
 
 export function getRouter() {
@@ -8,10 +9,10 @@ export function getRouter() {
     defaultErrorComponent: AppErrorComponent,
     defaultNotFoundComponent: () => (
       <main className="flex min-h-dvh flex-col items-center justify-center gap-3 bg-bg px-6 text-center">
-        <h1 className="font-display text-xl font-semibold">这一层还没有出露</h1>
-        <p className="text-sm text-muted">找不到这个地质点。回到地图再找一次。</p>
+        <h1 className="font-display text-xl font-semibold">{t("notFoundTitle")}</h1>
+        <p className="text-sm text-muted">{t("notFoundBody")}</p>
         <a href="/" className="text-sm text-moss underline">
-          回到地图
+          {t("backMap")}
         </a>
       </main>
     ),

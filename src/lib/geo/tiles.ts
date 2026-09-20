@@ -16,6 +16,9 @@ const ESRI_SAT =
 const ESRI_PLACES =
   "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}";
 const OSM = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+const ESRI_STREETS =
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}";
+const ATTR_EN_STREETS_ESRI = "© Esri, OpenStreetMap, and the GIS user community";
 
 export const ASIA_SW: [number, number] = [5.0, 70.0];
 export const ASIA_NE: [number, number] = [55.5, 150.0];
@@ -45,6 +48,25 @@ function attachOsmFallback(
       noWrap: true,
       attribution: "© OpenStreetMap",
     }).addTo(map);
+  });
+}
+
+function attachEnStreetsFallback(
+  L: Leaflet,
+  map: import("leaflet").Map,
+  layer: import("leaflet").TileLayer,
+) {
+  let used = false;
+  layer.on("tileerror", () => {
+    if (used) return;
+    used = true;
+    const esri = L.tileLayer(ESRI_STREETS, {
+      maxZoom: 19,
+      noWrap: true,
+      attribution: ATTR_EN_STREETS_ESRI,
+    });
+    esri.addTo(map);
+    attachOsmFallback(L, map, esri);
   });
 }
 
@@ -110,6 +132,7 @@ export function addChinaBase(
         attribution: showAttr ? ATTR_EN_STREETS : "",
         className: "tile-rich",
       });
+      attachEnStreetsFallback(L, map, vectorLayer);
     } else {
       const a = showAttr ? ATTR_ZH : "";
       const sat = L.tileLayer(SAT, {

@@ -7160,38 +7160,42 @@
       "legal_notes": "Protected geoheritage. Look, photograph, note. Do not hammer, dig, or take rock, mineral or fossil. Prices and hours follow the official listing on the day. This guide does not sell tickets."
     },
     "xiqiaoshan": {
-      "city": "Fo Shan",
-      "geologic_age_text": "Neogene–Quaternary volcanic rock",
-      "hook": "Xiqiaoshan: Magma reaching the surface as scoria cones, lava plates, maars or a caldera. Find vesicles, ropey lava or pyroclastics first. A maar is not a karst tiankeng. A scoria cone is not granite.",
-      "formation_short": "Xiqiaoshan. Rock: Basalt, andesite or volcaniclastic rock. Process: Magma reaching the surface as scoria cones, lava plates, maars or a caldera. A maar is not a karst tiankeng. A scoria cone is not granite. Look, do not take.",
-      "evolution_sequence": "Eruption → cone / lake / plate → later water, wind or waves",
-      "what_you_see_today": "At Xiqiaoshan, find vesicles, ropey lava or pyroclastics first. A maar is not a karst tiankeng. A scoria cone is not granite.",
+      "city": "Foshan",
+      "geologic_age_text": "Neogene",
+      "hook": "Xiqiao is a trachyte dome. The caves are old quarry voids, not limestone caverns and not pahoehoe.",
+      "formation_short": "Rock: Neogene trachyte, not a basaltic scoria cone. Structure: a central dome on the Pearl River Delta. Process: joints opened by quarrying and weathering. The walls show tool marks, not speleothems, not ropey lava. This is not Leiqiong and not an active volcano.",
+      "evolution_sequence": "Trachyte dome → joints → quarry voids",
+      "what_you_see_today": "Name the pale trachyte and its tabular joints first. The caves are quarry voids. Not karst, not pahoehoe, not a Leiqiong maar.",
       "observation_tips": [
-        "Vesicles and ropey texture are not bedding.",
-        "A maar wall is debris, not limestone.",
-        "Stay on the crater path."
+        "Pale phenocrysts; tool marks on the wall are not stalactites.",
+        "Not a limestone cave, not a Leiqiong maar, not in-situ pahoehoe.",
+        "Stay on open paths. Do not collect."
+      ],
+      "corrections": [
+        "Xiqiao is a trachyte-dome quarry, not a limestone cave and not Hawaiian pahoehoe.",
+        "Do not write Xiqiao as Leiqiong-style basalt or as an active volcano."
       ],
       "formation_timeline": [
         {
-          "name": "Eruption",
-          "age": "Neogene–Quaternary (park-specific)",
-          "what": "Lava or tephra reached the surface."
+          "name": "Trachyte dome",
+          "age": "Neogene",
+          "what": "Trachyte, not a basaltic scoria cone."
         },
         {
-          "name": "Landform locks in",
-          "age": "soon after",
-          "what": "Cone, lake or plate."
+          "name": "Joints",
+          "age": "after emplacement",
+          "what": "Tabular to columnar joints."
         },
         {
-          "name": "Reworking",
-          "age": "to the present",
-          "what": "Water, wind or waves cut again."
+          "name": "Quarrying",
+          "age": "historical",
+          "what": "Stone cutting opened the joints into caves."
         }
       ],
       "visible_rocks_minerals_fossils": [
         {
-          "name": "Basalt, andesite or volcaniclastic rock",
-          "how_to_recognize": "Find vesicles, ropey lava or pyroclastics first. Look, do not collect.",
+          "name": "Neogene trachyte",
+          "how_to_recognize": "Pale rock with phenocrysts. Not vesicular basalt, not pahoehoe.",
           "collect_allowed": false
         }
       ],
@@ -16680,6 +16684,58 @@
     "fs-zhoukoudian": {
       "name": "Zhoukoudian cave",
       "look_here": "Read the cave-fill beds. Fossils are in the exhibits. Area only."
+    },
+    "shd-flowers": {
+      "name": "Stone-flower galleries",
+      "look_here": "Stone flowers and flags on Wumishan dolostone. Look, do not touch. Coloured lights are not the process. Northern caves are slow and small — not a Guilin fenglin plain."
+    },
+    "shd-wall": {
+      "name": "Wumishan wall bedding",
+      "look_here": "Mesoproterozoic dolostone bedding at an open gallery. Stromatolite convex-up. Weak fizz compared with limestone."
+    },
+    "shd-gate": {
+      "name": "Open cave-mouth floors",
+      "look_here": "Stacked halls follow joints. Stay with the group. Do not touch speleothems."
+    },
+    "sd-wall": {
+      "name": "Juma valley wall",
+      "look_here": "Near-horizontal Wumishan beds. Fizz means carbonate. Northern valley karst — not Guilin fenglin, not Danxia cliffs."
+    },
+    "sd-bend": {
+      "name": "Shidu canyon bend",
+      "look_here": "A river meander cut into bedrock. 'Ten ferries' is a place name, not ten geologic fords. Name the rock before the bend."
+    },
+    "xqs-quarry": {
+      "name": "Quarry-cave wall",
+      "look_here": "A trachyte quarry void. Tool marks, not stalactites, not pahoehoe. Xiqiao is not a limestone cave and not Hawaiian basalt."
+    },
+    "xqs-dome": {
+      "name": "Trachyte dome from afar",
+      "look_here": "A Cenozoic trachyte dome, not a basaltic scoria cone, not an active volcano, not a Leiqiong maar."
+    },
+    "xqs-joint": {
+      "name": "Tabular-joint path",
+      "look_here": "Tabular to columnar joints and pale phenocrysts. Name the rock, then see how quarrying opened the joint faces."
+    },
+    "lc-section": {
+      "name": "Heimugou loess–palaeosol section",
+      "look_here": "Wind-blown loess with palaeosol bands, vertical joints, carbonate nodules. Not red-bed Danxia. Stay back from the cut after rain."
+    },
+    "lc-yuan": {
+      "name": "Loess yuan surface",
+      "look_here": "Yuan, liang and mao are wind-blown silt later cut by water. Name the silt first, then the dissection."
+    },
+    "lc-gully": {
+      "name": "Gully cut face",
+      "look_here": "Vertical joints control the gully wall. Mud after rain. Read the section. Do not collect loess."
+    },
+    "xx-section": {
+      "name": "Xixian loess section",
+      "look_here": "Quaternary wind-blown loess, vertical joints, carbonate nodules. Not red-bed Danxia. Stay back from the cut."
+    },
+    "xx-yuan": {
+      "name": "Yuan–liang–mao from afar",
+      "look_here": "Wind stacked the silt; water cut yuan, liang and mao. Name the silt first."
     }
   },
   "visits": {

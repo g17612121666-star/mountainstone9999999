@@ -1,4 +1,5 @@
 import { createRootRoute, HeadContent, Link, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppFooter } from "@/components/layout/AppFooter";
@@ -8,6 +9,17 @@ import { publicPathFor, suggestSitesBySlug, TOOL_PATHS } from "@/lib/geo/slug";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "山石志";
+const CANONICAL_ORIGIN = "https://mountainstone.grok.me";
+
+function AliasRedirect() {
+  useEffect(() => {
+    const host = window.location.hostname.toLowerCase();
+    if (host === "shanshizhi.grok.me" || host === "www.mountainstone.grok.me") {
+      window.location.replace(CANONICAL_ORIGIN + window.location.pathname + window.location.search);
+    }
+  }, []);
+  return null;
+}
 
 function NotFound() {
   const t = useT();
@@ -65,6 +77,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#6B5344" },
     ],
     links: [
+      { rel: "canonical", href: CANONICAL_ORIGIN + "/" },
       { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
@@ -82,6 +95,7 @@ export const Route = createRootRoute({
         <HeadContent />
       </head>
       <body className="bg-bg text-ink">
+        <AliasRedirect />
         <PreviewHostBridge />
         <AuthProvider>
           <Outlet />

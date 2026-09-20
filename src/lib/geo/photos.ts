@@ -7,8 +7,7 @@ type DiskExtra = { src: string; credit: string; caption: string; diagram?: boole
 
 const DISK_EXTRAS = diskExtrasJson as Record<string, DiskExtra[]>;
 
-const SAT_CREDIT =
-  "Esri World Imagery · 该点坐标卫星资料照片，非地面实拍";
+const SAT_CREDIT = "Esri World Imagery";
 const SAT_CAPTION = "卫星资料照片，非地面实拍";
 
 /** Preferred analog donors: real field photos of the same process. Not Zhangye↔Danxia, not Zhangjiajie↔karst. */
@@ -259,11 +258,6 @@ function collectDonors(sites: Site[]): Map<string, Site[]> {
     const list = byFam.get(fam) ?? [];
     list.push(s);
     byFam.set(fam, list);
-    if (fam !== "other") {
-      const others = byFam.get("other") ?? [];
-      others.push(s);
-      byFam.set("other", others);
-    }
   }
   for (const [fam, list] of byFam) {
     list.sort((a, b) => {
@@ -290,17 +284,6 @@ function pickDonor(
     return true;
   });
   if (pool.length) return pool[offset % pool.length];
-  if (fam !== "other") {
-    const fallback = (donors.get("other") ?? []).filter((d) => {
-      if (d.id === site.id) return false;
-      if (!d.cover_image || usedSrc.has(d.cover_image)) return false;
-      if (d.cover_image === site.cover_image) return false;
-      if (analogFamily(d) === "danxia" && site.id === "zhangye") return false;
-      if (analogFamily(d) === "karst" && analogFamily(site) === "zhangjiajie_sandstone") return false;
-      return true;
-    });
-    if (fallback.length) return fallback[offset % fallback.length];
-  }
   return undefined;
 }
 
