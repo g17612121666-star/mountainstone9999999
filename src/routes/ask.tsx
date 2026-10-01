@@ -62,15 +62,12 @@ function AskPage() {
     }
   }
 
-  const first = picks[0] ? getSite(picks[0].id) : undefined;
-  const film = first ? clipFor(first) : null;
-
   return (
     <div className="page-shell">
       <AppHeader />
       <main id="main" className="mx-auto w-full max-w-3xl px-4 py-10">
         <p className="text-xs font-semibold tracking-wide text-moss">{t("appName")}</p>
-        <h1 className="font-display mt-2 text-4xl font-semibold sm:text-5xl">{t("askTitle")}</h1>
+        <h1 className="display-title mt-2">{t("askTitle")}</h1>
         <p className="mt-3 max-w-xl text-base leading-relaxed">{t("askLead")}</p>
 
         <form
@@ -124,41 +121,40 @@ function AskPage() {
               const site = getSite(p.id);
               if (!site) return null;
               const shot = coverFor(site);
+              const film = clipFor(site);
               return (
-                <li key={p.id} className="overflow-hidden rounded-2xl bg-surface shadow-[var(--shadow-border)] sm:flex">
-                  {shot ? (
-                    <img src={shot.src} alt="" className="h-40 w-full object-cover sm:h-auto sm:w-44 sm:shrink-0" />
-                  ) : null}
-                  <div className="min-w-0 flex-1 p-4">
-                    <SiteBadges site={site} compact />
-                    <h2 className="font-display mt-2 text-2xl font-semibold">
-                      <Link {...siteTo(site)} className="hover:underline">
-                        {displayName(site, locale)}
-                      </Link>
-                    </h2>
-                    <p className="mt-1 text-sm text-muted">{placeLine(site, locale)}</p>
-                    {shot?.related ? <p className="mt-1 text-xs text-muted">{t("relatedPhoto")}</p> : null}
-                    <p className="mt-3 text-sm leading-relaxed">{p.why}</p>
-                    {p.watch ? (
-                      <p className="mt-2 text-sm leading-relaxed">
-                        <span className="font-medium">{t("askWatch")} · </span>
-                        {p.watch}
-                      </p>
+                <li key={p.id} className="overflow-hidden rounded-2xl bg-surface shadow-[var(--shadow-border)]">
+                  <div className="sm:flex">
+                    {shot ? (
+                      <img src={shot.src} alt="" className="h-44 w-full object-cover sm:h-auto sm:w-48 sm:shrink-0" />
                     ) : null}
+                    <div className="min-w-0 flex-1 p-4">
+                      <SiteBadges site={site} compact />
+                      <h2 className="font-display mt-2 text-2xl font-semibold">
+                        <Link {...siteTo(site)} className="hover:underline">
+                          {displayName(site, locale)}
+                        </Link>
+                      </h2>
+                      <p className="mt-1 text-sm text-muted">{placeLine(site, locale)}</p>
+                      <p className="mt-3 text-sm leading-relaxed">{p.why}</p>
+                      {p.watch ? (
+                        <p className="mt-2 text-sm leading-relaxed">
+                          <span className="font-medium">{t("askWatch")} · </span>
+                          {p.watch}
+                        </p>
+                      ) : null}
+                    </div>
                   </div>
+                  {film ? (
+                    <div className="border-t border-border px-4 py-4">
+                      <p className="mb-2 text-sm font-medium">{film.related ? t("videoRelated") : t("video")}</p>
+                      <BiliEmbed video={film.video} poster={shot?.src} />
+                    </div>
+                  ) : null}
                 </li>
               );
             })}
           </ol>
-        ) : null}
-
-        {film ? (
-          <section className="mt-8">
-            <h2 className="font-display text-xl font-semibold">{film.related ? t("videoRelated") : t("video")}</h2>
-            <div className="mt-3">
-              <BiliEmbed video={film.video} poster={first ? coverFor(first)?.src : undefined} />
-            </div>
-          </section>
         ) : null}
       </main>
       <AppFooter />

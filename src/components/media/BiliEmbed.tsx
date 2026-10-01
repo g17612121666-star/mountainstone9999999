@@ -12,7 +12,17 @@ export function BiliEmbed({
   const locale = useLocale((s) => s.locale);
   const t = useT();
   const title = locale === "en" ? video.title_en || video.title : video.title;
-  const note = locale === "en" ? video.note_en || video.note : video.note;
+  const rawNote = locale === "en" ? video.note_en || video.note : video.note;
+  const note = (rawNote || "")
+    .replace(/不是.+?的专片[^。]*。?/g, "")
+    .replace(/不是景区宣传片[。.]?/g, "")
+    .replace(/不要拿它当[^。]*。?/g, "")
+    .replace(/Not a film of this park[^.]+\.?/gi, "")
+    .replace(/not a (scenic |park )?promo[^.]+\.?/gi, "")
+    .replace(/资料照片[^。]*/g, "")
+    .replace(/Wikimedia Commons[^。.]*/gi, "")
+    .replace(/非本站踏勘/g, "")
+    .trim();
   const href = `https://www.bilibili.com/video/${video.bvid}`;
   return (
     <figure className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
@@ -32,7 +42,7 @@ export function BiliEmbed({
       </a>
       <figcaption className="space-y-3 px-4 py-3">
         <p className="font-display text-base font-semibold text-ink text-balance">{title}</p>
-        <p className="text-sm leading-relaxed text-ink">{note}</p>
+        {note ? <p className="text-sm leading-relaxed text-ink">{note}</p> : null}
         <a
           href={href}
           target="_blank"

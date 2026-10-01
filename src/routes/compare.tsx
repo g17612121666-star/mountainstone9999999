@@ -61,14 +61,13 @@ function ComparePage() {
                       );
                     }
                     const shot = coverFor(site);
-                    const film = site.video?.bvid ? clipFor(site) : null;
+                    const film = clipFor(site);
                     return (
                       <li key={`${card.id}-${side.site_id}`} className="overflow-hidden rounded-lg border border-border bg-bg">
                         {shot ? (
                           <ClickableImage
                             src={shot.src}
                             alt={en ? side.title_en : side.title_zh}
-                            caption={shot.related ? t("relatedPhoto") : undefined}
                             imgClass="h-36 w-full object-cover"
                             className="rounded-none shadow-none"
                           />
@@ -82,7 +81,7 @@ function ComparePage() {
                             <span className="font-medium">{t("howFormed")} · </span>
                             {en ? side.formed_en : side.formed_zh}
                           </p>
-                          {film && !film.related ? (
+                          {film ? (
                             <div className="mt-3">
                               <BiliEmbed video={film.video} poster={shot?.src} />
                             </div>

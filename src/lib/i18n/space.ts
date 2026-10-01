@@ -26,6 +26,12 @@ export function repairEnSpacing(s: string): string {
   return out.replace(/\s{2,}/g, " ").trim();
 }
 
+function spinEn(seed: string, lines: string[]): string {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 33 + seed.charCodeAt(i)) >>> 0;
+  return lines[h % lines.length] || lines[0];
+}
+
 /** Drop machine glue and editor notes. Do not add geology that was not already in the sentence. */
 export function polishMachineEn(raw: string): string {
   if (!raw) return "";
@@ -33,6 +39,22 @@ export function polishMachineEn(raw: string): string {
   let out = repairEnSpacing(raw);
   out = out.replace(/\b(\w+)(?:\s+\1\b)+/gi, "$1");
   out = out.replace(/\bgranite\s+peaks?\b(?:\s*,?\s*and\s+|\s*,?\s*)granite\s+peaks?\b/gi, "granite peaks");
+  out = out.replace(
+    /^(.+?) is built on ([^.]+)\.\s*(?:Listed age:[^.]+\.\s*|Age as listed\.?\s*)?(?:Name the rock first, then the process\.\s*)?(?:Confirm mix-ups on the park page\.\s*)?(?:Look, don.?t take\.?\s*)?(?:Look, do not take\.?\s*)?$/i,
+    (_m, name: string, thing: string) => {
+      const what = thing.replace(/\s+locality$/i, " site").replace(/\s+geosite$/i, "").trim();
+      const line = spinEn(`${name}${what}`, [
+        `${name} is a ${what} stop. Start with the rock in front of you.`,
+        `At ${name} you are looking at ${what}. Colour and grain first.`,
+        `${name}: ${what}. Look. Don't take a piece home.`,
+      ]);
+      return line;
+    },
+  );
+  out = out.replace(
+    /\bRock:\s*([^.]+)\.\s*Process:\s*([^.]+)\./gi,
+    "The rock is $1. What made this shape: $2.",
+  );
   out = out.replace(/Listed age:\s*([^.]+)\./gi, (_m, token: string) => {
     const age = sanitizeGeologicAge(String(token));
     return age ? `Age: ${age}.` : "";
@@ -56,6 +78,9 @@ export function polishMachineEn(raw: string): string {
   out = out.replace(/This is a section, not a scenic mountain\.\s*/gi, "You are looking at a section, not a viewpoint. ");
   out = out.replace(/not surveyed by this site\.?\s*/gi, "");
   out = out.replace(/Reference photo[^.]{0,80}\.?\s*/gi, "");
+  out = out.replace(/Wikimedia Commons[^.]{0,40}\.?\s*/gi, "");
+  out = out.replace(/This guide does not sell tickets\.?\s*/gi, "");
+  out = out.replace(/Check the official listing on the day\.?\s*/gi, "");
   out = out.replace(/Look, don[’']t take\.?\s*/gi, "Look. Don't take a piece home. ");
   out = out.replace(/Look, do not take\.?\s*/gi, "Look. Don't take a piece home. ");
   out = out.replace(/Look, do not collect\.?\s*/gi, "Don't collect. ");

@@ -1,4 +1,5 @@
 import type { Area, Geosite, GsspExtra, Route, Site, ThemeRoute, VisitInfo } from "@/lib/geo/types";
+import { visibleCopy } from "@/lib/geo/copy";
 import { LOOK_EN, stripLocatePhrase } from "@/lib/geo/look";
 import { sanitizeGeologicAge } from "@/lib/geo/age";
 import enBundle from "../../../data/en.json";
@@ -78,7 +79,20 @@ function cleanGssp(g: GsspExtra, overlay?: Partial<GsspExtra>): GsspExtra {
 }
 
 export function localizeSite(site: Site, locale: Locale): Site {
-  if (locale !== "en") return site;
+  if (locale !== "en") {
+    return {
+      ...site,
+      hook: visibleCopy(site.hook),
+      formation_short: visibleCopy(site.formation_short),
+      evolution_sequence: visibleCopy(site.evolution_sequence),
+      what_you_see_today: visibleCopy(site.what_you_see_today),
+      legal_notes: visibleCopy(site.legal_notes),
+      park_structure: site.park_structure ? visibleCopy(site.park_structure) : site.park_structure,
+      observation_tips: (site.observation_tips || []).map((x) => visibleCopy(x)).filter(Boolean),
+      safety_notes: (site.safety_notes || []).map((x) => visibleCopy(x)).filter(Boolean),
+      corrections: (site.corrections || []).map((x) => visibleCopy(x)).filter(Boolean),
+    };
+  }
   const o = en.sites?.[site.id];
   const merged: Site = o ? { ...site, ...o, id: site.id } : { ...site };
   merged.city = cleanStr(merged.city || "", o?.city || "");

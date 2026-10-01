@@ -103,7 +103,6 @@ function SiteCardBody() {
         <ClickableImage
           src={shot.src}
           alt={displayName(site, locale)}
-          caption={shot.related ? t("relatedPhoto") : undefined}
           imgClass="h-40 w-full object-cover"
           className="mt-4"
         />
@@ -181,6 +180,13 @@ function TrailCardBody() {
   const locale = useLocale((s) => s.locale);
   if (!theme) return null;
   const task = themeTask(theme, locale);
+  const firstFilm =
+    theme.site_ids
+      .map((id) => {
+        const site = getSite(id);
+        return site ? clipFor(site) : null;
+      })
+      .find((clip) => !!clip) || null;
   return (
     <>
       <h1 className="font-display mt-1 text-3xl font-semibold">{themeName(theme, locale)}</h1>
@@ -213,9 +219,9 @@ function TrailCardBody() {
           );
         })}
       </ol>
-      {theme.video?.bvid ? (
+      {theme.video?.bvid || firstFilm ? (
         <div className="no-print mt-5">
-          <BiliEmbed video={theme.video} />
+          <BiliEmbed video={(theme.video?.bvid ? theme.video : firstFilm!.video)} />
         </div>
       ) : null}
       <aside className="mt-5 rounded-lg border border-hematite/30 p-3 text-sm leading-relaxed">

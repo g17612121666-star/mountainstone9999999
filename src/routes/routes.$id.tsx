@@ -136,7 +136,6 @@ function ThemePage() {
                     <ClickableImage
                       src={shot.src}
                       alt={displayName(site, locale)}
-                      caption={shot.related ? t("relatedPhoto") : undefined}
                       imgClass="h-44 w-full object-cover"
                       className="rounded-none shadow-none"
                     />

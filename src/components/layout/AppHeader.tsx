@@ -16,7 +16,6 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
     { to: "/about", label: t("navAbout"), icon: Info },
   ] as const;
   const tools = [
-    { to: "/ask", label: t("navAsk") },
     { to: "/nearby", label: t("nearby") },
     { to: "/compare", label: t("compare") },
     { to: "/glossary", label: t("glossary") },
@@ -25,7 +24,7 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
     { to: "/gssp", label: t("gssp") },
   ] as const;
   return (
-    <header className="z-30 border-b border-border-strong bg-bg/92 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border/80 bg-bg/90 backdrop-blur-md">
       <div className="h-1 bg-moss" />
       <div className="flex h-16 items-center gap-3 px-3">
       <a href="#main" className="skip-link">
@@ -42,7 +41,7 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
           <span className="font-display block text-lg leading-tight font-semibold tracking-tight">
             {t("appName")}
           </span>
-          <span className="block text-[11px] leading-tight text-muted">{t("tagline")}</span>
+          <span className="hidden text-[11px] leading-tight text-muted sm:block">{t("tagline")}</span>
         </span>
       </Link>
       <nav className="ml-auto flex items-center gap-0.5" aria-label={t("mainNav")}>
@@ -55,13 +54,13 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
               to={l.to}
               aria-label={l.label}
               className={cn(
-                "flex h-11 items-center gap-1.5 rounded-md px-2 text-sm transition-colors duration-150 sm:px-2.5",
-                l.to === "/ask" && "max-sm:hidden",
-                active ? "bg-surface-2 text-ink" : "text-muted hover:bg-surface-2 hover:text-ink",
+                "flex h-11 items-center gap-1.5 rounded-full px-2.5 text-sm transition-colors duration-150 sm:px-3",
+                l.to === "/ask" && "bg-moss text-accent-fg hover:opacity-90",
+                l.to !== "/ask" && (active ? "bg-surface-2 text-ink" : "text-muted hover:bg-surface-2 hover:text-ink"),
               )}
             >
               <Icon className="size-4" strokeWidth={1.75} />
-              <span className="hidden sm:inline">{l.label}</span>
+              <span className={l.to === "/ask" ? "inline" : "hidden sm:inline"}>{l.label}</span>
             </Link>
           );
         })}

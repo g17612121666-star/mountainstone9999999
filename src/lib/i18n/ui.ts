@@ -4,12 +4,12 @@ type Pair = Record<Locale, string>;
 
 export const UI = {
   appName: { zh: "山石志", en: "Shanshizhi" },
-  tagline: { zh: "随身地质向导", en: "A Pocket Geology Guide" },
+  tagline: { zh: "口袋里的石头地图", en: "A pocket map of rocks" },
   navMap: { zh: "地图", en: "Map" },
   navCatalog: { zh: "目录", en: "Catalog" },
   navRoutes: { zh: "线路", en: "Trails" },
   navAbout: { zh: "关于", en: "About" },
-  navAsk: { zh: "问问", en: "Ask" },
+  navAsk: { zh: "帮我挑", en: "Pick for me" },
   skipMap: { zh: "跳到地图", en: "Skip to map" },
   skipContent: { zh: "跳到正文", en: "Skip to content" },
   searchPh: { zh: "园名、地名、岩石、化石、阶名", en: "Park, rock, fossil, stage, place" },
@@ -122,8 +122,8 @@ export const UI = {
   age: { zh: "时代", en: "Age" },
   catalogTitle: { zh: "名录", en: "Catalog" },
   catalogLead: {
-    zh: "中国世界地质公园、国家地质公园、金钉子与城市地质点名录。",
-    en: "UNESCO Global Geoparks, national geoparks, GSSPs and urban geosites in China.",
+    zh: "世界地质公园、国家地质公园、金钉子，还有城里的石头。点开就能读。",
+    en: "UNESCO geoparks, national geoparks, golden spikes, and one city rock. Tap one and read it.",
   },
   nationalParks: { zh: "国家地质公园", en: "National geoparks" },
   allSites: { zh: "全部地质点", en: "All geosites" },
@@ -145,16 +145,16 @@ export const UI = {
   },
   trailsTitle: { zh: "主题线路", en: "Theme trails" },
   trailsLead: {
-    zh: "每条线只讲一个地质过程。点在线上负责证明什么，写在各自的角色里。",
-    en: "Each trail argues one geologic process. A stop is there to prove something — that job is written under the site.",
+    zh: "一条线只讲一件事：这块石头是怎么变成这样的。每个点负责证明其中一步。",
+    en: "One trail, one story: how this rock became what you see. Each stop proves one step.",
   },
   trailStop: { zh: "第", en: "Stop" },
   trailStopOf: { zh: "站", en: "" },
   trailTask: { zh: "这条线的观察任务", en: "Field task for this trail" },
   trailWhy: { zh: "为什么这些点能串成一条线", en: "Why these stops belong together" },
   sites: { zh: "个点", en: "stops" },
-  notFoundTitle: { zh: "这一层还没有出露", en: "This horizon has not cropped out" },
-  notFoundBody: { zh: "找不到这个地质点。回到地图再找一次。", en: "No such geosite. Back to the map." },
+  notFoundTitle: { zh: "没有这一页", en: "No page here" },
+  notFoundBody: { zh: "这个地址对不上名录。回地图再找。", en: "That address is not in the list. Back to the map." },
   backMap: { zh: "回到地图", en: "Back to the map" },
   aboutTitle: { zh: "关于山石志", en: "About Shanshizhi" },
   langZh: { zh: "中文", en: "中文" },
@@ -232,8 +232,8 @@ export const UI = {
   fieldCard: { zh: "观察卡", en: "Field card" },
   printCard: { zh: "打印 / 存为 PDF", en: "Print / save as PDF" },
   fieldCardLead: {
-    zh: "一页能装进口袋。不是行程商城，也不生成社交卡片。",
-    en: "One page for a pocket. Not an itinerary shop, not a social card.",
+    zh: "一页，能塞进口袋。打印出来对着石头看。",
+    en: "One page. It fits in a pocket. Print it and hold it up to the rock.",
   },
   lookDontTake: { zh: "看，别敲走。", en: "Look. Don't take a piece home." },
   offline: { zh: "离线野外包", en: "Offline pack" },
@@ -241,8 +241,8 @@ export const UI = {
   cached: { zh: "已缓存", en: "Cached" },
   uncache: { zh: "清除缓存", en: "Clear cache" },
   offlineNote: {
-    zh: "这是缓存，不是实时票价。正文可离线读。底图能否离线取决于浏览器与高德，本站不承诺。一次只缓存你勾选的园或线路。",
-    en: "This is a cache, not live ticket prices. The text is readable offline. Whether the basemap works offline depends on the browser and Gaode — this guide does not promise it. Cache only the park or trail you pick.",
+    zh: "这是你自己存下来的正文，不是实时更新。底图能不能离线，看浏览器和高德，这里不打包票。一次只存你勾的那一园或那条线。",
+    en: "This is the text you saved, not a live update. Whether the map works offline depends on the browser and Gaode. This site does not promise it. Save one park or one trail at a time.",
   },
   offlineList: { zh: "已缓存的野外包", en: "Cached packs" },
   noVideo: {
@@ -295,12 +295,12 @@ export const UI = {
   },
   inclusionH: { zh: "收录边界", en: "What this edition includes" },
   inclusionBody: {
-    zh: "收入已命名国家地质公园、资格园、世界地质公园、金钉子独立点，以及佘山这一处城市地质。不含省级地质公园——那是下一层名录，本期不混进国家名录。香港世界地质公园按单独法域收入。台湾、澳门本版不收。海南世界级点挂在雷琼（海口石山、湖光岩），白沙陨石坑等按国家名录收录。",
-    en: "This edition lists named national geoparks, qualifying parks, UNESCO Global Geoparks, independent GSSPs, and Sheshan as an urban geosite. Provincial geoparks are out — they are a different list and are not mixed into the national catalogue here. Hong Kong’s UNESCO Global Geopark is included under its own jurisdiction. Taiwan and Macao are not in this edition. Hainan’s UNESCO sites sit under Leiqiong (Haikou Shishan, Huguangyan); others such as Baisha crater follow the national list.",
+    zh: "这一版收已经命名的国家地质公园、还在资格名单上的园、世界地质公园、单独的金钉子，加上佘山这一处城里的石头。省级地质公园先不收，那是另一张名单。香港单独算。台湾、澳门这一版没有。海南的世界级点挂在雷琼（海口石山、湖光岩）；白沙陨石坑这些按国家名录来。",
+    en: "This edition keeps named national geoparks, parks still qualifying, UNESCO Global Geoparks, golden spikes that stand alone, and Sheshan — the city rock. Provincial parks stay off; they are a different list. Hong Kong is in, under its own rules. Taiwan and Macao are not. Hainan’s UNESCO sites sit with Leiqiong (Haikou Shishan, Huguangyan). Baisha crater and the rest follow the national list.",
   },
   provincialCallout: {
-    zh: "省级地质公园未收入本期。资格园与已命名国家地质公园一并收录，但资格不是已命名。",
-    en: "Provincial geoparks are not in this edition. Qualifying parks sit with named national parks — qualifying is not named.",
+    zh: "省级地质公园这一版不收。资格园和已经命名的放在一起看，但资格还不等于已命名。",
+    en: "Provincial parks are not in this edition. Qualifying parks sit next to named ones — qualifying is not the same as named.",
   },
   govPortal: { zh: "地方政府站点，不是园区官网", en: "Local government site — not the park’s own page" },
   parkOfficial: { zh: "园区 / 博物馆 / 预约页", en: "Park, museum or booking page" },
@@ -338,8 +338,8 @@ export const UI = {
   footerNav: { zh: "手册", en: "Handbook" },
   moreTools: { zh: "手册", en: "Tools" },
   cachedHint: {
-    zh: "已写入本机缓存。这不是实时票价。",
-    en: "Saved on this device. This is not a live ticket price.",
+    zh: "已经存在这台设备上了。",
+    en: "Saved on this device.",
   },
   hkWgs: {
     zh: "本园坐标按 WGS84 显示，香港不偏移到 GCJ-02。",
@@ -354,15 +354,15 @@ export const UI = {
   photoKindDiagram: { zh: "", en: "" },
   openVideo: { zh: "打开视频", en: "Open video" },
   videoOnBili: { zh: "在哔哩哔哩看", en: "Watch on Bilibili" },
-  relatedPhoto: { zh: "不是本园的照片，是同一种地貌。", en: "Not this park. Same kind of landform." },
+  relatedPhoto: { zh: "", en: "" },
   askTitle: { zh: "想去哪儿", en: "Where do you want to go?" },
   askLead: {
-    zh: "写你想看的石头、城市，或者只有一个周末。我只从名录里已有的地方挑，不编新的园。",
-    en: "Say what rock you want, which city, or that you only have a weekend. I only pick places already in the guide.",
+    zh: "说说想看的石头、想去的城市，或者只有一个周末。我只从已经写进名录的地方里挑，不现编一座园。",
+    en: "Say the rock, the city, or that you only have a weekend. I only pick places already in the guide. I won't invent a park.",
   },
   askPh: {
     zh: "比如：上海周末，想看花岗岩，不想爬太久",
-    en: "For example: a weekend near Shanghai, granite, nothing too steep",
+    en: "A weekend near Shanghai, granite, nothing too steep",
   },
   askGo: { zh: "帮我看", en: "Show me" },
   askWait: { zh: "在名录里翻…", en: "Looking through the list…" },
@@ -453,11 +453,10 @@ export const PHENOMENON_EN: Record<string, string> = {
   other: "Other",
 };
 
-export const MOTTO_EN =
-  "The Earth wrote on stone. We read it. We do not tear the page out.";
+export const MOTTO_EN = "The rock has writing on it. Read it. Don't tear a piece off.";
 
 export const FOSSIL_LAW_EN =
-  "Under China’s fossil-protection regulations, fossils are in principle state property. Look, photograph, note. Report important finds. Do not hammer, dig, or take anything home.";
+  "Fossils in mainland China belong to the state, in principle. Look, take a photo, write it down. Don't hammer, dig, or pocket anything. If you hit something important, tell the local office. That's the Fossil Protection Regulations.";
 
 export const FOSSIL_LAW_HK_EN =
   "Hong Kong is a separate jurisdiction. Mainland China’s Fossil Protection Regulations do not apply as such. Do not hammer, dig, or take specimens. Follow the Country Parks Ordinance and on-site notices.";

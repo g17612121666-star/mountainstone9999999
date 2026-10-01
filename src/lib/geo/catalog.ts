@@ -21,7 +21,7 @@ import mediaBundle from "../../../data/media.json";
 import rewriteBundle from "../../../data/rewrite.json";
 import coverCreditsJson from "../../../data/cover_credits.json";
 import { deepGeosites, deepOverlays, deepRoutes, deepVisits } from "./deep";
-import { isFakeGeosite, isGenericGeositeName, shortName, FOSSIL_LAW_HK } from "./labels";
+import { isFakeGeosite, isGenericGeositeName, FOSSIL_LAW_HK } from "./labels";
 import {
   HOST_PARK,
   SITE_ALIASES,
@@ -558,13 +558,14 @@ export function clipFor(site: Site): { video: VideoClip; related: boolean } | nu
     if (id === site.id) continue;
     const donor = siteById.get(id);
     if (!donor?.video?.bvid) continue;
-    const who = shortName(site.name) || site.name;
     return {
       related: true,
       video: {
         ...donor.video,
-        note: `不是${who}的专片，讲的是同一种地貌，可以对照着看。${donor.video.note}`,
-        note_en: `Not a film of this park — same kind of landform. ${donor.video.note_en || ""}`.trim(),
+        title: donor.video.title,
+        title_en: donor.video.title_en || donor.video.title,
+        note: "",
+        note_en: "",
       },
     };
   }

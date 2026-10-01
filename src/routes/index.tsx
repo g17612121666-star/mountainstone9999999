@@ -21,8 +21,8 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () =>
     seoHead({
-      title: "随身地质向导",
-      description: "一张可缩放的中国地质点地图：成因、打卡点、怎么走、看什么、不挖什么、要不要买票。",
+      title: "山石志",
+      description: "一张能点进去的中国石头地图。看岩石、看怎么裂开、看现场该站哪儿。只看不挖。",
       path: "/",
     }),
 });

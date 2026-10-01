@@ -69,8 +69,9 @@
   body {
     font-family: var(--font-sans);
     background:
-      radial-gradient(ellipse 90% 42% at 0% -8%, #efe2cc 0%, transparent 58%),
-      radial-gradient(ellipse 55% 32% at 100% 0%, #e4efe7 0%, transparent 52%),
+      radial-gradient(ellipse 80% 40% at 0% -10%, #efe2cc 0%, transparent 60%),
+      radial-gradient(ellipse 50% 28% at 100% 0%, #dce8e1 0%, transparent 55%),
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgb(107 83 68 / 0.035) 28px),
       var(--color-bg);
     color: var(--color-ink);
     min-height: 100dvh;
@@ -86,8 +87,18 @@
 
   main h2.font-display,
   article h2.font-display {
-    border-bottom: 2px solid color-mix(in oklab, var(--color-moss) 42%, var(--color-border));
-    padding-bottom: 0.28rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  main h2.font-display::after,
+  article h2.font-display::after {
+    content: "";
+    display: block;
+    width: 2.25rem;
+    height: 2px;
+    margin-top: 0.4rem;
+    background: var(--color-moss);
   }
 
   p {
@@ -279,11 +290,30 @@
   }
 }
 
+.display-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+article#main section {
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--color-surface) 92%, white);
+  padding: 1rem 1.1rem 1.15rem;
+  box-shadow: var(--shadow-border);
+}
+
+article#main section h2.font-display {
+  margin-top: 0;
+}
+
 .page-shell {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: var(--color-bg);
+  background: transparent;
 }
 
 .page-shell > main {

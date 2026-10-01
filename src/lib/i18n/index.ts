@@ -101,33 +101,8 @@ export function useDisplayName() {
   return (site: Site) => displayName(site, locale);
 }
 
-const EXTRA_CJK = /照片|标本|踏勘|露头|馆藏|公开资料|条目配图|缩略图/;
-
-function creditAuthor(credit: string, loc: Locale): string {
-  if (!credit) return "";
-  if (loc !== "en") return credit;
-  const parts = credit.split(/\s*[·/,|]\s*/);
-  const kept = parts.filter((p) => {
-    const t = p.trim();
-    if (!t) return false;
-    if (EXTRA_CJK.test(t)) return false;
-    const cjk = t.match(/[\u4e00-\u9fff]/g);
-    if (!cjk) return true;
-    const only = t.replace(/[\s,;.:：、]/g, "");
-    return /^[\u4e00-\u9fff]{2,4}$/.test(only);
-  });
-  return kept.join(", ");
-}
-
-export function photoCredit(credit: string, locale?: Locale): string {
-  const loc = locale ?? currentLocale();
-  const who = creditAuthor(credit, loc);
-  if (loc === "en") {
-    return who
-      ? `Reference photo · ${who} · not surveyed by this site`
-      : "Reference photo · not surveyed by this site";
-  }
-  return credit ? `资料照片 · ${credit} · 非本站踏勘` : "资料照片，非本站踏勘";
+export function photoCredit(_credit: string, _locale?: Locale): string {
+  return "";
 }
 
 export function placeLine(site: Site, locale?: Locale): string {

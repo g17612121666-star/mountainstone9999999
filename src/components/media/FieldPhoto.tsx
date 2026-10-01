@@ -5,14 +5,21 @@ import { cn } from "@/lib/utils";
 import { Lightbox } from "./Lightbox";
 
 function quietNote(raw: string): string {
-  return raw
+  const s = raw
+    .replace(/卫星资料照片[^。.]*/g, "")
     .replace(/资料照片[^。.]*/g, "")
     .replace(/非本站踏勘[。.]?/g, "")
+    .replace(/非地面实拍[。.]?/g, "")
     .replace(/Wikimedia Commons[^。.]*/gi, "")
     .replace(/Reference photo[^。.]*/gi, "")
     .replace(/not surveyed by this site[。.]?/gi, "")
+    .replace(/下图为[^。]*。/g, "")
+    .replace(/Analog from [^.]+\./gi, "")
+    .replace(/不是本园[^。]*。/g, "")
     .replace(/^[·,，\s]+|[·,，\s]+$/g, "")
     .trim();
+  if (!s || s === "卫星" || isCreditLine(s)) return "";
+  return s;
 }
 
 function isCreditLine(s: string): boolean {

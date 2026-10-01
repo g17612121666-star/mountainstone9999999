@@ -92,11 +92,11 @@ function CatalogPage() {
     <div className="page-shell">
       <AppHeader />
       <main id="main" className="mx-auto w-full max-w-5xl px-4 py-10">
-        <h1 className="font-display text-3xl font-semibold tracking-tight">{t("catalogTitle")}</h1>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+        <h1 className="display-title">{t("catalogTitle")}</h1>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-ink">
           {locale === "en"
-            ? `${stats.total} geosites: ${stats.national} named national geoparks, ${stats.candidate} qualifying, ${stats.world} UNESCO Global (incl. Hong Kong), ${stats.gssp} independent GSSPs, ${stats.urban} urban. ${stats.complete} full pages · ${stats.standard} field cards. Cutoff 2026-04.`
-            : `库内地质点 ${stats.total}：国家地质公园已命名 ${stats.national} 处，资格 ${stats.candidate} 处，世界级 ${stats.world} 处（含香港），金钉子独立点 ${stats.gssp} 处，城市地质 ${stats.urban} 处。深页 ${stats.complete} · 简卡 ${stats.standard}${stats.placeholder ? ` · 未写 ${stats.placeholder}` : ""}。截止日期 2026-04。`}
+            ? `${stats.total} places in the list. ${stats.national} named national geoparks, ${stats.candidate} still qualifying, ${stats.world} UNESCO Global (Hong Kong included), ${stats.gssp} golden spikes on their own, ${stats.urban} city rock. ${stats.complete} long pages, ${stats.standard} still short cards.`
+            : `名录里现在有 ${stats.total} 处。国家地质公园写全的 ${stats.national} 处，还在资格名单上的 ${stats.candidate} 处，世界地质公园 ${stats.world} 处（香港算在里面），单独的金钉子 ${stats.gssp} 处，城里的石头 ${stats.urban} 处。写长了的 ${stats.complete} 页，还是短卡的 ${stats.standard} 页。`}
           <Link to="/gssp" className="ml-1 text-moss underline">
             {t("gsspIndex")}
           </Link>

@@ -4,7 +4,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { seoHead } from "@/lib/geo/canonical";
-import { getSite, themeRoutes } from "@/lib/geo/catalog";
+import { clipFor, getSite, themeRoutes } from "@/lib/geo/catalog";
 import { isOwnCover } from "@/lib/geo/safety";
 import type { LandformType } from "@/lib/geo/types";
 import { LANDFORM_LABEL } from "@/lib/geo/types";
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/routes/")({
   head: () =>
     seoHead({
       title: "主题线路",
-      description: "每条线只讲一个地质过程。点在线上负责证明什么，写在各自的角色里。",
+      description: "一条线只讲一件事：这块石头是怎么变成这样的。",
       path: "/routes",
     }),
 });
@@ -53,8 +53,8 @@ function RoutesIndex() {
     <div className="page-shell">
       <AppHeader />
       <main id="main" className="mx-auto w-full max-w-5xl px-4 py-10">
-        <h1 className="font-display text-3xl font-semibold">{t("trailsTitle")}</h1>
-        <p className="mt-2 text-sm text-muted">{t("trailsLead")}</p>
+        <h1 className="display-title">{t("trailsTitle")}</h1>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed">{t("trailsLead")}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           <select
             className="h-10 rounded-md border border-border-strong bg-surface px-2 text-sm"
@@ -84,7 +84,11 @@ function RoutesIndex() {
           </select>
         </div>
         <ul className="handbook-grid handbook-grid-2 mt-8">
-          {rows.map(({ tr, thumb, provinces }) => (
+          {rows.map(({ tr, thumb, provinces, mapped }) => {
+            const own = tr.video?.bvid ? tr.video : null;
+            const borrowed = own ? null : mapped.map((s) => clipFor(s)).find((c) => !!c) || null;
+            const film = own || borrowed?.video || null;
+            return (
             <li key={tr.id} className="flex gap-3 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
               {thumb ? (
                 <img
@@ -108,9 +112,20 @@ function RoutesIndex() {
                     <span>{provinces.map((p) => provinceLabel(p, locale)).join(" · ")}</span>
                   ) : null}
                 </p>
+                {film?.bvid ? (
+                  <a
+                    href={`https://www.bilibili.com/video/${film.bvid}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex text-sm font-medium text-moss underline"
+                  >
+                    {own ? t("video") : t("videoRelated")}
+                  </a>
+                ) : null}
               </div>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </main>
       <AppFooter />

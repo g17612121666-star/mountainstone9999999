@@ -77,10 +77,10 @@ export function isFakeGeosite(g: { id?: string; name?: string }): boolean {
   return false;
 }
 
-export const MOTTO = "石头上写着地球的字。我们负责读出来，不负责撕走。";
+export const MOTTO = "石头上有字。读就行，别撕下来。";
 
 export const FOSSIL_LAW =
-  "根据《古生物化石保护条例》与《地质遗迹保护管理规定》，古生物化石原则上属于国家所有。禁止私自发掘、买卖来路不明的化石。正确做法：看、拍、记；发现重要化石向管理部门报告。不要敲、不要挖、不要带走。";
+  "化石原则上归国家。看、拍、记就行。别敲，别挖，别往包里塞。碰上重要的，跟当地管理部门说一声。依据是《古生物化石保护条例》。";
 
 export const FOSSIL_LAW_HK =
   "香港是单独法域。内地《古生物化石保护条例》不在此直接适用。不要敲、挖、带走标本。遵守《郊野公园条例》与现场告示。";

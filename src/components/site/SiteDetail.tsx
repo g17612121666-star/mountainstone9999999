@@ -117,16 +117,15 @@ export function SiteDetail({ site }: { site: Site }) {
             photo={shot.src}
             overlay
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 pb-6 pt-24">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent px-4 pb-7 pt-28">
             <div className="mx-auto max-w-3xl">
-              <h1 className="font-display text-4xl leading-tight font-semibold text-primary-fg sm:text-5xl">
-                {displayName(s, locale)}
-              </h1>
-              <p className="mt-2 text-sm text-primary-fg/90">
+              <p className="text-sm text-primary-fg/90">
                 {placeLine(site, locale)}
                 {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
               </p>
-              {shot.related ? <p className="mt-2 max-w-md text-xs text-primary-fg/80">{t("relatedPhoto")}</p> : null}
+              <h1 className="font-display mt-1 text-4xl leading-[1.15] font-semibold text-primary-fg drop-shadow-sm sm:text-5xl">
+                {displayName(s, locale)}
+              </h1>
             </div>
           </div>
         </div>

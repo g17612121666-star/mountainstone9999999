@@ -25,12 +25,12 @@ function AboutPage() {
       <AppHeader />
       <main id="main" className="mx-auto w-full max-w-2xl px-4 py-10">
         <p className="text-xs font-semibold tracking-wide text-moss">{t("appName")}</p>
-        <h1 className="font-display mt-2 text-4xl font-semibold">{t("aboutTitle")}</h1>
+        <h1 className="display-title mt-2">{t("aboutTitle")}</h1>
         <p className="mt-5 font-display text-xl leading-relaxed">{motto(locale)}</p>
         <p className="mt-4 text-base leading-relaxed">
           {en
-            ? "A map of rocks in China that you can tap. Not a brochure, and it does not sell tickets. Open a place and read what the rock is, how it cracked, what to look at first, and what you must not hammer."
-            : "这是一张能点进去的中国石头地图。不是攻略，也不卖票。点开一个地方，看石头是什么、怎么裂开的、到了先看哪，还有什么不能敲。"}
+            ? "A map of rocks in China you can tap. Not a brochure. Open a place and read what the rock is, how it cracked, what to look at first, and what you must not hammer."
+            : "这是一张能点进去的中国石头地图。不是风景介绍。点开一个地方，看石头是什么、怎么裂开的、到了先看哪，还有什么不能敲。"}
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           {en

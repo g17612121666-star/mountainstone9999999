@@ -96,7 +96,7 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       {
         name: "description",
-        content: "随身地质向导。一张可缩放的中国地质点地图：成因、打卡点、路线、观察与购票。",
+        content: "口袋里的中国石头地图。点开一处，看岩石是什么、怎么裂开、到了先看哪。只看不挖。",
       },
       { name: "robots", content: "index, follow" },
       { name: "theme-color", content: "#6B5344" },

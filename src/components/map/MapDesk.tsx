@@ -56,7 +56,9 @@ export function MapDesk() {
   const picks = STARTERS.map((id) => getSite(id)).filter((s): s is NonNullable<typeof s> => !!s);
 
   return (
-    <aside className="pointer-events-auto w-full rounded-xl bg-surface/95 p-3 shadow-[var(--shadow-border)]">
+    <aside className="pointer-events-auto w-full overflow-hidden rounded-2xl bg-surface/95 shadow-[var(--shadow-border-hover)]">
+      <div className="h-1 bg-moss" />
+      <div className="p-3">
       <div className="mb-2 flex items-start gap-2">
         <div className="min-w-0">
           <p className="font-display text-base font-semibold leading-tight">{t("deskTitle")}</p>
@@ -96,6 +98,7 @@ export function MapDesk() {
       <Link to="/routes/$id" params={{ id: "danxia" }} className="mt-2 inline-flex text-sm text-moss underline">
         {t("deskTrail")}
       </Link>
+      </div>
     </aside>
   );
 }

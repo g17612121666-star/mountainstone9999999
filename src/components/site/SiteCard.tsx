@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { ClickableImage } from "@/components/media/FieldPhoto";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
-import { coverFor } from "@/lib/geo/catalog";
+import { clipFor, coverFor } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import type { Site } from "@/lib/geo/types";
 import { displayName, localizeSite, placeLine, useLocale, useT } from "@/lib/i18n";
@@ -19,6 +20,7 @@ export function SiteCard({
   const locale = useLocale((s) => s.locale);
   const s = localizeSite(site, locale);
   const shot = coverFor(site);
+  const film = clipFor(site);
   return (
     <article className="overflow-hidden rounded-2xl bg-surface shadow-[var(--shadow-border)]">
       {shot ? (
@@ -38,8 +40,8 @@ export function SiteCard({
             {placeLine(site, locale)}
           </p>
         </div>
-        {shot?.related ? <p className="text-xs leading-relaxed text-muted">{t("relatedPhoto")}</p> : null}
-        <p className="text-base leading-relaxed text-ink">{s.hook}</p>
+        {s.hook ? <p className="text-base leading-relaxed text-ink">{s.hook}</p> : null}
+        {film ? <BiliEmbed video={film.video} poster={shot?.src} /> : null}
         <div className="flex gap-2 pt-1">
           <Button asChild className="flex-1">
             <Link {...siteTo(site)}>{t("openGuide")}</Link>
