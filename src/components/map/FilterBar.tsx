@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { LocateButton } from "@/components/map/LocateButton";
 import { TimescaleBar } from "@/components/geo/TimescaleBar";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useMemo, useState, type ReactNode } from "react";
@@ -9,7 +10,8 @@ import { useMapStore } from "@/lib/geo/store";
 import { sites, stats } from "@/lib/geo/catalog";
 import { filterSites, suggestSites } from "@/lib/geo/search";
 import { cn } from "@/lib/utils";
-import { displayName, landformLabel, placeLine, provinceLabel, useLocale, useT, type UiKey } from "@/lib/i18n";
+import { displayName, landformLabel, placeLine, provinceLabel, typeBadge, useLocale, useT, type UiKey } from "@/lib/i18n";
+import { isRealPhoto } from "@/lib/geo/safety";
 
 const LEVELS: { id: SiteType; key: UiKey }[] = [
   { id: "world_geopark", key: "world" },
@@ -68,7 +70,7 @@ export function FilterBar() {
   return (
     <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex flex-col gap-2 p-3 pt-3 sm:max-w-sm">
       <div className="pointer-events-auto flex gap-2">
-        <div className="relative flex-1">
+        <div className="relative min-w-0 flex-1">
           <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted" />
           <Input
             value={filters.query}
@@ -108,14 +110,23 @@ export function FilterBar() {
                         <button
                           type="button"
                           className={cn(
-                            "flex w-full flex-col items-start gap-0.5 px-3 py-2.5 text-left text-sm",
+                            "flex w-full items-center gap-2 px-3 py-2 text-left text-sm",
                             i === activeIx ? "bg-surface-2" : "hover:bg-surface-2",
                           )}
                           onMouseEnter={() => setActiveIx(i)}
                           onClick={() => pick(s.id)}
                         >
-                          <span className="font-medium">{displayName(s, locale)}</span>
-                          <span className="text-xs text-muted">{placeLine(s, locale)}</span>
+                          <span className="size-10 shrink-0 overflow-hidden rounded-md bg-surface-2">
+                            {isRealPhoto(s.cover_image) ? (
+                              <img src={s.cover_image} alt="" className="size-full object-cover" />
+                            ) : null}
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block truncate font-medium">{displayName(s, locale)}</span>
+                            <span className="block truncate text-xs text-muted">
+                              {typeBadge(s, locale)} · {placeLine(s, locale)}
+                            </span>
+                          </span>
                         </button>
                       </li>
                     );
@@ -134,7 +145,8 @@ export function FilterBar() {
         >
           {open ? <X className="size-4" /> : <SlidersHorizontal className="size-4" />}
         </Button>
-        <Button variant="outline" size="sm" className="shrink-0 bg-surface/95 shadow-[var(--shadow-border)]" asChild>
+        <LocateButton />
+        <Button variant="outline" size="sm" className="h-11 shrink-0 bg-surface/95 shadow-[var(--shadow-border)]" asChild>
           <Link to="/nearby">{t("nearby")}</Link>
         </Button>
       </div>

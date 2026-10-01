@@ -4,6 +4,8 @@ import { AppHeader } from "@/components/layout/AppHeader";
 import { ChinaMap } from "@/components/map/ChinaMap";
 import { FilterBar } from "@/components/map/FilterBar";
 import { MapLegend } from "@/components/map/Legend";
+import { MapDesk } from "@/components/map/MapDesk";
+import { MapPile } from "@/components/map/MapPile";
 import { SiteCard } from "@/components/site/SiteCard";
 import { seoHead } from "@/lib/geo/canonical";
 import { getSite } from "@/lib/geo/catalog";
@@ -30,6 +32,7 @@ function Home() {
   const selectedId = useMapStore((s) => s.selectedId);
   const select = useMapStore((s) => s.select);
   const site = selectedId ? getSite(selectedId) : undefined;
+  const pile = useMapStore((s) => s.pile);
   const t = useT();
 
   useEffect(() => {
@@ -55,7 +58,15 @@ function Home() {
           <div className="absolute inset-x-0 bottom-0 z-30 max-h-[70dvh] overflow-y-auto p-3 sm:inset-auto sm:top-16 sm:right-3 sm:bottom-auto sm:w-96">
             <SiteCard site={site} onClose={() => select(null)} />
           </div>
-        ) : null}
+        ) : pile ? (
+          <div className="absolute inset-x-0 bottom-0 z-30 p-3 sm:inset-auto sm:top-16 sm:right-3 sm:bottom-auto sm:w-96">
+            <MapPile />
+          </div>
+        ) : (
+          <div className="absolute right-16 bottom-20 left-3 z-20 sm:inset-x-auto sm:bottom-4 sm:left-1/2 sm:w-[34rem] sm:-translate-x-1/2">
+            <MapDesk />
+          </div>
+        )}
       </main>
     </div>
   );

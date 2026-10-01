@@ -14,8 +14,8 @@
   --color-surface-2: #e6ddd0;
   --color-ink: #2c261c;
   --color-fg: #2c261c;
-  --color-muted: #2a261f;
-  --color-subtle: #322c24;
+  --color-muted: #4e463c;
+  --color-subtle: #5a5046;
   --color-sand: #6b5344;
   --color-primary: #6b5344;
   --color-primary-fg: #f7f3eb;
@@ -30,7 +30,7 @@
   --color-card: #f7f3eb;
   --color-background: #f3eee4;
   --color-foreground: #2c261c;
-  --color-muted-foreground: #2a261f;
+  --color-muted-foreground: #4e463c;
   --color-destructive: #7a3b32;
 
   --radius-xs: 4px;

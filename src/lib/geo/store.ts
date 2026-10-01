@@ -18,6 +18,9 @@ interface MapState {
   filters: MapFilters;
   selectedId: string | null;
   hoveredId: string | null;
+  pile: MapPile | null;
+  fly: MapFly | null;
+  userAt: [number, number] | null;
   setQuery: (query: string) => void;
   toggleType: (t: SiteType) => void;
   toggleLandform: (t: LandformType) => void;
@@ -27,6 +30,24 @@ interface MapState {
   resetFilters: () => void;
   select: (id: string | null) => void;
   hover: (id: string | null) => void;
+  openPile: (pile: MapPile) => void;
+  clearPile: () => void;
+  requestFly: (lat: number, lng: number, zoom: number) => void;
+  setUserAt: (lngLat: [number, number] | null) => void;
+}
+
+export interface MapPile {
+  kind: "cluster" | "nearby";
+  ids: string[];
+  /** [lat, lng] */
+  at?: [number, number];
+}
+
+export interface MapFly {
+  lat: number;
+  lng: number;
+  zoom: number;
+  n: number;
 }
 
 const initial: MapFilters = {
@@ -44,6 +65,9 @@ export const useMapStore = create<MapState>((set) => ({
   filters: initial,
   selectedId: null,
   hoveredId: null,
+  pile: null,
+  fly: null,
+  userAt: null,
   setQuery: (query) => set((s) => ({ filters: { ...s.filters, query } })),
   toggleType: (t) =>
     set((s) => ({
@@ -75,6 +99,10 @@ export const useMapStore = create<MapState>((set) => ({
       },
     })),
   resetFilters: () => set({ filters: initial }),
-  select: (selectedId) => set({ selectedId }),
+  select: (selectedId) => set({ selectedId, pile: null }),
   hover: (hoveredId) => set({ hoveredId }),
+  openPile: (pile) => set({ pile, selectedId: null }),
+  clearPile: () => set({ pile: null }),
+  requestFly: (lat, lng, zoom) => set((s) => ({ fly: { lat, lng, zoom, n: (s.fly?.n ?? 0) + 1 } })),
+  setUserAt: (userAt) => set({ userAt }),
 }));

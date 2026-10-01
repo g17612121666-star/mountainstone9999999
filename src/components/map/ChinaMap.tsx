@@ -44,6 +44,8 @@ export function ChinaMap() {
   const select = useMapStore((s) => s.select);
   const locale = useLocale((s) => s.locale);
   const t = useT();
+  const userAt = useMapStore((s) => s.userAt);
+  const fly = useMapStore((s) => s.fly);
 
   useEffect(() => {
     const el = elRef.current;
@@ -136,16 +138,21 @@ export function ChinaMap() {
             members.reduce((a, s) => a + mapPair(s.coordinates, s.province, locale)[1], 0) /
             members.length;
           const n = members.length;
+          const size = Math.min(44, 24 + n / 4);
           const icon = L.divIcon({
             className: "cluster-dot",
             html: `<span>${n}</span>`,
-            iconSize: [Math.min(44, 24 + n / 4), Math.min(44, 24 + n / 4)],
-            iconAnchor: [16, 16],
+            iconSize: [size, size],
+            iconAnchor: [size / 2, size / 2],
           });
           const marker = L.marker([slat, slng], { icon, keyboard: true });
           marker.on("click", (e: LeafletMouseEvent) => {
             L.DomEvent.stop(e);
-            map.setView([slat, slng], Math.min(zoom + 2, 12));
+            const ids = [...members]
+              .sort((a, b) => a.name.localeCompare(b.name, "zh"))
+              .map((s) => s.id);
+            useMapStore.getState().openPile({ kind: "cluster", ids, at: [slat, slng] });
+            if (zoom < 7) map.setView([slat, slng], zoom + 1);
           });
           marker.bindTooltip(`${n} ${t("clusterSites")}`, { direction: "top", className: "marker-label" });
           marker.addTo(group);
@@ -155,6 +162,17 @@ export function ChinaMap() {
       if (selected) {
         const sel = matched.find((s) => s.id === selected) ?? getSite(selected);
         if (sel) addSiteMarker(L, group, sel, zoom, true, select, locale);
+      }
+
+      const pin = useMapStore.getState().userAt;
+      if (pin) {
+        L.circleMarker([pin[1], pin[0]], {
+          radius: 7,
+          color: "#f7f3eb",
+          weight: 2,
+          fillColor: "#3d5c52",
+          fillOpacity: 1,
+        }).addTo(group);
       }
 
       const geoGroup = geoLayerRef.current;
@@ -199,7 +217,12 @@ export function ChinaMap() {
     return () => {
       map.off("zoomend moveend", onView);
     };
-  }, [filters, selectedId, select, ready, locale, t]);
+  }, [filters, selectedId, select, ready, locale, t, userAt]);
+
+  useEffect(() => {
+    if (!ready || !fly) return;
+    mapRef.current?.flyTo([fly.lat, fly.lng], fly.zoom, { duration: 0.7 });
+  }, [fly, ready]);
 
   useEffect(() => {
     if (!ready) return;
