@@ -24,10 +24,11 @@ function radiusFor(site: Site, zoom: number): number {
 }
 
 function clusterCellSize(zoom: number): number | null {
-  if (zoom >= 7) return null;
-  if (zoom <= 4) return 2.0;
-  if (zoom <= 5) return 1.1;
-  return 0.55;
+  if (zoom >= 8) return null;
+  if (zoom <= 4) return 3.6;
+  if (zoom <= 5) return 2.8;
+  if (zoom <= 6) return 1.8;
+  return 1.05;
 }
 
 export function ChinaMap() {
@@ -233,6 +234,31 @@ function addSiteMarker(
   locale: "zh" | "en",
 ) {
   const [lng, lat] = mapPair(site.coordinates, site.province, locale);
+  const kind = primaryType(site);
+  if (kind === "gssp") {
+    const size = selected ? 16 : 13;
+    const marker = L.marker([lat, lng], {
+      icon: L.divIcon({
+        className: "gssp-pin",
+        html: "<span></span>",
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+      }),
+      keyboard: true,
+    });
+    marker.on("click", (e: LeafletMouseEvent) => {
+      L.DomEvent.stop(e);
+      select(site.id);
+    });
+    marker.bindTooltip(displayNameI18n(site, locale), {
+      direction: "top",
+      offset: [0, -8],
+      opacity: 0.95,
+      className: "marker-label",
+    });
+    marker.addTo(group);
+    return;
+  }
   const marker = L.circleMarker([lat, lng], {
     radius: radiusFor(site, zoom) + (selected ? 2 : 0),
     color: "#f7f3eb",

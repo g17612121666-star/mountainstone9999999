@@ -24,7 +24,7 @@ export {
   hasQualifiedEn,
 } from "./localize";
 export { provinceLabel } from "./provinces";
-export { repairEnSpacing, joinNameAge, joinLabeled } from "./space";
+export { repairEnSpacing, polishMachineEn, joinNameAge, joinLabeled } from "./space";
 
 const CJK = /[\u4e00-\u9fff]/;
 

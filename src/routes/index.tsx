@@ -47,7 +47,7 @@ function Home() {
         {t("skipMap")}
       </a>
       <AppHeader dense />
-      <main className="relative min-h-0 flex-1">
+      <main id="main" className="relative min-h-0 flex-1">
         <ChinaMap />
         <FilterBar />
         <MapLegend />

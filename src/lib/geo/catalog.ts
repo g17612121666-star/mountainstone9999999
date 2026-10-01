@@ -636,7 +636,24 @@ export function getAreas(siteId: string): Area[] {
 }
 
 export function relatedSites(site: Site): Site[] {
-  return site.related_site_ids.map((id) => siteById.get(id)).filter((s): s is Site => !!s);
+  return relatedEntries(site)
+    .map((e) => e.site)
+    .filter((s): s is Site => !!s);
+}
+
+export function relatedEntries(site: Site): { id: string; site?: Site }[] {
+  const seen = new Set<string>();
+  const out: { id: string; site?: Site }[] = [];
+  for (const id of site.related_site_ids) {
+    if (!id || seen.has(id)) continue;
+    seen.add(id);
+    const resolved =
+      siteById.get(id) ??
+      siteById.get(SITE_ALIASES[id] ?? "") ??
+      siteById.get(GSSP_ALIASES[id] ?? "");
+    out.push({ id, site: resolved });
+  }
+  return out;
 }
 
 export function gsspSites(): Site[] {

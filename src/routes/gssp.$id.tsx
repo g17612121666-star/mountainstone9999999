@@ -53,7 +53,7 @@ export const Route = createFileRoute("/gssp/$id")({
 function GsspPage() {
   const { site } = Route.useLoaderData();
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
       <SiteDetail site={site} />
       <AppFooter />

@@ -7,11 +7,11 @@ export function AppFooter() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   return (
-    <footer className="border-t border-border bg-bg-warm">
+    <footer className="border-t border-border-strong bg-bg-warm">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="font-display text-base font-semibold">{t("appName")}</p>
-          <p className="mt-1 max-w-sm text-sm leading-relaxed text-muted">{motto(locale)}</p>
+          <p className="mt-1 max-w-sm text-sm leading-relaxed text-ink">{motto(locale)}</p>
         </div>
         <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm" aria-label={t("footerNav")}>
           <Link to="/routes" className="text-moss underline">
@@ -40,7 +40,7 @@ export function AppFooter() {
           </Link>
         </nav>
       </div>
-      <p className="mx-auto max-w-5xl px-4 pb-6 text-xs text-subtle">
+      <p className="mx-auto max-w-5xl px-4 pb-6 text-sm text-ink">
         <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>
           {CONTACT_EMAIL}
         </a>

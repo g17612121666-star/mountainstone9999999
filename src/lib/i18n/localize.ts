@@ -3,7 +3,7 @@ import { LOOK_EN, stripLocatePhrase } from "@/lib/geo/look";
 import { sanitizeGeologicAge } from "@/lib/geo/age";
 import enBundle from "../../../data/en.json";
 import type { Locale } from "./locale";
-import { repairEnSpacing } from "./space";
+import { polishMachineEn } from "./space";
 import { FOSSIL_LAW_HK_EN } from "./ui";
 
 const CJK = /[\u4e00-\u9fff]/;
@@ -50,9 +50,9 @@ function hasCjk(v: unknown): boolean {
 
 function cleanStr(s: string, fallback: string): string {
   const t = (s || "").trim();
-  if (!t) return fallback;
-  if (hasCjk(t)) return fallback;
-  return repairEnSpacing(t);
+  if (!t) return polishMachineEn(fallback);
+  if (hasCjk(t)) return polishMachineEn(fallback);
+  return polishMachineEn(t);
 }
 
 function cleanGssp(g: GsspExtra, overlay?: Partial<GsspExtra>): GsspExtra {
@@ -241,21 +241,21 @@ export function localizeArea(area: Area, locale: Locale): Area {
 
 export function themeName(tr: ThemeRoute, locale: Locale): string {
   const n = locale === "en" ? tr.name_en || tr.name : tr.name;
-  return locale === "en" ? repairEnSpacing(n) : n;
+  return locale === "en" ? polishMachineEn(n) : n;
 }
 
 export function themeThesis(tr: ThemeRoute, locale: Locale): string {
   const n = locale === "en" ? tr.thesis_en || tr.thesis : tr.thesis;
-  return locale === "en" ? repairEnSpacing(n) : n;
+  return locale === "en" ? polishMachineEn(n) : n;
 }
 
 export function themeRole(tr: ThemeRoute, i: number, locale: Locale): string {
   const n = locale === "en" && tr.site_roles_en?.[i] ? tr.site_roles_en[i] : tr.site_roles[i] ?? "";
-  return locale === "en" ? repairEnSpacing(n) : n;
+  return locale === "en" ? polishMachineEn(n) : n;
 }
 
 export function themeTask(tr: ThemeRoute, locale: Locale): string {
-  return locale === "en" ? repairEnSpacing(tr.task_en || tr.task || "") : tr.task || "";
+  return locale === "en" ? polishMachineEn(tr.task_en || tr.task || "") : tr.task || "";
 }
 
 /** True when the English overlay has a real hook + formation, not a fallback. */

@@ -2,10 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { SiteLinkCard } from "@/components/site/SiteLinkCard";
 import { Button } from "@/components/ui/button";
 import { seoHead } from "@/lib/geo/canonical";
+import { getSite } from "@/lib/geo/catalog";
 import { deletePack, listPacks, registerFieldSw, swAvailable, type OfflinePackMeta } from "@/lib/geo/offline";
+import { siteTo } from "@/lib/geo/href";
 import { useLocale, useT } from "@/lib/i18n";
+
+const EXAMPLE_IDS = ["danxiashan", "zhangjiajie", "meishan"];
 
 export const Route = createFileRoute("/offline")({
   component: OfflinePage,
@@ -32,19 +37,37 @@ function OfflinePage() {
       setPacks(await listPacks());
     });
   }, []);
+  const examples = EXAMPLE_IDS.map((id) => getSite(id)).filter((s): s is NonNullable<typeof s> => !!s);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-2xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-2xl px-4 py-10">
         <h1 className="font-display text-3xl font-semibold">{t("offline")}</h1>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
+        <p className="mt-2 text-sm leading-relaxed text-ink">
           {swOk === false ? t("swDisabled") : t("offlineNote")}
         </p>
         {packs.length === 0 ? (
-          <p className="mt-8 text-sm text-muted">{t("offlineEmpty")}</p>
+          <section className="mt-8">
+            <p className="text-sm font-medium text-ink">{t("offlineEmpty")}</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink">{t("cacheExamples")}</p>
+            <ul className="mt-4 space-y-3">
+              {examples.map((s) => (
+                <li key={s.id}>
+                  <SiteLinkCard
+                    site={s}
+                    note={
+                      <Link {...siteTo(s)} className="text-moss underline">
+                        {t("openGuide")}
+                      </Link>
+                    }
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
         ) : (
           <>
-            <p className="mt-6 text-xs text-subtle">
+            <p className="mt-6 text-xs text-muted">
               {t("offlineList")}
               <span className="ml-2 rounded-full bg-surface-2 px-2 py-0.5">{packs.length}</span>
             </p>

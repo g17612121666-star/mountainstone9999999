@@ -87,11 +87,20 @@ export function addChinaBase(
   let satGroup: import("leaflet").LayerGroup | undefined;
   let vectorLayer: import("leaflet").TileLayer | undefined;
   let control: import("leaflet").Control.Layers | undefined;
+  let placesLayer: import("leaflet").TileLayer | undefined;
 
   function names(): Record<string, import("leaflet").Layer> {
     return locale === "en"
       ? { Satellite: satGroup!, Streets: vectorLayer! }
       : { 卫星: satGroup!, 标准: vectorLayer! };
+  }
+
+  function syncPlaces() {
+    if (!placesLayer || !satGroup) return;
+    const show = map.getZoom() >= 9 && mode === "sat";
+    const has = satGroup.hasLayer(placesLayer);
+    if (show && !has) satGroup.addLayer(placesLayer);
+    if (!show && has) satGroup.removeLayer(placesLayer);
   }
 
   function rebuild(keepView: boolean) {
@@ -108,6 +117,7 @@ export function addChinaBase(
       map.removeControl(control);
       control = undefined;
     }
+    placesLayer = undefined;
     const bounds = asiaBounds(L);
     if (locale === "en") {
       const sat = L.tileLayer(ESRI_SAT, {
@@ -116,14 +126,14 @@ export function addChinaBase(
         bounds,
         attribution: showAttr ? ATTR_EN_SAT : "",
       });
-      const places = L.tileLayer(ESRI_PLACES, {
+      placesLayer = L.tileLayer(ESRI_PLACES, {
         maxZoom: 19,
         noWrap: true,
         bounds,
         attribution: "",
         pane: "overlayPane",
       });
-      satGroup = L.layerGroup([sat, places]);
+      satGroup = L.layerGroup([sat]);
       vectorLayer = L.tileLayer(CARTO_EN, {
         subdomains: "abcd",
         maxZoom: 20,
@@ -143,14 +153,14 @@ export function addChinaBase(
         attribution: a,
       });
       attachOsmFallback(L, map, sat);
-      const labels = L.tileLayer(LABELS_ZH, {
+      placesLayer = L.tileLayer(LABELS_ZH, {
         subdomains: "1234",
         maxZoom: 18,
         noWrap: true,
         bounds,
         attribution: "",
       });
-      satGroup = L.layerGroup([sat, labels]);
+      satGroup = L.layerGroup([sat]);
       vectorLayer = L.tileLayer(VECTOR_ZH, {
         subdomains: "1234",
         maxZoom: 18,
@@ -168,6 +178,7 @@ export function addChinaBase(
       vectorLayer.addTo(map);
       mode = "vector";
     }
+    syncPlaces();
     if (showControl) {
       control = L.control
         .layers(names(), {}, { position: "bottomright", collapsed: true })
@@ -175,9 +186,12 @@ export function addChinaBase(
     }
   }
 
+  map.off("zoomend", syncPlaces);
+  map.on("zoomend", syncPlaces);
   map.on("baselayerchange", (e: { name?: string }) => {
     const n = e.name || "";
     mode = n === "Satellite" || n === "卫星" ? "sat" : "vector";
+    syncPlaces();
   });
 
   rebuild(false);

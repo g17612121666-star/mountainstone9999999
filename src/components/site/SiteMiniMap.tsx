@@ -4,7 +4,7 @@ import { MARKER_COLOR } from "@/lib/geo/constants";
 import { primaryType } from "@/lib/geo/labels";
 import { addBaseTiles } from "@/lib/geo/tiles";
 import type { Geosite, Site } from "@/lib/geo/types";
-import { useLocale } from "@/lib/i18n";
+import { localizeGeosite, useLocale } from "@/lib/i18n";
 
 export function SiteMiniMap({ site, geosites }: { site: Site; geosites: Geosite[] }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,6 +39,7 @@ export function SiteMiniMap({ site, geosites }: { site: Site; geosites: Geosite[
       const sep = locale === "en" ? " · " : "：";
       for (const g of geosites) {
         const [glng, glat] = mapPair(g.coordinates, site.province, locale);
+        const locG = localizeGeosite(g, locale);
         L.circleMarker([glat, glng], {
           radius: 4,
           color: "#f7f3eb",
@@ -46,7 +47,7 @@ export function SiteMiniMap({ site, geosites }: { site: Site; geosites: Geosite[
           fillOpacity: 0.9,
           weight: 1,
         })
-          .bindTooltip(`${g.name}${sep}${g.look_here}`, { direction: "top", className: "marker-label" })
+          .bindTooltip(`${locG.name}${sep}${locG.look_here}`, { direction: "top", className: "marker-label" })
           .addTo(map);
       }
       requestAnimationFrame(() => map?.invalidateSize());
@@ -56,5 +57,5 @@ export function SiteMiniMap({ site, geosites }: { site: Site; geosites: Geosite[
       map?.remove();
     };
   }, [site, geosites, locale]);
-  return <div ref={ref} className="h-52 w-full overflow-hidden rounded-lg bg-bg-warm sm:h-64" />;
+  return <div ref={ref} className="h-full min-h-56 w-full bg-bg-warm" />;
 }

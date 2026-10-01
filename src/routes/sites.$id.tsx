@@ -67,7 +67,7 @@ export const Route = createFileRoute("/sites/$id")({
 function SitePage() {
   const { site } = Route.useLoaderData();
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
       <SiteDetail site={site} />
       <AppFooter />

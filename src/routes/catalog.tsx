@@ -4,6 +4,7 @@ import { RecentlyWritten } from "@/components/geo/RecentlyWritten";
 import { TimescaleBar } from "@/components/geo/TimescaleBar";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { SiteRowLink } from "@/components/site/SiteLinkCard";
 import { Input } from "@/components/ui/input";
@@ -94,9 +95,9 @@ function CatalogPage() {
   const grouped = groupByProvince(list);
 
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-5xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-5xl px-4 py-10">
         <h1 className="font-display text-3xl font-semibold tracking-tight">{t("catalogTitle")}</h1>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
           {locale === "en"
@@ -106,7 +107,7 @@ function CatalogPage() {
             {t("gsspIndex")}
           </Link>
         </p>
-        <p className="mt-1 text-xs text-subtle">{t("gsspNote")}</p>
+        <p className="mt-1 text-xs text-muted">{t("gsspNote")}</p>
         <Input
           className="mt-5 max-w-md"
           placeholder={t("catalogSearchPh")}
@@ -114,146 +115,147 @@ function CatalogPage() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
         />
-        <div className="mt-5 flex flex-wrap gap-2">
-          {(
-            [
-              ["national", t("nationalParks")],
-              ["all", t("allSites")],
-            ] as const
-          ).map(([id, label]) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => setTab(id)}
-              className={
-                tab === id
-                  ? "h-10 rounded-full bg-sand px-4 text-sm text-primary-fg"
-                  : "h-10 rounded-full bg-surface-2 px-4 text-sm text-muted"
-              }
-            >
-              {label}
-            </button>
-          ))}
-          <Link
-            to="/gssp"
-            className="flex h-10 items-center rounded-full bg-surface-2 px-4 text-sm text-muted"
-          >
-            {t("gssp")}
-          </Link>
+        <div className="mt-5 space-y-3 rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">
+          <details open>
+            <summary className="cursor-pointer text-sm font-semibold">{t("filterBasic")}</summary>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(
+                [
+                  ["national", t("nationalParks")],
+                  ["all", t("allSites")],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setTab(id)}
+                  className="filter-chip"
+                  data-active={tab === id}
+                >
+                  {label}
+                </button>
+              ))}
+              <Link to="/gssp" className="filter-chip">
+                {t("gssp")}
+              </Link>
+              <select
+                className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
+                value={landform}
+                onChange={(e) => setLandform(e.target.value as LandformType | "")}
+              >
+                <option value="">{t("landformAny")}</option>
+                {LANDS.map((l) => (
+                  <option key={l} value={l}>
+                    {landformLabel(l, locale)}
+                  </option>
+                ))}
+              </select>
+              <select
+                className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
+                value={province}
+                onChange={(e) => setProvince(e.target.value)}
+              >
+                <option value="">{t("provinceAny")}</option>
+                {PROVINCES.map((p) => (
+                  <option key={p} value={p}>
+                    {provinceLabel(p, locale)}
+                  </option>
+                ))}
+              </select>
+              <select
+                className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
+                value={status}
+                onChange={(e) => setStatus(e.target.value as typeof status)}
+              >
+                <option value="all">{t("statusAny")}</option>
+                <option value="deep">{t("deepPage")}</option>
+                <option value="standard">{t("standardCard")}</option>
+              </select>
+              <select
+                className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
+                value={ticket}
+                onChange={(e) => setTicket(e.target.value as typeof ticket)}
+              >
+                <option value="all">{t("ticketAnyLong")}</option>
+                <option value="yes">{t("ticketYes")}</option>
+                <option value="no">{t("freeOpen")}</option>
+              </select>
+            </div>
+            <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+              <span className="text-xs text-muted">{t("tools")}</span>
+              <Link to="/nearby" className="text-moss underline">{t("nearby")}</Link>
+              <Link to="/compare" className="text-moss underline">{t("compare")}</Link>
+              <Link to="/glossary" className="text-moss underline">{t("glossary")}</Link>
+              <Link to="/browse" className="text-moss underline">{t("browse")}</Link>
+              <Link to="/offline" className="text-moss underline">{t("offline")}</Link>
+            </p>
+          </details>
+          <details>
+            <summary className="cursor-pointer text-sm font-semibold">{t("level")}</summary>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => setWorldOnly((v) => !v)}
+                className="filter-chip"
+                data-active={worldOnly}
+              >
+                {t("world")}
+              </button>
+              {(
+                [
+                  ["national_geopark", "national"],
+                  ["national_geopark_candidate", "candidate"],
+                  ["gssp", "gssp"],
+                  ["iugs_geoheritage", "iugs"],
+                  ["urban_geosite", "urban"],
+                ] as const
+              ).map(([id, key]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setLevel((v) => (v === id ? "" : id))}
+                  className="filter-chip"
+                  data-active={level === id}
+                >
+                  {t(key)}
+                </button>
+              ))}
+            </div>
+          </details>
+          <details>
+            <summary className="cursor-pointer text-sm font-semibold">{t("timescale")}</summary>
+            <div className="mt-3">
+              <TimescaleBar
+                ageOn={ageOn}
+                ageStart={ageStart}
+                ageEnd={ageEnd}
+                onAgeChange={(on, start, end) => {
+                  setAgeOn(on);
+                  if (on && start != null && end != null) {
+                    setAgeStart(start);
+                    setAgeEnd(end);
+                  }
+                }}
+              />
+            </div>
+          </details>
         </div>
-        <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm">
-          <span className="text-xs text-muted">{t("tools")}</span>
-          <Link to="/nearby" className="text-moss underline">
-            {t("nearby")}
-          </Link>
-          <Link to="/compare" className="text-moss underline">
-            {t("compare")}
-          </Link>
-          <Link to="/glossary" className="text-moss underline">
-            {t("glossary")}
-          </Link>
-          <Link to="/browse" className="text-moss underline">
-            {t("browse")}
-          </Link>
-          <Link to="/offline" className="text-moss underline">
-            {t("offline")}
-          </Link>
-        </p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <select
-            className="h-10 rounded-md border border-border bg-surface px-2 text-sm"
-            value={landform}
-            onChange={(e) => setLandform(e.target.value as LandformType | "")}
-          >
-            <option value="">{t("landformAny")}</option>
-            {LANDS.map((l) => (
-              <option key={l} value={l}>
-                {landformLabel(l, locale)}
-              </option>
-            ))}
-          </select>
-          <select
-            className="h-10 rounded-md border border-border bg-surface px-2 text-sm"
-            value={province}
-            onChange={(e) => setProvince(e.target.value)}
-          >
-            <option value="">{t("provinceAny")}</option>
-            {PROVINCES.map((p) => (
-              <option key={p} value={p}>
-                {provinceLabel(p, locale)}
-              </option>
-            ))}
-          </select>
-          <select
-            className="h-10 rounded-md border border-border bg-surface px-2 text-sm"
-            value={status}
-            onChange={(e) => setStatus(e.target.value as typeof status)}
-          >
-            <option value="all">{t("statusAny")}</option>
-            <option value="deep">{t("deepPage")}</option>
-            <option value="standard">{t("standardCard")}</option>
-          </select>
-          <select
-            className="h-10 rounded-md border border-border bg-surface px-2 text-sm"
-            value={ticket}
-            onChange={(e) => setTicket(e.target.value as typeof ticket)}
-          >
-            <option value="all">{t("ticketAnyLong")}</option>
-            <option value="yes">{t("ticketYes")}</option>
-            <option value="no">{t("freeOpen")}</option>
-          </select>
-          <button
-            type="button"
-            onClick={() => setWorldOnly((v) => !v)}
-            className={
-              worldOnly
-                ? "h-10 rounded-full bg-sand px-3 text-sm text-primary-fg"
-                : "h-10 rounded-full bg-surface-2 px-3 text-sm text-muted"
-            }
-          >
-            {t("world")}
-          </button>
-          {(
-            [
-              ["national_geopark", "national"],
-              ["national_geopark_candidate", "candidate"],
-              ["gssp", "gssp"],
-              ["iugs_geoheritage", "iugs"],
-              ["urban_geosite", "urban"],
-            ] as const
-          ).map(([id, key]) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => setLevel((v) => (v === id ? "" : id))}
-              className={
-                level === id
-                  ? "h-10 rounded-full bg-sand px-3 text-sm text-primary-fg"
-                  : "h-10 rounded-full bg-surface-2 px-3 text-sm text-muted"
-              }
-            >
-              {t(key)}
-            </button>
-          ))}
-        </div>
-        <p className="mt-3 text-xs text-subtle">
+        <p className="mt-3 text-sm text-muted">
           {t("catalogNow")} {list.length} · {t("catalogTotal")} {stats.total}
         </p>
-        <div className="mt-5 space-y-6">
-          <TimescaleBar
-            ageOn={ageOn}
-            ageStart={ageStart}
-            ageEnd={ageEnd}
-            onAgeChange={(on, start, end) => {
-              setAgeOn(on);
-              if (on && start != null && end != null) {
-                setAgeStart(start);
-                setAgeEnd(end);
-              }
-            }}
-          />
+        <div className="mt-5">
           <RecentlyWritten />
         </div>
+        {grouped.length > 0 ? (
+          <nav className="chip-row mt-8" aria-label={t("jumpProvince")}>
+            {grouped.map(([provinceName, items]) => (
+              <a key={provinceName} href={`#prov-${provinceName}`} className="toc-chip">
+                {provinceLabel(provinceName, locale)}
+                <span className="ml-1 text-muted">{items.length}</span>
+              </a>
+            ))}
+          </nav>
+        ) : null}
         <div className="mt-8 space-y-10">
           {grouped.length === 0 ? (
             <p className="rounded-xl bg-surface p-6 text-sm text-muted shadow-[var(--shadow-border)]">
@@ -261,7 +263,7 @@ function CatalogPage() {
             </p>
           ) : null}
           {grouped.map(([provinceName, items]) => (
-            <section key={provinceName}>
+            <section key={provinceName} id={`prov-${provinceName}`}>
               <h2 className="font-display flex flex-wrap items-baseline gap-2 text-xl font-semibold">
                 <span>{provinceLabel(provinceName, locale)}</span>
                 <span className="rounded-full bg-surface-2 px-2 py-0.5 text-sm font-normal text-muted">
@@ -277,8 +279,10 @@ function CatalogPage() {
                         site={s}
                         sub={
                           <>
-                            {loc.city || provinceLabel(s.province, locale)} · {typeLabel(s.types[0], locale)} ·{" "}
-                            {ageLabel(loc.geologic_age_text, locale)}
+                            {loc.city || provinceLabel(s.province, locale)} · {typeLabel(s.types[0], locale)}
+                            {ageLabel(loc.geologic_age_text, locale)
+                              ? ` · ${ageLabel(loc.geologic_age_text, locale)}`
+                              : ""}
                           </>
                         }
                         end={
@@ -296,6 +300,7 @@ function CatalogPage() {
         </div>
       </main>
       <AppFooter />
+      <BackToTop />
     </div>
   );
 }

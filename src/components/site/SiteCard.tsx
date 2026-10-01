@@ -1,13 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
 import { LandformCover } from "@/components/cover/LandformCover";
+import { ClickableImage } from "@/components/media/FieldPhoto";
+import { mediaKindFor, mediaKindUiKey } from "@/lib/geo/photos";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
 import { getVisit } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isRealPhoto } from "@/lib/geo/safety";
 import type { Site } from "@/lib/geo/types";
-import { displayName, localizeSite, placeLine, useLocale, useT } from "@/lib/i18n";
+import { displayName, localizeSite, photoCredit, placeLine, useLocale, useT } from "@/lib/i18n";
 
 export function SiteCard({
   site,
@@ -29,14 +31,26 @@ export function SiteCard({
   const photo = isRealPhoto(site.cover_image) ? site.cover_image : undefined;
   return (
     <article className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
-      <div className="relative h-28 overflow-hidden rounded-t-xl">
-        <LandformCover
-          type={site.landform_types[0] ?? "other"}
-          label={displayName(site, locale)}
-          photo={photo}
-          credit={site.cover_credit}
-        />
+      <div className="relative h-28 overflow-hidden">
+        {photo ? (
+          <ClickableImage
+            src={photo}
+            alt={displayName(site, locale)}
+            imgClass="h-28 w-full object-cover"
+            className="rounded-none shadow-none"
+            badge={t(mediaKindUiKey(mediaKindFor({ credit: site.cover_credit, role: "cover" })))}
+          />
+        ) : (
+          <LandformCover
+            type={site.landform_types[0] ?? "other"}
+            label={displayName(site, locale)}
+            decorative
+          />
+        )}
       </div>
+      {photo ? (
+        <p className="credit-bar py-1.5 text-[11px]">{photoCredit(site.cover_credit || "", locale)}</p>
+      ) : null}
       <div className="space-y-3 p-4">
         <SiteBadges site={site} />
         <div>

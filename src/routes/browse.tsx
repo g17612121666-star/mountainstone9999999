@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { SiteRowLink } from "@/components/site/SiteLinkCard";
 import { seoHead } from "@/lib/geo/canonical";
 import { sites } from "@/lib/geo/catalog";
@@ -47,28 +48,35 @@ function BrowsePage() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   const en = locale === "en";
+  const filled = BUCKETS.map((b) => ({ ...b, list: sites.filter(b.match) })).filter((b) => b.list.length);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-5xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-5xl px-4 py-10">
         <h1 className="font-display text-3xl font-semibold">{t("browse")}</h1>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">{t("browseLead")}</p>
-        <div className="mt-10 space-y-12">
-          {BUCKETS.map((b) => {
-            const list = sites.filter(b.match);
-            if (!list.length) return null;
+        <nav className="chip-row mt-6" aria-label={t("browseIndex")}>
+          {filled.map((b) => (
+            <a key={b.id} href={`#${b.id}`} className="toc-chip">
+              {en ? b.en : b.zh}
+              <span className="ml-1 text-muted">{b.list.length}</span>
+            </a>
+          ))}
+        </nav>
+        <div className="mt-8 space-y-12">
+          {filled.map((b) => {
             const title = en ? b.en : b.zh;
             return (
               <section key={b.id} id={b.id}>
                 <h2 className="font-display flex flex-wrap items-baseline gap-2 text-xl font-semibold">
                   <span>{title}</span>
                   <span className="rounded-full bg-surface-2 px-2 py-0.5 text-sm font-normal text-muted">
-                    {list.length}
+                    {b.list.length}
                   </span>
                 </h2>
-                <ul className="mt-3 divide-y divide-border overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)] sm:grid sm:grid-cols-2 sm:divide-y-0 sm:gap-px sm:bg-transparent sm:shadow-none">
-                  {list.map((s) => (
-                    <li key={s.id} className="sm:overflow-hidden sm:rounded-lg sm:bg-surface sm:shadow-[var(--shadow-border)]">
+                <ul className="handbook-grid handbook-grid-2 mt-3">
+                  {b.list.map((s) => (
+                    <li key={s.id} className="overflow-hidden rounded-lg bg-surface shadow-[var(--shadow-border)]">
                       <SiteRowLink
                         site={s}
                         sub={s.landform_types
@@ -85,6 +93,7 @@ function BrowsePage() {
         </div>
       </main>
       <AppFooter />
+      <BackToTop />
     </div>
   );
 }

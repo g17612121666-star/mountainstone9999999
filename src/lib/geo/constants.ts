@@ -6,15 +6,15 @@ export const DATA_CUTOFF = "2026-04";
 export const INFO_UPDATED_ON = "2026-04-20";
 
 export const MARKER_COLOR: Record<string, string> = {
-  world_geopark: "#3d5c52",
-  national_geopark: "#6b5344",
-  national_geopark_candidate: "#9a8b78",
-  gssp: "#7a3b32",
+  world_geopark: "#1b6b58",
+  national_geopark: "#2f4f7a",
+  national_geopark_candidate: "#c4a574",
+  gssp: "#9b1d2e",
   iugs_geoheritage: "#4a5c6a",
   urban_geosite: "#4a6080",
   stratotype: "#5c4a38",
   landform_site: "#7a6e5c",
-  geosite: "#8a7a64",
+  geosite: "#6d6458",
 };
 
 export const ROCK_GUESS: Record<LandformType, string> = {

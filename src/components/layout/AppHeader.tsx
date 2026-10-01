@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
 
-export function AppHeader({ dense = false }: { dense?: boolean }) {
+export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
+  void _dense;
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const t = useT();
   const links = [
@@ -22,12 +23,10 @@ export function AppHeader({ dense = false }: { dense?: boolean }) {
     { to: "/gssp", label: t("gssp") },
   ] as const;
   return (
-    <header
-      className={cn(
-        "z-30 flex items-center gap-3 border-b border-border bg-bg/92 px-3 backdrop-blur-sm",
-        dense ? "h-12" : "h-14",
-      )}
-    >
+    <header className="z-30 flex h-14 items-center gap-3 border-b border-border-strong bg-bg/96 px-3 backdrop-blur-sm">
+      <a href="#main" className="skip-link">
+        {t("skipContent")}
+      </a>
       <Link to="/" className="flex shrink-0 items-center gap-2">
         <span className="flex h-8 w-6 flex-col overflow-hidden rounded-sm border border-border">
           <span className="h-1.5 bg-moss" />
@@ -39,7 +38,7 @@ export function AppHeader({ dense = false }: { dense?: boolean }) {
           <span className="font-display block text-base leading-tight font-semibold tracking-tight">
             {t("appName")}
           </span>
-          {!dense ? <span className="block text-[11px] text-muted">{t("tagline")}</span> : null}
+          <span className="block text-[11px] leading-tight text-muted">{t("tagline")}</span>
         </span>
       </Link>
       <nav className="ml-auto flex items-center gap-0.5" aria-label={t("mainNav")}>

@@ -1,15 +1,18 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
 import { ThemeMap } from "@/components/map/ThemeMap";
 import { BiliEmbed } from "@/components/media/BiliEmbed";
+import { ClickableImage } from "@/components/media/FieldPhoto";
+import { MapFrame } from "@/components/site/MapFrame";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
 import { seoHead } from "@/lib/geo/canonical";
 import { getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
-import { isOwnCover } from "@/lib/geo/safety";
+import { isDiagramCredit, isOwnCover } from "@/lib/geo/safety";
 import { ageLabel } from "@/lib/geo/age";
 import type { Site } from "@/lib/geo/types";
 import {
@@ -53,9 +56,9 @@ function ThemePage() {
   const mapped = points.map((p) => p.site).filter((s): s is Site => !!s);
   const task = themeTask(theme, locale);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-3xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-3xl px-4 py-10">
         <p className="text-xs tracking-wide text-muted uppercase">{t("themeTrails")}</p>
         <h1 className="font-display mt-1 text-3xl font-semibold">{themeName(theme, locale)}</h1>
         <section className="mt-6">
@@ -82,7 +85,7 @@ function ThemePage() {
         ) : null}
         {theme.video?.bvid ? (
           <div className="mt-6">
-            <BiliEmbed video={theme.video} />
+            <BiliEmbed video={theme.video} poster={mapped.find((s) => isOwnCover(s))?.cover_image} />
           </div>
         ) : null}
         {theme.article ? (
@@ -98,8 +101,10 @@ function ThemePage() {
             </a>
           </p>
         ) : null}
-        <div className="mt-6 overflow-hidden rounded-xl shadow-[var(--shadow-border)]">
-          <ThemeMap sites={mapped} />
+        <div className="mt-6">
+          <MapFrame>
+            <ThemeMap sites={mapped} />
+          </MapFrame>
         </div>
         <ol className="mt-8 space-y-4">
           {points.map(({ site }, i) =>
@@ -120,16 +125,18 @@ function ThemePage() {
                   </div>
                 </div>
                 {isOwnCover(site) ? (
-                  <>
-                    <img
-                      src={site.cover_image}
-                      alt={photoCredit(site.cover_credit || "", locale)}
-                      className="h-40 w-full object-cover"
-                    />
-                    <p className="px-4 pt-2 text-[11px] leading-snug text-muted">
-                      {photoCredit(site.cover_credit || "", locale)}
-                    </p>
-                  </>
+                  <ClickableImage
+                    src={site.cover_image}
+                    alt={photoCredit(site.cover_credit || "", locale)}
+                    caption={photoCredit(site.cover_credit || "", locale)}
+                    imgClass="h-40 w-full object-cover"
+                    className="rounded-none shadow-none"
+                    badge={
+                      isDiagramCredit(site.cover_credit || "", "")
+                        ? t("photoKindDiagram")
+                        : t("photoKindRef")
+                    }
+                  />
                 ) : (
                   <p className="mx-4 rounded-md bg-surface-2 px-3 py-6 text-center text-xs text-muted">
                     {t("noPhoto")}
@@ -141,33 +148,29 @@ function ThemePage() {
                     {themeRole(theme, i, locale)}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed">{localizeSite(site, locale).hook}</p>
-                  <p className="mt-2 text-sm leading-relaxed">
-                    {localizeSite(site, locale).what_you_see_today || localizeSite(site, locale).formation_short}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {localizeSite(site, locale).formation_short}
-                  </p>
-                  <p className="mt-2 text-xs text-subtle">
-                    {t("landformColon")}
-                    {site.landform_types.map((lf) => landformLabel(lf, locale)).join(" · ")}
-                    <span className="mx-1">·</span>
-                    {t("age")} {ageLabel(localizeSite(site, locale).geologic_age_text || site.geologic_age_text, locale)}
-                  </p>
+                  {(() => {
+                    const loc = localizeSite(site, locale);
+                    const lands = site.landform_types
+                      .map((lf) => landformLabel(lf, locale))
+                      .filter((label) => label && label !== "其他" && label !== "Other");
+                    const age = ageLabel(loc.geologic_age_text || site.geologic_age_text, locale);
+                    if (!lands.length && !age) return null;
+                    return (
+                      <p className="meta-row mt-3">
+                        {lands.map((label) => (
+                          <span key={label} className="meta-tag">
+                            {label}
+                          </span>
+                        ))}
+                        {age ? (
+                          <span className="meta-tag">{locale === "en" ? `Age ${age}` : `时代 ${age}`}</span>
+                        ) : null}
+                      </p>
+                    );
+                  })()}
                   {site.video?.bvid ? (
                     <div className="mt-3">
-                      <BiliEmbed video={site.video} />
-                      <p className="mt-2 text-sm">
-                        <a
-                          className="text-moss underline"
-                          href={`https://www.bilibili.com/video/${site.video.bvid}`}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {t("videoExt")}
-                          {" · "}
-                          {locale === "en" ? site.video.title_en || site.video.title : site.video.title}
-                        </a>
-                      </p>
+                      <BiliEmbed video={site.video} poster={isOwnCover(site) ? site.cover_image : undefined} />
                     </div>
                   ) : (
                     <p className="mt-2 text-sm">
@@ -190,7 +193,13 @@ function ThemePage() {
                   )}
                 </div>
               </li>
-            ) : null,
+            ) : (
+              <li key={`missing-${i}`} className="rounded-xl border border-dashed border-border bg-surface-2 p-4">
+                <p className="text-xs font-medium text-muted">{t("unlisted")}</p>
+                <p className="font-display mt-1 text-lg font-semibold">{theme.site_ids[i]}</p>
+                <p className="mt-1 text-sm text-muted">{t("unlistedNote")}</p>
+              </li>
+            ),
           )}
         </ol>
         <div className="mt-8">
@@ -212,6 +221,7 @@ function ThemePage() {
         </div>
       </main>
       <AppFooter />
+      <BackToTop />
     </div>
   );
 }

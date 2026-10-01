@@ -8,7 +8,7 @@ export function getRouter() {
     routeTree,
     defaultErrorComponent: AppErrorComponent,
     defaultNotFoundComponent: () => (
-      <main className="flex min-h-dvh flex-col items-center justify-center gap-3 bg-bg px-6 text-center">
+      <main id="main" className="flex min-h-dvh flex-col items-center justify-center gap-3 bg-bg px-6 text-center">
         <h1 className="font-display text-xl font-semibold">{t("notFoundTitle")}</h1>
         <p className="text-sm text-muted">{t("notFoundBody")}</p>
         <a href="/" className="text-sm text-moss underline">

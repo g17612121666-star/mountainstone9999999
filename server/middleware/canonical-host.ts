@@ -35,20 +35,24 @@ function hostnameOf(hostHeader: string): string {
 function headerBag(event: EventShape): Record<string, string> {
   const out: Record<string, string> = {};
   const bags: unknown[] = [event.req?.headers, event.node?.req?.headers];
+  const names = [
+    "x-forwarded-host",
+    "x-original-host",
+    "x-vercel-forwarded-host",
+    "forwarded",
+    "host",
+  ];
   for (const bag of bags) {
     if (!bag) continue;
     if (typeof (bag as Headers).get === "function") {
       const h = bag as Headers;
-      for (const name of [
-        "x-forwarded-host",
-        "x-original-host",
-        "x-vercel-forwarded-host",
-        "forwarded",
-        "host",
-        ":authority",
-      ]) {
-        const v = h.get(name);
-        if (v) out[name] = v;
+      for (const name of names) {
+        try {
+          const v = h.get(name);
+          if (v) out[name] = v;
+        } catch {
+          /* Fetch Headers rejects pseudo-headers such as :authority */
+        }
       }
       continue;
     }
@@ -97,7 +101,12 @@ export default async function canonicalHost(
   event: EventShape,
   next: () => unknown | Promise<unknown>,
 ): Promise<unknown> {
-  const host = headerHost(event);
+  let host = "";
+  try {
+    host = headerHost(event);
+  } catch {
+    return next();
+  }
   const method = (event.req?.method ?? "GET").toUpperCase();
   const path = (event.url?.pathname || "/") + (event.url?.search || "");
 

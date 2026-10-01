@@ -21,13 +21,13 @@ function GsspIndex() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-3xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-3xl px-4 py-10">
         <h1 className="font-display text-3xl font-semibold">{t("gsspIndex")}</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted">{t("gsspLead")}</p>
-        <p className="mt-2 text-xs text-subtle">{t("gsspNote")}</p>
-        <ul className="mt-8 space-y-3">
+        <p className="mt-2 text-xs text-muted">{t("gsspNote")}</p>
+        <ul className="handbook-grid handbook-grid-2 mt-8">
           {list.map((s) => {
             const loc = localizeSite(s, locale);
             return (

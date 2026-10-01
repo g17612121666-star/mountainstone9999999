@@ -31,7 +31,7 @@ export function LandformCover({
         <img
           src={photo}
           alt={decorative ? "" : creditLine}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center outline outline-1 -outline-offset-1 outline-black/10"
         />
         <div
           className={
@@ -40,11 +40,6 @@ export function LandformCover({
               : "absolute inset-0 bg-gradient-to-t from-ink/45 to-transparent"
           }
         />
-        {decorative || overlay ? null : (
-          <p className="absolute right-3 bottom-2 left-3 text-[11px] leading-snug text-primary-fg/90">
-            {creditLine}
-          </p>
-        )}
       </div>
     );
   }

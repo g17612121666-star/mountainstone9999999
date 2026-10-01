@@ -149,6 +149,48 @@ export function isSatelliteCredit(credit: string): boolean {
   return /卫星|Esri World Imagery/i.test(credit || "");
 }
 
+export type MediaKindKey =
+  | "field"
+  | "satellite"
+  | "section"
+  | "analog"
+  | "reference"
+  | "diagram";
+
+export function mediaKindFor(opts: {
+  kind?: string;
+  credit?: string;
+  caption?: string;
+  role?: "cover" | "stop" | "gallery" | "genesis" | "compare";
+}): MediaKindKey {
+  const credit = opts.credit || "";
+  const caption = opts.caption || "";
+  const blob = `${credit} ${caption}`;
+  if (opts.kind === "analog") return "analog";
+  if (opts.kind === "satellite" || isSatelliteCredit(credit)) return "satellite";
+  if (isDiagramCredit(credit, caption)) return "diagram";
+  if (/剖面/.test(blob)) return "section";
+  if (opts.role === "stop") return "field";
+  return "reference";
+}
+
+export function mediaKindUiKey(kind: MediaKindKey): "photoKindField" | "satBadge" | "photoKindSection" | "analogBadge" | "photoKindRef" | "photoKindDiagram" {
+  switch (kind) {
+    case "field":
+      return "photoKindField";
+    case "satellite":
+      return "satBadge";
+    case "section":
+      return "photoKindSection";
+    case "analog":
+      return "analogBadge";
+    case "diagram":
+      return "photoKindDiagram";
+    default:
+      return "photoKindRef";
+  }
+}
+
 export function classifyCover(site: Site): PhotoType {
   const credit = site.cover_credit || "";
   const caption = "";
@@ -364,29 +406,15 @@ export function assignPhotoSlots(sites: Site[], geosites: Geosite[]): void {
       }
     }
 
-    let stopIndex = 0;
     for (const g of stopList) {
-      if (g.photo_kind === "own" && isRealPhoto(g.photo) && g.photo !== cover) continue;
-      if (g.photo === cover) g.photo = "";
-      const donor = pickDonor(site, donors, new Set([cover, site.genesis?.src || ""]), stopIndex);
-      stopIndex += 1;
-      if (donor) {
-        const photo = analogPhoto(site, donor);
-        g.photo = photo.src;
-        g.photo_kind = "analog";
-        g.photo_credit = photo.credit;
-        g.analog_from_id = donor.id;
-        g.analog_note_zh = photo.analog_note_zh;
-        g.analog_note_en = photo.analog_note_en;
-      } else if (site.genesis && site.genesis.kind === "satellite") {
-        g.photo = esriSatSrc(g.coordinates?.length === 2 ? g.coordinates : site.coordinates, 0.02);
-        g.photo_kind = "satellite";
-        g.photo_credit = SAT_CREDIT;
-      } else {
-        g.photo = satellitePhoto(site, 0.022).src;
-        g.photo_kind = "satellite";
-        g.photo_credit = SAT_CREDIT;
-      }
+      const own = g.photo_kind === "own" && isRealPhoto(g.photo) && g.photo !== cover;
+      if (own) continue;
+      g.photo = "";
+      g.photo_kind = undefined;
+      g.photo_credit = "";
+      g.analog_from_id = undefined;
+      g.analog_note_zh = undefined;
+      g.analog_note_en = undefined;
     }
 
     const seen = new Set<string>();
@@ -403,21 +431,12 @@ export function assignPhotoSlots(sites: Site[], geosites: Geosite[]): void {
 
 export function fieldPhotoFromGeosite(g: Geosite): FieldPhoto | undefined {
   if (!isRealPhoto(g.photo)) return undefined;
-  const kind: FieldPhoto["kind"] = g.analog_from_id
-    ? "analog"
-    : g.photo_kind === "satellite"
-      ? "satellite"
-      : g.photo_kind === "analog"
-        ? "analog"
-        : "own";
+  if (g.photo_kind === "analog" || g.photo_kind === "satellite" || g.analog_from_id) return undefined;
   return {
     src: g.photo,
     credit: g.photo_credit || "",
-    caption: g.analog_note_zh || "",
-    kind,
-    analog_from_id: g.analog_from_id,
-    analog_note_zh: g.analog_note_zh,
-    analog_note_en: g.analog_note_en,
+    caption: "",
+    kind: "own",
   };
 }
 

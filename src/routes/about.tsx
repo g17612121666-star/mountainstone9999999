@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { CONTACT_EMAIL, seoHead } from "@/lib/geo/canonical";
 import { bundleMeta, stats } from "@/lib/geo/catalog";
 import { fossilLaw, fossilLawFor, motto, useLocale, useT } from "@/lib/i18n";
@@ -20,9 +21,9 @@ function AboutPage() {
   const locale = useLocale((s) => s.locale);
   const en = locale === "en";
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-2xl px-4 py-10">
+      <main id="main" className="mx-auto w-full max-w-2xl px-4 py-10">
         <h1 className="font-display text-3xl font-semibold">{t("aboutTitle")}</h1>
         <p className="mt-4 text-lg leading-relaxed">{motto(locale)}</p>
         <p className="mt-4 text-sm leading-relaxed">
@@ -89,22 +90,24 @@ function AboutPage() {
         </p>
 
         <h2 className="font-display mt-10 text-xl font-semibold">{t("producer")}</h2>
-        <figure className="mt-4 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
+        <figure className="mt-4 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)] sm:flex sm:items-stretch">
           <img
             src="/producer.jpg"
             alt={en ? "Li Zeyu in the field, geological hammer in hand" : "李泽宇在野外，手里拿着地质锤"}
-            className="aspect-[4/5] w-full object-cover object-[50%_18%] sm:aspect-[5/4]"
+            className="aspect-[4/5] w-full object-cover object-[50%_18%] sm:w-48 sm:shrink-0 sm:aspect-auto"
           />
-          <figcaption className="space-y-2 px-4 py-4 text-sm leading-relaxed">
+          <figcaption className="space-y-3 px-5 py-5">
+            <p className="text-xs font-semibold tracking-wide text-moss">{t("producer")}</p>
             {en ? (
-              <p>
-                Website Producer: Li Zeyu. A geoscience lover. President of the Geoscience Club of
-                Shanghai Pinghe School.
+              <p className="font-display text-2xl leading-snug font-semibold">
+                Li Zeyu. A geoscience lover. President of the Geoscience Club of Shanghai Pinghe School.
               </p>
             ) : (
-              <p>网站制作：李泽宇。地质爱好者。上海平和学校地质社社长。</p>
+              <p className="font-display text-2xl leading-snug font-semibold">
+                李泽宇。地质爱好者。上海平和学校地质社社长。
+              </p>
             )}
-            <p className="text-muted">
+            <p className="text-base leading-relaxed text-ink">
               {en
                 ? "A field notebook for walking China’s geoparks, GSSPs and urban rock — written so a stop can be checked on the ground, not sold as scenery."
                 : "把中国的地质公园、金钉子和城市里的石头写成可现场核对的手册，而不是风景介绍。"}
@@ -134,6 +137,7 @@ function AboutPage() {
         </p>
       </main>
       <AppFooter />
+      <BackToTop />
     </div>
   );
 }

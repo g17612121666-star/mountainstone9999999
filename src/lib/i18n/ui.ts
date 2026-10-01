@@ -10,6 +10,7 @@ export const UI = {
   navRoutes: { zh: "线路", en: "Trails" },
   navAbout: { zh: "关于", en: "About" },
   skipMap: { zh: "跳到地图", en: "Skip to map" },
+  skipContent: { zh: "跳到正文", en: "Skip to content" },
   searchPh: { zh: "园名、地名、岩石、化石、阶名", en: "Park, rock, fossil, stage, place" },
   searchAria: { zh: "搜索园名、地名、岩石、化石、阶名", en: "Search parks, rocks, fossils, stages" },
   searchEmpty: {
@@ -176,8 +177,8 @@ export const UI = {
     en: "Stops not yet checked. No invented pins on the map.",
   },
   noStopPhoto: {
-    zh: "暂无该打卡点公开露头照片",
-    en: "No public outcrop photo for this stop yet",
+    zh: "待补现场照",
+    en: "Field photo still to come",
   },
   updatedOn: { zh: "信息更新于", en: "Updated" },
   catalogSearchPh: {
@@ -200,6 +201,10 @@ export const UI = {
   nearbyNone: {
     zh: "这一圈里没有名录点。放大半径，或打开名录。",
     en: "No catalog sites in this radius. Widen it, or open the catalog.",
+  },
+  nearbyNotFound: {
+    zh: "未找到附近地质点。换个地名，或点下面的城市再试。",
+    en: "No nearby geosites found. Try another place name, or pick a city below.",
   },
   locateMe: { zh: "用我的位置", en: "Use my location" },
   radius: { zh: "半径", en: "Radius" },
@@ -231,6 +236,10 @@ export const UI = {
   noVideo: {
     zh: "暂无合适现场讲解",
     en: "No suitable on-site process video yet",
+  },
+  videoEmptyHint: {
+    zh: "这一栏会放过程讲解。现在没有合适片源，所以只留封面，不嵌播放器。",
+    en: "This slot is for a process video. There is no suitable clip yet, so the cover stays and no player is embedded.",
   },
   offlineSwFail: {
     zh: "当前托管环境无法注册 Service Worker，正文缓存仅限本次会话。底图不承诺离线。不要把这次勾选当成已可离线。",
@@ -324,11 +333,35 @@ export const UI = {
     zh: "本园坐标按 WGS84 显示，香港不偏移到 GCJ-02。",
     en: "Coordinates stay in WGS 84. Hong Kong is not shifted to GCJ-02.",
   },
-  analogBadge: { zh: "类比示意 · 非本园实拍", en: "Analog, not this park" },
-  satBadge: { zh: "卫星资料照片 · 非地面实拍", en: "Satellite image, not a ground photo" },
+  analogBadge: { zh: "类比 · 非本园实拍", en: "Analog · not this park" },
+  satBadge: { zh: "卫星 · 非地面实拍", en: "Satellite · not a ground photo" },
   genesisLook: { zh: "看这里", en: "Look for" },
   diagramAppendix: { zh: "示意图附图（不是现场照片）", en: "Diagrams (not field photos)" },
   creditExpand: { zh: "来源与许可", en: "Source & licence" },
+  photoKindField: { zh: "现场", en: "Field" },
+  photoKindSection: { zh: "剖面", en: "Section" },
+  photoKindRef: { zh: "非本站实拍", en: "Not surveyed here" },
+  photoKindDiagram: { zh: "示意图", en: "Diagram" },
+  openVideo: { zh: "打开视频", en: "Open video" },
+  videoOnBili: { zh: "在哔哩哔哩观看（外链）", en: "Watch on Bilibili (external)" },
+  unlisted: { zh: "未收录", en: "Not in this edition" },
+  unlistedNote: {
+    zh: "本期名录尚未收入该点，卡片不可打开。",
+    en: "This edition does not include this site. The card is not a link.",
+  },
+  applyFilters: { zh: "应用", en: "Apply" },
+  filterBasic: { zh: "基础", en: "Basics" },
+  filterMore: { zh: "更多条件", en: "More filters" },
+  jumpProvince: { zh: "按省跳转", en: "Jump to province" },
+  backToTop: { zh: "回到顶部", en: "Back to top" },
+  pageIndex: { zh: "本页目录", en: "On this page" },
+  cacheExamples: { zh: "先缓存这几条", en: "Cache one of these first" },
+  nearbyTryCities: { zh: "试试这些城市", en: "Try these cities" },
+  mapSource: { zh: "底图来源", en: "Basemap" },
+  trailsLandform: { zh: "按地貌", en: "By landform" },
+  closeLightbox: { zh: "关闭大图", en: "Close image" },
+  glossaryIndex: { zh: "分类索引", en: "Index" },
+  browseIndex: { zh: "过程目录", en: "Process index" },
   noStopOutcrop: {
     zh: "暂无该打卡点公开露头照片",
     en: "No public outcrop photo for this stop yet",

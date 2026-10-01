@@ -55,5 +55,5 @@ export function ThemeMap({ sites }: { sites: Site[] }) {
       map?.remove();
     };
   }, [sites, locale]);
-  return <div ref={ref} className="h-56 w-full overflow-hidden rounded-xl bg-bg-warm sm:h-72" />;
+  return <div ref={ref} className="h-full min-h-56 w-full bg-bg-warm" />;
 }

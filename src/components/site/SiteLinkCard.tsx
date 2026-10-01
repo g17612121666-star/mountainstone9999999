@@ -35,7 +35,7 @@ export function SiteLinkCard({
       ) : null}
       <div className="min-w-0 flex-1 p-4">
         <SiteBadges site={site} compact />
-        <p className="font-display mt-2 text-xl font-semibold">
+        <p className="font-display mt-2 text-xl font-semibold break-words">
           <Link {...siteTo(site)} className="hover:underline">
             {displayName(site, locale)}
           </Link>

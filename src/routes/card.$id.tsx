@@ -6,8 +6,10 @@ import { getGeosites, getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { stripLocatePhrase } from "@/lib/geo/look";
+import { ClickableImage } from "@/components/media/FieldPhoto";
 import { isOwnCover } from "@/lib/geo/safety";
 import {
+  displayName,
   localizeGeosite,
   localizeSite,
   motto,
@@ -51,9 +53,9 @@ function CardPage() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="field-card mx-auto max-w-xl px-4 py-8">
+      <main id="main" className="field-card mx-auto w-full max-w-xl px-4 py-8">
         <p className="text-xs tracking-wide text-muted uppercase">{t("fieldCard")}</p>
         {data.kind === "site" && data.site ? <SiteCardBody /> : <TrailCardBody />}
         <div className="no-print mt-8 flex flex-wrap gap-2">
@@ -84,32 +86,51 @@ function SiteCardBody() {
   const allStops = getGeosites(site.id).filter((g) => !isFakeGeosite(g) && !isGenericGeositeName(g.name));
   const stops = allStops.map((g) => localizeGeosite(g, locale));
   const own = isOwnCover(site);
-  const stopThumbs = allStops.filter((g) => g.photo && g.photo !== site.cover_image).slice(0, 4);
+  const stopThumbs = allStops
+    .filter(
+      (g) =>
+        g.photo &&
+        g.photo !== site.cover_image &&
+        g.photo_kind !== "analog" &&
+        g.photo_kind !== "satellite" &&
+        !g.analog_from_id,
+    )
+    .slice(0, 4);
   return (
     <>
-      <h1 className="font-display mt-1 text-3xl font-semibold">
-        {locale === "en" ? site.name_en || site.id : site.name}
-      </h1>
+      <h1 className="font-display mt-1 text-3xl font-semibold">{displayName(site, locale)}</h1>
       {own ? (
-        <figure className="mt-4 overflow-hidden rounded-lg">
-          <img
-            src={site.cover_image}
-            alt={photoCredit(site.cover_credit || "", locale)}
-            className="h-36 w-full object-cover"
-          />
-          <figcaption className="mt-1 text-[11px] text-muted">
-            {photoCredit(site.cover_credit || "", locale)}
-          </figcaption>
-        </figure>
+        <ClickableImage
+          src={site.cover_image}
+          alt={displayName(site, locale)}
+          caption={photoCredit(site.cover_credit || "", locale)}
+          imgClass="h-36 w-full object-cover"
+          className="mt-4"
+          badge={t("photoKindRef")}
+        />
       ) : null}
       {stopThumbs.length ? (
-        <ul className="mt-3 grid grid-cols-3 gap-2">
-          {stopThumbs.map((g) => (
-            <li key={g.id} className="overflow-hidden rounded">
-              <img src={g.photo} alt={g.name} className="h-20 w-full object-cover" />
-              <p className="mt-1 truncate text-[10px] text-muted">{g.name}</p>
-            </li>
-          ))}
+        <ul
+          className={
+            stopThumbs.length === 3
+              ? "handbook-grid handbook-grid-3 mt-3"
+              : "handbook-grid handbook-grid-2 mt-3"
+          }
+        >
+          {stopThumbs.map((g) => {
+            const loc = localizeGeosite(g, locale);
+            return (
+              <li key={g.id}>
+                <ClickableImage
+                  src={g.photo!}
+                  alt={loc.name}
+                  caption={loc.name}
+                  imgClass="h-20 w-full object-cover"
+                  badge={t("photoKindField")}
+                />
+              </li>
+            );
+          })}
         </ul>
       ) : null}
       <p className="mt-4 text-base leading-relaxed">{s.hook}</p>
@@ -123,7 +144,10 @@ function SiteCardBody() {
             {stops.map((g) => (
               <li key={g.id}>
                 <span className="font-medium">{g.name}</span>
-                <span className="mt-0.5 block text-muted">{cardLook(g.name, g.look_here)}</span>
+                <span className="mt-0.5 block text-ink">{cardLook(g.name, g.look_here)}</span>
+                {!g.photo || g.photo_kind === "analog" || g.photo_kind === "satellite" || g.analog_from_id ? (
+                  <span className="mt-1 block text-sm font-medium text-ink">{t("noStopPhoto")}</span>
+                ) : null}
               </li>
             ))}
           </ol>
@@ -182,7 +206,7 @@ function TrailCardBody() {
                   {t("trailStop")} {i + 1}
                   {locale === "zh" ? t("trailStopOf") : ""}
                 </span>
-                <span className="font-medium">{locale === "en" ? site.name_en || site.id : site.name}</span>
+                <span className="font-medium">{displayName(site, locale)}</span>
                 <span className="mt-0.5 block text-muted">{themeRole(theme, i, locale)}</span>
               </span>
             </li>

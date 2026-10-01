@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { NearbyPanel } from "@/components/geo/NearbyPanel";
 import { TimescaleBar } from "@/components/geo/TimescaleBar";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useMemo, useState, type ReactNode } from "react";
@@ -33,14 +32,7 @@ function Chip({
   children: ReactNode;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        "h-9 rounded-full px-3 text-xs font-medium transition-colors duration-150",
-        active ? "bg-sand text-primary-fg" : "bg-surface-2 text-muted hover:text-ink",
-      )}
-    >
+    <button type="button" onClick={onClick} className="filter-chip" data-active={active}>
       {children}
     </button>
   );
@@ -74,10 +66,10 @@ export function FilterBar() {
   }
 
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex flex-col gap-2 p-3 pt-3 sm:max-w-xl">
+    <div className="pointer-events-none absolute inset-x-0 top-0 z-30 flex flex-col gap-2 p-3 pt-3 sm:max-w-sm">
       <div className="pointer-events-auto flex gap-2">
         <div className="relative flex-1">
-          <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-subtle" />
+          <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted" />
           <Input
             value={filters.query}
             onChange={(e) => {
@@ -145,24 +137,14 @@ export function FilterBar() {
         <Button variant="outline" size="sm" className="shrink-0 bg-surface/95 shadow-[var(--shadow-border)]" asChild>
           <Link to="/nearby">{t("nearby")}</Link>
         </Button>
-        <Button variant="outline" size="sm" className="hidden shrink-0 bg-surface/95 shadow-[var(--shadow-border)] sm:inline-flex" asChild>
-          <Link to="/compare">{t("compare")}</Link>
-        </Button>
       </div>
-      <div className="pointer-events-none flex flex-wrap items-center gap-1.5 text-[11px] text-muted">
-        <span className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1">
-          {t("onMap")} {matched.length} · {t("world")} {stats.world} · {t("national")} {stats.national} ·{" "}
-          {t("candidate")} {stats.candidate}
-        </span>
-        <span className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1">
-          {t("gssp")} {stats.gssp}
-        </span>
-        <span className="pointer-events-auto max-w-full rounded-full bg-bg/80 px-2 py-1">
-          {t("gsspNote")}
+      <div className="pointer-events-none flex flex-wrap items-center gap-1.5 text-xs text-ink">
+        <span className="pointer-events-auto rounded-full border border-border bg-bg/90 px-2 py-1">
+          {t("onMap")} {matched.length} · {t("world")} {stats.world} · {t("national")} {stats.national}
         </span>
         <Link
           to="/routes"
-          className="pointer-events-auto rounded-full bg-bg/80 px-2 py-1 text-moss underline"
+          className="pointer-events-auto rounded-full border border-border bg-bg/90 px-2 py-1 text-moss underline"
         >
           {t("startTrail")}
         </Link>
@@ -177,101 +159,108 @@ export function FilterBar() {
         </div>
       ) : null}
       {open ? (
-        <div className="pointer-events-auto max-h-[55dvh] space-y-3 overflow-y-auto rounded-xl bg-surface/97 p-4 shadow-[var(--shadow-border)]">
-          <p className="text-xs font-medium text-muted">{t("level")}</p>
-          <div className="flex flex-wrap gap-1.5">
-            {LEVELS.map((l) => (
-              <Chip key={l.id} active={filters.types.includes(l.id)} onClick={() => toggleType(l.id)}>
-                {t(l.key)}
-              </Chip>
-            ))}
-          </div>
-          <p className="text-xs font-medium text-muted">{t("landform")}</p>
-          <div className="flex flex-wrap gap-1.5">
-            {LANDS.map((l) => (
-              <Chip
-                key={l}
-                active={filters.landforms.includes(l)}
-                onClick={() => toggleLandform(l)}
-              >
-                {landformLabel(l, locale)}
-              </Chip>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <label className="text-xs text-muted">
-              {t("province")}
-              <select
-                className="mt-1 h-11 w-full rounded-md border border-border bg-bg px-2 text-sm text-ink"
-                value={filters.province}
-                onChange={(e) => setProvince(e.target.value)}
-              >
-                <option value="">{t("all")}</option>
-                {PROVINCES.map((p) => (
-                  <option key={p} value={p}>
-                    {provinceLabel(p, locale)}
-                  </option>
+        <div className="pointer-events-auto flex max-h-[48dvh] flex-col overflow-hidden rounded-xl bg-surface/98 shadow-[var(--shadow-border)]">
+          <div className="min-h-0 flex-1 space-y-2 overflow-y-auto p-4 pb-2">
+            <details open>
+              <summary className="cursor-pointer text-xs font-semibold tracking-wide text-ink">
+                {t("level")}
+              </summary>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {LEVELS.map((l) => (
+                  <Chip key={l.id} active={filters.types.includes(l.id)} onClick={() => toggleType(l.id)}>
+                    {t(l.key)}
+                  </Chip>
                 ))}
-              </select>
-            </label>
-            <label className="text-xs text-muted">
-              {t("ticket")}
-              <select
-                className="mt-1 h-11 w-full rounded-md border border-border bg-bg px-2 text-sm text-ink"
-                value={filters.ticket}
-                onChange={(e) => setTicket(e.target.value as typeof filters.ticket)}
-              >
-                <option value="all">{t("ticketAny")}</option>
-                <option value="yes">{t("ticketYes")}</option>
-                <option value="no">{t("ticketNo")}</option>
-              </select>
-            </label>
+              </div>
+            </details>
+            <details>
+              <summary className="cursor-pointer text-xs font-semibold tracking-wide text-ink">
+                {t("landform")}
+              </summary>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {LANDS.map((l) => (
+                  <Chip
+                    key={l}
+                    active={filters.landforms.includes(l)}
+                    onClick={() => toggleLandform(l)}
+                  >
+                    {landformLabel(l, locale)}
+                  </Chip>
+                ))}
+              </div>
+            </details>
+            <details>
+              <summary className="cursor-pointer text-xs font-semibold tracking-wide text-ink">
+                {t("filterMore")}
+              </summary>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                <label className="text-xs text-ink">
+                  {t("province")}
+                  <select
+                    className="mt-1 h-11 w-full rounded-md border border-border bg-bg px-2 text-sm text-ink"
+                    value={filters.province}
+                    onChange={(e) => setProvince(e.target.value)}
+                  >
+                    <option value="">{t("all")}</option>
+                    {PROVINCES.map((p) => (
+                      <option key={p} value={p}>
+                        {provinceLabel(p, locale)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="text-xs text-ink">
+                  {t("ticket")}
+                  <select
+                    className="mt-1 h-11 w-full rounded-md border border-border bg-bg px-2 text-sm text-ink"
+                    value={filters.ticket}
+                    onChange={(e) => setTicket(e.target.value as typeof filters.ticket)}
+                  >
+                    <option value="all">{t("ticketAny")}</option>
+                    <option value="yes">{t("ticketYes")}</option>
+                    <option value="no">{t("ticketNo")}</option>
+                  </select>
+                </label>
+              </div>
+              <label className="mt-3 flex items-center gap-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={filters.ageOn}
+                  onChange={(e) => setAge(e.target.checked)}
+                />
+                {t("ageFilter")}
+              </label>
+              {filters.ageOn ? (
+                <div className="mt-2 flex items-center gap-2 text-xs text-ink">
+                  <input
+                    type="number"
+                    className="h-10 w-20 rounded-md border border-border bg-bg px-2"
+                    value={filters.ageStart}
+                    onChange={(e) => setAge(true, Number(e.target.value), filters.ageEnd)}
+                  />
+                  <span>—</span>
+                  <input
+                    type="number"
+                    className="h-10 w-20 rounded-md border border-border bg-bg px-2"
+                    value={filters.ageEnd}
+                    onChange={(e) => setAge(true, filters.ageStart, Number(e.target.value))}
+                  />
+                  <span>Ma</span>
+                </div>
+              ) : null}
+              <div className="mt-2">
+                <TimescaleBar compact />
+              </div>
+            </details>
           </div>
-          <label className="flex items-center gap-2 text-sm">
-            <input
-              type="checkbox"
-              checked={filters.ageOn}
-              onChange={(e) => setAge(e.target.checked)}
-            />
-            {t("ageFilter")}
-          </label>
-          {filters.ageOn ? (
-            <div className="flex items-center gap-2 text-xs text-muted">
-              <input
-                type="number"
-                className="h-10 w-20 rounded-md border border-border bg-bg px-2"
-                value={filters.ageStart}
-                onChange={(e) => setAge(true, Number(e.target.value), filters.ageEnd)}
-              />
-              <span>—</span>
-              <input
-                type="number"
-                className="h-10 w-20 rounded-md border border-border bg-bg px-2"
-                value={filters.ageEnd}
-                onChange={(e) => setAge(true, filters.ageStart, Number(e.target.value))}
-              />
-              <span>Ma</span>
-            </div>
-          ) : null}
-          <TimescaleBar compact />
-          <NearbyPanel compact />
-          <p className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-            <Link to="/compare" className="text-moss underline">
-              {t("compare")}
-            </Link>
-            <Link to="/glossary" className="text-moss underline">
-              {t("glossary")}
-            </Link>
-            <Link to="/browse" className="text-moss underline">
-              {t("browse")}
-            </Link>
-            <Link to="/offline" className="text-moss underline">
-              {t("offline")}
-            </Link>
-          </p>
-          <Button variant="ghost" size="sm" onClick={reset}>
-            {t("clearFilters")}
-          </Button>
+          <div className="flex shrink-0 gap-2 border-t border-border bg-surface px-4 py-3">
+            <Button size="sm" className="h-11 flex-1" onClick={() => setOpen(false)}>
+              {t("applyFilters")}
+            </Button>
+            <Button variant="outline" size="sm" className="h-11" onClick={reset}>
+              {t("clearFilters")}
+            </Button>
+          </div>
         </div>
       ) : null}
     </div>

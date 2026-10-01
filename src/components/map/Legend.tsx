@@ -48,8 +48,18 @@ export function MapLegend() {
         <p className="mb-1 hidden text-[10px] tracking-wide text-muted uppercase sm:block">{t("legend")}</p>
         <ul className="space-y-1">
           {ITEMS.map((i) => (
-            <li key={i.key} className="flex items-center gap-2 text-[11px] text-ink">
-              <span className="size-2.5 rounded-full border border-white" style={{ background: i.c }} />
+            <li key={i.key} className="flex items-center gap-2 text-sm text-ink">
+              {i.key === "gssp" ? (
+                <span className="legend-diamond shrink-0" style={{ background: i.c }} />
+              ) : (
+                <span
+                  className="size-3 shrink-0 rounded-full"
+                  style={{
+                    background: i.c,
+                    boxShadow: "0 0 0 1px #f7f3eb",
+                  }}
+                />
+              )}
               {t(i.key)}
             </li>
           ))}

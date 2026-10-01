@@ -11,12 +11,12 @@ export function OfficialBox({ site, visit }: { site: Site; visit?: VisitInfo }) 
   return (
     <section className="rounded-xl border border-border bg-surface p-4 shadow-[var(--shadow-border)]">
       <h2 className="font-display text-lg font-semibold">{t("officialLinks")}</h2>
-      <ul className="mt-3 space-y-2 text-sm">
+      <ul className="mt-3 flex flex-wrap gap-2">
         {links.map((l) => (
           <li key={l.href}>
             <a
               href={l.href}
-              className="inline-flex items-center gap-1.5 text-moss underline"
+              className="official-chip"
               target="_blank"
               rel="noreferrer"
             >
@@ -24,7 +24,7 @@ export function OfficialBox({ site, visit }: { site: Site; visit?: VisitInfo }) 
               <ExternalLink className="size-3.5" />
             </a>
             {l.kind === "gov" ? (
-              <span className="mt-0.5 block text-[11px] text-subtle">{t("govPortal")}</span>
+              <span className="mt-1 block px-2 text-[11px] text-muted">{t("govPortal")}</span>
             ) : null}
           </li>
         ))}

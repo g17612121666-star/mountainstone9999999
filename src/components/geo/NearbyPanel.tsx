@@ -2,13 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { sites } from "@/lib/geo/catalog";
+import { sites, getSite } from "@/lib/geo/catalog";
 import { nearestSites, whyNearby, type NearbyHit } from "@/lib/geo/distance";
 import { siteTo } from "@/lib/geo/href";
 import { suggestSites } from "@/lib/geo/search";
 import { displayName, landformLabel, typeBadge, useLocale, useT } from "@/lib/i18n";
 
 const RADII = [20, 50, 100] as const;
+const SAMPLE_IDS = ["danxiashan", "zhangjiajie", "huangshan", "meishan"];
 
 const CITIES: { zh: string; en: string; coords: [number, number] }[] = [
   { zh: "北京", en: "Beijing", coords: [116.407, 39.904] },
@@ -34,8 +35,9 @@ export function NearbyPanel({
   const locale = useLocale((s) => s.locale);
   const [radius, setRadius] = useState<(typeof RADII)[number]>(50);
   const [hits, setHits] = useState<NearbyHit[] | null>(null);
-  const [status, setStatus] = useState<"idle" | "need" | "empty" | "ok">("idle");
+  const [status, setStatus] = useState<"idle" | "need" | "empty" | "ok" | "miss">("idle");
   const [place, setPlace] = useState("");
+  const [activeCity, setActiveCity] = useState<string>("");
 
   function applyOrigin(origin: [number, number]) {
     const found = nearestSites(origin, sites, radius, 8);
@@ -44,9 +46,11 @@ export function NearbyPanel({
   }
 
   function locate() {
+    setPlace("");
+    setActiveCity("");
+    setHits(null);
     if (!navigator.geolocation) {
       setStatus("need");
-      setHits(null);
       return;
     }
     navigator.geolocation.getCurrentPosition(
@@ -61,6 +65,8 @@ export function NearbyPanel({
 
   const placeHits = useMemo(() => suggestSites(sites, place, 5), [place]);
   const showTitle = !compact && !hideTitle;
+  const typed = place.trim();
+  const missTyped = typed.length > 0 && placeHits.length === 0;
 
   const radiusChips = (
     <div className={showTitle ? "ml-auto flex gap-1" : "flex gap-1"}>
@@ -73,11 +79,8 @@ export function NearbyPanel({
             setHits(null);
             setStatus("idle");
           }}
-          className={
-            radius === r
-              ? "h-8 rounded-full bg-sand px-2.5 text-xs text-primary-fg"
-              : "h-8 rounded-full bg-surface-2 px-2.5 text-xs text-muted"
-          }
+          className="filter-chip"
+          data-active={radius === r}
         >
           {r} km
         </button>
@@ -98,29 +101,40 @@ export function NearbyPanel({
       <Button type="button" size="sm" className="mt-3" onClick={locate}>
         {t("locateMe")}
       </Button>
-      <p className="mt-4 text-xs font-medium text-muted">{t("nearbyCity")}</p>
+      <p className="mt-4 text-xs font-medium text-ink">{t("nearbyCity")}</p>
       <div className="mt-2 flex flex-wrap gap-1.5">
         {CITIES.map((c) => (
           <button
             key={c.zh}
             type="button"
-            className="h-9 rounded-full bg-surface-2 px-3 text-xs text-muted hover:text-ink"
-            onClick={() => applyOrigin(c.coords)}
+            className="filter-chip"
+            data-active={activeCity === c.zh}
+            onClick={() => {
+              setPlace("");
+              setActiveCity(c.zh);
+              applyOrigin(c.coords);
+            }}
           >
             {locale === "en" ? c.en : c.zh}
           </button>
         ))}
       </div>
-      <label className="mt-3 block text-xs font-medium text-muted">
+      <label className="mt-3 block text-xs font-medium text-ink">
         {t("nearbyPlace")}
         <Input
           className="mt-1"
           placeholder={t("nearbyPlacePh")}
           value={place}
-          onChange={(e) => setPlace(e.target.value)}
+          onChange={(e) => {
+            const next = e.target.value;
+            setPlace(next);
+            setActiveCity("");
+            setHits(null);
+            setStatus(next.trim() ? "miss" : "idle");
+          }}
         />
       </label>
-      {place.trim() && placeHits.length ? (
+      {typed && placeHits.length ? (
         <ul className="mt-2 overflow-hidden rounded-lg border border-border">
           {placeHits.map((s) => (
             <li key={s.id}>
@@ -130,6 +144,7 @@ export function NearbyPanel({
                 onClick={() => {
                   applyOrigin(s.coordinates);
                   setPlace("");
+                  setActiveCity("");
                 }}
               >
                 <span className="font-medium">{displayName(s, locale)}</span>
@@ -139,9 +154,15 @@ export function NearbyPanel({
           ))}
         </ul>
       ) : null}
+      {missTyped ? (
+        <div className="mt-3 rounded-lg border border-border bg-surface-2 px-3 py-3">
+          <p className="text-sm font-medium text-ink">{t("nearbyNotFound")}</p>
+          <p className="mt-2 text-xs text-muted">{t("nearbyTryCities")}</p>
+        </div>
+      ) : null}
       {status === "need" ? <p className="mt-3 text-sm text-muted">{t("nearbyEmpty")}</p> : null}
-      {status === "empty" ? <p className="mt-3 text-sm text-muted">{t("nearbyNone")}</p> : null}
-      {hits && hits.length ? (
+      {status === "empty" && !missTyped ? <p className="mt-3 text-sm text-muted">{t("nearbyNone")}</p> : null}
+      {hits && hits.length && !missTyped ? (
         <ul className="mt-3 space-y-2">
           {hits.map((h) => (
             <li key={h.site.id} className="rounded-lg border border-border px-3 py-2">
@@ -156,10 +177,29 @@ export function NearbyPanel({
               <p className="mt-0.5 text-xs text-muted">
                 {typeBadge(h.site, locale)} · {landformLabel(h.site.landform_types[0] ?? "other", locale)}
               </p>
-              <p className="mt-1 text-xs leading-relaxed text-subtle">{whyNearby(h.site, locale)}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted">{whyNearby(h.site, locale)}</p>
             </li>
           ))}
         </ul>
+      ) : null}
+      {status === "idle" && !typed && !hits ? (
+        <div className="mt-4">
+          <p className="rounded-lg bg-surface-2 px-3 py-3 text-sm leading-relaxed text-ink">
+            {t("nearbyTryCities")}
+          </p>
+          <ul className="mt-3 space-y-2">
+            {SAMPLE_IDS.map((id) => getSite(id))
+              .filter((s): s is NonNullable<typeof s> => !!s)
+              .map((s) => (
+                <li key={s.id} className="rounded-lg border border-border px-3 py-2">
+                  <Link {...siteTo(s)} className="font-medium hover:underline">
+                    {displayName(s, locale)}
+                  </Link>
+                  <p className="mt-0.5 text-sm text-ink">{typeBadge(s, locale)}</p>
+                </li>
+              ))}
+          </ul>
+        </div>
       ) : null}
     </section>
   );

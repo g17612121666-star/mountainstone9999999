@@ -28,10 +28,8 @@ export function sanitizeGeologicAge(raw: string | null | undefined): string {
   return text;
 }
 
-export function ageLabel(raw: string | null | undefined, locale: "zh" | "en"): string {
-  const v = sanitizeGeologicAge(raw);
-  if (v) return v;
-  return locale === "en" ? "Age not yet established" : "年代待考";
+export function ageLabel(raw: string | null | undefined, _locale: "zh" | "en"): string {
+  return sanitizeGeologicAge(raw);
 }
 
 /** Replace template 「时代：碳酸盐岩」 clauses with a real age or 年代待考. */

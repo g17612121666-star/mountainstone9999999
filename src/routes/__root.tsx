@@ -5,6 +5,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { displayName, useLocale, useT } from "@/lib/i18n";
+import { getSite } from "@/lib/geo/catalog";
 import { publicPathFor, suggestSitesBySlug, TOOL_PATHS } from "@/lib/geo/slug";
 import appCss from "../styles.css?url";
 
@@ -31,31 +32,55 @@ function NotFound() {
   const isSiteish = head === "sites" || head === "gssp" || head === "card";
   const isUnknownTool = head && !TOOL_PATHS.has(head) && head !== "routes";
   const hits = slug ? suggestSitesBySlug(slug) : [];
+  const popular = ["danxiashan", "zhangjiajie", "huangshan", "meishan"]
+    .map((id) => getSite(id))
+    .filter((s): s is NonNullable<typeof s> => !!s);
   const title = t("notFoundTitle");
   const body = isSiteish ? t("notFoundSite") : isUnknownTool ? t("notFoundFeature") : slug ? t("notFoundSlug") : t("notFoundBody");
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto flex max-w-xl flex-col items-center gap-3 px-6 py-16 text-center">
-        <h1 className="font-display text-xl font-semibold">{title}</h1>
-        <p className="text-sm text-muted">{body}</p>
+      <main id="main" className="mx-auto flex w-full max-w-xl flex-col gap-4 px-6 py-12">
+        <h1 className="font-display text-2xl font-semibold">{title}</h1>
+        <p className="text-base leading-relaxed text-ink">{body}</p>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/catalog" className="filter-chip">
+            {t("navCatalog")}
+          </Link>
+          <Link to="/" className="filter-chip">
+            {t("navMap")}
+          </Link>
+          <Link to="/routes" className="filter-chip">
+            {t("navRoutes")}
+          </Link>
+        </div>
         {hits.length ? (
-          <ul className="mt-4 w-full space-y-2 text-left">
+          <ul className="space-y-2">
             {hits.map((s) => {
               const { href } = publicPathFor(s);
               return (
                 <li key={s.id}>
-                  <a href={href} className="block rounded-lg bg-surface px-3 py-2 text-sm shadow-[var(--shadow-border)]">
+                  <a href={href} className="block rounded-lg bg-surface px-3 py-3 text-sm shadow-[var(--shadow-border)]">
                     {displayName(s, locale)}
                   </a>
                 </li>
               );
             })}
           </ul>
-        ) : null}
-        <Link to="/" className="mt-4 text-sm text-moss underline">
-          {t("backMap")}
-        </Link>
+        ) : (
+          <ul className="space-y-2">
+            {popular.map((s) => {
+              const { href } = publicPathFor(s);
+              return (
+                <li key={s.id}>
+                  <a href={href} className="block rounded-lg bg-surface px-3 py-3 text-sm shadow-[var(--shadow-border)]">
+                    {displayName(s, locale)}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </main>
       <AppFooter />
     </div>

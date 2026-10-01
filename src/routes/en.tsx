@@ -21,13 +21,13 @@ function EnLocalePage() {
     setLocale("en");
   }, [setLocale]);
   return (
-    <div className="min-h-dvh bg-bg">
+    <div className="page-shell">
       <AppHeader />
-      <main className="mx-auto max-w-xl px-4 py-12">
+      <main id="main" className="mx-auto max-w-xl px-4 py-12">
         <h1 className="font-display text-3xl font-semibold">English is a language switch, not a second site</h1>
         <p className="mt-4 text-sm leading-relaxed text-muted">
           There is no standalone English edition at this address. Use the language toggle in the header.
-          Park pages whose English body has not been copy-edited stay in Chinese and say so on the page.
+          Where an English paragraph is not ready, the page keeps the original wording.
         </p>
         <p className="mt-3 text-sm leading-relaxed">
           这里不是独立英文站。请用顶栏切换语言。未人工质检的正文仍显示中文，并在页面上标明。
