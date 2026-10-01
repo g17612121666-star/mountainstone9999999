@@ -2,18 +2,17 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { seoHead } from "@/lib/geo/canonical";
-import { getGeosites, getSite, getTheme } from "@/lib/geo/catalog";
+import { ClickableImage } from "@/components/media/FieldPhoto";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
+import { clipFor, coverFor, getGeosites, getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { stripLocatePhrase } from "@/lib/geo/look";
-import { ClickableImage } from "@/components/media/FieldPhoto";
-import { isOwnCover } from "@/lib/geo/safety";
 import {
   displayName,
   localizeGeosite,
   localizeSite,
   motto,
-  photoCredit,
   themeName,
   themeRole,
   themeTask,
@@ -85,7 +84,8 @@ function SiteCardBody() {
   const s = localizeSite(site, locale);
   const allStops = getGeosites(site.id).filter((g) => !isFakeGeosite(g) && !isGenericGeositeName(g.name));
   const stops = allStops.map((g) => localizeGeosite(g, locale));
-  const own = isOwnCover(site);
+  const shot = coverFor(site);
+  const film = clipFor(site);
   const stopThumbs = allStops
     .filter(
       (g) =>
@@ -99,14 +99,13 @@ function SiteCardBody() {
   return (
     <>
       <h1 className="font-display mt-1 text-3xl font-semibold">{displayName(site, locale)}</h1>
-      {own ? (
+      {shot ? (
         <ClickableImage
-          src={site.cover_image}
+          src={shot.src}
           alt={displayName(site, locale)}
-          caption={photoCredit(site.cover_credit || "", locale)}
-          imgClass="h-36 w-full object-cover"
+          caption={shot.related ? t("relatedPhoto") : undefined}
+          imgClass="h-40 w-full object-cover"
           className="mt-4"
-          badge={t("photoKindRef")}
         />
       ) : null}
       {stopThumbs.length ? (
@@ -145,9 +144,6 @@ function SiteCardBody() {
               <li key={g.id}>
                 <span className="font-medium">{g.name}</span>
                 <span className="mt-0.5 block text-ink">{cardLook(g.name, g.look_here)}</span>
-                {!g.photo || g.photo_kind === "analog" || g.photo_kind === "satellite" || g.analog_from_id ? (
-                  <span className="mt-1 block text-sm font-medium text-ink">{t("noStopPhoto")}</span>
-                ) : null}
               </li>
             ))}
           </ol>
@@ -162,6 +158,14 @@ function SiteCardBody() {
       <aside className="mt-5 rounded-lg border border-hematite/30 p-3 text-sm leading-relaxed">
         <p className="font-medium">{t("lookDontTake")}</p>
       </aside>
+      {film ? (
+        <div className="no-print mt-5">
+          <h2 className="font-display text-lg font-semibold">{film.related ? t("videoRelated") : t("video")}</h2>
+          <div className="mt-3">
+            <BiliEmbed video={film.video} poster={shot?.src} />
+          </div>
+        </div>
+      ) : null}
       <p className="no-print mt-6 text-sm">
         <Link {...siteTo(site)} className="text-moss underline">
           {t("openGuide")}
@@ -191,15 +195,11 @@ function TrailCardBody() {
         {theme.site_ids.map((id, i) => {
           const site = getSite(id);
           if (!site) return null;
-          const own = isOwnCover(site);
+          const shot = coverFor(site);
           return (
             <li key={id} className="flex gap-3 text-sm leading-relaxed">
-              {own ? (
-                <img
-                  src={site.cover_image}
-                  alt=""
-                  className="h-14 w-20 shrink-0 rounded object-cover"
-                />
+              {shot ? (
+                <img src={shot.src} alt="" className="h-14 w-20 shrink-0 rounded object-cover" />
               ) : null}
               <span>
                 <span className="block text-xs text-muted">
@@ -213,6 +213,11 @@ function TrailCardBody() {
           );
         })}
       </ol>
+      {theme.video?.bvid ? (
+        <div className="no-print mt-5">
+          <BiliEmbed video={theme.video} />
+        </div>
+      ) : null}
       <aside className="mt-5 rounded-lg border border-hematite/30 p-3 text-sm leading-relaxed">
         <p className="font-medium">{t("lookDontTake")}</p>
       </aside>

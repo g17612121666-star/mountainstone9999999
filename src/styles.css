@@ -68,7 +68,10 @@
 
   body {
     font-family: var(--font-sans);
-    background: var(--color-bg);
+    background:
+      radial-gradient(ellipse 90% 42% at 0% -8%, #efe2cc 0%, transparent 58%),
+      radial-gradient(ellipse 55% 32% at 100% 0%, #e4efe7 0%, transparent 52%),
+      var(--color-bg);
     color: var(--color-ink);
     min-height: 100dvh;
   }
@@ -79,6 +82,12 @@
     font-family: var(--font-display);
     text-wrap: balance;
     letter-spacing: -0.02em;
+  }
+
+  main h2.font-display,
+  article h2.font-display {
+    border-bottom: 2px solid color-mix(in oklab, var(--color-moss) 42%, var(--color-border));
+    padding-bottom: 0.28rem;
   }
 
   p {

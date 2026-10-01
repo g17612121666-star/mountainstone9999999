@@ -35,6 +35,9 @@ export function AppFooter() {
           <Link to="/offline" className="text-moss underline">
             {t("offline")}
           </Link>
+          <Link to="/ask" className="text-moss underline">
+            {t("navAsk")}
+          </Link>
           <Link to="/about" className="text-moss underline">
             {t("navAbout")}
           </Link>

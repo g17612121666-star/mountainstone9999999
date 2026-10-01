@@ -10,9 +10,8 @@ import { MapFrame } from "@/components/site/MapFrame";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
 import { seoHead } from "@/lib/geo/canonical";
-import { getSite, getTheme } from "@/lib/geo/catalog";
+import { clipFor, coverFor, getSite, getTheme } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
-import { isDiagramCredit, isOwnCover } from "@/lib/geo/safety";
 import { ageLabel } from "@/lib/geo/age";
 import type { Site } from "@/lib/geo/types";
 import {
@@ -20,7 +19,6 @@ import {
   fossilLaw,
   landformLabel,
   localizeSite,
-  photoCredit,
   themeName,
   themeRole,
   themeTask,
@@ -55,6 +53,10 @@ function ThemePage() {
   const fossilLine = theme.id === "fossil" || theme.id === "gssp" || theme.id === "jehol-dinosaur";
   const mapped = points.map((p) => p.site).filter((s): s is Site => !!s);
   const task = themeTask(theme, locale);
+  const trailFilm = theme.video?.bvid
+    ? { video: theme.video, related: false as const }
+    : mapped.map((s) => clipFor(s)).find((c) => c) || null;
+  const trailCover = mapped.map((s) => coverFor(s)).find((c) => c)?.src;
   return (
     <div className="page-shell">
       <AppHeader />
@@ -83,9 +85,12 @@ function ThemePage() {
             {fossilLaw(locale)}
           </aside>
         ) : null}
-        {theme.video?.bvid ? (
+        {trailFilm ? (
           <div className="mt-6">
-            <BiliEmbed video={theme.video} poster={mapped.find((s) => isOwnCover(s))?.cover_image} />
+            {trailFilm.related ? (
+              <h2 className="font-display mb-3 text-lg font-semibold">{t("videoRelated")}</h2>
+            ) : null}
+            <BiliEmbed video={trailFilm.video} poster={trailCover} />
           </div>
         ) : null}
         {theme.article ? (
@@ -124,24 +129,19 @@ function ThemePage() {
                     <SiteBadges site={site} compact />
                   </div>
                 </div>
-                {isOwnCover(site) ? (
-                  <ClickableImage
-                    src={site.cover_image}
-                    alt={photoCredit(site.cover_credit || "", locale)}
-                    caption={photoCredit(site.cover_credit || "", locale)}
-                    imgClass="h-40 w-full object-cover"
-                    className="rounded-none shadow-none"
-                    badge={
-                      isDiagramCredit(site.cover_credit || "", "")
-                        ? t("photoKindDiagram")
-                        : t("photoKindRef")
-                    }
-                  />
-                ) : (
-                  <p className="mx-4 rounded-md bg-surface-2 px-3 py-6 text-center text-xs text-muted">
-                    {t("noPhoto")}
-                  </p>
-                )}
+                {(() => {
+                  const shot = coverFor(site);
+                  if (!shot) return null;
+                  return (
+                    <ClickableImage
+                      src={shot.src}
+                      alt={displayName(site, locale)}
+                      caption={shot.related ? t("relatedPhoto") : undefined}
+                      imgClass="h-44 w-full object-cover"
+                      className="rounded-none shadow-none"
+                    />
+                  );
+                })()}
                 <div className="p-4 pt-3">
                   <p className="text-sm leading-relaxed">
                     <span className="font-medium">{t("proveJob")} · </span>
@@ -168,29 +168,11 @@ function ThemePage() {
                       </p>
                     );
                   })()}
-                  {site.video?.bvid ? (
+                  {site.video?.bvid && site.video.bvid !== trailFilm?.video.bvid ? (
                     <div className="mt-3">
-                      <BiliEmbed video={site.video} poster={isOwnCover(site) ? site.cover_image : undefined} />
+                      <BiliEmbed video={site.video} poster={coverFor(site)?.src} />
                     </div>
-                  ) : (
-                    <p className="mt-2 text-sm">
-                      <a
-                        className="text-moss underline"
-                        href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(
-                          site.name
-                            .replace(/联合国教科文组织/g, "")
-                            .replace(/世界地质公园/g, "")
-                            .replace(/国家地质公园/g, "")
-                            .replace(/地质公园/g, "")
-                            .trim() || site.name,
-                        )}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {locale === "en" ? "Open encyclopaedia / field notes" : "百科与公开资料"}
-                      </a>
-                    </p>
-                  )}
+                  ) : null}
                 </div>
               </li>
             ) : (
@@ -209,7 +191,7 @@ function ThemePage() {
               id: theme.id,
               title: theme.name,
               title_en: theme.name_en || theme.name,
-              cover: mapped.find((s) => isOwnCover(s))?.cover_image,
+              cover: trailCover,
               body_zh: [theme.thesis, theme.task || "", theme.site_roles.join("\n")].join("\n\n"),
               body_en: [
                 theme.thesis_en || theme.thesis,

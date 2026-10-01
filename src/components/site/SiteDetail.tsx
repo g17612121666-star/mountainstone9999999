@@ -1,34 +1,31 @@
 import { Link } from "@tanstack/react-router";
 import { LandformCover } from "@/components/cover/LandformCover";
 import { LinkedText } from "@/components/geo/LinkedText";
-import { OfficialBox } from "@/components/geo/OfficialBox";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
-import { BiliEmbed, EmptyVideoSlot } from "@/components/media/BiliEmbed";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { ClickableImage, FieldPhoto } from "@/components/media/FieldPhoto";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { SiteLinkCard } from "@/components/site/SiteLinkCard";
 import { MapFrame } from "@/components/site/MapFrame";
 import { SiteMiniMap } from "@/components/site/SiteMiniMap";
-import { VisitCard } from "@/components/site/VisitCard";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Button } from "@/components/ui/button";
 import { ageLabel } from "@/lib/geo/age";
 import {
+  clipFor,
+  coverFor,
   getAreas,
   getGeosite,
   getGeosites,
   getRoutes,
   getSite,
   getTheme,
-  getVisit,
   relatedEntries,
-  VIDEO_SLOT_SITES,
 } from "@/lib/geo/catalog";
 import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { GENERIC_DO_NOT, isDiagramCredit, isRealPhoto } from "@/lib/geo/safety";
-import { mediaKindFor, mediaKindUiKey } from "@/lib/geo/photos";
 import { fieldPhotoFromGeosite } from "@/lib/geo/photos";
 import { stripLocatePhrase } from "@/lib/geo/look";
 import type { Geosite, Site } from "@/lib/geo/types";
@@ -43,7 +40,6 @@ import {
   localizeSite,
   motto,
   phenomenonLabel,
-  photoCredit,
   placeLine,
   themeName,
   themeThesis,
@@ -62,10 +58,11 @@ export function SiteDetail({ site }: { site: Site }) {
   const routes = getRoutes(site.id)
     .filter((r) => r.name !== "半日地质步道")
     .map((r) => localizeRoute(r, locale));
-  const visit = getVisit(site.id);
   const areas = getAreas(site.id).map((a) => localizeArea(a, locale));
   const related = relatedEntries(site);
-  const photo = isRealPhoto(site.cover_image) ? site.cover_image : undefined;
+  const shot = coverFor(site);
+  const photo = shot?.src;
+  const film = clipFor(site);
   const genesisSrc = site.genesis?.src;
   const leftoverPhotos = site.gallery.filter(
     (g) =>
@@ -74,9 +71,6 @@ export function SiteDetail({ site }: { site: Site }) {
       g.src !== genesisSrc &&
       isRealPhoto(g.src) &&
       !isDiagramCredit(g.credit || "", g.caption || ""),
-  );
-  const diagramPhotos = site.gallery.filter(
-    (g) => g.src && isDiagramCredit(g.credit || "", g.caption || ""),
   );
   const todayPhoto = leftoverPhotos[0];
   const extraPhotos = leftoverPhotos.slice(1);
@@ -108,41 +102,45 @@ export function SiteDetail({ site }: { site: Site }) {
   if (s.gssp) toc.push({ id: "sec-gssp", label: t("gsspFile") });
   if (formation || site.genesis) toc.push({ id: "sec-formation", label: t("formation") });
   if (today) toc.push({ id: "sec-today", label: t("today") });
-  if (site.video?.bvid || VIDEO_SLOT_SITES.has(site.id)) toc.push({ id: "sec-video", label: t("video") });
+  if (film) toc.push({ id: "sec-video", label: film.related ? t("videoRelated") : t("video") });
   if (geosites.length > 0) toc.push({ id: "sec-map", label: t("stopMap") });
   if (geosites.length > 0) toc.push({ id: "sec-stops", label: t("fieldStops") });
-  if (visit) toc.push({ id: "sec-visit", label: t("visit") });
   if (related.length > 0) toc.push({ id: "sec-related", label: t("related") });
-  if (s.sources.length > 0) toc.push({ id: "sec-sources", label: t("sources") });
 
   return (
     <article id="main" className="pb-20">
-      <div className="relative h-56 overflow-hidden sm:h-72 md:h-96">
-        <LandformCover
-          type={site.landform_types[0] ?? "other"}
-          label={displayName(s, locale)}
-          photo={photo}
-          credit={site.cover_credit}
-          overlay
-        />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 pb-5 pt-20">
-          <div className="mx-auto max-w-3xl">
-            <h1 className="font-display text-3xl leading-tight font-semibold text-primary-fg sm:text-4xl">
-              {displayName(s, locale)}
-            </h1>
-            <p className="mt-1.5 text-sm text-primary-fg/90">
+      {shot ? (
+        <div className="relative h-64 overflow-hidden sm:h-80 md:h-[28rem]">
+          <LandformCover
+            type={site.landform_types[0] ?? "other"}
+            label={displayName(s, locale)}
+            photo={shot.src}
+            overlay
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 px-4 pb-6 pt-24">
+            <div className="mx-auto max-w-3xl">
+              <h1 className="font-display text-4xl leading-tight font-semibold text-primary-fg sm:text-5xl">
+                {displayName(s, locale)}
+              </h1>
+              <p className="mt-2 text-sm text-primary-fg/90">
+                {placeLine(site, locale)}
+                {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
+              </p>
+              {shot.related ? <p className="mt-2 max-w-md text-xs text-primary-fg/80">{t("relatedPhoto")}</p> : null}
+            </div>
+          </div>
+        </div>
+      ) : null}
+      <div className="mx-auto max-w-3xl space-y-10 px-4 py-8">
+        {!shot ? (
+          <div>
+            <h1 className="font-display text-4xl leading-tight font-semibold">{displayName(s, locale)}</h1>
+            <p className="mt-2 text-sm text-muted">
               {placeLine(site, locale)}
               {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
             </p>
           </div>
-        </div>
-      </div>
-      {photo ? (
-        <p className="credit-bar mx-auto max-w-3xl">
-          {photoCredit(site.cover_credit || "", locale)}
-        </p>
-      ) : null}
-      <div className="mx-auto max-w-3xl space-y-10 px-4 py-8">
+        ) : null}
         {toc.length > 2 ? (
           <nav className="chip-row" aria-label={t("pageIndex")}>
             {toc.map((item) => (
@@ -270,13 +268,7 @@ export function SiteDetail({ site }: { site: Site }) {
               <div className="mt-3">
                 <ClickableImage
                   src={todayPhoto.src}
-                  alt={todayPhoto.caption || todayPhoto.credit}
-                  caption={
-                    locale === "zh" && todayPhoto.caption && todayPhoto.caption !== "资料照片，非本站踏勘"
-                      ? `${photoCredit(todayPhoto.credit, locale)} · ${todayPhoto.caption}`
-                      : photoCredit(todayPhoto.credit, locale)
-                  }
-                  badge={t(mediaKindUiKey(mediaKindFor({ credit: todayPhoto.credit, caption: todayPhoto.caption })))}
+                  alt={displayName(site, locale)}
                   imgClass="h-48 w-full object-cover"
                 />
               </div>
@@ -292,13 +284,7 @@ export function SiteDetail({ site }: { site: Site }) {
                 <li key={g.src}>
                   <ClickableImage
                     src={g.src}
-                    alt={g.caption || g.credit}
-                    caption={
-                      locale === "zh" && g.caption && g.caption !== "资料照片，非本站踏勘"
-                        ? `${photoCredit(g.credit, locale)} · ${g.caption}`
-                        : photoCredit(g.credit, locale)
-                    }
-                    badge={t(mediaKindUiKey(mediaKindFor({ credit: g.credit, caption: g.caption })))}
+                    alt={displayName(site, locale)}
                   />
                 </li>
               ))}
@@ -306,36 +292,15 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {diagramPhotos.length > 0 ? (
-          <section>
-            <h2 className="font-display text-xl font-semibold">{t("diagramAppendix")}</h2>
-            <ul className="handbook-grid handbook-grid-2 mt-3">
-              {diagramPhotos.map((g) => (
-                <li key={g.src}>
-                  <ClickableImage
-                    src={g.src}
-                    alt={g.caption || g.credit}
-                    imgClass="h-40 w-full bg-surface-2 object-contain"
-                    caption={`${g.caption || t("diagramAppendix")}${g.credit ? ` · ${photoCredit(g.credit, locale)}` : ""}`}
-                    badge={t("photoKindDiagram")}
-                  />
-                </li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-
-        {site.video?.bvid ? (
+        {film ? (
           <section id="sec-video">
-            <h2 className="font-display text-xl font-semibold">{t("video")}</h2>
+            <h2 className="font-display text-xl font-semibold">
+              {film.related ? t("videoRelated") : t("video")}
+            </h2>
             <div className="mt-3">
-              <BiliEmbed video={site.video} poster={photo} />
+              <BiliEmbed video={film.video} poster={photo} />
             </div>
           </section>
-        ) : VIDEO_SLOT_SITES.has(site.id) ? (
-          <div id="sec-video">
-            <EmptyVideoSlot poster={photo} />
-          </div>
         ) : null}
 
         {areas.length > 0 ? (
@@ -441,14 +406,6 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {visit ? (
-          <div id="sec-visit">
-            <VisitCard visit={visit} officialWebsite={site.official_website} />
-          </div>
-        ) : null}
-
-        <OfficialBox site={site} visit={visit} />
-
         {safety.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("safety")}</h2>
@@ -529,17 +486,6 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
-        {s.sources.length > 0 ? (
-          <section id="sec-sources">
-            <h2 className="font-display text-xl font-semibold">{t("sources")}</h2>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
-              {s.sources.map((src) => (
-                <li key={src}>{src}</li>
-              ))}
-            </ul>
-          </section>
-        ) : null}
-
         {site.content_status === "standard" ? (
           <p className="text-sm text-muted">{t("standardNote")}</p>
         ) : null}
@@ -605,11 +551,7 @@ function GeositeItem({ geosite }: { geosite: Geosite }) {
     <li id={geosite.id} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
       {photo ? (
         <FieldPhoto photo={photo} alt={geosite.name} imgClass="h-40 w-full object-cover" role="stop" />
-      ) : (
-        <div className="flex h-28 items-center justify-center bg-surface-2 px-4 text-center text-sm font-medium text-ink">
-          {t("noStopPhoto")}
-        </div>
-      )}
+      ) : null}
       <div className="p-4">
         <p className="text-xs text-muted">{phenomenonLabel(geosite.phenomenon_type, locale)}</p>
         <p className="font-display mt-0.5 text-lg font-semibold">{geosite.name}</p>

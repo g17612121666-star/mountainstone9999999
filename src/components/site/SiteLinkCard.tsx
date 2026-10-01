@@ -1,12 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { LandformCover } from "@/components/cover/LandformCover";
 import { SiteBadges } from "@/components/site/SiteBadges";
+import { coverFor } from "@/lib/geo/catalog";
 import { siteTo } from "@/lib/geo/href";
-import { isOwnCover } from "@/lib/geo/safety";
 import type { Site } from "@/lib/geo/types";
 import { displayName, useLocale } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
 
 /** Name is the only link text. Badges, place and notes sit outside the <a>. */
 export function SiteLinkCard({
@@ -21,16 +19,12 @@ export function SiteLinkCard({
   thumb?: boolean;
 }) {
   const locale = useLocale((s) => s.locale);
-  const own = isOwnCover(site);
+  const shot = coverFor(site);
   return (
     <article className="flex gap-3 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
-      {thumb ? (
+      {thumb && shot ? (
         <div className="h-24 w-28 shrink-0 overflow-hidden" aria-hidden>
-          {own ? (
-            <img src={site.cover_image} alt="" className="h-full w-full object-cover" />
-          ) : (
-            <LandformCover type={site.landform_types[0] ?? "other"} decorative />
-          )}
+          <img src={shot.src} alt="" className="h-full w-full object-cover" />
         </div>
       ) : null}
       <div className="min-w-0 flex-1 p-4">
@@ -57,16 +51,14 @@ export function SiteRowLink({
   end?: ReactNode;
 }) {
   const locale = useLocale((s) => s.locale);
-  const own = isOwnCover(site);
+  const shot = coverFor(site);
   return (
     <div className="flex items-center gap-3 px-3 py-3 sm:px-4">
-      <div className={cn("h-20 w-28 shrink-0 overflow-hidden rounded-md", own ? "" : "bg-surface-2")} aria-hidden>
-        {own ? (
-          <img src={site.cover_image} alt="" className="h-full w-full object-cover" />
-        ) : (
-          <LandformCover type={site.landform_types[0] ?? "other"} decorative />
-        )}
-      </div>
+      {shot ? (
+        <div className="h-16 w-24 shrink-0 overflow-hidden rounded-md" aria-hidden>
+          <img src={shot.src} alt="" className="h-full w-full object-cover" />
+        </div>
+      ) : null}
       <div className="min-w-0 flex-1">
         <p className="font-medium">
           <Link {...siteTo(site)} className="hover:underline">
@@ -75,9 +67,7 @@ export function SiteRowLink({
         </p>
         {sub ? <div className="mt-0.5 text-xs text-muted">{sub}</div> : null}
       </div>
-      {end ?? (
-        <SiteBadges site={site} compact />
-      )}
+      {end ?? <SiteBadges site={site} compact />}
     </div>
   );
 }

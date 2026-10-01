@@ -3,11 +3,11 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { ClickableImage } from "@/components/media/FieldPhoto";
+import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { seoHead } from "@/lib/geo/canonical";
-import { getSite } from "@/lib/geo/catalog";
+import { clipFor, coverFor, getSite } from "@/lib/geo/catalog";
 import { COMPARE } from "@/lib/geo/compare";
 import { siteTo } from "@/lib/geo/href";
-import { isDiagramCredit, isOwnCover } from "@/lib/geo/safety";
 import { displayName, useLocale, useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/compare")({
@@ -60,24 +60,19 @@ function ComparePage() {
                         </li>
                       );
                     }
-                    const src = isOwnCover(site) ? site.cover_image : "";
-                    const diagram = isDiagramCredit(site.cover_credit || "", "");
+                    const shot = coverFor(site);
+                    const film = site.video?.bvid ? clipFor(site) : null;
                     return (
-                      <li key={`${card.id}-${side.site_id}`} className="overflow-hidden rounded-lg border border-border">
-                        {src ? (
+                      <li key={`${card.id}-${side.site_id}`} className="overflow-hidden rounded-lg border border-border bg-bg">
+                        {shot ? (
                           <ClickableImage
-                            src={src}
+                            src={shot.src}
                             alt={en ? side.title_en : side.title_zh}
+                            caption={shot.related ? t("relatedPhoto") : undefined}
                             imgClass="h-36 w-full object-cover"
                             className="rounded-none shadow-none"
-                            badge={diagram ? t("photoKindDiagram") : t("photoKindRef")}
                           />
-                        ) : (
-                          <div className="relative flex h-32 items-center justify-center bg-surface-2 text-sm text-muted">
-                            <span className="photo-kind">{t("photoKindDiagram")}</span>
-                            {t("sketch")}
-                          </div>
-                        )}
+                        ) : null}
                         <div className="p-3">
                           <Link {...siteTo(site)} className="font-display text-lg font-semibold hover:underline">
                             {en ? side.title_en : side.title_zh}
@@ -87,6 +82,11 @@ function ComparePage() {
                             <span className="font-medium">{t("howFormed")} · </span>
                             {en ? side.formed_en : side.formed_zh}
                           </p>
+                          {film && !film.related ? (
+                            <div className="mt-3">
+                              <BiliEmbed video={film.video} poster={shot?.src} />
+                            </div>
+                          ) : null}
                         </div>
                       </li>
                     );

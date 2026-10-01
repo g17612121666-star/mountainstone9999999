@@ -48,7 +48,6 @@ export function FilterBar() {
   const toggleType = useMapStore((s) => s.toggleType);
   const toggleLandform = useMapStore((s) => s.toggleLandform);
   const setProvince = useMapStore((s) => s.setProvince);
-  const setTicket = useMapStore((s) => s.setTicket);
   const setAge = useMapStore((s) => s.setAge);
   const reset = useMapStore((s) => s.resetFilters);
   const select = useMapStore((s) => s.select);
@@ -205,7 +204,7 @@ export function FilterBar() {
               <summary className="cursor-pointer text-xs font-semibold tracking-wide text-ink">
                 {t("filterMore")}
               </summary>
-              <div className="mt-2 grid grid-cols-2 gap-2">
+              <div className="mt-2">
                 <label className="text-xs text-ink">
                   {t("province")}
                   <select
@@ -219,18 +218,6 @@ export function FilterBar() {
                         {provinceLabel(p, locale)}
                       </option>
                     ))}
-                  </select>
-                </label>
-                <label className="text-xs text-ink">
-                  {t("ticket")}
-                  <select
-                    className="mt-1 h-11 w-full rounded-md border border-border bg-bg px-2 text-sm text-ink"
-                    value={filters.ticket}
-                    onChange={(e) => setTicket(e.target.value as typeof filters.ticket)}
-                  >
-                    <option value="all">{t("ticketAny")}</option>
-                    <option value="yes">{t("ticketYes")}</option>
-                    <option value="no">{t("ticketNo")}</option>
                   </select>
                 </label>
               </div>

@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { BookOpen, Compass, Info, Map } from "lucide-react";
+import { BookOpen, Compass, Info, Map, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
@@ -12,9 +12,11 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
     { to: "/", label: t("navMap"), icon: Map },
     { to: "/catalog", label: t("navCatalog"), icon: BookOpen },
     { to: "/routes", label: t("navRoutes"), icon: Compass },
+    { to: "/ask", label: t("navAsk"), icon: MessageCircle },
     { to: "/about", label: t("navAbout"), icon: Info },
   ] as const;
   const tools = [
+    { to: "/ask", label: t("navAsk") },
     { to: "/nearby", label: t("nearby") },
     { to: "/compare", label: t("compare") },
     { to: "/glossary", label: t("glossary") },
@@ -23,19 +25,21 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
     { to: "/gssp", label: t("gssp") },
   ] as const;
   return (
-    <header className="z-30 flex h-14 items-center gap-3 border-b border-border-strong bg-bg/96 px-3 backdrop-blur-sm">
+    <header className="z-30 border-b border-border-strong bg-bg/92 backdrop-blur-md">
+      <div className="h-1 bg-moss" />
+      <div className="flex h-16 items-center gap-3 px-3">
       <a href="#main" className="skip-link">
         {t("skipContent")}
       </a>
       <Link to="/" className="flex shrink-0 items-center gap-2">
-        <span className="flex h-8 w-6 flex-col overflow-hidden rounded-sm border border-border">
+        <span className="flex h-9 w-7 flex-col overflow-hidden rounded-sm shadow-[var(--shadow-border)]">
           <span className="h-1.5 bg-moss" />
           <span className="h-1.5 bg-sand" />
           <span className="h-1.5 bg-hematite" />
           <span className="flex-1 bg-ink" />
         </span>
         <span>
-          <span className="font-display block text-base leading-tight font-semibold tracking-tight">
+          <span className="font-display block text-lg leading-tight font-semibold tracking-tight">
             {t("appName")}
           </span>
           <span className="block text-[11px] leading-tight text-muted">{t("tagline")}</span>
@@ -51,7 +55,8 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
               to={l.to}
               aria-label={l.label}
               className={cn(
-                "flex h-11 items-center gap-1.5 rounded-md px-2.5 text-sm transition-colors duration-150",
+                "flex h-11 items-center gap-1.5 rounded-md px-2 text-sm transition-colors duration-150 sm:px-2.5",
+                l.to === "/ask" && "max-sm:hidden",
                 active ? "bg-surface-2 text-ink" : "text-muted hover:bg-surface-2 hover:text-ink",
               )}
             >
@@ -83,6 +88,7 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
         </details>
         <LangSwitch />
       </nav>
+      </div>
     </header>
   );
 }

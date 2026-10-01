@@ -10,7 +10,7 @@ import { SiteRowLink } from "@/components/site/SiteLinkCard";
 import { Input } from "@/components/ui/input";
 import { ageLabel } from "@/lib/geo/age";
 import { seoHead } from "@/lib/geo/canonical";
-import { getVisit, nationalGeoparks, sites, stats } from "@/lib/geo/catalog";
+import { nationalGeoparks, sites, stats } from "@/lib/geo/catalog";
 import { haystack } from "@/lib/geo/search";
 import {
   LANDFORM_LABEL,
@@ -59,7 +59,6 @@ function CatalogPage() {
   const [province, setProvince] = useState("");
   const [worldOnly, setWorldOnly] = useState(false);
   const [status, setStatus] = useState<"all" | "deep" | "standard">("all");
-  const [ticket, setTicket] = useState<"all" | "yes" | "no">("all");
   const [level, setLevel] = useState<SiteType | "">("");
   const [ageOn, setAgeOn] = useState(false);
   const [ageStart, setAgeStart] = useState(0);
@@ -76,11 +75,6 @@ function CatalogPage() {
       if (level && !s.types.includes(level)) return false;
       if (status === "deep" && s.content_status !== "complete") return false;
       if (status === "standard" && s.content_status !== "standard") return false;
-      if (ticket !== "all") {
-        const v = getVisit(s.id);
-        if (ticket === "yes" && v?.is_ticketed !== true) return false;
-        if (ticket === "no" && v?.is_ticketed !== false) return false;
-      }
       if (ageOn) {
         const a = s.geologic_age_start_ma;
         const b = s.geologic_age_end_ma;
@@ -91,7 +85,7 @@ function CatalogPage() {
       }
       return true;
     });
-  }, [q, tab, landform, province, worldOnly, status, ticket, level, ageOn, ageStart, ageEnd]);
+  }, [q, tab, landform, province, worldOnly, status, level, ageOn, ageStart, ageEnd]);
   const grouped = groupByProvince(list);
 
   return (
@@ -171,18 +165,10 @@ function CatalogPage() {
                 <option value="deep">{t("deepPage")}</option>
                 <option value="standard">{t("standardCard")}</option>
               </select>
-              <select
-                className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
-                value={ticket}
-                onChange={(e) => setTicket(e.target.value as typeof ticket)}
-              >
-                <option value="all">{t("ticketAnyLong")}</option>
-                <option value="yes">{t("ticketYes")}</option>
-                <option value="no">{t("freeOpen")}</option>
-              </select>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
               <span className="text-xs text-muted">{t("tools")}</span>
+              <Link to="/ask" className="text-moss underline">{t("navAsk")}</Link>
               <Link to="/nearby" className="text-moss underline">{t("nearby")}</Link>
               <Link to="/compare" className="text-moss underline">{t("compare")}</Link>
               <Link to="/glossary" className="text-moss underline">{t("glossary")}</Link>

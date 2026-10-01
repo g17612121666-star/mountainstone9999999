@@ -6,6 +6,7 @@ import type {
   Route,
   Site,
   ThemeRoute,
+  VideoClip,
   VisitInfo,
 } from "./types";
 import rawSites from "../../../data/sites.json";
@@ -20,7 +21,7 @@ import mediaBundle from "../../../data/media.json";
 import rewriteBundle from "../../../data/rewrite.json";
 import coverCreditsJson from "../../../data/cover_credits.json";
 import { deepGeosites, deepOverlays, deepRoutes, deepVisits } from "./deep";
-import { isFakeGeosite, isGenericGeositeName, FOSSIL_LAW_HK } from "./labels";
+import { isFakeGeosite, isGenericGeositeName, shortName, FOSSIL_LAW_HK } from "./labels";
 import {
   HOST_PARK,
   SITE_ALIASES,
@@ -29,9 +30,8 @@ import {
   geositePatches,
   routePatches,
 } from "./patches";
-import { isDiagramCredit, isGenericSafety, isOwnCover, safetyFor } from "./safety";
+import { isDiagramCredit, isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
-import type { VideoClip } from "./types";
 import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
 import { isPlaceholderCopy, visibleCopy } from "./copy";
 import { assignPhotoSlots, mergeDiskExtras } from "./photos";
@@ -536,6 +536,55 @@ export const visits: VisitInfo[] = (rawVisits as unknown as VisitInfo[]).map((v)
 });
 
 const siteById = new Map(sites.map((s) => [s.id, s]));
+
+const FILM_BY_LANDFORM: Record<string, string> = {
+  danxia: "danxiashan",
+  zhangjiajie_sandstone: "zhangjiajie",
+  karst: "shilin",
+  volcano: "changbaishan",
+  granite_peak: "huangshan",
+  fossil: "chengjiang",
+  stratigraphy: "songshan",
+  yardang: "dunhuang",
+  coast: "hongkong",
+};
+
+/** Own film if we have one; otherwise a film of the same landform. */
+export function clipFor(site: Site): { video: VideoClip; related: boolean } | null {
+  if (site.video?.bvid) return { video: site.video, related: false };
+  const prefer = site.types.includes("gssp") ? "meishan" : "";
+  const donors = [prefer, ...site.landform_types.map((lf) => FILM_BY_LANDFORM[lf] || "")].filter(Boolean);
+  for (const id of donors) {
+    if (id === site.id) continue;
+    const donor = siteById.get(id);
+    if (!donor?.video?.bvid) continue;
+    const who = shortName(site.name) || site.name;
+    return {
+      related: true,
+      video: {
+        ...donor.video,
+        note: `不是${who}的专片，讲的是同一种地貌，可以对照着看。${donor.video.note}`,
+        note_en: `Not a film of this park — same kind of landform. ${donor.video.note_en || ""}`.trim(),
+      },
+    };
+  }
+  return null;
+}
+
+/** Own cover if it is a real photo of this place; otherwise a photo of the same landform. */
+export function coverFor(site: Site): { src: string; related: boolean } | null {
+  const ok = (s: Site) =>
+    isOwnCover(s) && isRealPhoto(s.cover_image) && !isDiagramCredit(s.cover_credit || "", "");
+  if (ok(site)) return { src: site.cover_image, related: false };
+  const prefer = site.types.includes("gssp") ? "meishan" : "";
+  const donors = [prefer, ...site.landform_types.map((lf) => FILM_BY_LANDFORM[lf] || "")].filter(Boolean);
+  for (const id of donors) {
+    if (id === site.id) continue;
+    const donor = siteById.get(id);
+    if (donor && ok(donor)) return { src: donor.cover_image, related: true };
+  }
+  return null;
+}
 assignPhotoSlots(sites, geosites);
 for (const tr of themeRoutes) {
   for (const id of tr.site_ids) {

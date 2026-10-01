@@ -39,6 +39,33 @@ export function polishMachineEn(raw: string): string {
   });
   out = out.replace(/\bAge as listed\.?/gi, "");
   out = out.replace(/\bred beds\s+danxia\b/gi, "Danxia red beds");
+  out = out.replace(/\bRock:\s*/g, "The rock is ");
+  out = out.replace(/\bProcess:\s*/g, "What happened: ");
+  out = out.replace(/\bStructure:\s*/g, "How it broke: ");
+  out = out.replace(/Rock first, structure next, a surface process last\.?/gi, "Rock, then the cracks, then whatever wore it down.");
+  out = out.replace(/Name the rock first, then the process\.?/gi, "Start with the rock, then how it got this shape.");
+  out = out.replace(/Name the rock before the landform word\.?/gi, "Say what the rock is before you name the landform.");
+  out = out.replace(/The rock you can point to on the path\.?/gi, "Whatever you can point at from the path.");
+  out = out.replace(/The silhouette can match a different rock\.?/gi, "The outline can belong to a different rock.");
+  out = out.replace(/Name colou?r, grain, bedding or phenocrysts first\.?/gi, "Colour and grain first. Then see if it is layered.");
+  out = out.replace(/Confirm mix-ups on the park page\.?/gi, "The easy mix-ups are on the park page.");
+  out = out.replace(/\bis built on fossil locality\.?/gi, " is a fossil site.");
+  out = out.replace(/Field ID: texture and structure\.\s*/gi, "Texture, and how it breaks. ");
+  out = out.replace(/written on /gi, "is what you read at ");
+  out = out.replace(/Name the (lithology|rock) first\.\s*/gi, "Start with whatever rock is in front of you. ");
+  out = out.replace(/This is a section, not a scenic mountain\.\s*/gi, "You are looking at a section, not a viewpoint. ");
+  out = out.replace(/not surveyed by this site\.?\s*/gi, "");
+  out = out.replace(/Reference photo[^.]{0,80}\.?\s*/gi, "");
+  out = out.replace(/Look, don[’']t take\.?\s*/gi, "Look. Don't take a piece home. ");
+  out = out.replace(/Look, do not take\.?\s*/gi, "Look. Don't take a piece home. ");
+  out = out.replace(/Look, do not collect\.?\s*/gi, "Don't collect. ");
+  {
+    let named = 0;
+    out = out.replace(/Name the rock\.?/gi, () => {
+      named += 1;
+      return named === 1 ? "Name the rock in front of you." : "";
+    });
+  }
   out = out
     .replace(/\s{2,}/g, " ")
     .replace(/\s+([.,;:])/g, "$1")

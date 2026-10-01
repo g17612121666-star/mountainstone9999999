@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AskRouteImport } from './routes/ask'
 import { Route as BrowseRouteImport } from './routes/browse'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as CompareRouteImport } from './routes/compare'
@@ -34,6 +35,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AskRoute = AskRouteImport.update({
+  id: '/ask',
+  path: '/ask',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BrowseRoute = BrowseRouteImport.update({
@@ -110,6 +116,7 @@ const SitesIdRoute = SitesIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
@@ -128,6 +135,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
@@ -147,6 +155,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ask': typeof AskRoute
   '/browse': typeof BrowseRoute
   '/catalog': typeof CatalogRoute
   '/compare': typeof CompareRoute
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/ask'
     | '/browse'
     | '/catalog'
     | '/compare'
@@ -185,6 +195,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/ask'
     | '/browse'
     | '/catalog'
     | '/compare'
@@ -203,6 +214,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/ask'
     | '/browse'
     | '/catalog'
     | '/compare'
@@ -222,6 +234,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AskRoute: typeof AskRoute
   BrowseRoute: typeof BrowseRoute
   CatalogRoute: typeof CatalogRoute
   CompareRoute: typeof CompareRoute
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ask': {
+      id: '/ask'
+      path: '/ask'
+      fullPath: '/ask'
+      preLoaderRoute: typeof AskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/browse': {
@@ -358,6 +378,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AskRoute: AskRoute,
   BrowseRoute: BrowseRoute,
   CatalogRoute: CatalogRoute,
   CompareRoute: CompareRoute,
