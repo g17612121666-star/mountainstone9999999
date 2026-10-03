@@ -51,6 +51,9 @@ function Home() {
       </a>
       <AppHeader dense />
       <main id="main" className="relative min-h-0 flex-1">
+        <h1 className="sr-only">
+          {t("appName")} · {t("tagline")}
+        </h1>
         <ChinaMap />
         <FilterBar />
         <MapLegend />

@@ -151,7 +151,9 @@ export function FilterBar() {
       </div>
       <div className="pointer-events-none flex flex-wrap items-center gap-1.5 text-xs text-ink">
         <span className="pointer-events-auto rounded-full border border-border bg-bg/90 px-2 py-1">
-          {t("onMap")} {matched.length} · {t("world")} {stats.world} · {t("national")} {stats.national}
+          {locale === "en"
+            ? `${matched.length} on the map, ${stats.total} in the list. UNESCO ${stats.world}, national ${stats.national}. A place can be more than one.`
+            : `图上 ${matched.length} 处，名录共 ${stats.total}。世界级 ${stats.world}，国家级 ${stats.national}。一个点可以兼好几类。`}
         </span>
         <Link
           to="/routes"

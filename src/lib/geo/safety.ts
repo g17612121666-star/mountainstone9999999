@@ -65,6 +65,51 @@ export function safetyFor(site: Site): string[] {
   return notes;
 }
 
+/** Covers confirmed unrelated to the geosite (wrong subject or wrong mountain). Do not display. */
+export const REJECTED_COVER_IDS = new Set([
+  "yashan",
+  "oroqen",
+  "yichun-forest",
+  "jingyu",
+  "meijiang",
+  "guanzhishan",
+  "changshan",
+  "qianan",
+  "ordos",
+  "bayannur",
+  "taining",
+  "longyan",
+  "baiyunshan-fj",
+  "yongan",
+  "siziwang",
+  "ulanqab",
+  "fusong",
+  "qingzhou",
+  "guanshan",
+  "dalian-coast",
+  "duan",
+  "donglan",
+  "qijiang",
+  "siping",
+  "ningcheng",
+  "erenhot",
+  "qiguoshan",
+  "huaguoshan",
+  "xiqiaoshan",
+  "pingshanhu",
+  "bingling",
+  "wuan",
+  "zhengzhou-huanghe",
+  "dabashan",
+]);
+
+export function isRejectedCover(id: string, src?: string): boolean {
+  if (!REJECTED_COVER_IDS.has(id)) return false;
+  const path = src || "";
+  if (!path) return true;
+  return path.includes(`/covers/${id}.`);
+}
+
 export function isRealPhoto(path: string | undefined): boolean {
   if (!path) return false;
   if (/\.(jpe?g|png|webp)(\?|#|$)/i.test(path)) return true;
@@ -114,6 +159,7 @@ export function isOwnCover(site: {
   cover_credit?: string;
 }): boolean {
   const src = site.cover_image || "";
+  if (isRejectedCover(site.id, src)) return false;
   if (!isRealPhoto(src)) return false;
   if (!src.includes(`/covers/${site.id}.`)) return false;
   const credit = site.cover_credit || "";

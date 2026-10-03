@@ -96,10 +96,18 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     host_park_id: null,
     related_site_ids: ["changshan", "gssp-penglaitan", "jixian"],
   },
-  zigong: { geologic_age_text: "中侏罗世" },
+  zigong: {
+    geologic_age_text: "中侏罗世",
+    types: ["world_geopark", "national_geopark"],
+    corrections: ["自贡是世界地质公园，不在 IUGS 首批 100 处里。标签已去掉。"],
+  },
   huangshan: { geologic_age_text: "早白垩世" },
   sanqingshan: { geologic_age_text: "早白垩世" },
-  changbaishan: { geologic_age_text: "新生代" },
+  changbaishan: {
+    geologic_age_text: "新生代",
+    coordinates: [128.06, 42.04],
+    corrections: ["原来的点落在天池南侧、朝鲜境内。现改到中国一侧北坡附近。景区大门坐标仍待核实。"],
+  },
   taishan: { geologic_age_text: "太古宙–寒武纪" },
   chongming: {
     geologic_age_text: "全新世",
@@ -254,7 +262,7 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   "xingtai-canyon": {
     geologic_age_text: "中元古代",
     landform_types: ["zhangjiajie_sandstone"],
-    hook: "太行山石英砂岩被切成峡谷群。先认层理和垂直节理。滴酸不起泡：不是喀斯特，也不是丹霞红层。",
+    hook: "太行山石英砂岩被切成峡谷群。先认层理和垂直节理。不是喀斯特，也不是丹霞红层。不要在崖上滴酸。",
   },
   huoshizhai: { geologic_age_text: "白垩纪" },
   hongkong: {
@@ -470,25 +478,64 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   },
   "gssp-paibi": {
     host_park_id: "xiangxi",
-    hook: "寒武系排碧阶的全球尺子。花垣排碧剖面，牙形石与三叶虫定界。层型点禁止取样。",
+    hook: "寒武系排碧阶的全球尺子。花垣排碧剖面，界线以三叶虫 Glyptagnostus reticulatus 的首现来定，不是牙形石。层型点禁止取样。",
     formation_short:
-      "岩石：寒武系花桥组碳酸盐岩。界线：排碧阶底，以牙形石与三叶虫化石带定义。这是层序，不是名山外形。禁止取样。",
+      "岩石：寒武系花桥组碳酸盐岩。排碧阶的底界，以三叶虫 Glyptagnostus reticulatus 的首现定义。这是层型，不是溶洞。禁止取样。",
     geologic_age_text: "寒武纪排碧阶",
     corrections: ["排碧是层型点，不是喀斯特景区的另一个溶洞。禁止取样。"],
   },
   "gssp-guzhang": {
     host_park_id: "xiangxi",
+    name: "古丈罗依溪金钉子",
+    coordinates: [109.9647, 28.72],
     hook: "寒武系古丈阶的全球尺子，钉在古丈罗依溪。层型点禁止取样。",
     geologic_age_text: "寒武纪古丈阶",
-    corrections: ["古丈阶是年代地层单位，不是一座丹霞山。禁止取样。"],
+    corrections: ["古丈阶是年代地层单位，不是一座丹霞山。禁止取样。剖面坐标按审查给出的罗依溪位置，精确桩号仍待对 ICS 表。"],
   },
   "gssp-wuliu": {
-    hook: "寒武系乌溜阶（苗岭统底）的全球尺子，在剑河乌溜–曾家岩。层型点禁止取样。",
+    name: "剑河乌溜－曾家崖金钉子",
+    coordinates: [108.4138, 26.7474],
+    hook: "寒武系乌溜阶（苗岭统底）的全球尺子，在剑河乌溜–曾家崖。层型点禁止取样。",
     geologic_age_text: "寒武纪乌溜阶",
   },
   "gssp-penglaitan": {
-    hook: "二叠系吴家坪阶的全球尺子。来宾蓬莱滩红水河边的层型。禁止取样。",
-    geologic_age_text: "二叠纪吴家坪阶",
+    coordinates: [109.3211, 23.6953],
+  },
+  mohe: {
+    coordinates: [122.37, 53.48],
+    corrections: ["原来的点落在黑龙江对岸。现改到北极村一带（约 122.37°E, 53.48°N）。景区大门的精确坐标仍待核实。"],
+  },
+  liping: {
+    coordinates: [106.62, 32.72],
+    corrections: ["原来的点落在四川南江。现改到汉中南郑黎坪一带。大门坐标仍待核实。"],
+  },
+  kongtongshan: {
+    geologic_age_text: "白垩纪",
+    geologic_age_start_ma: 145,
+    geologic_age_end_ma: 66,
+    corrections: ["原先年龄 120–250 Ma 上下颠倒，250 Ma 也不是白垩纪。现按白垩纪的纪范围填写，具体到组还待核实。"],
+  },
+  xiaonanhai: {
+    geologic_age_text: "全新世",
+    geologic_age_start_ma: 0.00017,
+    geologic_age_end_ma: 0,
+    corrections: ["小南海是 1856 年地震堵住的堰塞湖，不是 16 万年前。"],
+  },
+  zhoukoudian: {
+    types: ["stratotype", "landform_site"],
+    corrections: ["周口店是世界文化遗产。IUGS 首批 100 处地质遗产地里没有它，标签已去掉。"],
+  },
+  alxa: {
+    types: ["world_geopark", "national_geopark"],
+    corrections: ["IUGS 首批名录里相关的是巴丹吉林沙山湖泊，不是整个阿拉善沙漠公园。标签改挂在巴丹吉林那一条。"],
+  },
+  wuda: {
+    types: ["landform_site"],
+    corrections: ["乌达植物群不在 IUGS 首批 100 处里。标签已去掉，待以后若有新一批名录再核。"],
+  },
+  "guilin-karst": {
+    types: ["landform_site"],
+    corrections: ["IUGS 首批名录里的喀斯特是石林，不是桂林。桂林这条的 IUGS 标签已去掉。"],
   },
   "gssp-pengchong": {
     hook: "石炭系维宪阶的全球尺子，钉在柳州碰冲。层型点禁止取样。",
@@ -503,9 +550,11 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     geologic_age_text: "奥陶纪赫南特阶",
   },
   "gssp-jiangshan": {
+    name: "江山碓边金钉子",
+    coordinates: [118.6149, 28.816],
     geologic_age_text: "寒武纪江山阶",
     hook: "寒武系江山阶的全球尺子，钉在浙西碓边石灰岩里。层型点禁止取样。",
-    corrections: ["江山阶是年代地层单位，不是一座喀斯特景区。禁止取样。"],
+    corrections: ["江山阶是年代地层单位，不是一座喀斯特景区。禁止取样。坐标改到碓边 B 剖面附近，精确桩号仍待对 ICS 表。"],
   },
 };
 
@@ -542,7 +591,7 @@ export const geositePatches: Record<string, Geosite[]> = {
       115.927,
       39.803,
       "bedding",
-      "洞口或开放廊道认中元古界白云岩层理。叠层石纹理朝上。滴酸反应弱于纯灰岩。",
+      "洞口或开放廊道认中元古界白云岩层理。叠层石纹理朝上。和灰岩的差别留在室内，不要在洞壁上滴酸。",
     ),
     geo(
       "shd-gate",
@@ -562,7 +611,7 @@ export const geositePatches: Record<string, Geosite[]> = {
       115.604,
       39.642,
       "bedding",
-      "雾迷山组近水平层理。滴酸起泡才是碳酸盐岩。北方河谷喀斯特，不是桂林峰林，也不是丹霞赤壁。",
+      "雾迷山组近水平层理。北方河谷喀斯特，不是桂林峰林，也不是丹霞赤壁。碳酸盐岩鉴定留在室内。",
     ),
     geo(
       "sd-bend",

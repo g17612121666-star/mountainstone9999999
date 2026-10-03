@@ -17,31 +17,72 @@ const GROUPS: { id: string; zh: string; en: string; ids: string[] }[] = [
     id: "landform",
     zh: "地貌",
     en: "Landform",
-    ids: ["danxia", "karst", "fenglin", "fengcong", "karren", "tiankeng", "maar", "caldera"],
+    ids: [
+      "danxia",
+      "karst",
+      "fenglin",
+      "fengcong",
+      "karren",
+      "tiankeng",
+      "maar",
+      "caldera",
+      "colourhill",
+      "yardang",
+      "dune",
+      "loess",
+      "qzpillar",
+      "mesa",
+      "cave",
+      "knick",
+      "meander",
+      "delta",
+      "waveplat",
+      "eqlake",
+      "slidlake",
+      "lavadam",
+      "glacier",
+      "horn",
+      "impact",
+    ],
   },
   {
     id: "structure",
     zh: "构造与结构",
     en: "Structure",
-    ids: ["joint", "bedding", "unconformity", "planation", "spheroidal", "columnar"],
+    ids: ["joint", "bedding", "unconformity", "planation", "spheroidal", "columnar", "fault", "crossbed"],
   },
   {
     id: "rock",
     zh: "岩石",
     en: "Rock",
-    ids: ["redbed", "dolostone", "stromatolite"],
+    ids: [
+      "redbed",
+      "dolostone",
+      "stromatolite",
+      "granite",
+      "rhyolite",
+      "basalt",
+      "trachyte",
+      "neck",
+      "tuff",
+      "limestone",
+      "conglomerate",
+      "shale",
+      "phenocryst",
+      "ropelava",
+    ],
   },
   {
     id: "time",
-    zh: "层型",
-    en: "Stratotype",
-    ids: ["gssp", "stratotype"],
+    zh: "层型与化石",
+    en: "Time and fossils",
+    ids: ["gssp", "stratotype", "conodont", "trilobite", "graptolite", "lager", "extinction", "ordohigh", "dinosaur", "marine"],
   },
   {
     id: "ethic",
-    zh: "现场伦理",
-    en: "Field ethic",
-    ids: ["lookdonttake"],
+    zh: "现场与名录",
+    en: "Field and lists",
+    ids: ["lookdonttake", "coords", "urban", "worldpark", "iugs"],
   },
 ];
 
@@ -99,7 +140,7 @@ function GlossaryPage() {
             </a>
           ))}
         </nav>
-        {letters.length > 1 ? (
+        {en && letters.length > 1 ? (
           <nav className="mt-2 flex flex-wrap gap-1.5" aria-label={en ? "Letter index" : "首字索引"}>
             {letters.map(([ch, id]) => (
               <a key={ch} href={`#${id}`} className="filter-chip">

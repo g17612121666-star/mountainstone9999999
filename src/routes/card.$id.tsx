@@ -180,13 +180,7 @@ function TrailCardBody() {
   const locale = useLocale((s) => s.locale);
   if (!theme) return null;
   const task = themeTask(theme, locale);
-  const firstFilm =
-    theme.site_ids
-      .map((id) => {
-        const site = getSite(id);
-        return site ? clipFor(site) : null;
-      })
-      .find((clip) => !!clip) || null;
+  const film = theme.video?.bvid ? theme.video : null;
   return (
     <>
       <h1 className="font-display mt-1 text-3xl font-semibold">{themeName(theme, locale)}</h1>
@@ -205,7 +199,7 @@ function TrailCardBody() {
           return (
             <li key={id} className="flex gap-3 text-sm leading-relaxed">
               {shot ? (
-                <img src={shot.src} alt="" className="h-14 w-20 shrink-0 rounded object-cover" />
+                <img src={shot.src} alt={displayName(site, locale)} className="h-14 w-20 shrink-0 rounded object-cover" />
               ) : null}
               <span>
                 <span className="block text-xs text-muted">
@@ -219,9 +213,14 @@ function TrailCardBody() {
           );
         })}
       </ol>
-      {theme.video?.bvid || firstFilm ? (
+      {film ? (
         <div className="no-print mt-5">
-          <BiliEmbed video={(theme.video?.bvid ? theme.video : firstFilm!.video)} />
+          <p className="mb-2 text-sm text-muted">
+            {locale === "en"
+              ? "Overview of this trail, not a film of every stop."
+              : "这条线的总览片子，不是每一站的专片。"}
+          </p>
+          <BiliEmbed video={film} />
         </div>
       ) : null}
       <aside className="mt-5 rounded-lg border border-hematite/30 p-3 text-sm leading-relaxed">

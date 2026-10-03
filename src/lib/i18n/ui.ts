@@ -283,8 +283,8 @@ export const UI = {
     en: "10 independent sites; Meishan holds two spikes on one section.",
   },
   geositeHint: {
-    zh: "打卡点要放大地图才出现，坐标只到园区或观景台。",
-    en: "Field stops appear after you zoom in. Pins are park- or viewpoint-precision only.",
+    zh: "点图例可筛选，可多选。打卡点要放大到 10 级才出现，只标到园区或观景台。",
+    en: "Tap the legend to filter. Field stops appear from zoom 10, and only at park or viewpoint precision.",
   },
   startTrail: { zh: "从一条线路开始", en: "Start with a trail" },
   sketchLandform: { zh: "示意地貌，非本园踏勘照片", en: "Schematic landform, not a field photo of this park" },
@@ -295,8 +295,8 @@ export const UI = {
   },
   inclusionH: { zh: "收录边界", en: "What this edition includes" },
   inclusionBody: {
-    zh: "这一版收已经命名的国家地质公园、还在资格名单上的园、世界地质公园、单独的金钉子，加上佘山这一处城里的石头。省级地质公园先不收，那是另一张名单。香港单独算。台湾、澳门这一版没有。海南的世界级点挂在雷琼（海口石山、湖光岩）；白沙陨石坑这些按国家名录来。",
-    en: "This edition keeps named national geoparks, parks still qualifying, UNESCO Global Geoparks, golden spikes that stand alone, and Sheshan — the city rock. Provincial parks stay off; they are a different list. Hong Kong is in, under its own rules. Taiwan and Macao are not. Hainan’s UNESCO sites sit with Leiqiong (Haikou Shishan, Huguangyan). Baisha crater and the rest follow the national list.",
+    zh: "这一版收已经命名的国家地质公园、还在资格名单上的园、世界地质公园、单独的金钉子，加上佘山这一处城里的石头。省级地质公园先不收，那是另一张名单。香港单独算。台湾、澳门这一版没有。雷琼世界地质公园跨广东和海南：湖光岩在湛江，海口石山在海南，名录里不另算成两个世界地质公园。白沙按名录上的名字收着，资格还没有再对原文复核。",
+    en: "This edition keeps named national geoparks, parks still qualifying, UNESCO Global Geoparks, golden spikes that stand alone, and Sheshan — the city rock. Provincial parks stay off; they are a different list. Hong Kong is in, under its own rules. Taiwan and Macao are not. The Leiqiong UNESCO Global Geopark crosses Guangdong and Hainan: Huguangyan is in Zhanjiang, Haikou Shishan is in Hainan, and they are not counted as two global geoparks. Baisha is kept under the name on the roll; its status has not been re-checked against the source.",
   },
   provincialCallout: {
     zh: "省级地质公园这一版不收。资格园和已经命名的放在一起看，但资格还不等于已命名。",
@@ -334,7 +334,7 @@ export const UI = {
   nearbyCity: { zh: "按城市找", en: "Pick a city" },
   nearbyPlace: { zh: "输入地名", en: "Type a place name" },
   nearbyPlacePh: { zh: "临城、十渡、佘山…", en: "Lincheng, Shidu, Sheshan…" },
-  ageUnknown: { zh: "年代待考", en: "Age not yet established" },
+  ageUnknown: { zh: "年代待核实", en: "Age not yet checked" },
   footerNav: { zh: "手册", en: "Handbook" },
   moreTools: { zh: "手册", en: "Tools" },
   cachedHint: {
@@ -406,6 +406,14 @@ export const UI = {
   },
   errorTitle: { zh: "读层读到断层了", en: "The section is faulted" },
   errorBody: { zh: "页面出了问题。试着回到地图。", en: "Something broke. Try the map again." },
+  saveSite: { zh: "记下这个点", en: "Save this place" },
+  savedSite: { zh: "已记下", en: "Saved" },
+  reportError: { zh: "发现错误", en: "Report an error" },
+  savedList: { zh: "我的石头清单", en: "My rock list" },
+  savedEmpty: {
+    zh: "还没有记下的点。在地点页点「记下这个点」，存在这台浏览器里，换一台就没有了。",
+    en: "Nothing saved yet. On a place page, tap Save this place. It stays in this browser only.",
+  },
 } as const satisfies Record<string, Pair>;
 
 export type UiKey = keyof typeof UI;

@@ -1,0 +1,1566 @@
+{
+  "summary": {
+    "generated": "2026-10-03",
+    "sites": 292,
+    "geosites": 876,
+    "routes": 292,
+    "ledger": 194,
+    "high": 24,
+    "medium": 163,
+    "low": 7
+  },
+  "ledger": [
+    {
+      "id": "changbaishan-2",
+      "field": "cover_file",
+      "issue": "短边 363px（1200×363）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "chongming",
+      "field": "cover_file",
+      "issue": "短边 384px（700×384）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "danxiashan-3",
+      "field": "cover_file",
+      "issue": "短边 172px（1200×172）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "gssp-jiangshan-2",
+      "field": "cover_file",
+      "issue": "短边 314px（910×314）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "guniujiang",
+      "field": "cover_file",
+      "issue": "短边 389px（1200×389）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "haikou-volcano",
+      "field": "cover_file",
+      "issue": "短边 250px（1200×250）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "huangsongyu-3",
+      "field": "cover_file",
+      "issue": "短边 275px（500×275）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "jingyu-3",
+      "field": "cover_file",
+      "issue": "短边 361px（449×361）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "jixian-2",
+      "field": "cover_file",
+      "issue": "短边 337px（491×337）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "jixian-3",
+      "field": "cover_file",
+      "issue": "短边 390px（800×390）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "jixian",
+      "field": "cover_file",
+      "issue": "短边 337px（609×337）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "kanas",
+      "field": "cover_file",
+      "issue": "短边 380px（1200×380）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "linlushan",
+      "field": "cover_file",
+      "issue": "短边 337px（1200×337）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "luhe",
+      "field": "cover_file",
+      "issue": "短边 351px（1200×351）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "ningcheng-3",
+      "field": "cover_file",
+      "issue": "短边 365px（365×500）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "pingshanhu",
+      "field": "cover_file",
+      "issue": "短边 356px（1200×356）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "wuda-2",
+      "field": "cover_file",
+      "issue": "短边 365px（1920×365）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "wuda",
+      "field": "cover_file",
+      "issue": "短边 314px（1920×314）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "zhangshiyan",
+      "field": "cover_file",
+      "issue": "短边 334px（500×334）",
+      "severity": "medium",
+      "suggestion": "换一张短边至少 800px 的图，换不到就空着",
+      "status": "open"
+    },
+    {
+      "id": "fangshan.jpg+shidu.jpg",
+      "field": "cover_file",
+      "issue": "字节相同 20328faf：fangshan.jpg, shidu.jpg",
+      "severity": "medium",
+      "suggestion": "只留真正属于该地点的那一张",
+      "status": "open"
+    },
+    {
+      "id": "gssp-huangnitang-2.jpg+gssp-huangnitang.jpg",
+      "field": "cover_file",
+      "issue": "字节相同 58efb782：gssp-huangnitang-2.jpg, gssp-huangnitang.jpg",
+      "severity": "medium",
+      "suggestion": "只留真正属于该地点的那一张",
+      "status": "open"
+    },
+    {
+      "id": "huangsongyu-2.jpg+huangsongyu.jpg",
+      "field": "cover_file",
+      "issue": "字节相同 b3148fc2：huangsongyu-2.jpg, huangsongyu.jpg",
+      "severity": "medium",
+      "suggestion": "只留真正属于该地点的那一张",
+      "status": "open"
+    },
+    {
+      "id": "luochuan-2.jpg+luochuan.jpg",
+      "field": "cover_file",
+      "issue": "字节相同 9ab1a25e：luochuan-2.jpg, luochuan.jpg",
+      "severity": "medium",
+      "suggestion": "只留真正属于该地点的那一张",
+      "status": "open"
+    },
+    {
+      "id": "yesanpo",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xinglong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huguan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "ningwu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wangmangling",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "pingshun",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "laoniuwan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "siziwang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "oroqen",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qiguoshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huludao",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fenghuangshan-hlj",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shankou",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiguanshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guniujiang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "tianzhushan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "dabieshan-luan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiuhuashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fengyangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "taijidong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qingyunshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "marenshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shitai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "tianedong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "longyan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "lingtongshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fozishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qingliu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "sanming-jiaoye",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "pingtan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "sanduao",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guantaishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wugongshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shicheng",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "changshan-islands",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yiyuan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wulianshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "baotianman",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "funiushan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "chayashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guanshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shenlingzhai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "daimeishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jingangtai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xiaoqinling",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "linlushan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yaoshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shennongjia",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "mulanshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wudangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "dabieshan-hg",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wufeng",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiugongshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "enshi",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "changyang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fenghuang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "hongshilin",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiubujiang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wulongshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "meijiang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shiniuzhai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "daweishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wanfoshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xuefenghu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "mangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "baishuidong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xiangxi",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "lingxiaoyan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fengkai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "enping",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qinglan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "leye-fengshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "fengshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xiangqiao",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qibailong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guiping",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yizhou-shilin",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wuhuangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "duan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "luocheng",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "donglan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "baisha-crater",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（0）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "baisha-crater",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wulong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wansheng",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qiyaoshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "longmenshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "daduhe",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiuzhaigou",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "xingwen",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "siguniang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huayingshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "dabashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guangwushan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "qingchuan",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（0）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "qingchuan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "mianzhu",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（0）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "mianzhu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "gesala",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "zhijindong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "shuanghedong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "wumengshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "pingtang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "sinan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "getuhe",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "chengjiang",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（518）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "laojunshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "cangshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jiuxiang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "alu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "dongchuan",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（0）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "dongchuan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "weishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yigong",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "zhada",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "rongbuk",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "cuihuashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yanchuan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jinsixia",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "nangongshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huashan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "liping",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "dunhuang",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huanghe-shilin",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "maijishan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "bingling",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guangeogou",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "yeliguan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "pingshanhu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "zhagana",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "kanbula",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "kunlunshan",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "huzhu",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "nianbaoyuze",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "guide",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "animaging",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "kanas",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "keketuohai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "tianshan-tianchi",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "kuqa",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "jimunai",
+      "field": "geologic_age_text",
+      "issue": "年代为空",
+      "severity": "medium",
+      "suggestion": "查到再写，否则页面显示待核实",
+      "status": "open"
+    },
+    {
+      "id": "hongkong",
+      "field": "geologic_age",
+      "issue": "年龄区间长度为 0（140）",
+      "severity": "low",
+      "suggestion": "若只是一个年龄点，在台账里注明，不要假装成一段",
+      "status": "open"
+    },
+    {
+      "id": "(52 sites)",
+      "field": "hook",
+      "issue": "同一句出现 52 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(64 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 64 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(53 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 53 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(28 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 28 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(55 sites)",
+      "field": "hook",
+      "issue": "同一句出现 55 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(63 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 63 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(55 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 55 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(18 sites)",
+      "field": "hook",
+      "issue": "同一句出现 18 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(24 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 24 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(18 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 18 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(14 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 14 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(16 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 16 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(15 sites)",
+      "field": "hook",
+      "issue": "同一句出现 15 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(19 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 19 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(16 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 16 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(21 sites)",
+      "field": "hook",
+      "issue": "同一句出现 21 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(34 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 34 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(23 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 23 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(21 sites)",
+      "field": "hook",
+      "issue": "同一句出现 21 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(23 sites)",
+      "field": "what_you_see_today",
+      "issue": "同一句出现 23 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(8 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 8 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "(10 sites)",
+      "field": "formation_short",
+      "issue": "同一句出现 10 次",
+      "severity": "high",
+      "suggestion": "不要再套同一句。写不出就标简卡",
+      "status": "open"
+    },
+    {
+      "id": "geosites",
+      "field": "public_precision",
+      "issue": "套话观察点 461，其中标成 exact 的 452",
+      "severity": "high",
+      "suggestion": "页面已隐藏套话点。原始表还在，不要当成实测点",
+      "status": "hidden-in-ui"
+    },
+    {
+      "id": "routes",
+      "field": "name",
+      "issue": "名为「半日地质步道」的线路 292 条",
+      "severity": "high",
+      "suggestion": "页面不再展示这个名字。有真实线路再补",
+      "status": "hidden-in-ui"
+    },
+    {
+      "id": "videos",
+      "field": "video",
+      "issue": "sites.json 里自带视频 0 处（合并媒体表后会多几条）",
+      "severity": "low",
+      "suggestion": "没有核实过的相关片子就不要借别的园来顶",
+      "status": "policy"
+    },
+    {
+      "id": "visits",
+      "field": "price_note",
+      "issue": "票价说明只有 3 种句子，共 292 条",
+      "severity": "medium",
+      "suggestion": "未核实的票价不要写具体数字",
+      "status": "open"
+    }
+  ]
+}

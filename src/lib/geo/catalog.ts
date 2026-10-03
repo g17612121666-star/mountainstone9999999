@@ -30,7 +30,7 @@ import {
   geositePatches,
   routePatches,
 } from "./patches";
-import { isDiagramCredit, isGenericSafety, isOwnCover, isRealPhoto, safetyFor } from "./safety";
+import { isDiagramCredit, isGenericSafety, isOwnCover, isRealPhoto, isRejectedCover, safetyFor } from "./safety";
 import { expandLookHere } from "./look";
 import { rewriteAgeClause, sanitizeGeologicAge } from "./age";
 import { isPlaceholderCopy, visibleCopy } from "./copy";
@@ -343,6 +343,7 @@ const COVER_CREDITS = coverCreditsJson as Record<
 function fillCoverFromCredits(site: Site): void {
   const cc = COVER_CREDITS[site.id];
   if (!cc?.src) return;
+  if (isRejectedCover(site.id, cc.src)) return;
   let credit = (cc.credit || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   if (credit.toLowerCase().includes("href=")) {
     credit = credit.replace(/href=\S+/gi, "").replace(/\s+/g, " ").trim();
@@ -518,7 +519,7 @@ export const routes: Route[] = (() => {
     ...Object.values(upRoutes).flat(),
   ];
   const replaced = new Set(Object.keys(routePatches));
-  return [...merged.filter((r) => !replaced.has(r.site_id)), ...Object.values(routePatches).flat()];
+  return [...merged.filter((r) => !replaced.has(r.site_id) && r.name !== "半日地质步道"), ...Object.values(routePatches).flat()];
 })();
 
 export const areas: Area[] = rawAreas as unknown as Area[];
@@ -537,52 +538,17 @@ export const visits: VisitInfo[] = (rawVisits as unknown as VisitInfo[]).map((v)
 
 const siteById = new Map(sites.map((s) => [s.id, s]));
 
-const FILM_BY_LANDFORM: Record<string, string> = {
-  danxia: "danxiashan",
-  zhangjiajie_sandstone: "zhangjiajie",
-  karst: "shilin",
-  volcano: "changbaishan",
-  granite_peak: "huangshan",
-  fossil: "chengjiang",
-  stratigraphy: "songshan",
-  yardang: "dunhuang",
-  coast: "hongkong",
-};
-
-/** Own film if we have one; otherwise a film of the same landform. */
+/** Only this place's own film. Do not borrow another park's video. */
 export function clipFor(site: Site): { video: VideoClip; related: boolean } | null {
   if (site.video?.bvid) return { video: site.video, related: false };
-  const prefer = site.types.includes("gssp") ? "meishan" : "";
-  const donors = [prefer, ...site.landform_types.map((lf) => FILM_BY_LANDFORM[lf] || "")].filter(Boolean);
-  for (const id of donors) {
-    if (id === site.id) continue;
-    const donor = siteById.get(id);
-    if (!donor?.video?.bvid) continue;
-    return {
-      related: true,
-      video: {
-        ...donor.video,
-        title: donor.video.title,
-        title_en: donor.video.title_en || donor.video.title,
-        note: "",
-        note_en: "",
-      },
-    };
-  }
   return null;
 }
 
-/** Own cover if it is a real photo of this place; otherwise a photo of the same landform. */
+/** This place's own photograph, or nothing. Same-landform stand-ins are not shown. */
 export function coverFor(site: Site): { src: string; related: boolean } | null {
-  const ok = (s: Site) =>
-    isOwnCover(s) && isRealPhoto(s.cover_image) && !isDiagramCredit(s.cover_credit || "", "");
-  if (ok(site)) return { src: site.cover_image, related: false };
-  const prefer = site.types.includes("gssp") ? "meishan" : "";
-  const donors = [prefer, ...site.landform_types.map((lf) => FILM_BY_LANDFORM[lf] || "")].filter(Boolean);
-  for (const id of donors) {
-    if (id === site.id) continue;
-    const donor = siteById.get(id);
-    if (donor && ok(donor)) return { src: donor.cover_image, related: true };
+  if (isRejectedCover(site.id, site.cover_image)) return null;
+  if (isOwnCover(site) && isRealPhoto(site.cover_image) && !isDiagramCredit(site.cover_credit || "", "")) {
+    return { src: site.cover_image, related: false };
   }
   return null;
 }

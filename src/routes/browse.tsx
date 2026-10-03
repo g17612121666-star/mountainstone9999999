@@ -16,7 +16,7 @@ type Bucket = {
 };
 
 const BUCKETS: Bucket[] = [
-  { id: "danxia", zh: "红层与丹霞", en: "Red beds & Danxia", match: (s) => s.landform_types.includes("danxia") },
+  { id: "danxia", zh: "丹霞", en: "Danxia", match: (s) => s.landform_types.includes("danxia") },
   { id: "karst", zh: "喀斯特", en: "Karst", match: (s) => s.landform_types.includes("karst") },
   {
     id: "sandstone",

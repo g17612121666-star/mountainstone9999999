@@ -374,7 +374,6 @@
     "name_traditional": "周口店北京人遗址",
     "name_official": "周口店北京人遗址",
     "types": [
-      "iugs_geoheritage",
       "stratotype",
       "landform_site"
     ],
@@ -977,7 +976,7 @@
     "city": "迁安市",
     "coordinates": [
       118.7,
-      40.0
+      40
     ],
     "landform_types": [
       "granite_peak"
@@ -1316,7 +1315,7 @@
     "city": "宁武县",
     "coordinates": [
       112.3,
-      39.0
+      39
     ],
     "landform_types": [
       "karst"
@@ -1884,8 +1883,7 @@
     "name_official": "内蒙古阿拉善沙漠世界地质公园",
     "types": [
       "world_geopark",
-      "national_geopark",
-      "iugs_geoheritage"
+      "national_geopark"
     ],
     "status": "named",
     "province": "内蒙古",
@@ -2472,7 +2470,7 @@
     "city": "乌兰察布市",
     "coordinates": [
       113.13,
-      41.0
+      41
     ],
     "landform_types": [
       "volcano"
@@ -2521,7 +2519,6 @@
     "name_traditional": "乌达植物庞贝城",
     "name_official": "乌达植物庞贝城",
     "types": [
-      "iugs_geoheritage",
       "landform_site"
     ],
     "status": "other",
@@ -3011,8 +3008,8 @@
     "province": "吉林",
     "city": "延边州",
     "coordinates": [
-      128.08,
-      42.0
+      128.06,
+      42.04
     ],
     "landform_types": [
       "volcano",
@@ -3127,7 +3124,7 @@
     "city": "乾安县",
     "coordinates": [
       124.02,
-      45.0
+      45
     ],
     "landform_types": [
       "other"
@@ -3819,7 +3816,7 @@
     "province": "黑龙江",
     "city": "漠河市",
     "coordinates": [
-      122.54,
+      122.37,
       53.48
     ],
     "landform_types": [
@@ -4911,8 +4908,8 @@
     "province": "浙江",
     "city": "江山市",
     "coordinates": [
-      118.55,
-      28.65
+      118.6149,
+      28.816
     ],
     "landform_types": [
       "stratigraphy"
@@ -6139,7 +6136,7 @@
     "province": "福建",
     "city": "屏南县",
     "coordinates": [
-      119.0,
+      119,
       26.9
     ],
     "landform_types": [
@@ -7536,7 +7533,7 @@
     "city": "诸城市",
     "coordinates": [
       119.41,
-      36.0
+      36
     ],
     "landform_types": [
       "fossil"
@@ -8818,7 +8815,7 @@
     "province": "湖北",
     "city": "宜昌市",
     "coordinates": [
-      111.0,
+      111,
       30.82
     ],
     "landform_types": [
@@ -9054,7 +9051,7 @@
     "province": "湖北",
     "city": "丹江口市",
     "coordinates": [
-      111.0,
+      111,
       32.4
     ],
     "landform_types": [
@@ -9893,7 +9890,7 @@
     "city": "攸县",
     "coordinates": [
       113.4,
-      27.0
+      27
     ],
     "landform_types": [
       "karst"
@@ -10508,7 +10505,7 @@
     "corrections": [],
     "gssp": {
       "stage_name": "寒武系排碧阶（Paibian）",
-      "boundary_defined": "球接子三叶虫 Glyptagnostus reticulatus 首现，并与 SPICE 碳同位素正偏移吻合。",
+      "boundary_defined": "排碧阶底界：三叶虫 Glyptagnostus reticulatus 首现，不是牙形石。",
       "index_fossil": "Glyptagnostus reticulatus（三叶虫）",
       "ratified_year": 2003,
       "section_name": "湖南花垣排碧剖面",
@@ -10530,8 +10527,8 @@
     "province": "湖南",
     "city": "古丈县",
     "coordinates": [
-      109.91,
-      28.47
+      109.9647,
+      28.72
     ],
     "landform_types": [
       "stratigraphy"
@@ -11309,7 +11306,7 @@
       "coast"
     ],
     "geologic_age_text": "第四纪 岛",
-    "geologic_age_start_ma": 1.0,
+    "geologic_age_start_ma": 1,
     "geologic_age_end_ma": 0,
     "hook": "火山、海岸。成因与打卡点待补。",
     "formation_short": "岩石：玄武岩、安山岩或流纹质火山岩。构造：区域抬升与节理（或层面）把岩体切开。外力：喷发建造，再被流水和风化改写。标准卡待补，先用这个三件套读现场。",
@@ -11865,7 +11862,6 @@
     "name_traditional": "桂林喀斯特",
     "name_official": "桂林喀斯特",
     "types": [
-      "iugs_geoheritage",
       "landform_site"
     ],
     "status": "other",
@@ -11936,8 +11932,8 @@
     "province": "广西",
     "city": "来宾市",
     "coordinates": [
-      109.18,
-      23.7
+      109.3211,
+      23.6953
     ],
     "landform_types": [
       "stratigraphy"
@@ -11986,7 +11982,7 @@
       "stage_name": "二叠系吴家坪阶（Wuchiapingian）",
       "boundary_defined": "牙形石 Clarkina postbitteri postbitteri 首现，定义乐平统吴家坪阶底界。",
       "index_fossil": "Clarkina postbitteri postbitteri（牙形石）",
-      "ratified_year": 2005,
+      "ratified_year": 2004,
       "section_name": "广西来宾蓬莱滩剖面",
       "visit_possible": "来宾红水河畔，保护剖面，可远观与沿步道参观。",
       "protection_rule": "禁止在剖面上凿样。看的是深水硅质岩–灰岩转换，不是捡牙形石。"
@@ -12254,9 +12250,9 @@
     "landform_types": [
       "geo_hazard"
     ],
-    "geologic_age_text": "",
-    "geologic_age_start_ma": 0.16,
-    "geologic_age_end_ma": 0.16,
+    "geologic_age_text": "全新世",
+    "geologic_age_start_ma": 0.00017,
+    "geologic_age_end_ma": 0,
     "hook": "地质灾害遗迹。成因与打卡点待补。",
     "formation_short": "岩石：破裂岩体与堆积物。构造：区域抬升与节理（或层面）把岩体切开。外力：重力、地震或暴雨激发的破坏。标准卡待补，先用这个三件套读现场。",
     "formation_timeline": [],
@@ -12495,7 +12491,7 @@
     "city": "石柱县",
     "coordinates": [
       108.24,
-      30.0
+      30
     ],
     "landform_types": [
       "karst"
@@ -12546,8 +12542,7 @@
     "name_official": "四川自贡世界地质公园",
     "types": [
       "world_geopark",
-      "national_geopark",
-      "iugs_geoheritage"
+      "national_geopark"
     ],
     "status": "named",
     "province": "四川",
@@ -13271,7 +13266,7 @@
     "city": "通江县",
     "coordinates": [
       107.24,
-      32.0
+      32
     ],
     "landform_types": [
       "karst"
@@ -14188,10 +14183,10 @@
   },
   {
     "id": "gssp-wuliu",
-    "name": "剑河乌溜－曾家岩金钉子",
+    "name": "剑河乌溜－曾家崖金钉子",
     "name_en": "Wuliu-Zengjiayan GSSP",
-    "name_traditional": "剑河乌溜－曾家岩金钉子",
-    "name_official": "剑河乌溜－曾家岩金钉子",
+    "name_traditional": "剑河乌溜－曾家崖金钉子",
+    "name_official": "剑河乌溜－曾家崖金钉子",
     "types": [
       "gssp",
       "stratotype"
@@ -14200,8 +14195,8 @@
     "province": "贵州",
     "city": "剑河县",
     "coordinates": [
-      108.67,
-      26.8
+      108.4138,
+      26.7474
     ],
     "landform_types": [
       "stratigraphy"
@@ -15106,7 +15101,7 @@
     "city": "定日县",
     "coordinates": [
       86.92,
-      28.0
+      28
     ],
     "landform_types": [
       "stratigraphy"
@@ -15227,7 +15222,7 @@
     "city": "西安市",
     "coordinates": [
       109.02,
-      34.0
+      34
     ],
     "landform_types": [
       "geo_hazard",
@@ -15569,8 +15564,8 @@
     "province": "陕西",
     "city": "南郑区",
     "coordinates": [
-      106.8,
-      32.7
+      106.62,
+      32.72
     ],
     "landform_types": [
       "karst",
@@ -15755,9 +15750,9 @@
       "danxia",
       "other"
     ],
-    "geologic_age_text": "",
-    "geologic_age_start_ma": 120,
-    "geologic_age_end_ma": 250,
+    "geologic_age_text": "白垩纪",
+    "geologic_age_start_ma": 145,
+    "geologic_age_end_ma": 66,
     "hook": "丹霞、综合地貌。成因与打卡点待补。",
     "formation_short": "岩石：陆相红层砂岩与砾岩。构造：区域抬升与节理（或层面）把岩体切开。外力：垂直节理控制下的风化剥落与崩塌。标准卡待补，先用这个三件套读现场。",
     "formation_timeline": [],
@@ -17044,7 +17039,7 @@
     "city": "库车市",
     "coordinates": [
       83.5,
-      42.0
+      42
     ],
     "landform_types": [
       "other",

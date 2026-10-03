@@ -35,11 +35,11 @@ export function ageLabel(raw: string | null | undefined, _locale: "zh" | "en"): 
 /** Replace template 「时代：碳酸盐岩」 clauses with a real age or 年代待考. */
 export function rewriteAgeClause(text: string, age: string): string {
   if (!text) return text;
-  const fallback = age ? `时代：${age}` : "时代：年代待考";
+  const fallback = age ? `时代：${age}` : "时代：待核实";
   const lith =
     "碳酸盐岩|石英砂岩|丹霞|花岗岩|综合|火山岩|岩浆岩|变质岩|火成岩|海岸|红层|峰林|喀斯特|岩溶|峡谷|花岗闪长岩|超高压变质带|温泉与花岗岩|花岗岩海蚀|变质岩与碳酸盐岩";
   let out = text.replace(new RegExp(`时代：?(${lith})`, "g"), fallback);
-  out = out.replace(new RegExp(`名录时代（(?:${lith})）`, "g"), age ? `名录时代（${age}）` : "名录时代（年代待考）");
+  out = out.replace(new RegExp(`名录时代（(?:${lith})）`, "g"), age ? `名录时代（${age}）` : "名录时代（待核实）");
   out = out.replace(/时代：([^。]{1,24})/g, (_m, token: string) => {
     const t = String(token).trim();
     if (AGE_TOKEN.test(t) && !ROCK_OR_LANDFORM_ONLY.test(t)) return `时代：${t}`;

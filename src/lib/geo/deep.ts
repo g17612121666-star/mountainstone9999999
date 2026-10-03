@@ -86,7 +86,7 @@ export const deepOverlays: Record<string, Partial<Site>> = {
       "白石山在河北涞源，是跨省园区。",
     ],
     visible_rocks_minerals_fossils: [
-      rock("雾迷山组白云岩", "浅灰，或见叠层石纹层，滴酸反应弱于灰岩。"),
+      rock("雾迷山组白云岩", "浅灰，或见叠层石纹层。和灰岩的差别留在室内认，洞里不要滴酸。"),
       rock("方解石化学沉积", "石钟乳、石幔。只看。"),
       rock("叠层石", "纹层状，像被切开的毯子。"),
     ],
@@ -276,12 +276,12 @@ export const deepOverlays: Record<string, Partial<Site>> = {
   meishan: {
     content_status: "complete",
     content_tier: "deep",
-    hook: "一剖两钉。长兴阶在这里开始，二叠纪在这里结束。",
+    hook: "一剖两钉，不是同一年。下面是 2005 年的长兴阶底，上面是 2001 年的二叠–三叠系界线。",
     formation_short:
-      "岩石：长兴组灰岩向上过渡到三叠系底部泥质岩。2001 年，长兴阶底界与二叠–三叠系界线两颗金钉子钉在同一条剖面。IUGS 大灭绝遗产地。",
+      "岩石：长兴组灰岩向上过渡到三叠系底部泥质岩。长兴阶底界（Clarkina wangi）2005 年钉在下部；二叠–三叠系界线（Hindeodus parvus）2001 年钉在上部。两颗不在同一层。IUGS 大灭绝遗产地。",
     formation_timeline: [
-      { name: "长兴阶开始", age: "约 2.54 亿年", what: "牙形石 Clarkina wangi 首现附近。" },
-      { name: "大灭绝", age: "约 2.519 亿年", what: "Hindeodus parvus 首现定义三叠系底。" },
+      { name: "长兴阶底界", age: "2005 年钉下，约 2.54 亿年前", what: "牙形石 Clarkina wangi 首现。在剖面上更靠下。" },
+      { name: "二叠–三叠系界线", age: "2001 年钉下，约 2.52 亿年前", what: "牙形石 Hindeodus parvus 首现。在剖面上更靠上。大灭绝写在这附近。" },
     ],
     what_you_see_today: "煤山剖面保护廊和博物馆。能看到岩性从灰岩变成较暗的泥质层。",
     observation_tips: [
@@ -314,7 +314,7 @@ export const deepOverlays: Record<string, Partial<Site>> = {
     ],
     visible_rocks_minerals_fossils: [
       rock("叠层石", "穹状或层状纹层。只看。"),
-      rock("白云岩", "浅灰、粉晶，滴酸反应弱。"),
+      rock("白云岩", "浅灰、粉晶。和灰岩的差别留在室内，露头上不要滴酸。"),
     ],
     safety_notes: ["部分剖面在公路旁，注意车辆。"],
     legal_notes: "禁止凿取叠层石标本。",
@@ -430,7 +430,7 @@ export const deepOverlays: Record<string, Partial<Site>> = {
       "岩石：二叠系硅质岩与灰岩。构造：深水斜坡到台地转换。钉子钉的是牙形石 Clarkina postbitteri postbitteri 首现。外力：红水河把剖面洗出来。",
     what_you_see_today: "来宾蓬莱滩保护剖面。看深水硅质岩到灰岩的转换，不是捡牙形石。",
     observation_tips: ["牙形石毫米级。现场看岩性，不要凿样。", "河岸剖面要看水位。"],
-    visible_rocks_minerals_fossils: [rock("硅质岩 / 灰岩", "硅质岩更暗更硬，灰岩滴酸才有反应。")],
+    visible_rocks_minerals_fossils: [rock("硅质岩 / 灰岩", "硅质岩更暗更硬。灰岩不要在剖面上滴酸认。")],
     safety_notes: ["红水河岸防滑，汛期不要下剖面。"],
     legal_notes: "GSSP 禁止取样。",
     related_site_ids: ["meishan", "gssp-pengchong"],
@@ -453,7 +453,7 @@ export const deepOverlays: Record<string, Partial<Site>> = {
     content_tier: "deep",
     hook: "乌溜阶金钉子。寒武系苗岭统的底界在剑河。",
     formation_short:
-      "岩石：寒武系凯里组页岩与灰岩。构造：江南斜坡。钉子钉的是三叶虫 Oryctocephalus indicus 首现，定义苗岭统与乌溜阶底界。外力：抬升把乌溜–曾家岩剖面送到苗岭。",
+      "岩石：寒武系凯里组页岩与灰岩。构造：江南斜坡。钉子钉的是三叶虫 Oryctocephalus indicus 首现，定义苗岭统与乌溜阶底界。外力：抬升把乌溜–曾家崖剖面送到苗岭。",
     what_you_see_today: "剑河苗岭国家地质公园相关园区内的保护剖面。凯里生物群的特异埋藏在附近，不是挖掘现场。",
     observation_tips: ["层型点和化石产地要分开看。", "三叶虫层不对公众提供可发掘精度。"],
     visible_rocks_minerals_fossils: [rock("凯里组页岩", "深色细粒。化石在展陈里看。")],
@@ -566,9 +566,9 @@ export const deepGeosites: Record<string, Geosite[]> = {
     g("ss-tianmashan", "sheshan", "天马山对照", 121.158, 31.082, "other", "松郡九峰的另一座。同一套白垩纪火山岩。"),
   ],
   "gssp-jiangshan": [
-    g("js-board", "gssp-jiangshan", "江山阶解说牌", 118.55, 28.65, "other", "先把芙蓉统江山阶在国际地层表上的位置记下来。", "area_only"),
-    g("js-section", "gssp-jiangshan", "碓边 B 剖面", 118.55, 28.65, "bedding", "层型标志处。看层号，不取样。", "area_only"),
-    g("js-trilo", "gssp-jiangshan", "三叶虫层观景", 118.551, 28.651, "fossil_layer", "球接子三叶虫印在层面上。手背在身后。", "area_only"),
+    g("js-board", "gssp-jiangshan", "江山阶解说牌", 118.6149, 28.816, "other", "先把芙蓉统江山阶在国际地层表上的位置记下来。", "area_only"),
+    g("js-section", "gssp-jiangshan", "碓边 B 剖面", 118.6149, 28.816, "bedding", "层型标志处。看层号，不取样。", "area_only"),
+    g("js-trilo", "gssp-jiangshan", "三叶虫层观景", 118.616, 28.817, "fossil_layer", "球接子三叶虫印在层面上。手背在身后。", "area_only"),
   ],
   "gssp-huanghuachang": [
     g("hhc-board", "gssp-huanghuachang", "大坪阶解说", 111.37, 30.86, "other", "中奥陶统的底从这里数起。", "area_only"),
@@ -586,14 +586,14 @@ export const deepGeosites: Record<string, Geosite[]> = {
     g("pb-park", "gssp-paibi", "湘西地质公园对照", 109.53, 28.4, "other", "园是保护罩，钉子是尺子。", "area_only"),
   ],
   "gssp-guzhang": [
-    g("gz-board", "gssp-guzhang", "古丈阶解说", 109.91, 28.47, "other", "苗岭统第七阶。", "area_only"),
-    g("gz-section", "gssp-guzhang", "罗依溪层型点", 109.91, 28.47, "bedding", "碳质页岩与灰岩。不要敲。", "area_only"),
-    g("gz-red", "gssp-guzhang", "红石林对照", 109.92, 28.48, "other", "层型是时间，石林是喀斯特。两套过程。", "area_only"),
+    g("gz-board", "gssp-guzhang", "古丈阶解说", 109.9647, 28.72, "other", "苗岭统第七阶。", "area_only"),
+    g("gz-section", "gssp-guzhang", "罗依溪层型点", 109.9647, 28.72, "bedding", "碳质页岩与灰岩。不要敲。", "area_only"),
+    g("gz-red", "gssp-guzhang", "红石林对照", 109.97, 28.722, "other", "层型是时间，石林是喀斯特。两套过程。", "area_only"),
   ],
   "gssp-penglaitan": [
-    g("plt-board", "gssp-penglaitan", "吴家坪阶解说", 109.18, 23.7, "other", "乐平统的底。", "area_only"),
-    g("plt-section", "gssp-penglaitan", "蓬莱滩层型点", 109.18, 23.7, "bedding", "硅质岩到灰岩的转换。河岸剖面。", "area_only"),
-    g("plt-river", "gssp-penglaitan", "红水河远观", 109.181, 23.701, "other", "河把剖面洗出来。汛期不要下岸。", "area_only"),
+    g("plt-board", "gssp-penglaitan", "吴家坪阶解说", 109.3211, 23.6953, "other", "乐平统的底。", "area_only"),
+    g("plt-section", "gssp-penglaitan", "蓬莱滩层型点", 109.3211, 23.6953, "bedding", "硅质岩到灰岩的转换。河岸剖面。", "area_only"),
+    g("plt-river", "gssp-penglaitan", "红水河远观", 109.322, 23.696, "other", "河把剖面洗出来。汛期不要下岸。", "area_only"),
   ],
   "gssp-pengchong": [
     g("pc-board", "gssp-pengchong", "维宪阶解说", 109.45, 24.433, "other", "石炭纪阶一级的尺子。", "area_only"),
@@ -601,9 +601,9 @@ export const deepGeosites: Record<string, Geosite[]> = {
     g("pc-note", "gssp-pengchong", "保护说明", 109.451, 24.434, "other", "科研剖面。先问管理部门，勿入农地剖壁。", "area_only"),
   ],
   "gssp-wuliu": [
-    g("wl-board", "gssp-wuliu", "乌溜阶解说", 108.67, 26.8, "other", "苗岭统的底界。", "area_only"),
-    g("wl-section", "gssp-wuliu", "乌溜–曾家岩层型点", 108.67, 26.8, "bedding", "凯里组。看层，不挖。", "area_only"),
-    g("wl-museum", "gssp-wuliu", "剑河地质展示", 108.68, 26.81, "fossil_layer", "凯里生物群在柜子里。", "area_only"),
+    g("wl-board", "gssp-wuliu", "乌溜阶解说", 108.4138, 26.7474, "other", "苗岭统的底界。", "area_only"),
+    g("wl-section", "gssp-wuliu", "乌溜–曾家崖层型点", 108.4138, 26.7474, "bedding", "凯里组。看层，不挖。", "area_only"),
+    g("wl-museum", "gssp-wuliu", "剑河地质展示", 108.42, 26.75, "fossil_layer", "凯里生物群在柜子里。", "area_only"),
   ],
 };
 

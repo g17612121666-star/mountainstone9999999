@@ -63,6 +63,7 @@ function CatalogPage() {
   const [ageOn, setAgeOn] = useState(false);
   const [ageStart, setAgeStart] = useState(0);
   const [ageEnd, setAgeEnd] = useState(0);
+  const [openProvinces, setOpenProvinces] = useState<Record<string, boolean>>({});
 
   const list = useMemo(() => {
     const base = tab === "national" ? nationalGeoparks() : sites;
@@ -248,7 +249,11 @@ function CatalogPage() {
               {t("catalogEmpty")}
             </p>
           ) : null}
-          {grouped.map(([provinceName, items]) => (
+          {grouped.map(([provinceName, items]) => {
+            const open = Boolean(province) || openProvinces[provinceName];
+            const shown = open ? items : items.slice(0, 8);
+            const rest = items.length - shown.length;
+            return (
             <section key={provinceName} id={`prov-${provinceName}`}>
               <h2 className="font-display flex flex-wrap items-baseline gap-2 text-xl font-semibold">
                 <span>{provinceLabel(provinceName, locale)}</span>
@@ -257,7 +262,7 @@ function CatalogPage() {
                 </span>
               </h2>
               <ul className="mt-3 divide-y divide-border overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
-                {items.map((s) => {
+                {shown.map((s) => {
                   const loc = localizeSite(s, locale);
                   return (
                     <li key={s.id}>
@@ -280,9 +285,21 @@ function CatalogPage() {
                     </li>
                   );
                 })}
+                {rest > 0 ? (
+                  <li>
+                    <button
+                      type="button"
+                      className="w-full px-4 py-3 text-left text-sm text-moss"
+                      onClick={() => setOpenProvinces((prev) => ({ ...prev, [provinceName]: true }))}
+                    >
+                      {locale === "en" ? `${rest} more in this province` : `这一省还有 ${rest} 处`}
+                    </button>
+                  </li>
+                ) : null}
               </ul>
             </section>
-          ))}
+            );
+          })}
         </div>
       </main>
       <AppFooter />

@@ -1,10 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { CONTACT_EMAIL, seoHead } from "@/lib/geo/canonical";
-import { stats } from "@/lib/geo/catalog";
-import { fossilLaw, fossilLawFor, motto, useLocale, useT } from "@/lib/i18n";
+import { getSite, stats } from "@/lib/geo/catalog";
+import { siteTo } from "@/lib/geo/href";
+import { readSaved } from "@/lib/geo/saved";
+import { displayName, fossilLaw, fossilLawFor, motto, useLocale, useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -20,6 +23,10 @@ function AboutPage() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
   const en = locale === "en";
+  const [saved, setSaved] = useState<string[] | null>(null);
+  useEffect(() => {
+    setSaved(readSaved());
+  }, []);
   return (
     <div className="page-shell">
       <AppHeader />
@@ -34,11 +41,16 @@ function AboutPage() {
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted">
           {en
-            ? `${stats.total} places so far: parks, golden spikes, and one city rock. Sheshan is the urban site. Shanghai’s national geopark is Chongming Island.`
-            : `眼下写了 ${stats.total} 处：公园、金钉子，还有一处城里的石头。佘山是城市点。上海的国家地质公园是崇明岛。`}
+            ? `${stats.total} places so far: parks, golden spikes, and one city rock. Sheshan is the urban site. Shanghai’s national geopark is Chongming Island. Counts as of 2026-10-03.`
+            : `眼下写了 ${stats.total} 处：公园、金钉子，还有一处城里的石头。佘山是城市点。上海的国家地质公园是崇明岛。数字截至 2026-10-03。`}
           <Link to="/gssp" className="ml-1 text-moss underline">
             {t("gsspIndex")}
           </Link>
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          {en
+            ? "Huguangyan is in Zhanjiang, Guangdong. Haikou Shishan is in Hainan. Both belong to the Leiqiong UNESCO Global Geopark. They are not two global geoparks."
+            : "湖光岩在广东湛江。海口石山在海南。两处都是雷琼世界地质公园的一部分，不另算成两个世界地质公园。"}
         </p>
 
         <h2 className="font-display mt-10 text-xl font-semibold">{t("inclusionH")}</h2>
@@ -61,7 +73,6 @@ function AboutPage() {
             className="aspect-[4/5] w-full object-cover object-[50%_18%] sm:aspect-auto sm:w-52 sm:shrink-0"
           />
           <figcaption className="space-y-3 px-5 py-5">
-            <p className="text-xs font-semibold tracking-wide text-moss">{t("producer")}</p>
             {en ? (
               <p className="font-display text-2xl leading-snug font-semibold">
                 Li Zeyu. He likes rocks. President of the Geography Club of Shanghai Pinghe School.
@@ -78,6 +89,25 @@ function AboutPage() {
             </p>
           </figcaption>
         </figure>
+
+        <h2 className="font-display mt-10 text-xl font-semibold">{t("savedList")}</h2>
+        {saved === null ? null : saved.length === 0 ? (
+          <p className="mt-3 text-base leading-relaxed text-muted">{t("savedEmpty")}</p>
+        ) : (
+          <ul className="mt-3 divide-y divide-border overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
+            {saved.map((id) => {
+              const site = getSite(id);
+              if (!site) return null;
+              return (
+                <li key={id}>
+                  <Link {...siteTo(site)} className="block px-4 py-3 text-sm hover:bg-surface-2">
+                    {displayName(site, locale)}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
 
         <h2 className="font-display mt-10 text-xl font-semibold">{t("contact")}</h2>
         <p className="mt-3 text-base leading-relaxed">

@@ -45,7 +45,7 @@ export function SiteLinkCard({
     <article className="flex gap-3 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
       {thumb && shot ? (
         <div className="h-24 w-28 shrink-0 overflow-hidden" aria-hidden>
-          <img src={shot.src} alt="" className="h-full w-full object-cover" />
+          <img src={shot.src} alt={displayName(site, locale)} className="h-full w-full object-cover" loading="lazy" decoding="async" />
         </div>
       ) : null}
       <div className="min-w-0 flex-1 p-4">
@@ -78,7 +78,7 @@ export function SiteRowLink({
     <div className="flex items-center gap-3 px-3 py-3 sm:px-4">
       {shot ? (
         <div className="h-16 w-24 shrink-0 overflow-hidden rounded-md" aria-hidden>
-          <img src={shot.src} alt="" className="h-full w-full object-cover" />
+          <img src={shot.src} alt={displayName(site, locale)} className="h-full w-full object-cover" loading="lazy" decoding="async" />
         </div>
       ) : null}
       <div className="min-w-0 flex-1">

@@ -25,9 +25,9 @@ export const COMPARE: CompareCard[] = [
     alike_zh: "三处都是陡的、有颜色的柱或崖，照片里容易被写成「丹霞」。",
     alike_en: "All three are steep and coloured. Photographs get captioned “Danxia” for all of them.",
     split_zh:
-      "丹霞山：红层 + 垂直节理 + 崩塌，滴酸通常不起泡。张掖：干旱区河湖相彩丘，风和间歇洪水切软层，没有丹霞那套巷谷。张家界：石英砂岩，夷平面被节理切成近方形柱，滴酸不起泡，不是喀斯特。",
+      "丹霞山：红层 + 垂直节理 + 崩塌。张掖：干旱区河湖相彩丘，风和间歇洪水切软层，没有丹霞那套巷谷。张家界：石英砂岩，夷平面被节理切成近方形柱，不是喀斯特。酸蚀鉴定留在室内，不要在山上滴酸。",
     split_en:
-      "Danxiashan: red beds + vertical joints + collapse; acid usually does not fizz. Zhangye: arid lacustrine colourful hills cut by wind and flash floods — no Danxia alleyways. Zhangjiajie: quartz sandstone, a planation surface jointed into near-square pillars; no fizz, not karst.",
+      "Danxiashan: red beds + vertical joints + collapse. Zhangye: arid lacustrine colourful hills cut by wind and flash floods — no Danxia alleyways. Zhangjiajie: quartz sandstone, a planation surface jointed into near-square pillars, not karst. Acid tests stay indoors.",
     sides: [
       {
         site_id: "danxiashan",
@@ -59,9 +59,9 @@ export const COMPARE: CompareCard[] = [
     alike_zh: "都是碳酸盐岩被水拆掉，都有溶洞。远看都是「石头山」。",
     alike_en: "Both are carbonate taken apart by water, both have caves. From far away they are just “stone mountains”.",
     split_zh:
-      "桂林：湿润区峰林平原，峰孤立在溶蚀平原上。房山–十渡：雾迷山组白云岩，层理近水平，拒马河把山切成弯谷，洞小、石花密、没有峰林平原。滴酸：白云岩弱于灰岩。",
+      "桂林：湿润区峰林平原，峰孤立在溶蚀平原上。房山–十渡：雾迷山组白云岩，层理近水平，拒马河把山切成弯谷，洞小、石花密、没有峰林平原。白云岩和灰岩的差别留在室内认，现场不要滴酸。",
     split_en:
-      "Guilin: a wet-tropical fenglin plain, peaks standing on a dissolution flat. Fangshan–Shidu: Wumishan dolostone, near-horizontal beds, the Juma River bending through the hills; smaller caves, denser stone flowers, no fenglin plain. Acid: dolostone fizzes less than limestone.",
+      "Guilin: a wet-tropical fenglin plain, peaks standing on a dissolution flat. Fangshan–Shidu: Wumishan dolostone, near-horizontal beds, the Juma River bending through the hills; smaller caves, denser stone flowers, no fenglin plain. Tell dolostone from limestone indoors — do not acid-test the outcrop.",
     sides: [
       {
         site_id: "guilin-karst",
@@ -167,9 +167,9 @@ export const COMPARE: CompareCard[] = [
     alike_zh: "都是圆坑、都有水，照片里都像「塌出来的湖」。",
     alike_en: "Both are round pits with water. Photographs get captioned as a collapsed lake.",
     split_zh:
-      "天坑：地下河顶板在碳酸盐岩里大规模塌出来，围岩会滴酸起泡。玛珥：地下水遇上岩浆爆炸留下的圆坑，岸是火山碎屑，滴酸不起泡。一个是溶了再塌，一个是炸。",
+      "天坑：地下河顶板在碳酸盐岩里大规模塌出来。玛珥：地下水遇上岩浆爆炸留下的圆坑，岸是火山碎屑。一个是溶了再塌，一个是炸。不要在坑壁上滴酸。",
     split_en:
-      "A tiankeng is the roof of an underground river collapsing in carbonate — acid fizzes. A maar is a round crater from groundwater meeting magma; the rim is volcanic debris and does not fizz. One dissolved, then fell; one exploded.",
+      "A tiankeng is the roof of an underground river collapsing in carbonate. A maar is a round crater from groundwater meeting magma; the rim is volcanic debris. One dissolved, then fell; one exploded. Do not acid-test the wall.",
     sides: [
       {
         site_id: "leye-fengshan",

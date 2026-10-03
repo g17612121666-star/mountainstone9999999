@@ -1,32 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MARKER_COLOR } from "@/lib/geo/constants";
+import { useMapStore } from "@/lib/geo/store";
+import type { SiteType } from "@/lib/geo/types";
 import { useT, type UiKey } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
-const ITEMS: { c: string; key: UiKey }[] = [
-  { c: MARKER_COLOR.world_geopark, key: "world" },
-  { c: MARKER_COLOR.national_geopark, key: "national" },
-  { c: MARKER_COLOR.national_geopark_candidate, key: "candidate" },
-  { c: MARKER_COLOR.gssp, key: "gssp" },
-  { c: MARKER_COLOR.urban_geosite, key: "urban" },
-  { c: MARKER_COLOR.geosite, key: "legendGeosite" },
+const ITEMS: { type: SiteType; c: string; key: UiKey }[] = [
+  { type: "world_geopark", c: MARKER_COLOR.world_geopark, key: "world" },
+  { type: "national_geopark", c: MARKER_COLOR.national_geopark, key: "national" },
+  { type: "national_geopark_candidate", c: MARKER_COLOR.national_geopark_candidate, key: "candidate" },
+  { type: "gssp", c: MARKER_COLOR.gssp, key: "gssp" },
+  { type: "urban_geosite", c: MARKER_COLOR.urban_geosite, key: "urban" },
 ];
-
-const HINT_KEY = "shanshizhi-geosite-hint";
 
 export function MapLegend() {
   const [open, setOpen] = useState(false);
-  const [hint, setHint] = useState(false);
   const t = useT();
-  useEffect(() => {
-    try {
-      if (!localStorage.getItem(HINT_KEY)) {
-        setHint(true);
-        localStorage.setItem(HINT_KEY, "1");
-      }
-    } catch {
-      setHint(true);
-    }
-  }, []);
+  const types = useMapStore((s) => s.filters.types);
+  const toggleType = useMapStore((s) => s.toggleType);
   return (
     <div className="pointer-events-none absolute bottom-8 left-3 z-30">
       <button
@@ -45,26 +36,35 @@ export function MapLegend() {
             : "pointer-events-none hidden rounded-lg bg-surface/92 px-3 py-2 shadow-[var(--shadow-border)] sm:pointer-events-auto sm:block"
         }
       >
-        <p className="mb-1 hidden text-[10px] tracking-wide text-muted uppercase sm:block">{t("legend")}</p>
+        <p className="mb-1 hidden text-[10px] tracking-wide text-muted sm:block">{t("legend")}</p>
         <ul className="space-y-1">
-          {ITEMS.map((i) => (
-            <li key={i.key} className="flex items-center gap-2 text-sm text-ink">
-              {i.key === "gssp" ? (
-                <span className="legend-diamond shrink-0" style={{ background: i.c }} />
-              ) : (
-                <span
-                  className="size-3 shrink-0 rounded-full"
-                  style={{
-                    background: i.c,
-                    boxShadow: "0 0 0 1px #f7f3eb",
-                  }}
-                />
-              )}
-              {t(i.key)}
-            </li>
-          ))}
+          {ITEMS.map((i) => {
+            const on = types.includes(i.type);
+            const dim = types.length > 0 && !on;
+            return (
+              <li key={i.key}>
+                <button
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() => toggleType(i.type)}
+                  className={cn(
+                    "flex min-h-11 w-full items-center gap-2 rounded-md px-1 text-left text-sm text-ink",
+                    on && "bg-moss/15",
+                    dim && "opacity-45",
+                  )}
+                >
+                  {i.type === "gssp" ? (
+                    <span className="legend-diamond shrink-0" style={{ background: i.c }} />
+                  ) : (
+                    <span className="size-3 shrink-0 rounded-full" style={{ background: i.c, boxShadow: "0 0 0 1px #f7f3eb" }} />
+                  )}
+                  {t(i.key)}
+                </button>
+              </li>
+            );
+          })}
         </ul>
-        {hint ? <p className="mt-2 max-w-40 text-[10px] leading-snug text-muted">{t("geositeHint")}</p> : null}
+        <p className="mt-2 max-w-44 text-[11px] leading-snug text-muted">{t("geositeHint")}</p>
       </div>
     </div>
   );

@@ -102,7 +102,6 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#6B5344" },
     ],
     links: [
-      { rel: "canonical", href: CANONICAL_ORIGIN + "/" },
       { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
@@ -120,6 +119,19 @@ export const Route = createRootRoute({
         <HeadContent />
       </head>
       <body className="bg-bg text-ink">
+        <noscript>
+          <p
+            style={{
+              margin: 0,
+              padding: "0.75rem 1rem",
+              background: "#f1ebe0",
+              color: "#2c261c",
+              fontFamily: "sans-serif",
+            }}
+          >
+            山石志需要 JavaScript 才能用地图和筛选。关掉脚本时，点不了。
+          </p>
+        </noscript>
         <AliasRedirect />
         <PreviewHostBridge />
         <AuthProvider>

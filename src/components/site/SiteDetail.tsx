@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { LandformCover } from "@/components/cover/LandformCover";
 import { LinkedText } from "@/components/geo/LinkedText";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
 import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { ClickableImage, FieldPhoto } from "@/components/media/FieldPhoto";
+import { MeishanSpikes } from "@/components/site/MeishanSpikes";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { SiteLinkCard } from "@/components/site/SiteLinkCard";
 import { MapFrame } from "@/components/site/MapFrame";
@@ -11,6 +13,7 @@ import { SiteMiniMap } from "@/components/site/SiteMiniMap";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Button } from "@/components/ui/button";
 import { ageLabel } from "@/lib/geo/age";
+import { CONTACT_EMAIL } from "@/lib/geo/canonical";
 import {
   clipFor,
   coverFor,
@@ -28,6 +31,7 @@ import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { GENERIC_DO_NOT, isDiagramCredit, isRealPhoto } from "@/lib/geo/safety";
 import { fieldPhotoFromGeosite } from "@/lib/geo/photos";
 import { stripLocatePhrase } from "@/lib/geo/look";
+import { readSaved, toggleSaved } from "@/lib/geo/saved";
 import type { Geosite, Site } from "@/lib/geo/types";
 import {
   displayName,
@@ -51,6 +55,11 @@ export function SiteDetail({ site }: { site: Site }) {
   const locale = useLocale((s) => s.locale);
   const t = useT();
   const s = localizeSite(site, locale);
+  const [savedIds, setSavedIds] = useState<string[]>([]);
+  useEffect(() => {
+    setSavedIds(readSaved());
+  }, [site.id]);
+  const saved = savedIds.includes(site.id);
   const standard = site.content_status === "standard";
   const geosites = getGeosites(site.id)
     .filter((g) => !isFakeGeosite(g) && !isGenericGeositeName(g.name))
@@ -132,11 +141,16 @@ export function SiteDetail({ site }: { site: Site }) {
       ) : null}
       <div className="mx-auto max-w-3xl space-y-10 px-4 py-8">
         {!shot ? (
-          <div>
+          <div className="mx-auto max-w-3xl px-4 pt-8">
             <h1 className="font-display text-4xl leading-tight font-semibold">{displayName(s, locale)}</h1>
             <p className="mt-2 text-sm text-muted">
               {placeLine(site, locale)}
               {locale === "zh" && site.name_en ? ` · ${site.name_en}` : ""}
+            </p>
+            <p className="mt-4 rounded-xl bg-surface-2 px-4 py-6 text-sm leading-relaxed text-ink">
+              {locale === "en"
+                ? "No field photo of this place yet. A picture of somewhere else is not used as a stand-in."
+                : "这里还没有确认过的现场照片。不用别的地方的图来顶。"}
             </p>
           </div>
         ) : null}
@@ -153,6 +167,7 @@ export function SiteDetail({ site }: { site: Site }) {
           <SiteBadges site={site} />
           {site.province === "香港" ? <p className="text-sm text-ink">{t("hkWgs")}</p> : null}
           <p className="text-lg leading-relaxed text-ink">{s.hook}</p>
+          {site.id === "meishan" ? <MeishanSpikes en={locale === "en"} /> : null}
           <div className="flex flex-wrap gap-2">
             <Button variant="ghost" size="sm" asChild>
               <Link to="/" search={{ focus: site.id }}>
@@ -163,6 +178,22 @@ export function SiteDetail({ site }: { site: Site }) {
               <Link to="/card/$id" params={{ id: site.id }}>
                 {t("fieldCard")}
               </Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              type="button"
+              aria-pressed={saved}
+              onClick={() => setSavedIds(toggleSaved(site.id))}
+            >
+              {saved ? t("savedSite") : t("saveSite")}
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a
+                href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`纠错 ${site.id}`)}&body=${encodeURIComponent(`地点：${site.name}（${site.id}）\n哪里不对：\n`)}`}
+              >
+                {t("reportError")}
+              </a>
             </Button>
           </div>
         </header>
@@ -397,8 +428,8 @@ export function SiteDetail({ site }: { site: Site }) {
             <ul className="mt-3 space-y-2">
               {rocks.map((v, i) => (
                 <li key={`${v.name}-${i}`} className="rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)]">
-                  <p className="font-medium">{v.name}</p>
-                  <p className="mt-1 text-sm text-muted">{v.how_to_recognize}</p>
+                  <p className="font-medium">{visibleCopy(v.name) || v.name}</p>
+                  <p className="mt-1 text-sm text-muted">{visibleCopy(v.how_to_recognize)}</p>
                 </li>
               ))}
             </ul>

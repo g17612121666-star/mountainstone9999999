@@ -4,7 +4,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { seoHead } from "@/lib/geo/canonical";
-import { clipFor, getSite, themeRoutes } from "@/lib/geo/catalog";
+import { getSite, themeRoutes } from "@/lib/geo/catalog";
 import { isOwnCover } from "@/lib/geo/safety";
 import type { LandformType } from "@/lib/geo/types";
 import { LANDFORM_LABEL } from "@/lib/geo/types";
@@ -84,16 +84,14 @@ function RoutesIndex() {
           </select>
         </div>
         <ul className="handbook-grid handbook-grid-2 mt-8">
-          {rows.map(({ tr, thumb, provinces, mapped }) => {
-            const own = tr.video?.bvid ? tr.video : null;
-            const borrowed = own ? null : mapped.map((s) => clipFor(s)).find((c) => !!c) || null;
-            const film = own || borrowed?.video || null;
+          {rows.map(({ tr, thumb, provinces }) => {
+            const film = tr.video?.bvid ? tr.video : null;
             return (
             <li key={tr.id} className="flex gap-3 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
               {thumb ? (
                 <img
                   src={thumb.cover_image}
-                  alt=""
+                  alt={themeName(tr, locale)}
                   className="h-28 w-28 shrink-0 object-cover sm:h-auto sm:w-32"
                 />
               ) : null}
@@ -119,7 +117,7 @@ function RoutesIndex() {
                     rel="noreferrer"
                     className="mt-2 inline-flex text-sm font-medium text-moss underline"
                   >
-                    {own ? t("video") : t("videoRelated")}
+                    {t("video")}
                   </a>
                 ) : null}
               </div>

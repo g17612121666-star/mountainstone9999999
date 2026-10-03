@@ -36,9 +36,9 @@ export function whyNearby(site: Site, locale: "zh" | "en"): string {
   const lf = site.landform_types[0];
   if (locale === "en") {
     if (site.types.includes("gssp")) return "A golden spike — compare the bed, not the scenery.";
-    if (lf === "karst") return "Carbonate taken apart by water; check fizz and valley vs fenglin.";
+    if (lf === "karst") return "Carbonate taken apart by water. Tell limestone from dolostone indoors — do not acid-test in the park. Then ask: valley or fenglin?";
     if (lf === "danxia") return "Red beds, joints, collapse — not a colourful hill.";
-    if (lf === "zhangjiajie_sandstone") return "Quartz-sandstone pillars; acid does not fizz.";
+    if (lf === "zhangjiajie_sandstone") return "Quartz-sandstone pillars, not karst.";
     if (lf === "granite_peak") return "Coarse granite tors, not a volcanic cone.";
     if (lf === "volcano") return "Name the magma and the landform: cone, caldera, or dam.";
     if (lf === "loess") return "Aeolian silt and a river cutting its own archive.";
@@ -47,9 +47,9 @@ export function whyNearby(site: Site, locale: "zh" | "en"): string {
     return "A catalog geosite worth checking against what is underfoot.";
   }
   if (site.types.includes("gssp")) return "金钉子。对照的是那一层，不是风景。";
-  if (lf === "karst") return "碳酸盐岩被水拆掉；核对起泡，以及河谷还是峰林。";
+  if (lf === "karst") return "碳酸盐岩被水拆掉。灰岩还是白云岩留在室内认，公园里不要滴酸。再看是河谷还是峰林。";
   if (lf === "danxia") return "红层、节理、崩塌，不是彩丘。";
-  if (lf === "zhangjiajie_sandstone") return "石英砂岩柱，滴酸不起泡。";
+  if (lf === "zhangjiajie_sandstone") return "石英砂岩柱，不是喀斯特，也不是丹霞。";
   if (lf === "granite_peak") return "粗粒花岗岩石蛋，不是火山锥。";
   if (lf === "volcano") return "先认岩浆，再认锥、破火山口还是堰塞。";
   if (lf === "loess") return "风积黄土，河在切自己的档案。";

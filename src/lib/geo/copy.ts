@@ -45,7 +45,16 @@ function loosenZh(raw: string): string {
   s = s.replace(/不要把所有平顶山都叫张家界地貌，也不要把所有红崖都叫丹霞。/g, "平顶的不一定是张家界那种砂岩，红的也不一定是丹霞。");
   s = s.replace(/本站不售票。?/g, "");
   s = s.replace(/以官方当日为准。?/g, "");
+  s = parkAcid(s);
   return s.replace(/\s{2,}/g, " ").replace(/。{2,}/g, "。").trim();
+}
+
+/** Visitors were being told to drip acid on the outcrop. Identification stays indoors. */
+export function parkAcid(s: string): string {
+  if (!/滴酸|盐酸/.test(s)) return s;
+  let t = s.replace(/滴稀盐酸起泡才是碳酸盐岩[。.]?/g, "碳酸盐岩的鉴定留在室内，公园里不要做酸蚀试验。");
+  t = t.replace(/[^。；;，,]{0,16}滴酸[^。；;]{0,18}/g, "碳酸盐岩的鉴定留在室内，公园里不要做酸蚀试验");
+  return t;
 }
 
 export function isPlaceholderCopy(s: string | null | undefined): boolean {

@@ -53,9 +53,7 @@ function ThemePage() {
   const fossilLine = theme.id === "fossil" || theme.id === "gssp" || theme.id === "jehol-dinosaur";
   const mapped = points.map((p) => p.site).filter((s): s is Site => !!s);
   const task = themeTask(theme, locale);
-  const trailFilm = theme.video?.bvid
-    ? { video: theme.video, related: false as const }
-    : mapped.map((s) => clipFor(s)).find((c) => c) || null;
+  const trailFilm = theme.video?.bvid ? { video: theme.video, related: false as const } : null;
   const trailCover = mapped.map((s) => coverFor(s)).find((c) => c)?.src;
   return (
     <div className="page-shell">
@@ -87,9 +85,12 @@ function ThemePage() {
         ) : null}
         {trailFilm ? (
           <div className="mt-6">
-            {trailFilm.related ? (
-              <h2 className="font-display mb-3 text-lg font-semibold">{t("videoRelated")}</h2>
-            ) : null}
+            <h2 className="font-display mb-3 text-lg font-semibold">{t("video")}</h2>
+            <p className="mb-3 text-sm leading-relaxed text-muted">
+              {locale === "en"
+                ? "An overview of this trail, not a film of every stop."
+                : "这条线的总览片子，不是每一站各自的专片。"}
+            </p>
             <BiliEmbed video={trailFilm.video} poster={trailCover} />
           </div>
         ) : null}

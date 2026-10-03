@@ -1,4 +1,5 @@
 import type { Geosite, PhenomenonType } from "./types";
+import { parkAcid } from "./copy";
 
 const HAND: Record<string, string> = {
   "jx-wumishan":
@@ -51,7 +52,7 @@ export const LOOK_EN: Record<PhenomenonType, string> = {
 
 /** Strip template locate/ticket sentences so the page can print that note once. */
 export function stripLocatePhrase(text: string): string {
-  return (text || "")
+  const stripped = (text || "")
     .replace(/站在开放步道或观景台看「[^」]+」。?/g, "")
     .replace(/定位只到园区或观景台，不提供可取样坐标。?/g, "")
     .replace(/定位到园区\s*\/\s*观景台，不提供可取样坐标。?/g, "")
@@ -60,6 +61,7 @@ export function stripLocatePhrase(text: string): string {
     .replace(/票价以官方当日为准，本站不售票。?/g, "")
     .replace(/\s{2,}/g, " ")
     .trim();
+  return parkAcid(stripped);
 }
 
 export function expandLookHere(g: Geosite): string {
@@ -80,4 +82,3 @@ export function expandLookHere(g: Geosite): string {
   }
   return extra;
 }
-
