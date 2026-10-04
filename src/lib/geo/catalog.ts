@@ -442,6 +442,7 @@ export const sites: Site[] = (rawSites as unknown as Site[]).map((s) => {
     merged.gallery = [];
     for (const p of extra) {
       if (!p.src || p.src === merged.cover_image || have.has(p.src)) continue;
+      if (isRejectedCover(s.id, p.src)) continue;
       have.add(p.src);
       if (isDiagramCredit(p.credit || "", p.caption || "")) {
         merged.gallery.push({ ...p, caption: p.caption || "示意图，不是现场照片" });

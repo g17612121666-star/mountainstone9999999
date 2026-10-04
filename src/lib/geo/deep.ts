@@ -427,11 +427,12 @@ export const deepOverlays: Record<string, Partial<Site>> = {
     content_tier: "deep",
     hook: "吴家坪阶金钉子。乐平统从红水河边开始。",
     formation_short:
-      "岩石：二叠系硅质岩与灰岩。构造：深水斜坡到台地转换。钉子钉的是牙形石 Clarkina postbitteri postbitteri 首现。外力：红水河把剖面洗出来。",
-    what_you_see_today: "来宾蓬莱滩保护剖面。看深水硅质岩到灰岩的转换，不是捡牙形石。",
-    observation_tips: ["牙形石毫米级。现场看岩性，不要凿样。", "河岸剖面要看水位。"],
+      "岩石：二叠系硅质岩与灰岩。构造：深水斜坡到台地转换。钉子钉在来宾灰岩第 6k 层之底，标志是牙形石 Clarkina postbitteri postbitteri 的首现。外力：红水河把剖面切出来。",
+    what_you_see_today:
+      "来宾蓬莱滩。ICS 网页上的点在红水河边。2023 年有论文说原河边剖面自 2020 年起被淹，并建议改到同地新开挖的剖面。新点位本站没有。不要按图钉下到河里。",
+    observation_tips: ["牙形石毫米级。现场看岩性，不要凿样。", "河岸如果还能看见，先看水位，再决定下不下。"],
     visible_rocks_minerals_fossils: [rock("硅质岩 / 灰岩", "硅质岩更暗更硬。灰岩不要在剖面上滴酸认。")],
-    safety_notes: ["红水河岸防滑，汛期不要下剖面。"],
+    safety_notes: ["不要按旧河岸坐标下到红水河里。能开放的范围听当地管理。"],
     legal_notes: "GSSP 禁止取样。",
     related_site_ids: ["meishan", "gssp-pengchong"],
   },
@@ -566,8 +567,8 @@ export const deepGeosites: Record<string, Geosite[]> = {
     g("ss-tianmashan", "sheshan", "天马山对照", 121.158, 31.082, "other", "松郡九峰的另一座。同一套白垩纪火山岩。"),
   ],
   "gssp-jiangshan": [
-    g("js-board", "gssp-jiangshan", "江山阶解说牌", 118.6149, 28.816, "other", "先把芙蓉统江山阶在国际地层表上的位置记下来。", "area_only"),
-    g("js-section", "gssp-jiangshan", "碓边 B 剖面", 118.6149, 28.816, "bedding", "层型标志处。看层号，不取样。", "area_only"),
+    g("js-board", "gssp-jiangshan", "江山阶解说牌", 118.6148, 28.8163, "other", "先把芙蓉统江山阶在国际地层表上的位置记下来。", "area_only"),
+    g("js-section", "gssp-jiangshan", "碓边 B 剖面", 118.6148, 28.8163, "bedding", "层型标志处。看层号，不取样。", "area_only"),
     g("js-trilo", "gssp-jiangshan", "三叶虫层观景", 118.616, 28.817, "fossil_layer", "球接子三叶虫印在层面上。手背在身后。", "area_only"),
   ],
   "gssp-huanghuachang": [
@@ -581,9 +582,9 @@ export const deepGeosites: Record<string, Geosite[]> = {
     g("wjw-graptolite", "gssp-wangjiawan", "笔石层观景", 111.421, 30.981, "fossil_layer", "层面上的锯齿状印痕。只看。", "area_only"),
   ],
   "gssp-paibi": [
-    g("pb-board", "gssp-paibi", "排碧阶解说", 109.52, 28.39, "other", "芙蓉统从这里开始。SPICE 写在化学里。", "area_only"),
-    g("pb-section", "gssp-paibi", "排碧层型点", 109.52, 28.39, "bedding", "花桥组灰岩。看层，不取样。", "area_only"),
-    g("pb-park", "gssp-paibi", "湘西地质公园对照", 109.53, 28.4, "other", "园是保护罩，钉子是尺子。", "area_only"),
+    g("pb-board", "gssp-paibi", "排碧阶解说", 109.5257, 28.3895, "other", "芙蓉统从这里开始。SPICE 写在化学里。", "area_only"),
+    g("pb-section", "gssp-paibi", "排碧层型点", 109.5257, 28.3895, "bedding", "花桥组灰岩。看层，不取样。", "area_only"),
+    g("pb-park", "gssp-paibi", "湘西地质公园对照", 109.53, 28.392, "other", "园是保护罩，钉子是尺子。", "area_only"),
   ],
   "gssp-guzhang": [
     g("gz-board", "gssp-guzhang", "古丈阶解说", 109.9647, 28.72, "other", "苗岭统第七阶。", "area_only"),
@@ -592,8 +593,8 @@ export const deepGeosites: Record<string, Geosite[]> = {
   ],
   "gssp-penglaitan": [
     g("plt-board", "gssp-penglaitan", "吴家坪阶解说", 109.3211, 23.6953, "other", "乐平统的底。", "area_only"),
-    g("plt-section", "gssp-penglaitan", "蓬莱滩层型点", 109.3211, 23.6953, "bedding", "硅质岩到灰岩的转换。河岸剖面。", "area_only"),
-    g("plt-river", "gssp-penglaitan", "红水河远观", 109.322, 23.696, "other", "河把剖面洗出来。汛期不要下岸。", "area_only"),
+    g("plt-section", "gssp-penglaitan", "蓬莱滩层型点", 109.3211, 23.6953, "bedding", "硅质岩到灰岩的转换。这是 ICS 网页上的老坐标，不要据此下河。", "area_only"),
+    g("plt-river", "gssp-penglaitan", "红水河远观", 109.322, 23.696, "other", "只在开放的高处看河。不要下到被淹的旧剖面。", "area_only"),
   ],
   "gssp-pengchong": [
     g("pc-board", "gssp-pengchong", "维宪阶解说", 109.45, 24.433, "other", "石炭纪阶一级的尺子。", "area_only"),
@@ -691,7 +692,7 @@ export const deepRoutes: Record<string, Route[]> = {
     route("gz-walk", "gssp-guzhang", "罗依溪层型", "半日", "低", ["gz-board", "gz-section", "gz-red"], "古丈罗依溪。可与排碧连看。", "不要把红石林和金钉子当成同一件事。"),
   ],
   "gssp-penglaitan": [
-    route("plt-walk", "gssp-penglaitan", "蓬莱滩层型", "2–3 小时", "低", ["plt-board", "plt-section", "plt-river"], "来宾红水河畔。看水位再下岸。", "硅质岩到灰岩的转换是这条剖面的句子。"),
+    route("plt-walk", "gssp-penglaitan", "蓬莱滩层型", "2–3 小时", "低", ["plt-board", "plt-section", "plt-river"], "来宾。先问当地还开不开河边。", "不要按老坐标下到红水河里。"),
   ],
   "gssp-pengchong": [
     route("pc-walk", "gssp-pengchong", "碰冲层型（需许可）", "2 小时", "低", ["pc-board", "pc-section", "pc-note"], "柳州北岸乡。先问管理部门。", "不要把科研剖面当成农地景点。"),

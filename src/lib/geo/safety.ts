@@ -107,7 +107,7 @@ export function isRejectedCover(id: string, src?: string): boolean {
   if (!REJECTED_COVER_IDS.has(id)) return false;
   const path = src || "";
   if (!path) return true;
-  return path.includes(`/covers/${id}.`);
+  return path.includes(`/covers/${id}.`) || path.includes(`/covers/${id}-`);
 }
 
 export function isRealPhoto(path: string | undefined): boolean {

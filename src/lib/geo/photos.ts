@@ -1,6 +1,6 @@
 import diskExtrasJson from "../../../data/disk_extras.json";
 import { shortName } from "./labels";
-import { isDiagramCredit, isOwnCover, isRealPhoto } from "./safety";
+import { isDiagramCredit, isOwnCover, isRealPhoto, isRejectedCover } from "./safety";
 import type { FieldPhoto, Geosite, LandformType, PhotoType, Site } from "./types";
 
 type DiskExtra = { src: string; credit: string; caption: string; diagram?: boolean };
@@ -337,6 +337,7 @@ export function mergeDiskExtras(site: Site): void {
   if (!Array.isArray(site.gallery)) site.gallery = [];
   for (const p of extra) {
     if (!p.src || have.has(p.src)) continue;
+    if (isRejectedCover(site.id, p.src)) continue;
     have.add(p.src);
     if (p.diagram || isDiagramCredit(p.credit || "", p.caption || "")) {
       site.gallery.push({
@@ -355,7 +356,6 @@ export function mergeDiskExtras(site: Site): void {
  * Cover stays as-is. Related-site cards keep using each site's own cover.
  */
 export function assignPhotoSlots(sites: Site[], geosites: Geosite[]): void {
-  const donors = collectDonors(sites);
   const geositesBySite = new Map<string, Geosite[]>();
   for (const g of geosites) {
     const list = geositesBySite.get(g.site_id) ?? [];
@@ -383,27 +383,17 @@ export function assignPhotoSlots(sites: Site[], geosites: Geosite[]): void {
     const ownCandidates = (site.gallery || []).filter((p) => {
       if (!p.src || used.has(p.src)) return false;
       if (!isRealPhoto(p.src)) return false;
+      if (isRejectedCover(site.id, p.src)) return false;
       if (isDiagramCredit(p.credit || "", p.caption || "")) return false;
       return true;
     });
 
-    const coverIsSat = site.cover_kind === "satellite";
     if (ownCandidates.length) {
       const p = ownCandidates[0];
       site.genesis = ownPhoto(p.src, p.credit, p.caption || "成因观察。资料照片，非本站踏勘");
       used.add(p.src);
-    } else if (!coverIsSat && cover) {
-      site.genesis = satellitePhoto(site, 0.035);
-      used.add(site.genesis.src);
     } else {
-      const donor = pickDonor(site, donors, used, 0);
-      if (donor) {
-        site.genesis = analogPhoto(site, donor);
-        used.add(site.genesis.src);
-      } else {
-        site.genesis = satellitePhoto(site, coverIsSat ? 0.02 : 0.04);
-        used.add(site.genesis.src);
-      }
+      site.genesis = undefined;
     }
 
     for (const g of stopList) {

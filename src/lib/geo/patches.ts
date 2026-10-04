@@ -478,11 +478,15 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   },
   "gssp-paibi": {
     host_park_id: "xiangxi",
+    coordinates: [109.5257, 28.3895],
     hook: "寒武系排碧阶的全球尺子。花垣排碧剖面，界线以三叶虫 Glyptagnostus reticulatus 的首现来定，不是牙形石。层型点禁止取样。",
     formation_short:
       "岩石：寒武系花桥组碳酸盐岩。排碧阶的底界，以三叶虫 Glyptagnostus reticulatus 的首现定义。这是层型，不是溶洞。禁止取样。",
     geologic_age_text: "寒武纪排碧阶",
-    corrections: ["排碧是层型点，不是喀斯特景区的另一个溶洞。禁止取样。"],
+    corrections: [
+      "排碧是层型点，不是喀斯特景区的另一个溶洞。禁止取样。",
+      "坐标按 ICS 页面印的 28°23.37′N、109°31.54′E 换算，不是本站实测大门。",
+    ],
   },
   "gssp-guzhang": {
     host_park_id: "xiangxi",
@@ -490,16 +494,26 @@ export const fieldPatches: Record<string, Partial<Site>> = {
     coordinates: [109.9647, 28.72],
     hook: "寒武系古丈阶的全球尺子，钉在古丈罗依溪。层型点禁止取样。",
     geologic_age_text: "寒武纪古丈阶",
-    corrections: ["古丈阶是年代地层单位，不是一座丹霞山。禁止取样。剖面坐标按审查给出的罗依溪位置，精确桩号仍待对 ICS 表。"],
+    corrections: [
+      "古丈阶是年代地层单位，不是一座丹霞山。禁止取样。",
+      "坐标按层型论文印的公路切面 28°43.20′N、109°57.88′E 换算，不是本站复测。",
+    ],
   },
   "gssp-wuliu": {
     name: "剑河乌溜－曾家崖金钉子",
     coordinates: [108.4138, 26.7474],
     hook: "寒武系乌溜阶（苗岭统底）的全球尺子，在剑河乌溜–曾家崖。层型点禁止取样。",
     geologic_age_text: "寒武纪乌溜阶",
+    corrections: [
+      "坐标按 2019 年层型论文印的 26°44.843′N、108°24.830′E 换算。维基百科上另有一个 26.08°N 的换算，那是把 44′ 算错了，不要用。",
+    ],
   },
   "gssp-penglaitan": {
     coordinates: [109.3211, 23.6953],
+    corrections: [
+      "坐标按 ICS 页面：23°41′43″N，109°19′16″E。不是本站实测。",
+      "界线在来宾灰岩第 6k 层之底。批准年本站记 2004，和国际年代地层表常见写法一致。另有 2023 年论文写成 2005，并说原河边剖面自 2020 年被淹、建议改钉同地新开挖的剖面。新点位本站没有，不要按这个图钉下到河里。",
+    ],
   },
   mohe: {
     coordinates: [122.37, 53.48],
@@ -551,10 +565,37 @@ export const fieldPatches: Record<string, Partial<Site>> = {
   },
   "gssp-jiangshan": {
     name: "江山碓边金钉子",
-    coordinates: [118.6149, 28.816],
+    coordinates: [118.6148, 28.8163],
     geologic_age_text: "寒武纪江山阶",
     hook: "寒武系江山阶的全球尺子，钉在浙西碓边石灰岩里。层型点禁止取样。",
-    corrections: ["江山阶是年代地层单位，不是一座喀斯特景区。禁止取样。坐标改到碓边 B 剖面附近，精确桩号仍待对 ICS 表。"],
+    corrections: [
+      "江山阶是年代地层单位，不是一座喀斯特景区。禁止取样。",
+      "坐标按 ICS 页面印的碓边 B 剖面 28°48.977′N、118°36.887′E 换算，不是本站复测。",
+    ],
+  },
+  qianan: {
+    landform_types: ["stratigraphy"],
+    hook: "迁安公开介绍讲的是太古宙的石头和不整合，不是黄山那种花岗岩名山。具体到哪一组，还有「已命名还是仍在资格名单」，都没对到部委原文。",
+    formation_short:
+      "原先的正文把迁安写成燕山期花岗岩、石蛋和钾长石。那是套话，和公开介绍里的太古宙变质岩、不整合不是一回事。组名和接触关系本站没对到论文，这里不另编一套。",
+    formation_timeline: [],
+    evolution_sequence: "",
+    what_you_see_today: "到了不要先找花岗石蛋。这一页的花岗岩说法已经拿掉。现场认哪一块石头，等核对完再写。",
+    observation_tips: [
+      "不要按粗粒石英和钾长石去认。",
+      "资格还是已命名，看园里的牌子。本站没有部委公告。",
+    ],
+    visible_rocks_minerals_fossils: [
+      rock("岩性先空着", "原先写成燕山期花岗岩。公开介绍不是这个。具体矿物先不写。"),
+    ],
+    corrections: [
+      "原先标成花岗岩地貌，和公开介绍不符，已改到地层这一类。组的名字待核实。",
+      "2009 年的材料写的是第五批国家地质公园资格。另有汇编名录把它写成国家地质公园。正式命名公告没有对到，级别先不改。",
+    ],
+  },
+  "baisha-crater": {
+    hook: "名录上的名字是白沙陨石坑。坑是不是撞击留下的，本站没有对到原始论文，不要写成已经锤定。",
+    corrections: ["汇编名录里有这一条。撞击证据没有在这里复核。"],
   },
 };
 

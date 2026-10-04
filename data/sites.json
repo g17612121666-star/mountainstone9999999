@@ -979,7 +979,7 @@
       40
     ],
     "landform_types": [
-      "granite_peak"
+      "stratigraphy"
     ],
     "geologic_age_text": "太古宙",
     "geologic_age_start_ma": 2500,
@@ -4908,8 +4908,8 @@
     "province": "浙江",
     "city": "江山市",
     "coordinates": [
-      118.6149,
-      28.816
+      118.6148,
+      28.8163
     ],
     "landform_types": [
       "stratigraphy"
@@ -10456,8 +10456,8 @@
     "province": "湖南",
     "city": "花垣县",
     "coordinates": [
-      109.52,
-      28.39
+      109.5257,
+      28.3895
     ],
     "landform_types": [
       "stratigraphy"
