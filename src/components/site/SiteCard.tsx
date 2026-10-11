@@ -5,6 +5,7 @@ import { ClickableImage } from "@/components/media/FieldPhoto";
 import { SiteBadges } from "@/components/site/SiteBadges";
 import { Button } from "@/components/ui/button";
 import { clipFor, coverFor } from "@/lib/geo/catalog";
+import { processLine } from "@/lib/geo/process";
 import { siteTo } from "@/lib/geo/href";
 import type { Site } from "@/lib/geo/types";
 import { displayName, localizeSite, placeLine, useLocale, useT } from "@/lib/i18n";
@@ -41,6 +42,14 @@ export function SiteCard({
           </p>
         </div>
         {s.hook ? <p className="text-base leading-relaxed text-ink">{s.hook}</p> : null}
+        {processLine(site, locale) ? (
+          <p className="text-sm leading-relaxed text-muted">
+            {processLine(site, locale)}
+            {locale === "en"
+              ? " Typical of this landform, not a measured log."
+              : "。这是这类地貌常见的过程，不是这一处的实测剖面。"}
+          </p>
+        ) : null}
         {film ? <BiliEmbed video={film.video} poster={shot?.src} /> : null}
         <div className="flex gap-2 pt-1">
           <Button asChild className="flex-1">

@@ -4,6 +4,8 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
+import { BottomNav } from "@/components/layout/BottomNav";
+import { InstallHint } from "@/components/layout/InstallHint";
 import { displayName, useLocale, useT } from "@/lib/i18n";
 import { getSite } from "@/lib/geo/catalog";
 import { publicPathFor, suggestSitesBySlug, TOOL_PATHS } from "@/lib/geo/slug";
@@ -112,6 +114,12 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@600;700&display=swap",
       },
     ],
+    scripts: [
+      {
+        children:
+          '(function(){try{var t=localStorage.getItem("shanshizhi-theme");if(t==="night"||t==="contrast")document.documentElement.dataset.theme=t;if(localStorage.getItem("shanshizhi-type")==="lg")document.documentElement.dataset.type="lg";}catch(e){}})();',
+      },
+    ],
   }),
   component: () => (
     <html lang="zh-CN" className="antialiased" suppressHydrationWarning>
@@ -137,6 +145,8 @@ export const Route = createRootRoute({
         <AuthProvider>
           <Outlet />
         </AuthProvider>
+        <BottomNav />
+        <InstallHint />
         <Scripts />
       </body>
     </html>

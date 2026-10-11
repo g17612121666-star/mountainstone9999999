@@ -1,10 +1,11 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { LocateButton } from "@/components/map/LocateButton";
 import { TimescaleBar } from "@/components/geo/TimescaleBar";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { pushRecent, readRecent } from "@/lib/geo/fieldnotes";
 import { LANDFORM_LABEL, PROVINCES, type LandformType, type SiteType } from "@/lib/geo/types";
 import { useMapStore } from "@/lib/geo/store";
 import { sites, stats } from "@/lib/geo/catalog";
@@ -23,6 +24,13 @@ const LEVELS: { id: SiteType; key: UiKey }[] = [
 ];
 
 const LANDS = (Object.keys(LANDFORM_LABEL) as LandformType[]).filter((k) => k !== "other");
+
+type SpeechRec = {
+  lang: string;
+  onresult: ((ev: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+  onerror: (() => void) | null;
+  start: () => void;
+};
 
 function Chip({
   active,
@@ -53,6 +61,21 @@ export function FilterBar() {
   const select = useMapStore((s) => s.select);
   const [open, setOpen] = useState(false);
   const [activeIx, setActiveIx] = useState(0);
+  const [focused, setFocused] = useState(false);
+  const [recent, setRecent] = useState<string[]>([]);
+  const [copied, setCopied] = useState(false);
+  const [voiceNote, setVoiceNote] = useState("");
+  const [canVoice, setCanVoice] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setRecent(readRecent());
+    const w = window as unknown as {
+      SpeechRecognition?: unknown;
+      webkitSpeechRecognition?: unknown;
+    };
+    setCanVoice(Boolean(w.SpeechRecognition || w.webkitSpeechRecognition));
+  }, []);
 
   const suggestions = useMemo(
     () => suggestSites(sites, filters.query, 8),
@@ -61,9 +84,58 @@ export function FilterBar() {
   const matched = useMemo(() => filterSites(sites, filters), [filters]);
 
   function pick(id: string) {
+    if (filters.query.trim()) setRecent(pushRecent(filters.query));
     select(id);
     setQuery("");
     setActiveIx(0);
+  }
+
+  function shareView() {
+    const selectedId = useMapStore.getState().selectedId;
+    const route = useMapStore.getState().activeRouteId;
+    const search = {
+      view: "1" as const,
+      focus: selectedId || undefined,
+      types: filters.types.length ? filters.types.join(",") : undefined,
+      lands: filters.landforms.length ? filters.landforms.join(",") : undefined,
+      province: filters.province || undefined,
+      age: filters.ageOn ? `${filters.ageStart}-${filters.ageEnd}` : undefined,
+      route: route || undefined,
+      q: filters.query || undefined,
+      depth: filters.depth !== "all" ? filters.depth : undefined,
+    };
+    void navigate({ to: "/", search });
+    const url = new URL(window.location.origin + "/");
+    for (const [key, value] of Object.entries(search)) {
+      if (value) url.searchParams.set(key, value);
+    }
+    void navigator.clipboard?.writeText(url.toString()).then(
+      () => {
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1600);
+      },
+      () => setCopied(false),
+    );
+  }
+
+  function listen() {
+    const w = window as unknown as {
+      SpeechRecognition?: new () => SpeechRec;
+      webkitSpeechRecognition?: new () => SpeechRec;
+    };
+    const Ctor = w.SpeechRecognition || w.webkitSpeechRecognition;
+    if (!Ctor) {
+      setVoiceNote(t("voiceFail"));
+      return;
+    }
+    const rec = new Ctor();
+    rec.lang = locale === "en" ? "en-US" : "zh-CN";
+    rec.onresult = (ev) => {
+      const said = ev.results?.[0]?.[0]?.transcript ?? "";
+      if (said) setQuery(said);
+    };
+    rec.onerror = () => setVoiceNote(t("voiceFail"));
+    rec.start();
   }
 
   return (
@@ -96,6 +168,8 @@ export function FilterBar() {
             aria-label={t("searchAria")}
             aria-autocomplete="list"
             aria-expanded={suggestions.length > 0}
+            onFocus={() => setFocused(true)}
+            onBlur={() => window.setTimeout(() => setFocused(false), 180)}
           />
           {filters.query.trim() ? (
             <div className="absolute inset-x-0 top-[calc(100%+6px)] z-40 overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
@@ -134,6 +208,27 @@ export function FilterBar() {
               )}
             </div>
           ) : null}
+          {focused && !filters.query.trim() && recent.length ? (
+            <div className="absolute inset-x-0 top-[calc(100%+6px)] z-40 rounded-xl bg-surface p-2 shadow-[var(--shadow-border)]">
+              <p className="px-1 text-[11px] text-muted">{t("recentSearch")}</p>
+              <div className="mt-1 flex flex-wrap gap-1">
+                {recent.map((q) => (
+                  <button
+                    key={q}
+                    type="button"
+                    className="filter-chip !min-h-9"
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => {
+                      setQuery(q);
+                      setRecent(pushRecent(q));
+                    }}
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
         <Button
           variant={open ? "default" : "outline"}
@@ -145,10 +240,11 @@ export function FilterBar() {
           {open ? <X className="size-4" /> : <SlidersHorizontal className="size-4" />}
         </Button>
         <LocateButton />
-        <Button variant="outline" size="sm" className="h-11 shrink-0 bg-surface/95 shadow-[var(--shadow-border)]" asChild>
+        <Button variant="outline" size="sm" className="hidden h-11 shrink-0 bg-surface/95 shadow-[var(--shadow-border)] sm:inline-flex" asChild>
           <Link to="/nearby">{t("nearby")}</Link>
         </Button>
       </div>
+      {voiceNote ? <p className="pointer-events-auto text-xs text-hematite">{voiceNote}</p> : null}
       <div className="pointer-events-none flex flex-wrap items-center gap-1.5 text-xs text-ink">
         <span className="pointer-events-auto rounded-full border border-border bg-bg/90 px-2 py-1">
           {locale === "en"
@@ -161,6 +257,13 @@ export function FilterBar() {
         >
           {t("startTrail")}
         </Link>
+        <button
+          type="button"
+          className="pointer-events-auto rounded-full border border-border bg-bg/90 px-2 py-1"
+          onClick={shareView}
+        >
+          {copied ? t("shareCopied") : t("shareView")}
+        </button>
       </div>
       {matched.length === 0 ? (
         <div className="pointer-events-auto rounded-xl bg-surface/95 p-4 text-sm shadow-[var(--shadow-border)]">
@@ -258,6 +361,11 @@ export function FilterBar() {
             <Button size="sm" className="h-11 flex-1" onClick={() => setOpen(false)}>
               {t("applyFilters")}
             </Button>
+            {canVoice ? (
+              <Button variant="outline" size="sm" className="h-11" type="button" onClick={listen}>
+                {t("voiceSearch")}
+              </Button>
+            ) : null}
             <Button variant="outline" size="sm" className="h-11" onClick={reset}>
               {t("clearFilters")}
             </Button>

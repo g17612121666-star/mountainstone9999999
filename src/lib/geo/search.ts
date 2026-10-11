@@ -51,6 +51,8 @@ export function siteMatches(site: Site, f: MapFilters, opts?: { includeQuery?: b
     const hi = Math.max(a, b);
     if (hi < f.ageStart || lo > f.ageEnd) return false;
   }
+  if (f.depth === "deep" && site.content_status !== "complete") return false;
+  if (f.depth === "standard" && site.content_status !== "standard") return false;
   return true;
 }
 

@@ -3,6 +3,7 @@ import { AppFooter } from "@/components/layout/AppFooter";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
+import { TrailCheck, TrailWalk } from "@/components/geo/TrailWalk";
 import { ThemeMap } from "@/components/map/ThemeMap";
 import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { ClickableImage } from "@/components/media/FieldPhoto";
@@ -83,6 +84,7 @@ function ThemePage() {
             {fossilLaw(locale)}
           </aside>
         ) : null}
+        <TrailWalk routeId={theme.id} stops={points} />
         {trailFilm ? (
           <div className="mt-6">
             <h2 className="font-display mb-3 text-lg font-semibold">{t("video")}</h2>
@@ -115,7 +117,7 @@ function ThemePage() {
         <ol className="mt-8 space-y-4">
           {points.map(({ site }, i) =>
             site ? (
-              <li key={site.id} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
+              <li key={site.id} id={`stop-${site.id}`} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
                 <div className="p-4 pb-3">
                   <p className="text-xs text-muted">
                     {t("trailStop")} {i + 1}
@@ -148,6 +150,7 @@ function ThemePage() {
                     {themeRole(theme, i, locale)}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed">{localizeSite(site, locale).hook}</p>
+                  <TrailCheck routeId={theme.id} siteId={site.id} />
                   {(() => {
                     const loc = localizeSite(site, locale);
                     const lands = site.landform_types

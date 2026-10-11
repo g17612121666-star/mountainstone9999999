@@ -3,6 +3,7 @@ import { BookOpen, Compass, Info, Map, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
+import { AppearanceToggle } from "./AppearanceToggle";
 
 export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
   void _dense;
@@ -73,7 +74,10 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
           >
             {t("moreTools")}
           </summary>
-          <div className="absolute right-0 z-40 mt-1 min-w-40 rounded-lg bg-surface p-1 shadow-[var(--shadow-border)]">
+          <div className="absolute right-0 z-40 mt-1 min-w-44 rounded-lg bg-surface p-1 shadow-[var(--shadow-border)]">
+            <div className="px-1 py-1 md:hidden">
+              <AppearanceToggle />
+            </div>
             {tools.map((l) => (
               <Link
                 key={l.to}
@@ -85,6 +89,9 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
             ))}
           </div>
         </details>
+        <div className="hidden md:block">
+          <AppearanceToggle />
+        </div>
         <LangSwitch />
       </nav>
       </div>

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { LandformCover } from "@/components/cover/LandformCover";
 import { LinkedText } from "@/components/geo/LinkedText";
 import { OfflinePackButton } from "@/components/geo/OfflinePackButton";
+import { ObserveList } from "@/components/site/ObserveList";
+import { ProcessSketch, sketchKind } from "@/components/site/ProcessSketch";
 import { BiliEmbed } from "@/components/media/BiliEmbed";
 import { ClickableImage, FieldPhoto } from "@/components/media/FieldPhoto";
 import { MeishanSpikes } from "@/components/site/MeishanSpikes";
@@ -27,6 +29,7 @@ import {
 } from "@/lib/geo/catalog";
 import { isPlaceholderCopy, visibleCopy } from "@/lib/geo/copy";
 import { siteTo } from "@/lib/geo/href";
+import { amapMarkerHref } from "@/lib/geo/coords";
 import { isFakeGeosite, isGenericGeositeName } from "@/lib/geo/labels";
 import { GENERIC_DO_NOT, isDiagramCredit, isRealPhoto } from "@/lib/geo/safety";
 import { fieldPhotoFromGeosite } from "@/lib/geo/photos";
@@ -166,13 +169,34 @@ export function SiteDetail({ site }: { site: Site }) {
         <header className="space-y-4">
           <SiteBadges site={site} />
           {site.province === "香港" ? <p className="text-sm text-ink">{t("hkWgs")}</p> : null}
-          <p className="text-lg leading-relaxed text-ink">{s.hook}</p>
+          <p className="text-lg leading-relaxed text-ink">
+            <LinkedText text={s.hook} />
+          </p>
           {site.id === "meishan" ? <MeishanSpikes en={locale === "en"} /> : null}
+          {site.id !== "meishan" && (site.content_status === "complete" || site.content_tier === "deep") && sketchKind(site.landform_types) ? (
+            <ProcessSketch kind={sketchKind(site.landform_types)!} />
+          ) : null}
+          {site.types.includes("gssp") || fossilRelated || site.types.includes("urban_geosite") ? (
+            <aside className="sticky top-[4.25rem] z-20 space-y-2 rounded-xl border border-hematite/40 bg-surface/95 p-3 text-sm leading-relaxed shadow-[var(--shadow-border)]">
+              {site.types.includes("gssp") ? <p>{t("lawStickyGssp")}</p> : null}
+              {fossilRelated ? <p>{fossilLawFor(site.province, locale)}</p> : null}
+              {site.types.includes("urban_geosite") ? <p>{t("lawStickyUrban")}</p> : null}
+            </aside>
+          ) : null}
           <div className="flex flex-wrap gap-2">
             <Button variant="ghost" size="sm" asChild>
               <Link to="/" search={{ focus: site.id }}>
                 {t("locate")}
               </Link>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href={amapMarkerHref(site.coordinates, site.province, displayName(site, locale))}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("amapNav")}
+              </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
               <Link to="/card/$id" params={{ id: site.id }}>
@@ -411,6 +435,14 @@ export function SiteDetail({ site }: { site: Site }) {
           </section>
         ) : null}
 
+        {tips.length > 0 || rocks.length > 0 ? (
+          <ObserveList
+            siteId={site.id}
+            rocks={rocks.map((v) => visibleCopy(v.name) || v.name).filter(Boolean)}
+            tips={tips}
+          />
+        ) : null}
+
         {tips.length > 0 ? (
           <section>
             <h2 className="font-display text-xl font-semibold">{t("handbook")}</h2>
@@ -520,6 +552,8 @@ export function SiteDetail({ site }: { site: Site }) {
           <p className="text-sm text-muted">{t("standardNote")}</p>
         ) : null}
 
+        <p className="text-xs leading-relaxed text-muted">{t("provenance")}</p>
+        <p className="text-xs leading-relaxed text-muted">{t("amapNote")}</p>
         <p className="font-display text-center text-sm text-muted">{motto(locale)}</p>
       </div>
       <BackToTop />

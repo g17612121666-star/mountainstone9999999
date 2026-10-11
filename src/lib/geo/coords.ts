@@ -74,7 +74,7 @@ export function gcjPair(
   return wgs84ToGcj02(coordinates[0], coordinates[1]);
 }
 
-/** Marker pair matching the active basemap CRS. English tiles are WGS84. */
+/** Leaflet display pair matching the active basemap CRS. English tiles are WGS84. */
 export function mapPair(
   coordinates: [number, number],
   province?: string,
@@ -82,4 +82,22 @@ export function mapPair(
 ): [number, number] {
   if (locale === "en") return coordinates;
   return gcjPair(coordinates, province);
+}
+
+/** Amap marker. Mainland uses GCJ-02; Hong Kong and Macao stay WGS84 (`gps`). Catalog pin, not a surveyed gate. */
+export function amapMarkerHref(
+  coordinates: [number, number],
+  province: string | undefined,
+  name: string,
+): string {
+  const eligible = province ? gcj02Eligible(province) : !outOfChina(coordinates[0], coordinates[1]);
+  const [lng, lat] = eligible ? wgs84ToGcj02(coordinates[0], coordinates[1]) : coordinates;
+  const params = new URLSearchParams({
+    position: `${lng.toFixed(6)},${lat.toFixed(6)}`,
+    name,
+    src: "shanshizhi",
+    coordinate: eligible ? "gaode" : "gps",
+    callnative: "1",
+  });
+  return `https://uri.amap.com/marker?${params.toString()}`;
 }

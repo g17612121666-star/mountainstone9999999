@@ -30,24 +30,38 @@ const ATTR_EN_STREETS = "© OpenStreetMap contributors, © CARTO";
 type Leaflet = typeof import("leaflet");
 export type TileLocale = "zh" | "en";
 
+export type TileHooks = {
+  onReady?: () => void;
+  onFail?: () => void;
+};
+
 function asiaBounds(L: Leaflet) {
   return L.latLngBounds(ASIA_SW, ASIA_NE);
+}
+
+function watchTiles(layer: import("leaflet").TileLayer, hooks?: TileHooks) {
+  if (!hooks) return;
+  layer.on("load", () => hooks.onReady?.());
+  layer.on("tileerror", () => hooks.onFail?.());
 }
 
 function attachOsmFallback(
   L: Leaflet,
   map: import("leaflet").Map,
   layer: import("leaflet").TileLayer,
+  hooks?: TileHooks,
 ) {
   let used = false;
   layer.on("tileerror", () => {
     if (used) return;
     used = true;
-    L.tileLayer(OSM, {
+    const osm = L.tileLayer(OSM, {
       maxZoom: 19,
       noWrap: true,
       attribution: "© OpenStreetMap",
-    }).addTo(map);
+    });
+    watchTiles(osm, hooks);
+    osm.addTo(map);
   });
 }
 
@@ -55,6 +69,7 @@ function attachEnStreetsFallback(
   L: Leaflet,
   map: import("leaflet").Map,
   layer: import("leaflet").TileLayer,
+  hooks?: TileHooks,
 ) {
   let used = false;
   layer.on("tileerror", () => {
@@ -65,20 +80,27 @@ function attachEnStreetsFallback(
       noWrap: true,
       attribution: ATTR_EN_STREETS_ESRI,
     });
+    watchTiles(esri, hooks);
     esri.addTo(map);
-    attachOsmFallback(L, map, esri);
+    attachOsmFallback(L, map, esri, hooks);
   });
 }
 
 export type BaseTilesHandle = {
   setLocale: (locale: TileLocale) => void;
+  reload: () => void;
 };
 
 /** Default: satellite + labels. ZH = Gaode 卫星/标准; EN = Esri Satellite / Carto Streets. */
 export function addChinaBase(
   L: Leaflet,
   map: import("leaflet").Map,
-  opts?: { layersControl?: boolean; attribution?: boolean; locale?: TileLocale },
+  opts?: {
+    layersControl?: boolean;
+    attribution?: boolean;
+    locale?: TileLocale;
+    hooks?: TileHooks;
+  },
 ): BaseTilesHandle {
   const showControl = opts?.layersControl !== false;
   const showAttr = opts?.attribution !== false;
@@ -126,6 +148,7 @@ export function addChinaBase(
         bounds,
         attribution: showAttr ? ATTR_EN_SAT : "",
       });
+      watchTiles(sat, opts?.hooks);
       placesLayer = L.tileLayer(ESRI_PLACES, {
         maxZoom: 19,
         noWrap: true,
@@ -133,6 +156,7 @@ export function addChinaBase(
         attribution: "",
         pane: "overlayPane",
       });
+      watchTiles(placesLayer, opts?.hooks);
       satGroup = L.layerGroup([sat]);
       vectorLayer = L.tileLayer(CARTO_EN, {
         subdomains: "abcd",
@@ -142,7 +166,8 @@ export function addChinaBase(
         attribution: showAttr ? ATTR_EN_STREETS : "",
         className: "tile-rich",
       });
-      attachEnStreetsFallback(L, map, vectorLayer);
+      watchTiles(vectorLayer, opts?.hooks);
+      attachEnStreetsFallback(L, map, vectorLayer, opts?.hooks);
     } else {
       const a = showAttr ? ATTR_ZH : "";
       const sat = L.tileLayer(SAT, {
@@ -152,7 +177,8 @@ export function addChinaBase(
         bounds,
         attribution: a,
       });
-      attachOsmFallback(L, map, sat);
+      watchTiles(sat, opts?.hooks);
+      attachOsmFallback(L, map, sat, opts?.hooks);
       placesLayer = L.tileLayer(LABELS_ZH, {
         subdomains: "1234",
         maxZoom: 18,
@@ -160,6 +186,7 @@ export function addChinaBase(
         bounds,
         attribution: "",
       });
+      watchTiles(placesLayer, opts?.hooks);
       satGroup = L.layerGroup([sat]);
       vectorLayer = L.tileLayer(VECTOR_ZH, {
         subdomains: "1234",
@@ -169,6 +196,7 @@ export function addChinaBase(
         attribution: a,
         className: "tile-rich",
       });
+      watchTiles(vectorLayer, opts?.hooks);
     }
     const startSat = keepView ? wasSat : true;
     if (startSat) {
@@ -201,6 +229,20 @@ export function addChinaBase(
       if (next === locale) return;
       locale = next;
       rebuild(true);
+    },
+    reload() {
+      const redraw = (layer: import("leaflet").Layer | undefined) => {
+        if (!layer) return;
+        const tile = layer as import("leaflet").TileLayer;
+        if (typeof tile.redraw === "function" && "getTileUrl" in layer) tile.redraw();
+        const group = layer as import("leaflet").LayerGroup;
+        if (typeof group.eachLayer === "function" && !("getTileUrl" in layer)) {
+          group.eachLayer((child) => redraw(child));
+        }
+      };
+      redraw(satGroup);
+      redraw(vectorLayer);
+      map.invalidateSize();
     },
   };
 }

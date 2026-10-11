@@ -1,5 +1,6 @@
-/* Field-pack service worker. Caches only explicit packs, their pages, and covers.
-   Basemap tiles are not promised offline. Cache name must match src/lib/geo/offline.ts. */
+/* Field-pack service worker. Explicit packs plus covers the browser has already fetched.
+   Basemap tiles stay on the tile host and are not promised offline.
+   Cache name must match src/lib/geo/offline.ts. */
 const CACHE = "shanshizhi-field-v2";
 
 self.addEventListener("install", (event) => {
@@ -34,12 +35,15 @@ self.addEventListener("fetch", (event) => {
   if (!packable) return;
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
-      const hit = await cache.match(event.request);
-      if (hit) return hit;
       try {
         const res = await fetch(event.request);
+        if (res.ok && path.startsWith("/covers/")) {
+          await cache.put(event.request, res.clone());
+        }
         return res;
       } catch {
+        const hit = await cache.match(event.request);
+        if (hit) return hit;
         return new Response("Offline pack missing", { status: 503, statusText: "Offline" });
       }
     }),

@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { ThemeMap } from "@/components/map/ThemeMap";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { sites, getSite } from "@/lib/geo/catalog";
+import { amapMarkerHref } from "@/lib/geo/coords";
 import { nearestSites, whyNearby, type NearbyHit } from "@/lib/geo/distance";
 import { siteTo } from "@/lib/geo/href";
 import { suggestSites } from "@/lib/geo/search";
@@ -163,24 +165,38 @@ export function NearbyPanel({
       {status === "need" ? <p className="mt-3 text-sm text-muted">{t("nearbyEmpty")}</p> : null}
       {status === "empty" && !missTyped ? <p className="mt-3 text-sm text-muted">{t("nearbyNone")}</p> : null}
       {hits && hits.length && !missTyped ? (
-        <ul className="mt-3 space-y-2">
-          {hits.map((h) => (
-            <li key={h.site.id} className="rounded-lg border border-border px-3 py-2">
-              <p className="flex items-baseline justify-between gap-2">
-                <Link {...siteTo(h.site)} className="font-medium hover:underline">
-                  {displayName(h.site, locale)}
-                </Link>
-                <span className="shrink-0 text-xs text-muted">
-                  {h.km < 10 ? h.km.toFixed(1) : Math.round(h.km)} km
-                </span>
-              </p>
-              <p className="mt-0.5 text-xs text-muted">
-                {typeBadge(h.site, locale)} · {landformLabel(h.site.landform_types[0] ?? "other", locale)}
-              </p>
-              <p className="mt-1 text-xs leading-relaxed text-muted">{whyNearby(h.site, locale)}</p>
-            </li>
-          ))}
-        </ul>
+        <>
+          <div className="mt-3 h-56 overflow-hidden rounded-xl border border-border">
+            <ThemeMap sites={hits.map((h) => h.site)} />
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-muted">{t("amapNote")}</p>
+          <ul className="mt-3 space-y-2">
+            {hits.map((h) => (
+              <li key={h.site.id} className="rounded-lg border border-border px-3 py-2">
+                <p className="flex items-baseline justify-between gap-2">
+                  <Link {...siteTo(h.site)} className="font-medium hover:underline">
+                    {displayName(h.site, locale)}
+                  </Link>
+                  <span className="shrink-0 text-xs text-muted">
+                    {h.km < 10 ? h.km.toFixed(1) : Math.round(h.km)} km
+                  </span>
+                </p>
+                <p className="mt-0.5 text-xs text-muted">
+                  {typeBadge(h.site, locale)} · {landformLabel(h.site.landform_types[0] ?? "other", locale)}
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-muted">{whyNearby(h.site, locale)}</p>
+                <a
+                  className="mt-2 inline-flex min-h-11 items-center text-sm text-moss underline"
+                  href={amapMarkerHref(h.site.coordinates, h.site.province, displayName(h.site, locale))}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("amapNav")}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
       ) : null}
       {status === "idle" && !typed && !hits ? (
         <div className="mt-4">

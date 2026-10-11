@@ -11,13 +11,13 @@ import { Input } from "@/components/ui/input";
 import { ageLabel } from "@/lib/geo/age";
 import { seoHead } from "@/lib/geo/canonical";
 import { nationalGeoparks, sites, stats } from "@/lib/geo/catalog";
-import { haystack } from "@/lib/geo/search";
+import { siteMatches } from "@/lib/geo/search";
+import { useMapStore } from "@/lib/geo/store";
 import {
   LANDFORM_LABEL,
   PROVINCES,
   type LandformType,
   type Site,
-  type SiteType,
 } from "@/lib/geo/types";
 import {
   landformLabel,
@@ -53,40 +53,19 @@ const LANDS = (Object.keys(LANDFORM_LABEL) as LandformType[]).filter((k) => k !=
 function CatalogPage() {
   const t = useT();
   const locale = useLocale((s) => s.locale);
-  const [q, setQ] = useState("");
+  const filters = useMapStore((s) => s.filters);
+  const setQuery = useMapStore((s) => s.setQuery);
+  const setLandforms = useMapStore((s) => s.setLandforms);
+  const setProvince = useMapStore((s) => s.setProvince);
+  const setDepth = useMapStore((s) => s.setDepth);
+  const toggleType = useMapStore((s) => s.toggleType);
   const [tab, setTab] = useState<"national" | "all">("all");
-  const [landform, setLandform] = useState<LandformType | "">("");
-  const [province, setProvince] = useState("");
-  const [worldOnly, setWorldOnly] = useState(false);
-  const [status, setStatus] = useState<"all" | "deep" | "standard">("all");
-  const [level, setLevel] = useState<SiteType | "">("");
-  const [ageOn, setAgeOn] = useState(false);
-  const [ageStart, setAgeStart] = useState(0);
-  const [ageEnd, setAgeEnd] = useState(0);
   const [openProvinces, setOpenProvinces] = useState<Record<string, boolean>>({});
 
   const list = useMemo(() => {
     const base = tab === "national" ? nationalGeoparks() : sites;
-    const qq = q.trim().toLowerCase();
-    return base.filter((s) => {
-      if (qq && !haystack(s).includes(qq)) return false;
-      if (landform && !s.landform_types.includes(landform)) return false;
-      if (province && s.province !== province) return false;
-      if (worldOnly && !s.types.includes("world_geopark")) return false;
-      if (level && !s.types.includes(level)) return false;
-      if (status === "deep" && s.content_status !== "complete") return false;
-      if (status === "standard" && s.content_status !== "standard") return false;
-      if (ageOn) {
-        const a = s.geologic_age_start_ma;
-        const b = s.geologic_age_end_ma;
-        if (a == null || b == null) return false;
-        const lo = Math.min(a, b);
-        const hi = Math.max(a, b);
-        if (hi < ageStart || lo > ageEnd) return false;
-      }
-      return true;
-    });
-  }, [q, tab, landform, province, worldOnly, status, level, ageOn, ageStart, ageEnd]);
+    return base.filter((s) => siteMatches(s, filters));
+  }, [tab, filters]);
   const grouped = groupByProvince(list);
 
   return (
@@ -107,8 +86,8 @@ function CatalogPage() {
           className="mt-5 max-w-md"
           placeholder={t("catalogSearchPh")}
           aria-label={t("searchAria")}
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
+          value={filters.query}
+          onChange={(e) => setQuery(e.target.value)}
         />
         <div className="mt-5 space-y-3 rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">
           <details open>
@@ -135,8 +114,8 @@ function CatalogPage() {
               </Link>
               <select
                 className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
-                value={landform}
-                onChange={(e) => setLandform(e.target.value as LandformType | "")}
+                value={filters.landforms[0] ?? ""}
+                onChange={(e) => setLandforms(e.target.value ? [e.target.value as LandformType] : [])}
               >
                 <option value="">{t("landformAny")}</option>
                 {LANDS.map((l) => (
@@ -147,7 +126,7 @@ function CatalogPage() {
               </select>
               <select
                 className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
-                value={province}
+                value={filters.province}
                 onChange={(e) => setProvince(e.target.value)}
               >
                 <option value="">{t("provinceAny")}</option>
@@ -159,8 +138,8 @@ function CatalogPage() {
               </select>
               <select
                 className="h-9 rounded-full border border-border-strong bg-surface px-3 text-sm"
-                value={status}
-                onChange={(e) => setStatus(e.target.value as typeof status)}
+                value={filters.depth}
+                onChange={(e) => setDepth(e.target.value as "all" | "deep" | "standard")}
               >
                 <option value="all">{t("statusAny")}</option>
                 <option value="deep">{t("deepPage")}</option>
@@ -182,9 +161,9 @@ function CatalogPage() {
             <div className="mt-3 flex flex-wrap gap-2">
               <button
                 type="button"
-                onClick={() => setWorldOnly((v) => !v)}
+                onClick={() => toggleType("world_geopark")}
                 className="filter-chip"
-                data-active={worldOnly}
+                data-active={filters.types.includes("world_geopark")}
               >
                 {t("world")}
               </button>
@@ -200,9 +179,9 @@ function CatalogPage() {
                 <button
                   key={id}
                   type="button"
-                  onClick={() => setLevel((v) => (v === id ? "" : id))}
+                  onClick={() => toggleType(id)}
                   className="filter-chip"
-                  data-active={level === id}
+                  data-active={filters.types.includes(id)}
                 >
                   {t(key)}
                 </button>
@@ -212,18 +191,7 @@ function CatalogPage() {
           <details>
             <summary className="cursor-pointer text-sm font-semibold">{t("timescale")}</summary>
             <div className="mt-3">
-              <TimescaleBar
-                ageOn={ageOn}
-                ageStart={ageStart}
-                ageEnd={ageEnd}
-                onAgeChange={(on, start, end) => {
-                  setAgeOn(on);
-                  if (on && start != null && end != null) {
-                    setAgeStart(start);
-                    setAgeEnd(end);
-                  }
-                }}
-              />
+              <TimescaleBar compact />
             </div>
           </details>
         </div>
@@ -250,7 +218,7 @@ function CatalogPage() {
             </p>
           ) : null}
           {grouped.map(([provinceName, items]) => {
-            const open = Boolean(province) || openProvinces[provinceName];
+            const open = Boolean(filters.province) || openProvinces[provinceName];
             const shown = open ? items : items.slice(0, 8);
             const rest = items.length - shown.length;
             return (
