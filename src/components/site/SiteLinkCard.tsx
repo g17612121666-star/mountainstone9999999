@@ -75,7 +75,7 @@ export function SiteRowLink({
   const locale = useLocale((s) => s.locale);
   const shot = coverFor(site);
   return (
-    <div className="flex items-center gap-3 px-3 py-3 sm:px-4">
+    <div className="group flex items-center gap-3 px-3 py-3 transition-colors duration-200 hover:bg-bg/80 sm:px-4">
       {shot ? (
         <div className="h-16 w-24 shrink-0 overflow-hidden rounded-md" aria-hidden>
           <img src={shot.src} alt={displayName(site, locale)} className="h-full w-full object-cover" loading="lazy" decoding="async" />

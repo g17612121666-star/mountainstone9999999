@@ -25,24 +25,24 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
     { to: "/gssp", label: t("gssp") },
   ] as const;
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-bg/90 backdrop-blur-md">
-      <div className="h-1 bg-moss" />
+    <header className="sticky top-0 z-40 border-b border-border/70 bg-bg/75 backdrop-blur-xl">
+      <div className="h-px bg-gradient-to-r from-transparent via-moss to-transparent" />
       <div className="flex h-16 items-center gap-3 px-3">
       <a href="#main" className="skip-link">
         {t("skipContent")}
       </a>
-      <Link to="/" className="flex shrink-0 items-center gap-2">
-        <span className="flex h-9 w-7 flex-col overflow-hidden rounded-sm shadow-[var(--shadow-border)]">
+      <Link to="/" className="group flex shrink-0 items-center gap-2.5">
+        <span className="flex h-9 w-7 flex-col overflow-hidden rounded-[3px] shadow-[var(--shadow-border)] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)] group-hover:-translate-y-0.5">
           <span className="h-1.5 bg-moss" />
           <span className="h-1.5 bg-sand" />
           <span className="h-1.5 bg-hematite" />
           <span className="flex-1 bg-ink" />
         </span>
         <span>
-          <span className="font-display block text-lg leading-tight font-semibold tracking-tight">
+          <span className="font-display block text-xl leading-none font-medium tracking-tight">
             {t("appName")}
           </span>
-          <span className="hidden text-[11px] leading-tight text-muted sm:block">{t("tagline")}</span>
+          <span className="mt-1 hidden text-xs leading-tight tracking-wide text-muted sm:block">{t("tagline")}</span>
         </span>
       </Link>
       <nav className="ml-auto flex items-center gap-0.5" aria-label={t("mainNav")}>
@@ -55,7 +55,7 @@ export function AppHeader({ dense: _dense = false }: { dense?: boolean }) {
               to={l.to}
               aria-label={l.label}
               className={cn(
-                "flex h-11 items-center gap-1.5 rounded-full px-2.5 text-sm transition-colors duration-150 sm:px-3",
+                "flex h-11 items-center gap-1.5 rounded-full px-2.5 text-sm transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] sm:px-3",
                 l.to === "/ask" && "bg-moss text-accent-fg hover:opacity-90",
                 l.to !== "/ask" && (active ? "bg-surface-2 text-ink" : "text-muted hover:bg-surface-2 hover:text-ink"),
               )}

@@ -62,8 +62,8 @@ export function MapLegend() {
       <div
         className={
           open
-            ? "pointer-events-auto max-h-[46dvh] overflow-y-auto rounded-lg bg-surface/92 px-3 py-2 shadow-[var(--shadow-border)]"
-            : "pointer-events-none hidden rounded-lg bg-surface/92 px-3 py-2 shadow-[var(--shadow-border)] sm:pointer-events-auto sm:block sm:max-h-[62dvh] sm:overflow-y-auto"
+            ? "pointer-events-auto max-h-[46dvh] overflow-y-auto rounded-2xl border border-border/70 bg-surface/92 px-3 py-2 shadow-[var(--shadow-border-hover)] backdrop-blur-xl"
+            : "pointer-events-none hidden rounded-2xl border border-border/70 bg-surface/92 px-3 py-2 shadow-[var(--shadow-border-hover)] backdrop-blur-xl sm:pointer-events-auto sm:block sm:max-h-[62dvh] sm:overflow-y-auto"
         }
       >
         <p className="mb-1 hidden text-[10px] tracking-wide text-muted sm:block">{t("legend")}</p>

@@ -15,7 +15,7 @@ export function BottomNav() {
   ] as const;
   return (
     <nav
-      className="bottom-nav no-print fixed inset-x-0 bottom-0 z-50 border-t border-border bg-surface/95 backdrop-blur-md sm:hidden"
+      className="bottom-nav no-print fixed inset-x-3 bottom-3 z-50 overflow-hidden rounded-2xl border border-border/80 bg-surface/88 shadow-[var(--shadow-border-hover)] backdrop-blur-xl sm:hidden"
       aria-label={t("mainNav")}
     >
       <ul className="grid grid-cols-5">
@@ -27,12 +27,19 @@ export function BottomNav() {
               <Link
                 to={item.to}
                 className={cn(
-                  "flex min-h-14 flex-col items-center justify-center gap-0.5 text-[11px] font-medium",
+                  "flex min-h-14 flex-col items-center justify-center gap-0.5 text-[11px] font-medium transition-colors duration-200",
                   on ? "text-moss" : "text-muted",
                 )}
                 aria-current={on ? "page" : undefined}
               >
-                <Icon className="size-5" strokeWidth={1.75} />
+                <span
+                  className={cn(
+                    "flex size-8 items-center justify-center rounded-full transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)]",
+                    on && "scale-105 bg-moss/15",
+                  )}
+                >
+                  <Icon className="size-5" strokeWidth={1.75} />
+                </span>
                 {item.label}
               </Link>
             </li>

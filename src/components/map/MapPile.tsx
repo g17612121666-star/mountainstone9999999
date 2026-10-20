@@ -20,7 +20,7 @@ export function MapPile() {
   const title = pile.kind === "nearby" ? t("pileNearby") : t("pileCluster");
 
   return (
-    <section className="flex max-h-[70dvh] flex-col overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
+    <section className="sheet-in flex max-h-[70dvh] flex-col overflow-hidden rounded-2xl bg-surface/95 shadow-[var(--shadow-border)] backdrop-blur-md">
       <header className="flex items-center gap-2 border-b border-border px-3 py-2">
         <h2 className="font-display text-lg font-semibold">
           {title}

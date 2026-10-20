@@ -101,7 +101,7 @@ export const Route = createRootRoute({
         content: "口袋里的中国石头地图。点开一处，看岩石是什么、怎么裂开、到了先看哪。只看不挖。",
       },
       { name: "robots", content: "index, follow" },
-      { name: "theme-color", content: "#6B5344" },
+      { name: "theme-color", content: "#2f5348" },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
@@ -111,7 +111,7 @@ export const Route = createRootRoute({
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@520;650&display=swap",
       },
     ],
     scripts: [

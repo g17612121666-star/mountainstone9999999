@@ -23,7 +23,7 @@ export function SiteCard({
   const shot = coverFor(site);
   const film = clipFor(site);
   return (
-    <article className="overflow-hidden rounded-2xl bg-surface shadow-[var(--shadow-border)]">
+    <article className="sheet-in lift overflow-hidden rounded-2xl bg-surface/95 shadow-[var(--shadow-border)] backdrop-blur-md">
       {shot ? (
         <ClickableImage
           src={shot.src}

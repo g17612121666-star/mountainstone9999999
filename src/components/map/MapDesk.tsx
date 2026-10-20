@@ -56,8 +56,8 @@ export function MapDesk() {
   const picks = STARTERS.map((id) => getSite(id)).filter((s): s is NonNullable<typeof s> => !!s);
 
   return (
-    <aside className="pointer-events-auto w-full overflow-hidden rounded-2xl bg-surface/95 shadow-[var(--shadow-border-hover)]">
-      <div className="h-1 bg-moss" />
+    <aside className="sheet-in pointer-events-auto w-full overflow-hidden rounded-2xl border border-border/70 bg-surface/92 shadow-[var(--shadow-border-hover)] backdrop-blur-xl">
+      <div className="h-px bg-gradient-to-r from-moss via-sand to-transparent" />
       <div className="p-3">
       <div className="mb-2 flex items-start gap-2">
         <div className="min-w-0">
@@ -80,7 +80,7 @@ export function MapDesk() {
               <button
                 type="button"
                 onClick={() => select(site.id)}
-                className="flex w-full flex-col overflow-hidden rounded-lg bg-bg text-left hover:bg-surface-2"
+                className="lift flex w-full flex-col overflow-hidden rounded-xl bg-bg text-left"
               >
                 <span className="block h-12 overflow-hidden bg-surface-2 sm:h-16">
                   {photo ? (

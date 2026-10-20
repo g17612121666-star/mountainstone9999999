@@ -4,20 +4,20 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[opacity,transform,background-color,color] duration-150 disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-medium transition-[opacity,transform,background-color,color,box-shadow] duration-200 ease-[cubic-bezier(0.2,0,0,1)] disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 active:scale-[0.96]",
   {
     variants: {
       variant: {
-        default: "bg-moss text-accent-fg shadow-sm hover:opacity-92",
+        default: "bg-moss text-accent-fg shadow-[var(--shadow-border)] hover:brightness-110",
         moss: "bg-moss text-accent-fg hover:opacity-92",
         outline: "border border-border bg-surface text-ink hover:bg-surface-2",
         ghost: "text-ink hover:bg-surface-2",
         link: "text-moss underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-11 rounded-md px-4 text-sm",
-        sm: "h-9 rounded-sm px-3 text-sm",
-        lg: "h-12 rounded-lg px-5 text-base",
+        default: "h-11 rounded-full px-4 text-sm",
+        sm: "h-9 rounded-full px-3 text-sm",
+        lg: "h-12 rounded-full px-5 text-base",
         icon: "size-11 rounded-md",
         "icon-sm": "size-9 rounded-sm",
       },

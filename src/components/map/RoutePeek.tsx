@@ -12,7 +12,7 @@ export function RoutePeek() {
   const theme = id ? getTheme(id) : undefined;
   if (!theme) return null;
   return (
-    <article className="max-h-[40dvh] overflow-y-auto rounded-2xl bg-surface p-4 shadow-[var(--shadow-border)]">
+    <article className="sheet-in max-h-[40dvh] overflow-y-auto rounded-2xl border border-border/70 bg-surface/95 p-4 shadow-[var(--shadow-border-hover)] backdrop-blur-md">
       <p className="text-xs text-muted">{t("routeOnMap")}</p>
       <h2 className="font-display text-xl font-semibold">{themeName(theme, locale)}</h2>
       <p className="mt-1 text-sm leading-relaxed text-ink">{themeThesis(theme, locale)}</p>

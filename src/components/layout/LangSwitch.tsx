@@ -13,7 +13,7 @@ export function LangSwitch() {
   }, [setLocale]);
 
   return (
-    <div className="relative z-40 flex h-9 shrink-0 overflow-hidden rounded-md border border-border bg-surface">
+    <div className="relative z-40 flex h-9 shrink-0 overflow-hidden rounded-full border border-border bg-surface/80">
       <button
         type="button"
         className={cn(
