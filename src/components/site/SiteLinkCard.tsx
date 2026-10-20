@@ -78,7 +78,7 @@ export function SiteRowLink({
     <div className="group flex items-center gap-3 px-3 py-3 transition-colors duration-200 hover:bg-bg/80 sm:px-4">
       {shot ? (
         <div className="h-16 w-24 shrink-0 overflow-hidden rounded-md" aria-hidden>
-          <img src={shot.src} alt={displayName(site, locale)} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+          <img src={shot.src} alt={displayName(site, locale)} className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.2,0,0,1)] group-hover:scale-105" loading="lazy" decoding="async" />
         </div>
       ) : null}
       <div className="min-w-0 flex-1">
